@@ -1,2 +1,2 @@
 # Animate-X.github.io
-https://tanshuai0219.github.io/
+https://Lucaria-Academy.github.io/Animate-X/
