@@ -135,3 +135,11 @@ body {
 
 
 
+.pixart-alpha-icon::before {
+  background-image: url(../images/animate-x-logo.png);
+  background-size: 1em 1em;
+  display: inline-block;
+  width: 1em; 
+  height: 0.9em;
+  content:"";
+}
