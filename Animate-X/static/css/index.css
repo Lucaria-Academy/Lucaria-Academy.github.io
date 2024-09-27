@@ -143,3 +143,11 @@ body {
   height: 0.9em;
   content:"";
 }
+
+section.banner {
+  background-image: url(../images/overlay.png), url(../images/head.png);
+  color: #aaaaaa;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: scroll;
+}
