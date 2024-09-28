@@ -213,20 +213,21 @@
         <div class="content has-text-justified">
           <p>
             Character image animation, which generates high-quality videos from a reference image and target pose
-            sequence, has seen significant progress. However, most existing methods only apply to human figures, which
-            usually do not generalize well on anthropomorphic characters commonly used in industries like gaming and
-            entertainment. Our in-depth analysis suggests to attribute this limitation to their insufficient modeling of
-            motion, which is unable to comprehend the movement pattern of the driving video, thus imposing the pose
-            rigidly onto the identity of character. To this end, this paper proposes \(\texttt{Animate-X}\), a universal animation
-            framework based on LDM for various character types (collectively named \(\texttt{X}\)), including
-            anthropomorphic characters. To enhance motion representation, we introduce the Pose Indicator, which
-            captures comprehensive motion pattern from the driving video through both implicit and explicit manner. The
-            former leverages CLIP visual features of a driving video to extract its gist of motion, like the overall
-            movement pattern and temporal relations among motions, while the latter strengthens the generalization of
-            model by simulating various possible inputs that may arise during inference. Moreover, we introduce a new
-            Animated Anthropomorphic Benchmark (\(\texttt{$A^2$Bench}\)) to evaluate the performance of \(\texttt{Animate-X}\) on universal and
-            widely applicable animation images. Extensive experiments demonstrate the superiority and effectiveness of
-            \(\texttt{Animate-X}\) compared to state-of-the-art methods.
+            sequence, has seen significant progress in recent years. However, most existing methods only apply to human
+            figures, which usually do not generalize well on anthropomorphic characters commonly used in industries like
+            gaming and entertainment. Our in-depth analysis suggests to attribute this limitation to their insufficient
+            modeling of motion, which is unable to comprehend the movement pattern of the driving video, thus imposing a
+            pose sequence rigidly onto the target character. To this end, this paper proposes \(\texttt{Animate-X}\), a
+            universal animation framework based on LDM for various character types (collectively named \(\texttt{X}\)),
+            including anthropomorphic characters. To enhance motion representation, we introduce the Pose Indicator,
+            which captures comprehensive motion pattern from the driving video through both implicit and explicit
+            manner. The former leverages CLIP visual features of a driving video to extract its gist of motion, like the
+            overall movement pattern and temporal relations among motions, while the latter strengthens the
+            generalization of LDM by simulating possible inputs in advance that may arise during inference. Moreover, we
+            introduce a new Animated Anthropomorphic Benchmark (\(\texttt{$A^2$Bench}\)) to evaluate the performance of
+            \(\texttt{Animate-X}\) on universal and widely applicable animation images. Extensive experiments
+            demonstrate the superiority and effectiveness of \(\texttt{Animate-X}\) compared to state-of-the-art
+            methods.
           </p>
         </div>
         <!-- </div> -->
@@ -271,18 +272,17 @@
           <img src="https://img.alicdn.com/imgextra/i4/O1CN0157rCQo1rFlklv0LBv_!!6000000005602-2-tps-7137-5310.png"
             alt="MY ALT TEXT" />
           <h2 class="content has-text-justified">
-            The overview of our Animate-X. Given a reference image \(I^r\), we first extract Clip image feature
-            \(f^r_{\varphi}\) and latent feature \(f^r_{e}\) via Clip image encoder \(\Phi\) and VAE encoder
-            \(\mathcal{E}\). To fully leverage the motion information in the driving video \(I^d_{1:F}\) composed of
-            \(T\) frames, the proposed Implicit Pose Indicator (IPI) and Explicit Pose Indicator (EPI)
-            process them in an implicit and explicit manner, respectively, producing motion feature \(f_i\) and pose
-            feature \(f_e\). The feature \(f_e\) is concatenated with the noised input \(\epsilon\) along the
-            channel dimension, then further concatenated with \(f^r_{e}\) along the temporal dimension. This serves as
-            the input to the diffusion model \(\epsilon_\theta\) for progressively denoising. During the denoising
-            process, \(f^r_{\varphi}\) and \(f_i\) provide appearance information from \(I^r\) and motion information
-            from \(I^d_{1:F}\), respectively. This design ensures that the final result maintains strong identity
-            consistency with \(I^r\) and motion consistency with \(I^d_{1:F}\). At last, a VAE decoder \(\mathcal{D}\)
-            is adopted to map the generated latent representation \(z_0\) to the animation video.
+            The overview of our Animate-X. Given a reference image \(I^r\), we first extract CLIP image feature
+            \(f^r_{\varphi}\) and latent feature \(f^r_{e}\) via CLIP image encoder \(\Phi\) and VAE encoder
+            \(\mathcal{E}\). The proposed Implicit Pose Indicator (IPI) and Explicit Pose Indicator (EPI)
+            produce motion feature \(f_i\) and pose feature \(f_e\), respectively. \(f_e\) is concatenated with the
+            noised input \(\epsilon\) along the channel dimension,
+            then further concatenated with \(f^r_{e}\) along the temporal dimension.
+            This serves as the input to the diffusion model \(\epsilon_\theta\) for progressive denoising.
+            During the denoising process, \(f^r_{\varphi}\) and \(f_i\) provide appearance information from \(I^r\) and
+            motion information from \(I^d_{1:F}\), respectively.
+            At last, a VAE decoder \(\mathcal{D}\) is adopted to map the generated latent representation \(z_0\) to the
+            animation video.
           </h2>
         </div>
       </div>
