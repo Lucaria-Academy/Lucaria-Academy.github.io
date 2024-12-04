@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<head>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+
+  <meta property="og:title" content="Mimir: Improving Video Diffusion Models for Precise Text Understanding" />
+
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+
+
+
+  <title>Mimir</title>
+
+  <script>
+    var x = window.innerWidth;
+    function resizeFresh() {
+      if (x != window.innerWidth)
+        location.reload();
+    }
+  </script>
+
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="static/images/x_icon.png">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+</head>
+
+<body>
+
+
+
+  <section class="hero banner">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title" style="display: flex; align-items: center;">
+              <!-- <i class="animate-x-icon" style="font-size: 180px; margin-right: 0px;"></i> -->
+              <span style="margin-left: 0px;">
+                <span style="color: rgb(116, 212, 223); font-weight: bold;font-size: 52px;">Mimir:</span>
+                <span style="color: white; font-weight: bold;  font-size: 52px;">Improving Video Diffusion
+                </span></br>
+                <span style="color: white; font-weight: bold;  font-size: 52px;"> Models for Precise Text
+                  Understanding</span></br>
+                <!-- <span style="color: white; font-weight: bold;  font-size: 52px;">Motion Representation</span> -->
+
+              </span>
+            </h1>
+
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block"></span>
+              <a href="https://openreview.net/profile?id=~Shuai_Tan4" target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Shuai Tan</a><sup>1*</sup>,&thinsp;
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=BwdpTiQAAAAJ" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Biao
+                  Gong</a><sup>1*† </sup>,&thinsp;</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=mZwJLeUAAAAJ" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Yutong Feng</a><sup>2</sup>,&thinsp; </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=hMDQifQAAAAJ" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Kecheng Zheng</a><sup>1</sup>, &thinsp; </span>
+              <br>
+              <span class="author-block">
+                <a href="https://openreview.net/profile?id=~DanDan_Zheng1" target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Dandan
+                  Zheng</a><sup>1</sup>,&thinsp; </span>
+              <span class="author-block">
+                <a href="https://openreview.net/profile?id=~Shuwei_Shi1"
+                  target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Shuwei Shi</a><sup>1</sup>,&thinsp;
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=u76xfogAAAAJ"
+                  target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Yujun Shen</a><sup>1</sup>,&thinsp;
+              </span>
+              <span class="author-block">
+                <a href="https://openreview.net/profile?id=~Jingdong_Chen1" target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Jingdong
+                  Chen</a><sup>1</sup>,&thinsp;
+              </span>
+              <span class="author-block">
+                <a href="https://openreview.net/profile?id=~Ming_Yang2" target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Ming
+                  Yang</a><sup>1</sup>&thinsp;
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors" style="margin-top: 17px;">
+              <span class="author-block"><sup>1</sup>Ant Group,&thinsp; &thinsp;</span>
+              <span class="author-block"><sup>2</sup>Tsinghua University&thinsp; &thinsp;</span>
+            </div>
+            <div class="is-size-5 publication-authors" style="margin-top: -5px;">
+              <span class="eql-cntrb"><small><sup>*</sup>Equal Contribution.</small></span>
+            </div>
+            <div class="is-size-5 publication-authors" style="margin-top: -13px;">
+              <span class="eql-cntrb"><small><sup>†</sup><a href="mailto:a.biao.gong@gmail.com">Corresponding
+                    Author.</a></small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/" target="_blank"
+                    class="external-link button is-normal is-rounded is-white">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Video link -->
+                <span class="link-block">
+                  <a href="https://lucaria-academy.github.io/Mimir/"
+                    target="_blank" class="external-link button is-normal is-rounded is-white">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop" style="margin-top: 30px;margin-bottom: -15px;">
+        <div class="container is-max-desktop is-centered has-text-centered" style="margin-top: 20px;margin-bottom: -3px;">
+          <h2 >VIDEO FRAMES & PROMPTS</h2></div>
+        <img src="static\images\teaser.png" alt="MY ALT TEXT" />
+        <div class="container is-max-desktop is-centered has-text-centered" style="margin-top: 20px;margin-bottom: -10px;">
+        <h2 >VIDEOS</h2></div>
+        <div class="scaled-carousel-tesear">
+          <video poster="" id="video1" autoplay controls muted loop>
+            <!-- Your video file here -->
+            <source src="https://cloud.video.taobao.com/vod/OYdmeQoe1lc7bhG8cpHFEBOhLL9qNx6engVQfwW-_24.mp4" type="video/mp4">
+          </video>
+          <video poster="" id="video2" autoplay controls muted loop>
+            <!-- Your video file here -->
+            <source src="https://cloud.video.taobao.com/vod/Ie9Lyf-5JF6C2M1nraxGTxmpILOxzOeomQ_GBQOsuwA.mp4" type="video/mp4">
+          </video>
+        
+          <video poster="" id="video3" autoplay controls muted loop>\
+            <!-- Your video file here -->
+            <source src="https://cloud.video.taobao.com/vod/b32ngeBDrsSK-afSilCyF2usTX2iZl9A7BySHZxzToY.mp4" type="video/mp4">
+          </video>
+      
+          <video poster="" id="video4" autoplay controls muted loop>\
+            <!-- Your video file here -->
+            <source src="https://cloud.video.taobao.com/vod/tcKuXojdNGtBEGwpStfCk_cGWf_4NlNVZgPPJMBQesg.mp4" type="video/mp4">
+          </video>
+        </div>
+  
+      </div>
+  
+
+    </div>
+  </section>
+
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop is-centered has-text-centered" style="margin-top: -50px;">
+        <!-- <div class="columns is-centered has-text-centered"> -->
+        <!-- <div class="column is-four-fifths"> -->
+          <!-- <img src="static\images\teaser.png" alt="MY ALT TEXT" /> -->
+        <h2 class="title is-3">Abstract</h2>
+        <!-- <h2 class="title is-3">Abstract</h2> -->
+        <div class="content has-text-justified">
+          <p>
+            Text serves as the key control signal in video generation due to its narrative nature. To render text
+            descriptions into video clips, current video diffusion models borrow features from text
+            \(\textbf{encoders}\) yet struggle with limited text comprehension. The recent success of large language
+            models (LLMs) showcases the power of \(\textbf{decoder-only}\) transformers, which offers three clear
+            benefits
+            for text-to-video (T2V) generation, namely, precise text understanding resulting from the superior
+            scalability, imagination beyond the input text enabled by next token prediction, and flexibility to
+            prioritize user interests through instruction tuning. Nevertheless, the feature distribution gap emerging
+            from the two different text modeling paradigms hinders the direct use of LLMs in established T2V models.
+            This work addresses this challenge with \(\textbf{Mimir}\), an end-to-end training framework featuring a
+            carefully
+            tailored \(\textbf{token fuser}\) to harmonize the outputs from text encoders and LLMs. Such a design allows
+            the
+            T2V model to fully leverage learned video priors while capitalizing on the text-related capability of LLMs.
+            Extensive quantitative and qualitative results demonstrate the effectiveness of our approach in generating
+            high-quality videos with excellent text comprehension, especially when processing short captions and
+            managing shifting motions. The code and models will be made publicly available.
+          </p>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <!-- <section class="hero is-light"> -->
+    <div class="hero-body">
+      <div class="container is-max-desktop is-centered has-text-centered" style="margin-top: 30px; margin-bottom: 30px;">
+        <h2 class="title is-3">Overall Framework of Mimir</h2>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static\images\method.png" alt="MY ALT TEXT" />
+          <h2 class="content has-text-justified">
+            The framework of \(\textbf{Mimir}\). Given a text prompt, we employ a text encoder and a decoder-only large
+            language
+            model to obtain \(e_\theta\) and \(e_\beta\). Additionally, we add an instruction prompt which, after
+            processing
+            by the decoder-only model, yields the corresponding instruction token \(e_i\). To prevent any convergence
+            issue in training caused by the feature distribution gap
+            of \(e_\theta\) and \(e_\beta\), the proposed token fuser first applies a normalization layer and a
+            learnable
+            scale to \(e_\beta\). It then uses Zero-Conv to preserve the original semantic space in the early of
+            training.
+            These modified tokens are then summed to produce \(e \in \mathbb{R}^{n\times4096}\). Meanwhile, we
+            initialize
+            four learnable tokens \(e_l\), which are added to \(e_i\) to stabilize divergent semantic features. Finally,
+            the
+            token fuser concatenates \(e\) and \(e_s\) to generate videos.
+          </h2>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+
+
+
+
+
+
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small is-light"> -->
+  <section class="hero is-small  is-light">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered " style="margin-top: 50px; margin-bottom: -20px;">Spatial Semantic Understanding</h2>
+
+      <div class="container is-centered has-text-centered  scaled-carousel" >
+        <!-- <div class="hero-body"> -->
+        <h2 class="title is-3">Color Rendering</h2>
+
+        <div id="results-carousel11" class="carousel results-carousel " data-bs-ride="carousel" data-interval="16000">
+          <div class="item item-video00">
+            <video poster="" id="video00" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/UKPckl92_nilNzJkb61TSwDEVpaidQl-izaaSoifr1w.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A neon pink elephant walking under a glowing green moon.</h5>
+          </div>
+          <div class="item item-video01">
+            <video poster="" id="video01" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/l3dfF31SrcK-U1kEmD7L9rUAlHifcCR38KYchpkArHk.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A green elephant walking under a glowing pink moon.</h5>
+          </div>
+          <div class="item item-video02">
+            <video poster="" id="video02" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/1GYHaPpDzxrUhF3cp2yhW3ewRi5XAVxG9evSL_mLBs4.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A gray elephant walking under a glowing red moon.</h5>
+          </div>
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/c3Yo10LBGEE7wOdKtAuyRNJXC2F30Uer4-4-3XJTFc4.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Turtle in fluorescent pink and rainbow color armor.</h5>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/1GYHaPpDzxrUhF3cp2yhW3ewRi5XAVxG9evSL_mLBs4.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Red lion and blue grassland.</h5>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/O2_pFS06Gvch9QjB85GcmO-7Mdv5Bz8Z2NLA6ZOA8NA.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Blue cow and Orange Pasture.</h5>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/bUFs1mA1VfBJBK1g41ampf2G31I3WhyuGf9JAJS35tM.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Purple tiger and yellow grassland.</h5>
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/qKccJlFUMxXiKwD_Pq1Q9qEWK7Sv9eR324sjT2HQst4.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Blue desert and red cactus.</h5>
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+
+
+
+      <div class="container is-centered has-text-centered scaled-carousel" style="margin-top: -70px;">
+        <!-- <div class="hero-body"> -->
+        <h2 class="title is-3">Absolute & Relative Position</h2>
+
+        <div id="results-carousel11" class="carousel results-carousel " data-bs-ride="carousel" data-interval="16000">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/C-Ci1xlH1kC6SAGx-O1fKV-fiFGxOc0C_ZByaeApQrw.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A mischievous raccoon wearing a tiny hat sits to the right of a floating piece of
+              cheese.</h5>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/WUR80RkxmLHBqa7S3W2LMQMJDTv8ZbmwUr-lWTQruz0.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A mischievous raccoon wearing a tiny hat sits to the left of a floating piece of
+              cheese.</h5>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/6y0fUJ7lWwd_tZZUAmrebQ3Y-1pKt_KeaVYGINXWlLY.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A mischievous raccoon wearing a tiny hat sits to the bottom of a floating piece of
+              cheese.</h5>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/qepoyqlPdbdQKNJX-Rd5Kv7yRmbTO-HEoyiPUdY3iqQ.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A mischievous raccoon wearing a tiny hat sits to the top of a floating piece of
+              cheese.</h5>
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/8yGHPRU0IwNaDKYyhIHA727ePx8QJm7j_5_NZTxkjHs.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A shoe on the left side of a bowl.</h5>
+          </div>
+          <div class="item item-video6">
+            <video poster="" id="video6" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/rDRc_Ar1koO3Ont_vwMx1hY685QdyL2NwkqCkEXQUDQ.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A shoe on the right side of a bowl.</h5>
+          </div>
+          <div class="item item-video7">
+            <video poster="" id="video7" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/1V5zRo0Lm-dXfodRiY8ZR2-h7DBkYZ-iF4F7VLaEV4s.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A shoe on the top side of a bowl.</h5>
+          </div>
+          <div class="item item-video8">
+            <video poster="" id="video8" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/1I-2y82khefkv5F9ZI_GBVN1PxRCoLXoBKigb-EetiY.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A shoe on the bottom side of a bowl.</h5>
+          </div>
+          <div class="item item-video9">
+            <video poster="" id="video9" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/k1Ra8-tvgelgX36DqWxPVVZZeFJhCyuvbeEDDJu4Ufg.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A friendly dragon puffing colorful smoke, with a giant donut floating to its right.
+            </h5>
+          </div>
+          <div class="item item-video10">
+            <video poster="" id="video10" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/udRSB9HHAF0mbB9POduWFPzE8Dtd0izD5kEH8Jq1zSs.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A friendly dragon puffing colorful smoke, with a giant donut floating to its left.
+            </h5>
+          </div>
+          <div class="item item-video11">
+            <video poster="" id="video11" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/uRUsNNEJp8vhAnc0EUbrkFMqL4VvZPaxXRf8pOFeGY0.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A friendly dragon puffing colorful smoke, with a giant donut floating to its top.
+            </h5>
+          </div>
+          <div class="item item-video12">
+            <video poster="" id="video12" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/mriyCZdJx_aGbXKNIiyNz_mhqnlDUyuONfzUPPY9LRM.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A friendly dragon puffing colorful smoke, with a giant donut floating to its bottom.
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-centered has-text-centered  scaled-carousel" style="margin-top: -70px;">
+        <!-- <div class="hero-body"> -->
+        <h2 class="title is-3">Counting</h2>
+
+        <div id="results-carousel12" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000" style="height: 80%; width: auto;">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/Z4el68nAkShHUSVdTYUZDITSy7iWf0ZoHkB4C1DgOF8.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">One apple becomes two apples.</h5>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/lhanxZcKXppVBygZxSwobxBlXECOsepMJVaSxrADh5k.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Two apples become three apples.</h5>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/H9qmw2pIoWehRkNXdyXomy6ODog4GmOM6VwwDWf2jno.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Two dogs.</h5>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/E48w4ZGOc2Jmac07RCATI8iY16KQLnHde6fuOHucqHE.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Three birds.</h5>
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/HW-RJElDlcFHHpcTGEK6HCc0lE9qguaYpZ5usFOQW7Y.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Two butterflies.</h5>
+          </div>
+          <div class="item item-video6">
+            <video poster="" id="video6" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/BBs6GMv-D3pCI9OxX2XmKJDC0KoKGg5bXv-3doo8ixA.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Seven pearls.</h5>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+
+
+
+
+  <!-- Video carousel -->
+
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small is-light"> -->
+  <section class="hero  is-small">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered " style="margin-top: 50px; margin-bottom: -20px;">Temporal Semantic Understanding</h2>
+      <div class="container is-centered has-text-centered scaled-carousel">
+        <!-- <div class="hero-body"> -->
+        <h2 class="title is-3">Sequential Actions</h2>
+
+        <div id="results-carousel11" class="carousel results-carousel " data-bs-ride="carousel" data-interval="16000">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/3ff1Ut19QATrO3fZTyMBpYv1ZONw41bpEGBcagRAlwM.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A race car speeds down a track and, with a burst of energy, changes into a superhero,
+              launching into the sky to save the day.</h5>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/tfCR24_oJwQUg-3GGkPCve-8PMhZyWpWVCh_gbm9otk.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A bicycle leisurely rolls along a park path, and suddenly it transforms into a
+              high-speed jet ski, splashing through a nearby lake.</h5>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/atg4MULZ3faHUGWXi5sJUZiXE2ATopw5-Y_bzwgvYVQ.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A puppy looks left and then right.</h5>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/s5pcgSQp6IyitAAg2p4qUIwDJu_P1hlhbutBfCCMiKA.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A lion looks right and then left.</h5>
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/Bl21_Q3oDroJ6WLNVBcJPUcwowimM22K_GXouR_iShY.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A cat looks up, then down.</h5>
+          </div>
+          <div class="item item-video6">
+            <video poster="" id="video6" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/xTPQeOij9ghyGluTCUUjGs8JSHoD15tm9_OKwx7qM-c.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A cat looks down, then up.</h5>
+          </div>
+          <div class="item item-video7">
+            <video poster="" id="video7" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/2vRIKxNtyAsqqx9lfYVwGITLHll8s2bu_5gICrdeHE4.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A cat looks up, then down, and up again.</h5>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="container is-centered has-text-centered scaled-carousel"  style="margin-top: -100px;">
+        <!-- <div class="hero-body"> -->
+        <h2 class="title is-3">
+          Illumination Harmonization</h2>
+
+        <div id="results-carousel11" class="carousel results-carousel " data-bs-ride="carousel" data-interval="16000">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/sXvR50qQxgYrucOZ1ak7Mrm6BLghUSN8PJqZS8oFGSc.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">As dawn breaks, the once-vivid stars begin to dim, their brilliance softening as the
+              sky transitions from deep indigo to a pale, serene blue. One by one, the celestial lights vanish,
+              retreating into the vast expanse above. The faint glow of the morning sun brushes the horizon, casting
+              gentle hues of peach and gold. In their place, a tranquil light blue sky emerges, vast and endless,
+              signaling the quiet start of a new day and leaving behind a faint memory of the night.</h5>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/1gsk5jgQ-N0ZdGkNVcNob3Rko01xddiPfnMFCCExWqI.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">The horizon glows with a fiery brilliance as a red sun begins its ascent above the
+              calm sea. Its vibrant hue bathes the sky in shades of crimson and amber, casting a warm, ethereal light
+              across the water. The sea, once cloaked in darkness, transforms into a shimmering expanse, reflecting the
+              sun's fiery glow in rippling patterns. As the sun climbs higher, its light floods the world, illuminating
+              the waves and painting the landscape with radiant warmth, heralding the arrival of a new day in
+              breathtaking beauty.</h5>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/vyoXwlEpI8R3kHRjIHXhEcCNrcqiIEy9X3LsR-KAo54.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Among the forests, mist lingers among the green trees, and the sunlight penetrates
+              the branches and leaves, shedding bits of golden light. In the evening, the setting sun paints the sky in
+              a blazing orange-red color.</h5>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/-JvZ_-xAVhN8wn-PfzC4V4jqzp6xSyy8L56IEJWC7qA.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">The fields are awakened by the golden sunlight, and a gentle breeze stirs up a green
+              wave. In the evening, the setting sun puts on a coat of fiery red for the earth. At night, the fields are
+              filled with starlight like water, and the Milky Way in the distance quietly guards this peaceful world.
+            </h5>
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/G16g7eb42rcaNNPeofFghZPh_mIsMcqWw97HO8iHIhQ.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">On the vast plains, at dusk, the setting sun colors the clouds into a flaming golden
+              red, and after nightfall, the deep starry sky shines like a jewel, making the whole world seem serene and
+              mysterious.</h5>
+          </div>
+          <div class="item item-video6">
+            <video poster="" id="video6" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/oGXctFh3v7PjfB8m8I9w0JvZeRGAbwdDZuPJJ6ofycg.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">With a ghostly blue glow, the whole world seems pure and mysterious. The setting sun
+              dyed the sky red, and the ice reflected the warm orange light. At night, the stars are densely packed and
+              the Milky Way crosses the dome of the sky, reflecting the coldness and quietness of the glacier.</h5>
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+  </section>
+
+
+
+
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small is-light"> -->
+  <section class="hero  is-small is-light">
+    <div class="hero-body">
+
+      <h2 class="title is-3 has-text-centered " style="margin-top: 50px; margin-bottom: -20px;">More interesting examples</h2>
+      <div class="container is-centered has-text-centered  scaled-carousel">
+        <!-- <div class="hero-body"> -->
+        <!-- <h2 class="title is-3">More interesting examples</h2> -->
+
+        <div id="results-carousel14" class="carousel results-carousel " data-bs-ride="carousel" data-interval="16000">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/OFQrasKVRklYndx-EBitU_aeh5Fm3gkG4taJZUakYTU.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A weathered, vintage truck, its paint faded and rusted, sits anchored in a serene
+              bay, half-submerged in the crystal-clear water. The truck's bed is filled with vibrant wildflowers. The
+              sun sets in the background, casting a golden glow over the scene, while seagulls glide gracefully above.
+            </h5>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/5E3wmhE5ZHFjGoa25JN6xiS_O3kKtLYrDh1r8YH939Q.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A young woman with flawless skin and a serene expression sits at a vanity, bathed in
+              soft morning light. She uses a foundation brush to blend a sheer layer of foundation, creating a natural,
+              glowing base.
+            </h5>
+          </div>
+
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/zRlJlHiGec6V6v-VdDBP0GC8YhXKV1ncg1P0mFBWMro.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Aerial panoramic view of a breathtaking fantasy land from a drone. The scene features
+              a vast forest with towering ancient trees, golden leaves shimmering under a mystical twilight sky. A
+              crystal-clear river winds through the forest, sparkling with an ethereal glow. Snow-capped mountains rise
+              in the distance, dotted with vibrant, otherworldly flora. A hidden valley holds a grand enchanted castle,
+              its spires reaching the heavens, surrounded by floating islands and cascading waterfalls. The sky is
+              painted with purple and pink hues, twinkling stars.
+            </h5>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/vQG9XLcz6MDDD0aAMV5jTdb4SBnS8iZvOnZnLnNbDQs.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A charming animated scene features a quaint boat with colorful flags sailing on the
+              serene Seine River, creating ripples that reflect the sunset's soft hues. The Eiffel Tower looms
+              majestically in the background, while the sky glows with warm oranges and pinks.
+            </h5>
+          </div>
+
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/_4DlBVc-Trh9wy42Ki6IWFSVzjTfp-7-pHCVE4vfQcU.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Yoda playing guitar on the stage. </h5>
+          </div>
+          <div class="item item-video6">
+            <video poster="" id="video6" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/RYSjNdD7BtW-qLsIJRZWQwLzkm5GgtOClgxnYfFKBtY.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Po drinking coffee in a cafe in Paris, Van Gogh style.</h5>
+          </div>
+          <div class="item item-video7">
+            <video poster="" id="video7" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/t41Kf4ZoyGanF9VDxpCQllfMu8hssUg8CzoE4FVE9-E.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A serene coastal scene at sunset with a rocky shoreline extending into the distance.
+              The sky is a mix of warm oranges and cool blues, with scattered clouds. Palm trees and lush greenery line
+              the left side, while the calm ocean reflects the colors of the sky. The overall atmosphere is tranquil,
+              with no visible human presence. The quality is clear, and the style is realistic.
+            </h5>
+          </div>
+          <div class="item item-video8">
+            <video poster="" id="video8" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/tZDUkcwWqMD3_7vBjV6ShD02Cw1JofE7TVfnhejCO8Y.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A vibrant underwater scene features a coral reef with large, textured, brown coral
+              formations in the foreground. Numerous small, colorful fish swim around the corals.
+            </h5>
+          </div>
+
+          <div class="item item-video9">
+            <video poster="" id="video9" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/1UqKXBRnAGq0OMhc80FWgcVifH2S6x4yFviURCePBAo.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Two animated dogs are perched on a cliff.
+            </h5>
+          </div>
+          <div class="item item-video10">
+            <video poster="" id="video10" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/ctJFgxD-Z0sMoQP-2Ni7aIdHWkwDI1qwv9JXq2sUvgA.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A vast, luminous spiral galaxy dominates the scene, with a bright core at its center
+              emitting a yellowish glow, surrounded by dense blue and white star fields. The arms of the galaxy, adorned
+              with countless stars, extend outward in a swirling pattern. The background is a deep, dark space dotted
+              with distant stars, adding to the grandeur of the galaxy. The overall style is realistic, capturing the
+              immense scale and beauty of the celestial structure.
+            </h5>
+          </div>
+          <div class="item item-video11">
+            <video poster="" id="video11" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/LAcuiMLQscpfXI1W5VR4Culdh1wPEnU_MpTqRVXKzdA.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A young man at his 20s is sitting on a piece of cloud in the sky, reading a book.
+            </h5>
+          </div>
+          <div class="item item-video12">
+            <video poster="" id="video12" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/dLhvjPbNlesx_URacBAiK-0snw6P1UYZQGzrvCVHwrs.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">Animated scene features a close-up of a short fluffy monster kneeling beside a
+              melting red candle. The mood of the painting is one of wonder and curiosity, as the monster gazes at the
+              flame with wide eyes and open mouth. Its pose and expression convey a sense of innocence and playfulness,
+              as if it is exploring the world around it for the first time.</h5>
+          </div>
+
+
+          <div class="item item-video13">
+            <video poster="" id="video13" autoplay controls muted loop>
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/RJs9KHxHSn6HEbzpfs6vs36kJHa8oGq54i_3tx9Q1jA.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A steampunk airship floats above a bustling Victorian city, its brass gears and steam
+              engines puffing clouds into the sky. Below, the streets are filled with horse-drawn carriages, and the
+              skyline is dominated by towering smokestacks and ornate buildings, bathed in the golden glow of sunset.
+            </h5>
+          </div>
+
+          <div class="item item-video14">
+            <video poster="" id="video14" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/aNhYdhp6c1hWtXV_rZl3cUvr_DOx-Bc5iYSVQeUTkA0.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A starlit sky filled with floating lanterns, with a curious cat perched on a moonbeam
+              to the left.
+            </h5>
+          </div>
+
+          <div class="item item-video15">
+            <video poster="" id="video15" autoplay controls muted loop>\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/jiqZ9gKt4rl6JuZIwCME0sWBoX6obzKdyL6Ww-scU5g.mp4" type="video/mp4">
+            </video>
+            <h5 class="title is-5">A sudden eruption of flames engulfs the vehicle, illuminating the surroundings with
+              an ethereal glow.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Reference</h2>
+      <pre>
+      <code>
+@article{tan2024Mimir,
+  title={Mimir: Improving Video Diffusion Models for Precise Text Understanding},
+  author={Tan, Shuai and Gong, Biao and Feng, Yutong and Zheng, Kecheng and Zheng, Dandan and Shi, Shuwei and Shen, Yujun and Chen, Jingdong and Yang, Ming},
+  journal={arXiv preprint arXiv:2410.10306},
+  year={2024}}
+
+@article{tan2024AnimateX,
+  title={Animate-X: Universal Character Image Animation with Enhanced Motion Representation},
+  author={Tan, Shuai and Gong, Biao and Wang, Xiang and Zhang, Shiwei and Zheng, Dandan and Zheng, Ruobin and Zheng, Kecheng and Chen, Jingdong and Yang, Ming},
+  journal={arXiv preprint arXiv:2410.10306},
+  year={2024}}
+</code>
+</pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8 text-center">
+          <div class="content text-center">
+
+            <p>
+              <font color='red'>
+                The images used in the demo videos are for academic purposes only and are not for commercial use. Contact email: youtai.ts@antgroup.com.</font>
+              The source code of this webpage is borrowed from the <a href="https://nerfies.github.io"
+                target="_blank">Nerfies</a> project webpage.
+            </p>
+            <p class="has-text-centered">Total clicks: <span id="busuanzi_value_site_pv"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+
+    bulmaCarousel.attach('#results-carousel22', {
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      infinite: true,
+      autoplay: false,
+    });
+    bulmaCarousel.attach('#results-carousel33', {
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      infinite: true,
+      autoplay: false,
+    });
+  </script>
+
+
+</body>
+
+</html>
