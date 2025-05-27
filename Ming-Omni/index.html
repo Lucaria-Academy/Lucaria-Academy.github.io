@@ -14,10 +14,10 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Ming-Lite-Omni">
-  <meta property="og:title" content="Ming-Lite-Omni" />
+  <meta name="description" content="Ming-Omni">
+  <meta property="og:title" content="Ming-Omni" />
   <meta property="og:description"
-    content="Ming-Lite-Omni: A Unified Multimodal Model for Perception and Generation" />
+    content="Ming-Omni: A Unified Multimodal Model for Perception and Generation" />
   <meta property="og:url" content="URL OF THE WEBSITE" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/video_t1.png" />
@@ -26,7 +26,7 @@
 
 
 
-  <title>Ming-Lite-Omni</title>
+  <title>Ming-Omni</title>
   <link rel="icon" type="image/x-icon" href="static/images/ant-bailing.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -57,7 +57,7 @@
             <h1 class="title is-1 publication-title" style="display: flex; align-items: center;">
               <i class="gongbiao-icon" style="font-size: 100px; margin-right: 20px; margin-top: 10px;"></i>
               <span style="margin-left: 0px;">
-                <span style="color: rgb(44, 185, 250); font-weight: bold; font-size: 52px;">Ming</span><span style="color: white; font-weight: bold; font-size: 52px;">-Lite-Omni:</span></br>
+                <span style="color: rgb(44, 185, 250); font-weight: bold; font-size: 52px;">Ming</span><span style="color: white; font-weight: bold; font-size: 52px;">-Omni:</span></br>
                 <span style="color: white; font-weight: bold;  font-size: 52px;">A Unified Multimodal Model</span></br>
                 <span style="color: white; font-weight: bold;  font-size: 52px;">for
                   Perception and Generation</span>
@@ -145,7 +145,7 @@
     <div class="hero-body">
       <div class="container is-max-desktop">
         <br>
-        <img src="static/images/teaser1.png"
+        <img src="static/images/teaser.jpg"
           alt="teaser"/>
         </h2>
       </div>
@@ -164,19 +164,20 @@
         <!-- <h2 class="title is-3">Abstract</h2> -->
         <div class="content has-text-justified">
           <p>
-            We propose Ming-Lite-Omni, a unified multi-modal model that can process a wide range of inputs, including
-            images, text, audio, and video, and deliver both speech and image generation with remarkable
-            proficiency. By utilizing dedicated encoders, Ming-Lite-Omni is able to extract tokens from different
-            modalities and process them through Ling-lite, an MoE architecture that is equipped with modality-specific
-            routers. This design allows for efficient handling of multi-modal data and ensures that the
-            model can effectively integrate information from various modalities. Ming-Lite-Omni is equipped with
-            an advanced audio decoder that produces natural-sounding speech, as well as MetaQueries, which
-            enables high-quality image generation. These features allow the model to engage in context-aware
-            dialogues, perform text-to-speech conversion, and conduct versatile image editing. Our experimental
-            results showcase Ming-Lite-Omni offers a powerful solution for unified perception and generation across
-            all modalities. Notably, our proposed Ming-Lite-Omni is the first open-source model we are aware of to
-            match GPT-4o in modality support, and we release all code and model weights to encourage further
-            research and development in the community.
+          We propose Ming-Omni, a unified multimodal model capable of processing images, text, audio, and
+          video, while demonstrating strong proficiency in both speech and image generation. Ming-Omni
+          employs dedicated encoders to extract tokens from different modalities, which are then processed
+          by Ling, an MoE architecture equipped with newly proposed modality-specific routers. This design
+          enables a single model to efficiently process and fuse multimodal inputs within a unified framework,
+          thereby facilitating diverse tasks without requiring separate models, task-specific fine-tuning, or
+          structural redesign. Importantly, Ming-Omni extends beyond conventional multimodal models by
+          supporting audio and image generation. This is achieved through the integration of an advanced
+          audio decoder for natural-sounding speech and Ming-Lite-Uni for high-quality image generation,
+          which also allow the model to engage in context-aware chatting, perform text-to-speech conversion,
+          and conduct versatile image editing. Our experimental results showcase Ming-Omni offers a powerful
+          solution for unified perception and generation across all modalities. Notably, our proposed Ming-Omni
+          is the first open-source model we are aware of to match GPT-4o in modality support, and we
+          release all code and model weights to encourage further research and development in the community.
           </p>
         </div>
         <!-- </div> -->
@@ -197,13 +198,13 @@
     <!-- <section class="hero is-light"> -->
     <div class="hero-body">
       <div class="container is-max-desktop is-centered has-text-centered">
-        <h2 class="title is-3">Overall Framework of <span style="color: rgb(16, 106, 190);">Ming</span>-Lite-Omni</h2>
+        <h2 class="title is-3">Overall Framework of <span style="color: rgb(16, 106, 190);">Ming</span>-Omni</h2>
         <div class="item">
           <!-- Your image here -->
           <img src="static/images/method.png"
             alt="method" />
           <h2 class="content has-text-justified">
-            The overall framework of Ming-Lite-Omni. Ming-Lite-Omni extracts visual and audio tokens with dedicated encoders. These
+            The overall framework of Ming-Omni. Ming-Omni extracts visual and audio tokens with dedicated encoders. These
             tokens are then combined with text tokens and processed through Ling (MoE architecture with modality-specific routers).
             Subsequently, it generates speech through an audio decoder and enables image generation via a diffusion model.
           </h2>
@@ -264,7 +265,7 @@
           </div>
           <div class="column is-half">
             <video poster="" id="tree1" controls muted loop width="100%">
-              <source src="https://cloud.video.taobao.com/vod/tjtBvQND97mln5QsIdYsd8YIWS6mYgp3tHtdAoeaq-E.mp4"
+              <source src="https://cloud.video.taobao.com/vod/Szp0rqz2e1lpX3pkUDp4EFSC-KRMIuHZcqtxlx4rfjk.mp4"
                 type="video/mp4">
             </video>
             <h3 class="title is-5">Mobile Phone Interaction</h3>
@@ -291,11 +292,27 @@
           </div>
           <div class="column is-half">
             <video poster="" id="tree1" controls muted loop width="100%">
+              <source src="https://cloud.video.taobao.com/vod/YiuzWc4invH0V--IOwmW8zznDDa902Exop3sHPu-aMI.mp4"
+              type="video/mp4">
+            </video>
+            <h3 class="title is-5">Image</h3>
+          </div>
+        </div> 
+        <div class="columns is-mobile is-centered">
+          <div class="column is-half">
+            <video poster="" id="tree1" controls muted loop width="100%">
               <source src="https://cloud.video.taobao.com/vod/DulRhChUz7pN_5-3vZtkSVUMU5RfsJZOx0K6aswnJHg.mp4"
                 type="video/mp4">
             </video>
             <h3 class="title is-5">Video (This video contains audio)</h3>
           </div>
+          <div class="column is-half">
+            <video poster="" id="tree1" controls muted loop width="100%">
+              <source src="https://cloud.video.taobao.com/vod/NKyLG8dx2wODx9j4lidW9IA-BBJ5dR3wlAj40vCHgIQ.mp4"
+                type="video/mp4">
+            </video>
+            <h3 class="title is-5">Video (This video contains audio)</h3>
+          </div>          
         </div>    
       </div>
     </div>
@@ -414,7 +431,7 @@
       <pre>
       <code>
 @article{Mingomni2025,
-  title   = {Ming-Lite-Omni: A Unified Multi-Modal Model for Perception and Generation},
+  title   = {Ming-Omni: A Unified Multi-Modal Model for Perception and Generation},
   author  = {Inclusion AI, Ant Group},
   journal = {Technical Report},
   year    = {2025}
