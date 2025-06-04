@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<head>
+
+  <!-- <link href="css/two_style.css" rel="stylesheet" /> -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="SynMotion">
+  <meta property="og:title" content="SynMotion" />
+  <meta property="og:description"
+    content="SynMotion: Semantic-Visual Adaptation for Motion Customized Video Generation" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/video_t1.png" />
+  <meta property="og:image:width" content="2412" />
+  <meta property="og:image:height" content="1394" />
+
+
+
+  <title>SynMotion</title>
+  <link rel="icon" href="static/images/synmotion-x-logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+<body>
+
+  <section class="hero banner" style="display: flex; align-items: center; justify-content: center; text-align: center;">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <i class="pixart-alpha-icon"></i>
+            <h1 class="title is-1 publication-title"
+              style="display: flex; align-items: center; justify-content: center; text-align: center;">
+              <span>
+                <span style="color: #B771E5; font-weight: bold; font-size: 46px;">SynMotion:</span>
+                <span style="color: white; font-weight: bold; font-size: 46px;">Semantic-Visual Adaptation</span><br>
+                <span style="color: white; font-weight: bold; font-size: 46px;">for Motion Customized Video
+                  Generation</span>
+                <!-- <span style="color: white; font-weight: bold; font-size: 52px;">with Precise Motion Control</span> -->
+              </span>
+            </h1>
+            <div class="is-size-5 publication-authors" style="text-align: center;">
+              <span class="author-block">
+                <a href="" target="_blank" style="color: rgb(170,170,170) !important; text-decoration: underline;">Shuai
+                  Tan</a><sup>1</sup>,&thinsp;
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=BwdpTiQAAAAJ" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Biao Gong</a><sup>1†</sup>,
+                &thinsp;
+              </span>
+              <span class="author-block"></span>
+              <a href="https://weilllllls.github.io" target="_blank"
+                style="color: rgb(170,170,170) !important; text-decoration: underline;">Yujie
+                Wei</a><sup>2</sup>,&thinsp;
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=ZO3OQ-8AAAAJ" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Shiwei Zhang</a><sup>2
+                </sup>,&thinsp;
+              </span>
+              <span class="author-block">
+                <a href="https://openreview.net/profile?id=%7EZhuoxin_Liu1" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Zhuoxin Liu</a><sup>3</sup>,
+                &thinsp;
+              </span>
+              <span class="author-block">
+                <a href="" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Dandan Zheng</a><sup>1</sup>,
+                &thinsp;
+              </span>
+              <br>
+              <span class="author-block">
+                <a href="" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Jingdong
+                  Chen</a><sup>1</sup>,&thinsp;
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=en&user=f6FgQ_bXEb4C" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Yan
+                  Wang</a><sup>4</sup>,&thinsp;
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=HupEGRYAAAAJ&hl=en&oi=ao" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Hao
+                  Ouyang</a><sup>1</sup>,&thinsp;
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=hMDQifQAAAAJ&hl=en&oi=ao" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Kecheng
+                  Zheng</a><sup>1</sup>&thinsp;
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=u76xfogAAAAJ&hl=en&oi=ao" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Yujun
+                  Shen</a><sup>1</sup>&thinsp;
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors" style="text-align: center;">
+              <span class="author-block"><sup>1</sup>Ant Group&thinsp; &thinsp;</span>
+              <span class="author-block"><sup>2</sup>Tongyi Lab&thinsp; &thinsp;</span>
+              <span class="author-block"><sup>3</sup>University of Wisconsin-Madison&thinsp; &thinsp;</span>
+              <br>
+              <span class="author-block"><sup>4</sup>University of North Carolina at Chapel Hill&thinsp; &thinsp;</span>
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Project Leader&thinsp; &thinsp;</small></span> -->
+              <span class="eql-cntrb"><small><sup>†</sup>Project Leader, Corresponding Author</small></span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-white">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- <span class="link-block">
+                                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-white">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Code</span>
+                                </a>
+                            </span> -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+
+        <img src="static\images\teaser.png" alt="MY ALT TEXT" />
+        </h2>
+      </div>
+      <!-- </div> -->
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- <div class="hero-body"> -->
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="https://cloud.video.taobao.com/vod/-J35lPjq90av6jwGPHC0jNs_d7_A5PIZ--CBm8Ba_w8.mp4"
+            type="video/mp4">
+        </video>
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop is-centered has-text-centered">
+        <!-- <div class="columns is-centered has-text-centered"> -->
+        <!-- <div class="column is-four-fifths"> -->
+        <h2 class="title is-3">Abstract</h2>
+        <!-- <h2 class="title is-3">Abstract</h2> -->
+        <div class="content has-text-justified">
+          <p>
+            Recent advances in diffusion models have enabled video generation, yet customizing specific motions for
+            diverse subjects remains challenging due to the complexity of semantic alignment and visual dynamics. Most
+            existing motion customization methods focus exclusively on either semantic guidance or visual adaptation,
+            limiting their ability to generate accurate subject-specific customized motions in videos. To address these
+            limitations, we propose \(\texttt{SynMotion}\), a new and powerful framework for motion-customized video
+            generation that
+            jointly leverages semantic guidance and visual adaptation. At the semantic level, we introduce a
+            dual-embedding semantic comprehension mechanism that disentangles subject and motion representations,
+            allowing the model to learn customized motion features while preserving its generative capabilities for
+            diverse subjects. At the visual level, we integrate parameter-efficient motion adapters into a pre-trained
+            video generation model to enhance motion fidelity and temporal coherence. Furthermore, we design an
+            embedding-specific training strategy that alternately optimizes subject and motion embeddings, supported by
+            a newly constructed Subject Prior Video (SPV) dataset. This strategy promotes motion specificity while
+            preserving generalization across diverse subjects. Lastly, we introduce MotionBench, a newly curated
+            benchmark with diverse motion patterns. Experimental results across both T2V and I2V settings demonstrate
+            that \(\texttt{SynMotion}\) significantly outperforms existing baselines.
+          </p>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+
+
+
+  <!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Demo Video</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <source src=""
+            type="video/mp4">
+          </video> 
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End youtube video -->
+
+
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <!-- <section class="hero is-light"> -->
+    <div class="hero-body">
+      <div class="container is-max-desktop is-centered has-text-centered">
+        <h2 class="title is-3">Overall Framework of SynMotion</h2>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/framework.png" alt="MY ALT TEXT" />
+          <h2 class="content has-text-justified">
+            The pipeline of \(\texttt{SynMotion}\). Given a prompt in the form of \(<\text{subject}, \text{motion}>\),
+              we use a MLLM to
+              obtain the corresponding text embedding, which is then decomposed into a subject embedding \(e_{sub}\) and
+              motion embedding \(e_{mot}\). Each part is augmented with the learnable embeddings (i.e., \(e^l_{sub}\)
+              and
+              \(e^l_{mot}\)) in a zero-initialized convolutional residual (Zero-Conv) \(\mathcal{Z}\) manner. These
+              embeddings are then passed through an Embedding Refiner \(\mathcal{R}\), which fuses subject and motion
+              semantics. The refined embeddings are reintegrated via Zero-Conv \(\mathcal{Z}\) and injected into the
+              video
+              generation backbone. An additional Adapter \(\mathcal{R}\) enhances motion-aware features, enabling the
+              final model to generate videos with customized motion across novel subjects.
+          </h2>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+  <!-- Video carousel -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-centered has-text-centered">
+        <h2 class="title is-3">Motion Video Customization Results of SynMotion</h2>
+        <div id="results-carousel11" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+
+          <!-- Group 1 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A sea lion</span> <span
+                style="color: #6C8EBF;">claps</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/R79UQHdKsGGEBAvTqCyr874NJ7C0yKxwlzl8yipOF28.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Clap</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/A7YnEwlXcFnL5HRdmAApxtKEZVq9FHsLK6EZoUPP9Jk.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">An orangutan</span> <span
+                style="color: #6C8EBF;">waves</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/-w9pk3BCZ_i_UwYHF2hZSNzyjc5g73jhu-d6klInJOo.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Wave</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/5seXcHQKP29HSYdTkSkHw2U9NmTg7fz8JthqiGRuJwU.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A kreindeer</span> <span
+                style="color: #6C8EBF;">knocks door</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/tL8CXemVaLDcCrLWvqUnXbn8dsSSKbAYigXm1U6-tOw.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Knock door</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/52S2l1VfVLHsmNivwVuxb92lq3zc_qXGuoOoKcX4jjQ.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A kangaroo</span> <span
+                style="color: #6C8EBF;">salutes</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/5BZmY3tUTkep5uLQq0wJBLOhJ94xzG751sWjuBakn7M.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Salute</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/SJQqsYFHnUWz4B-csOvK7DVeksQtoWIMGdhzSOTUa2U.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 5 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A crocodile</span> <span
+                style="color: #6C8EBF;">handstands</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/gGP6WpH1gmn1fC6_8VsDdNyi05BWxNfiq7Nmjl30jV0.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Handstand</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/guRMBNiq3jUepHjvIsRoU9AP2Rph_nUaC0sfYE3OTpk.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 6 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A chicken</span> <span
+                style="color: #6C8EBF;">bows</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/u5CYlBKQthWmaQ0swXrGCQdn3k7TYfGV6tTEUgfiu-M.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Bow</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/zxXbX47YqIKYo-TusPlufN8rK7cIoremnVbfy4qX6Cg.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 1-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A squirrel</span> <span
+                style="color: #6C8EBF;">claps</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/SQCwPcmyZ_0Qr2INtnPtEkginAJOj0EF7G2gkC0JW2g.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Clap</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/PpkB5F1g2YaG-ZUYw3Gm8nvoan0Cot4BIFxex8EcMK0.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A koala</span> <span
+                style="color: #6C8EBF;">waves</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/QqRDOG4DUFd7D0F4HVpeEwGS63GNdSIx387ae2pm6Vw.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Wave</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/Pw7-XfUis2K18TmQ8vdJypIbDZBKowWY4v-QCJ4Gnhg.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A parrot</span> <span style="color: #6C8EBF;">knocks
+                door</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/WN-2MUMro-qO8uOP-41dgYquO9W9X5M-siyjJ4rG2BE.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Knock door</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/sc1AwsoG0h55k2jgfrTsQwFGDCaWmS-POQIaRp3lBV0.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A red panda</span> <span
+                style="color: #6C8EBF;">salutes</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/1bKHKRuuxyf60EmcjDeJfj5Y79zUqTStST9qk4saFCg.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Salute</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/7OSD9VfAJLq5EBroZH6RvZ5ZCMVb56svdPzGrsZ2PME.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 5-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A leopard</span> <span
+                style="color: #6C8EBF;">handstands</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/Ui-JC_i8MDW2-mO0W8nkWScctv6hw_ceMZ6LwVpHjjU.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Handstand</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/EeWFoV7rfhmHPNe7P1kz1EjUFssAkDt_DEgO2JciENY.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 6-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A squirrel</span> <span
+                style="color: #6C8EBF;">bows</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/vaDOWuNuSNtTGjpnCN0SASZ0TrqM2hSN6yBje54XNME.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Bow</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/bFmb1hrv4qVMDPBqZC_WrjFYfNfJKCRKO5bjgq2cKD8.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="results-carousel11" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+
+          <!-- Group 1 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A fox</span> <span style="color: #6C8EBF;">opens
+                door</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/GUtmvofbkAuuSyj1jR_DIhyOl06650jYXPfRfnGxt1g.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Open door</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/1E6EEf1bsqvXnqZ8eUSvbbeRBk1yZQURKF0aBHyaXOs.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A rabbit</span> <span
+                style="color: #6C8EBF;">prays</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/Ei1Jpd_co7IAgYF_c78D-rRtXR_W4qdzGvPmH32WA0A.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Pray</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/0zo5E5vafs5GOx3l-V-BqrZA7Zmuag9DpjjFHWe_plA.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A koala</span> <span
+                style="color: #6C8EBF;">punches</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/kkMk-e89QEgruq9KtegFGlJwOcAD1bYzY7-fI50nam0.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Punch</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/9fmysynl0F5j2hYjJ8sW_CH3wm1BB-aSbIIaxvHn-pU.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A polar bear</span> <span
+                style="color: #6C8EBF;">spins</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/-mgvhTvbker7ZA4vTt4qBGru19_sajbBbzF9wr5Liso.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Spin</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/pOQ3u_xXk55eASXXkFxn9zeNARlOqOFgVC2wKDh_cmw.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 5 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A dog</span> <span
+                style="color: #6C8EBF;">waves</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/N-xH3lBjG5QSMpsTYMH2seaTWjYr40pt-rD6c_qw6Ew.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Wave</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/4IAsM8VJgVAJUTUbTrIQj-VUu5PM_82WRc6WxCLsJbA.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 1-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A giraffe</span> <span style="color: #6C8EBF;">opens
+                door</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/GUtmvofbkAuuSyj1jR_DIhyOl06650jYXPfRfnGxt1g.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Open door</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/92yFQk-EwBrvEsjoR7krSUlO-Kcbk4s9hoh9-z7EALY.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A bear</span> <span
+                style="color: #6C8EBF;">prays</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/YH4jIB6v7AtPYhp1V-ZmCexwLMR1TlZA6Dxg8dgnzpY.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Pray</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/AafiBzWDJEh6ErRAs-_NFbkk7h1V70-xJUvXfgLpW3c.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A dog</span> <span
+                style="color: #6C8EBF;">punches</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/WFWCSdSubBXR4LYVaUXhWLvaU60v6qu2xPf5s_-7BHg.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Punch</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/Y7tU_1Z-vwZ_5m2WQBhhc9Lrh2FTluZjEGAAwUvzwCs.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A bee</span> <span
+                style="color: #6C8EBF;">spins</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/-mgvhTvbker7ZA4vTt4qBGru19_sajbBbzF9wr5Liso.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Spin</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/ylIG-hoAQrCF0RCQzrmRBvnCgkrZ6_a__aLP7BJ6Hh8.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 5-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A panda</span> <span
+                style="color: #6C8EBF;">waves</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/I6aMELNQoxUONccYAn0xrYZ8rXhGCaLZ6QBEkI0MQsU.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Wave</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/HS3ib0MZyKh34hvALFYn92H2QwDRzoiMT6T24ienIKU.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div id="results-carousel11" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+
+          <!-- Group 1 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">Albert Einstein</span> <span
+                style="color: #6C8EBF;">raises
+                arms</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/5ZBOlBNS84MtCPfXNBViexLh0g4432lmO_jY41e75ig.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Raise arm</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/7yIkLxiBdDxEC2l3-GqEQUULK1jQbge7DQgRusNl70Y.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">Marilyn Monroe</span> <span
+                style="color: #6C8EBF;">punches</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/kkMk-e89QEgruq9KtegFGlJwOcAD1bYzY7-fI50nam0.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Punch</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/W12gWyN8FWlF1sXaid_WLfOJql5yMOvTiaaYD3xo1Eo.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">Hulk</span> <span
+                style="color: #6C8EBF;">waves</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/-w9pk3BCZ_i_UwYHF2hZSNzyjc5g73jhu-d6klInJOo.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Wave</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/G3uEMykCLhSdmRxxs3ABwJokrZH-HLut3yQjZRahUN8.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">Batman</span> <span
+                style="color: #6C8EBF;">claps</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/R79UQHdKsGGEBAvTqCyr874NJ7C0yKxwlzl8yipOF28.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Clap</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/9tmE6HxO0ord9aoP4Z0DhlAG6LSlSjHGsM372x5CsL4.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 5 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">Superman</span> <span
+                style="color: #6C8EBF;">salutes</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/9GTsKFO6reqPiOssNQiwKjY7OCecoCgVZcJUHLpiqF0.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Salute</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/DE9P7cSYdNiEuH5JI4slX8JZfZ6ndFS6dxNlR6E5Mxc.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 6 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">Ironman</span> <span
+                style="color: #6C8EBF;">prays</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/Ei1Jpd_co7IAgYF_c78D-rRtXR_W4qdzGvPmH32WA0A.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Pray</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/slViU8aisno_pugnFLQ0boWzw9j2sMf8akbi8J5qUx0.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Group 1-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">Hulk</span> <span style="color: #6C8EBF;">raises
+                arms</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/piLQFYvVmDw9Hj9sz7aPGzNyOUMvBvGXe57LU5VFRfA.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Raise arm</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/rRnrVNnYhQA2NUOGIijEtBjXaHKygY8bO9TeRG4kIhU.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">Albert Einstein</span> <span
+                style="color: #6C8EBF;">punches</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/WFWCSdSubBXR4LYVaUXhWLvaU60v6qu2xPf5s_-7BHg.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Punch</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/qFIreus8J_-BmbiUhPM5slvj4Zced5DVZO8InTH0A-E.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">Marilyn Monroe</span> <span
+                style="color: #6C8EBF;">waves</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/QqRDOG4DUFd7D0F4HVpeEwGS63GNdSIx387ae2pm6Vw.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Wave</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/h3DENAqSfy1R5mKxgDOhVn0i8CG0L877jMlMwhfW6V8.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">Elon Musk</span> <span
+                style="color: #6C8EBF;">claps</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/R79UQHdKsGGEBAvTqCyr874NJ7C0yKxwlzl8yipOF28.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Clap</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/G7yBEvUoKTVZnlDrAHf_G2wIoXs5DTCvlVr4wTK6TCA.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 5-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">Deadpool</span> <span
+                style="color: #6C8EBF;">salutes</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/1bKHKRuuxyf60EmcjDeJfj5Y79zUqTStST9qk4saFCg.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Salute</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/-AbgImZS1j5m6KE59SsXnf1kcjHF7bDWJt8tbttKpKI.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 6-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">Barack Obama</span> <span
+                style="color: #6C8EBF;">prays</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/YH4jIB6v7AtPYhp1V-ZmCexwLMR1TlZA6Dxg8dgnzpY.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Pray</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/eI1pyB9xxxnSri1ch4o53sUaLMO19m7i1iIac-EAN5M.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+  <!-- Video carouse2 -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-centered has-text-centered">
+        <h2 class="title is-3">Motion Video Customization Results of SynMotion in Image-to-Video setting</h2>
+        <div id="results-carousel11" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+
+          <!-- Group 1 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A penguin</span> <span
+                style="color: #6C8EBF;">dances</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/lQDtekQoupY-KH1L8tAq0XrOkRnqofPlN1Irg64BdWE.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Dance</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/kTl59L7gcKrhx8EaVtRL1BzkXLeIodw9fspvxhvEwpI.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">An hippon</span> <span
+                style="color: #6C8EBF;">waves</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/L9rH0KPw7ACn2x8aRj36NqdKn-AUrSJ18bU61-5fq10.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Wave</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/KTCd5nMFdObn_lCIXeAzCKkRC38IF96vMvg0yT0BC-A.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A koala</span> <span
+                style="color: #6C8EBF;">claps</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/WWXrn8eZMrnhpFytqGq4bM-4S-Od5KhWUlcMdPDP04o.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Clap</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/YFvyQG3xILT_LjZm3MugcIzstlwnH47CQomibovZAjs.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A fox</span> <span
+                style="color: #6C8EBF;">prays</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/7Nisg7kwT4UvyMeV5vVKGJiYEIFCXw65CugdCIoTbns.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Pray</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/uuF6S46kJ1_BCBzZ4O0NA7qbbFXNUtWD5p6ebuTR_-c.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Group 1-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A crocodile</span> <span
+                style="color: #6C8EBF;">dances</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/e7pL8Uf7Tfnpu8D10zq3--lP5wL4yX3pMBd_T27tlas.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Dance</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/dENHKiFAtLwSM4aOBPJ24LNh573qk_poSRBXlH3qaHc.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A wild boar</span> <span
+                style="color: #6C8EBF;">waves</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/jCgMVnrCEp5-nCB0IFx1-trJFckK7cCdzEJ7-Vz4xt8.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Wave</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/SDQCJAgjtTJLt4hAWklXDj4cwmQixL389XIRGdMMaEM.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A polar bear</span> <span
+                style="color: #6C8EBF;">claps</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/9wGoedHEBH_xFmeRXC0LwKT1ooooPiv1j7YgULEZlIo.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Clap</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/SlF8HTSHo9L2M5-_RH84b0zeNeN7mGQPlKLEdGBfmKU.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A sea lion</span> <span
+                style="color: #6C8EBF;">prays</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/C93OxiX30noDn2IQ_NH8TrjBkKMhAV3rOIndQn-v_B4.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Pray</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/75Fsuic0MCSwcgKzu6jKbxv2pLTYl6hW50XPjar2t0g.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div id="results-carousel11" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+
+          <!-- Group 1 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A giraffe</span> <span
+                style="color: #6C8EBF;">squats</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/qlQJT9QUPTvwUKPkdy8IN0KdeKfFKlZEflQry992YfQ.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Squat</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/unfk7cby6CiPG__Vxk5mWVpDpD5sqXQVelxtpwS1MZg.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A lizard</span> <span
+                style="color: #6C8EBF;">throws</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/pB_Mr_TYKAVqI7RBSkYgsi_WnNeOdIkoowZDnaaGKBE.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Throw</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/WZit5hDFup5Il5_rqg1mUuw-74YTVh09C9EE0oqNpdc.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A sea lion</span> <span
+                style="color: #6C8EBF;">waves</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/eq9fh4X9n4lPrHUi4vLVmlVQBMQ0UHU9ajiPBfxiHAE.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Wave</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/ADjIVnwiBK3wS5pN6773IgWvcHHrKBaWpJbkuZzx7p8.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A cat</span> <span style="color: #6C8EBF;">raises
+                arms</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/OgbYpBoh2cPwBDzwZaCuywHuwQGsgP0OJca9Rei3kW4.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Raise arm</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/uhEtEXK8QUZJRXtzF1eG9zGW6OT7OCCQ5TjnYUwpnsc.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Group 1-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A parrot</span> <span
+                style="color: #6C8EBF;">squats</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/VESTt037HZ48xTWQ_y2BgqPV_JaT4ilHJJpmXthWxlQ.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Squat</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/3pN-t6HwoitLdtnns64ldXC-JYIlfAOod5qctJ4oZ4M.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A panda</span> <span
+                style="color: #6C8EBF;">throws</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/6iqg-K7SAfirNEnti6IaEtIM-_27QRRNKuwU7qtbX7M.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Throw</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/IW-nbbABx877dozyyWgqFKFTLF-bQWKB5tP3Zn8eY6A.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A cat</span> <span
+                style="color: #6C8EBF;">waves</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/2SCNHuVnkeD7ymBXABrY1yoHEKDQapQ0VZ8-WyNDDOg.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Wave</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/zASxc9F3Lr7o5cdln4CjWfOUpnU3V0cLb98Y3HYXRNQ.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4-2 -->
+          <div class="item">
+            <h5 class="title is-4">"<span style="color: #82B366;">A fox</span> <span style="color: #6C8EBF;">raises
+                arms</span>"</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/W691p92jXc_n0-gpEtoJfkm7wItwjheTJKOhfqknKtA.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Raise arm</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/Iw-dV1iwIgqr4qc2LShx3tE_tKFztH3lo9Lmdlhfb_o.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div id="results-carousel11" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+          <!-- animal2animal 1 -->
+          <div class="item">
+            <h5 class="title is-4">"A kangaroo hops."</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/c6Om70ybRaer_dGvS174GXCz2xYaLzl2KcV15LcjL5U.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Exemplar Video</h5>
+              </div>
+            </div>
+
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video2" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/3rLSPO1ih6N6AGl7kOXDntb7cUVkAhi4ZvSqbsR1Vbo.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video3" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/mWeQbZZeeiPTqpHVvVV0_hHk35nLHUkKe6r4zx4v5hg.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/1-VQ3dqiK3JZZGIyGTbmSjgSkQ8SI3hPpTx9qgSs_EQ.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/So5oDJ0sSOIo_b8sjXi1Gj4SUuvTj_vAA8ugM3vVzdw.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- animal2animal 2 -->
+          <div class="item">
+            <h5 class="title is-4">"A bird swings wings."</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/-GvDLEQnhHWd26DC1YtRMMxjB_B1oHgvmGxGYTaLhWA.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Exemplar Video</h5>
+              </div>
+            </div>
+
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video2" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/9PYgeWV0IZelLBQ8X5PsNCpWB1TUX34VJ_T48Dt64JA.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video3" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/OSQnQMEw-VRaRYDNaBcx_MkX8jmYHW2RjgJi1Rueg0Y.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/_CH-kL4NCW8RjINwnNOowvHTx9J_Nflcd5Rw5QEPuyc.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/9Xl8tZg8_E41mtnjkdhN8T_rPVUeNvh9yC6R2tPy8cM.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Generated Video</h5>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <!-- End video carouse2 -->
+
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-centered has-text-centered">
+        <h2 class="title is-3">Qualitative Comparison of Motion Video Customization</h2>
+        <div id="results-carousel11" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+          <!-- Group 1 -->
+          <div class="item">
+            <h5 class="title is-4">"A person knocks door."</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/tL8CXemVaLDcCrLWvqUnXbn8dsSSKbAYigXm1U6-tOw.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/WN-2MUMro-qO8uOP-41dgYquO9W9X5M-siyjJ4rG2BE.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="text-container">
+              <h5 class="title is-4 has-text-centered">"A sea lion knocks door."</h5>
+            </div>
+            <div class="video-container1">
+              <div class="video-item1">
+                <video poster="" id="video2" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/pyiR-BSNyaB9FTj8hxkJrzXQVYOm7NyGK1txv7xadTE.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">VMC</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video3" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/0MzUEHmOFThUPx-jTixD9NWxlf95gGxKuhdtpqx3EYQ.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">DMT</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/P8BBZGgGlYfuEFLPWV4W_m6JJtrmFEtNQMJIcRaxuWg.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Motion Director</h5>
+              </div>
+            </div>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/8yxyVwqlOUxbCsWytI_wYJpypOntCpO8p4owpbCYnLc.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Motion Inversion</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/nLDdNSRj6SkXctsYoPGoDtHYut_QOhjntkTaN-pT79E.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Base Model</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/V78ZXiBEk2Yli5C2On6frC42tQ-tw_b71mY_wyMczU8.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5"><span style="color: #E52020;">Ours</span></h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="item">
+            <h5 class="title is-4">"A person salutes."</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/5BZmY3tUTkep5uLQq0wJBLOhJ94xzG751sWjuBakn7M.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/1bKHKRuuxyf60EmcjDeJfj5Y79zUqTStST9qk4saFCg.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="text-container">
+              <h5 class="title is-4 has-text-centered">"A rabbit salutes."</h5>
+            </div>
+            <div class="video-container1">
+              <div class="video-item1">
+                <video poster="" id="video2" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/T3xddmPeOdvp97rmE6XBEtexR5Mz1wAV_9PnKLTzWRo.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">VMC</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video3" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/jrJRDh4XoUoVvdRPY7K1boShdM9iJUs18Gw5-V4n50I.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">DMT</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/n5KX7WpN52L87VADIaRvrvXj8gr5kROG20IPqWGcA7Y.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Motion Director</h5>
+              </div>
+            </div>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/HEgXUcagiBu9pwuxi09pTtH4bjQ3KxW0AOsh8yFPWR4.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Motion Inversion</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/VfXnFHasTLbSCYeXu4k3QIBB6ZShhZNptUhpSwNmGs4.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Base Model</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/F8YdVitWL-scbfvSz442YcljF5jn_G3H_rK7Olc6ypc.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5"><span style="color: #E52020;">Ours</span></h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3 -->
+          <div class="item">
+            <h5 class="title is-4">"A person waves."</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/-w9pk3BCZ_i_UwYHF2hZSNzyjc5g73jhu-d6klInJOo.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/QqRDOG4DUFd7D0F4HVpeEwGS63GNdSIx387ae2pm6Vw.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="text-container">
+              <h5 class="title is-4 has-text-centered">"A dog waves."</h5>
+            </div>
+            <div class="video-container1">
+              <div class="video-item1">
+                <video poster="" id="video2" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/9DHDqMLIPPvCJI1knpy2avUtR8aU8sMK9I22VOmD9fk.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Textual Inversion</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video3" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/Gw0KFqoqUrL044Z1FPHHcdac4c8Hm6DHy8afeM5AY7c.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">DreamBooth</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/P7rogIQmUGXwkAIRFZmX1SBkSQ65Ki0Lo8OpCfbHmzA.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">ReVersion</h5>
+              </div>
+            </div>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/mJiFIwN_ncPsSV8Vbk7CDH6Fc5GcLUEW0-CbhwTpvCQ.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Base Model</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/xTu6afq3bSV57dgcojR3PtCN-RlKZs9GUi4o4XV_6sw.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5"><span style="color: #E52020;">Ours</span></h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4 -->
+          <div class="item">
+            <h5 class="title is-4">"A person punches."</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/WFWCSdSubBXR4LYVaUXhWLvaU60v6qu2xPf5s_-7BHg.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/kkMk-e89QEgruq9KtegFGlJwOcAD1bYzY7-fI50nam0.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="text-container">
+              <h5 class="title is-4 has-text-centered">"A koala punches."</h5>
+            </div>
+            <div class="video-container1">
+              <div class="video-item1">
+                <video poster="" id="video2" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/1UnISKjQgkD_XsieYtMh-d0pl2P9tRI62PROyGAoQyM.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Textual Inversion</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video3" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/uhyJEEP8Qxm1I5ZhtLVHEwMzqvUmHT9gU2MUAzXJH0Q.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">DreamBooth</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/PS4vl-5_Jg0AR8TFbRxXP3Wol__WkPCIzOMPtpqcMCY.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">ReVersion</h5>
+              </div>
+            </div>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/zSqVFnyUfVgrczNEI31bzp6T_hakkU4tVJIr9iQ2NoE.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Base Model</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/9fmysynl0F5j2hYjJ8sW_CH3wm1BB-aSbIIaxvHn-pU.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5"><span style="color: #E52020;">Ours</span></h5>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Group 5 -->
+          <div class="item">
+            <h5 class="title is-4">"A person dances."</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/e7pL8Uf7Tfnpu8D10zq3--lP5wL4yX3pMBd_T27tlas.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/lQDtekQoupY-KH1L8tAq0XrOkRnqofPlN1Irg64BdWE.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="text-container">
+              <h5 class="title is-4 has-text-centered">"A penguin dances."</h5>
+            </div>
+
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video2" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/K4GC5zbl6VtxCqAQope_4sRj6Eo0oB7Y1uCydhYVoCs.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">CogVideoX-I2V</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video3" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/DkltkCtkLLg20N0z5qsLF9NLQvNftdZAiVSAsGPT-MY.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">HunyuanVideo-I2V</h5>
+              </div>
+            </div>
+
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/n329qTw1K3tFZH-ryRSaJDE0Psj7ONa7MqWDwfPadMY.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Wan2.1-I2V</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/3FOaU5lEFvTX1OZLXVqWrQzl5P16MzOw42Ok2KmQ8Sw.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5"><span style="color: #E52020;">Ours</span></h5>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Group 6 -->
+          <div class="item">
+            <h5 class="title is-4">"A person waves."</h5>
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/2SCNHuVnkeD7ymBXABrY1yoHEKDQapQ0VZ8-WyNDDOg.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/eq9fh4X9n4lPrHUi4vLVmlVQBMQ0UHU9ajiPBfxiHAE.mp4"
+                    type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="text-container">
+              <h5 class="title is-4 has-text-centered">"A crocodile waves."</h5>
+            </div>
+
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video2" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/W2-mzQPu5OCy1qvULbmkR3cPudR4NezturP8JShZUH4.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">CogVideoX-I2V</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video3" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/wHiy1awtgfxRqCx1oQI7aVimIXLfp6RHeT5Fq45Hirg.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">HunyuanVideo-I2V</h5>
+              </div>
+            </div>
+
+            <div class="video-container1-firstrow">
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/j7KgUSbeuY7-i8mwAJ0VMvnax7xDY8BcE17Ux-j2lCA.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5">Wan2.1-I2V</h5>
+              </div>
+              <div class="video-item1">
+                <video poster="" id="video1" autoplay controls muted loop>
+                  <source src="https://cloud.video.taobao.com/vod/n6ZHVXbaA9CWVzKEVt70Cj8_fIIU6_FWqY1Swpv-nMM.mp4"
+                    type="video/mp4">
+                </video>
+                <h5 class="title is-5"><span style="color: #E52020;">Ours</span></h5>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </section>
+  <!-- End video carousel -->
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Reference</h2>
+      <pre>
+      <code>
+        @article{tan2025SynMotion,
+          title={SynMotion: Semantic-Visual Adaptation for Motion Customized Video Generation},
+          author={Tan, Shuai and Gong, Biao and Wei, Yujie and Zhang, Shiwei and Liu, Zhuoxin and Zheng, Dandan and Chen, Jingdong and Wang, Yan and Ouyang, Hao and Zheng, Kecheng and Shen, Yujun},
+          journal={arXiv preprint arXiv:2506.xxxxx},
+          year={2025}
+        }
+        @article{Mimir2025,
+          title={Mimir: Improving Video Diffusion Models for Precise Text Understanding},
+          author={Tan, Shuai and Gong, Biao and Feng, Yutong and Zheng, Kecheng and Zheng, Dandan and Shi, Shuwei and Shen, Yujun and Chen, Jingdong and Yang, Ming},
+          journal={arXiv preprint arXiv:2412.03085},
+          year={2025}}       
+        @article{AnimateX2025,
+          title={Animate-X: Universal Character Image Animation with Enhanced Motion Representation},
+          author={Tan, Shuai and Gong, Biao and Wang, Xiang and Zhang, Shiwei and Zheng, Dandan and Zheng, Ruobin and Zheng, Kecheng and Chen, Jingdong and Yang, Ming},
+          journal={arXiv preprint arXiv:2410.10306},
+          year={2025}}
+        </code>
+        </pre>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8 text-center">
+          <div class="content text-center">
+
+            <p>
+              <!-- <font color='red'>
+                The images used in the demo videos are for academic purposes only and are not for commercial use. If you
+                feel that the images we use infringe your rights, please contact us and we will delete them immediately
+                and express our sincere apologies. Contact email: .</font> -->
+              The source code of this webpage is borrowed from the <a href="https://nerfies.github.io"
+                target="_blank">Nerfies</a>  project webpage.
+            </p>
+            <p class="has-text-centered">Total clicks: <span id="busuanzi_value_site_pv"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    bulmaCarousel.attach('#results-carousel21', {
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      infinite: true,
+      autoplay: true,
+      pauseOnHover: true,
+      autoplaySpeed: 6000,
+    });
+    bulmaCarousel.attach('#results-carousel11', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: true,
+      autoplay: true,
+      pagination: true,
+      pauseOnHover: true,
+      autoplaySpeed: 6000,
+    });
+    bulmaCarousel.attach('#results-carousel33', {
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      infinite: true,
+      autoplay: false,
+      autoplaySpeed: 6000,
+    });
+  </script>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
