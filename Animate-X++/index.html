@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<head>
+
+  <!-- <link href="css/two_style.css" rel="stylesheet" /> -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Animate-X++">
+  <meta property="og:title" content="Animate-X++" />
+  <meta property="og:description" content="Animate-X++: Universal Character Image Animation with Dynamic Backgrounds" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/video_t1.png" />
+  <meta property="og:image:width" content="2412" />
+  <meta property="og:image:height" content="1394" />
+
+
+  <!-- <meta name="twitter:title" content="Animate-X">
+  <meta name="twitter:description" content="Animate-X: Universal Character Image Animation with Enhanced Motion Representation"> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- <meta name="twitter:image" content="static/images/video_t1.png">
+  <meta name="twitter:card" content="summary_large_image"> -->
+  <!-- Keywords for your paper to be indexed by-->
+  <!-- <meta name="keywords" content="Image-to-Video">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+
+  <title>Animate-X++</title>
+  <link rel="icon" type="image/x-icon" href="static/images/x_icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+
+<body>
+
+
+
+  <section class="hero banner">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title" style="display: flex; align-items: center;">
+              <i class="pixart-alpha-icon" style="font-size: 120px; margin-right: -20px; margin-top: -40px;"></i>
+              <span style="margin-left: 0px;">
+                <span style="color: rgb(223,126,35); font-weight: bold;font-size: 52px;">Animate-X++:</span>
+                <span style="color: white; font-weight: bold;  font-size: 52px;">Universal Character</span></br>
+                <span style="color: white; font-weight: bold;  font-size: 52px;">Image Animation with
+                  </span></br>
+                <span style="color: white; font-weight: bold;  font-size: 52px;">Dynamic Backgrounds</span>
+
+              </span>
+            </h1>
+
+            <!-- <div class="is-size-5 publication-authors" style="margin-top: 17px;">
+              <span class="author-block">ICLR 2025&thinsp; &thinsp;</span>
+            </div> -->
+
+
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block"></span>
+              <a href="https://openreview.net/profile?id=~Shuai_Tan4" target="_blank"
+                style="color: rgb(170,170,170) !important; text-decoration: underline;">Shuai
+                Tan</a><sup>1</sup>,&thinsp;
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=BwdpTiQAAAAJ&hl=zh-CN&oi=ao" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Biao
+                  Gong</a><sup>2 </sup>,&thinsp;</span>
+              <span class="author-block">
+                <a href="" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Zhuoxin
+                  Liu</a><sup>3</sup>,&thinsp; </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=f6FgQ_bXEb4C&hl=en" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Yan Wang</a><sup>4</sup>,
+                &thinsp; </span>
+              <!-- <br> -->
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=WntYF-sAAAAJ&hl=en&oi=ao" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Yifan
+                  Feng</a><sup>5</sup>,&thinsp; </span>
+              <span class="author-block">
+                <a href="https://hszhao.github.io/" target="_blank"
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Hengshuang
+                  Zhao</a><sup>1†</sup>,&thinsp;
+              </span>
+
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>The University of Hong Kong,&thinsp; &thinsp;</span>
+              <span class="author-block"><sup>2</sup>Ant Group&thinsp; &thinsp;</span>
+              <span class="author-block"><sup>3</sup>The University of Wisconsin-Madison&thinsp; &thinsp;</span>
+              <span class="author-block"><sup>4</sup>University of North Carolina at Chapel Hill,&thinsp;
+                &thinsp;</span>
+              <span class="author-block"><sup>5</sup>Tsinghua University,&thinsp; &thinsp;</span>
+              <span class="eql-cntrb"><small><br><sup>†</sup><a href="mailto:hszhao@cs.hku.hk">Corresponding
+                    author.</a></small></span>
+            </div>
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2410.10306" target="_blank"
+                    class="external-link button is-normal is-rounded is-white">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Video link -->
+                <span class="link-block">
+                  <a href="https://lucaria-academy.github.io/Animate-X++/" target="_blank"
+                    class="external-link button is-normal is-rounded is-white">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/Lucaria-Academy/Animate-X++" target="_blank"
+                    class="external-link button is-normal is-rounded is-white">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- <div class="hero-body"> -->
+        <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+        <!-- Your video here -->
+        <!-- <source src="static/images/teaser.png"
+        type="video/mp4">
+      </video> -->
+        <img src="static/images/teaser.png" alt="MY ALT TEXT" />
+        </h2>
+      </div>
+      <!-- </div> -->
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- <div class="hero-body"> -->
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="https://cloud.video.taobao.com/vod/i18qjxKlFXgdcVfNC5XsQy3hHVlt5w2QJbK7UyobGEQ.mp4"
+            type="video/mp4">
+        </video>
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop is-centered has-text-centered">
+        <!-- <div class="columns is-centered has-text-centered"> -->
+        <!-- <div class="column is-four-fifths"> -->
+        <h2 class="title is-3">Abstract</h2>
+        <!-- <h2 class="title is-3">Abstract</h2> -->
+        <div class="content has-text-justified">
+          <p>
+            Character image animation, which generates high-quality videos from a reference image and target pose
+            sequence, has seen significant progress in recent years. However, most existing methods only apply to human
+            figures, which usually do not generalize well on anthropomorphic characters commonly used in industries like
+            gaming and entertainment. Furthermore, previous methods could only generate videos with static backgrounds,
+            which limits the realism of the videos. For the first challenge, our in-depth analysis suggests to attribute
+            this limitation to their insufficient modeling of motion, which is unable to comprehend the movement pattern
+            of the driving video, thus imposing a pose sequence rigidly onto the target character. To this end, this
+            paper proposes \(\texttt{Animate-X++}\), a universal animation framework based on DiT for various character
+            types
+            (collectively named \(\texttt{X})\), including anthropomorphic characters. To enhance motion representation, we
+            introduce the Pose Indicator, which captures comprehensive motion pattern from the driving video through
+            both implicit and explicit manner. The former leverages CLIP visual features of a driving video to extract
+            its gist of motion, like the overall movement pattern and temporal relations among motions, while the latter
+            strengthens the generalization of DiT by simulating possible inputs in advance that may arise during
+            inference. For the second challenge, we introduce a multi-task training strategy that jointly trains the
+            animation and Text-Image-to-Video (TI2V) tasks. Combined with the proposed partial parameter training, this
+            approach achieves not only character animation but also text-driven background dynamics, making the videos
+            more realistic. Moreover, we introduce a new Animated Anthropomorphic Benchmark (\(\texttt{$A^2$Bench}\)) to
+            evaluate the
+            performance of \(\texttt{Animate-X++}\) on universal and widely applicable animation images. Extensive
+            experiments
+            demonstrate the superiority and effectiveness of \(\texttt{Animate-X++}\).
+          </p>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+
+
+
+  <!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Demo Video</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <video poster="" id="tree" autoplay controls muted loop height="100%">
+            <source src="https://cloud.video.taobao.com/vod/play/cFNxeHpNYjAzV3EycWo/S0hMQVVESkJKQXJrdk4wd1VMSUtsR3FNVTAvcTZQZWw1SnpKVVVCTlh4OVFON0V5UUVMUDduY1RJak82VE1sdXdHTjNOaHc9PQ"
+            type="video/mp4">
+          </video> 
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End youtube video -->
+
+
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <!-- <section class="hero is-light"> -->
+    <div class="hero-body">
+      <div class="container is-max-desktop is-centered has-text-centered">
+        <h2 class="title is-3">Overall Framework of Animate-X++</h2>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/method.png" alt="MY ALT TEXT" />
+          <h2 class="content has-text-justified">
+            The overview of our Animate-X++. Given a reference image \(I^r\), we first extract latent feature
+            \(f^r_{e}\) via CLIP image encoder \(\Phi\) and VAE encoder
+            \(\mathcal{E}\). The proposed Implicit Pose Indicator (IPI) and Explicit Pose Indicator (EPI)
+            produce motion feature \(f_i\) and pose feature \(f_e\), respectively. \(f^r_e\) is concatenated with the
+            noised input \(\epsilon\) along the channel dimension, then further add to \(f_e\) and \(f_i\). This serves as the
+            input to the diffusion model \(\epsilon_\theta\) for progressive denoising. During the denoising process,
+            \(\mathcal{T}\) provides background dynamics instruction via a T5 Encoder and cross-attention layer.
+            At last, a VAE decoder \(\mathcal{D}\) is adopted to map the generated latent representation \(z_0\) to the
+            animation video.
+          </h2>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+
+  <section class="section hero is-small is-light 2d">
+    <div class="hero-body">
+      <div class="container is-centered has-text-centered">
+        <h2 class="title is-3">Overview of Animate-X</h2>
+        <div class="columns is-mobile is-centered">
+          <div class="column is-half">
+            <video poster="" id="tree2" controls muted loop width="100%">
+              <source src="https://cloud.video.taobao.com/vod/b_C5y51HxQ9zZfABcT0WpS81_xl1HLWdemEz5QEBl14.mp4"
+                type="video/mp4">
+            </video>
+            <h3 class="title is-5">Comparison with SOTA methods</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small is-light"> -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-centered has-text-centered">
+        <!-- <div class="hero-body"> -->
+        <h2 class="title is-3">Animating anthropomorphic characters in fancy poster</h2>
+        <!-- <h2 class="title is-4">Human</h2> -->
+        <!-- <div id="results-carousel11" class="carousel results-carousel"> -->
+        <!-- <div id="results-carousel11" class="carousel results-carousel" data-interval="8000"> -->
+        <div id="results-carousel12" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/wQCnLaW3CRk17tI-VXmHz9BuuBSekrOCprhx16Vfsgk.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/UKQx0LIc1kOZM3CLJjIG6ucgzL_brZg6sVQMnOAXU6c.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/l5YS-RYc28krZuJGOxDsx9ghOaxM6J6W3NLLiJQTIqc.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/mfnaD-Nlo8jEKCX65RQUvhSgih8rZqDcGrXELRy3Yu0.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/z6FDY1fwFLs1QuBHwLplE4Sk_8ZctiOJbZv8E_kG0AQ.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video6">
+            <video poster="" id="video6" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/889k-YUVX17zMTxrmV14q_9gyWa9B24X-tpSa7th44Q.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video7">
+            <video poster="" id="video7" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/i7d3KEc2ZTzitxJXypi3hFbEMMGC62Fj9XlJiOZr4ro.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video8">
+            <video poster="" id="video8" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/OSNTDbJ6FBY1_R4xmxEHgVYM8zKN_f9NdNsJjRXrKRA.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video9">
+            <video poster="" id="video9" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/M2jM0qU8LUjevxH7852qS-UkBQaELqkzP_CslOyGN6Y.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+
+
+
+
+
+  <!-- Video carousel -->
+
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small is-light"> -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-centered has-text-centered">
+        <!-- <div class="hero-body"> -->
+        <h2 class="title is-3">Animating anthropomorphic characters in games and cartoons</h2>
+        <!-- <h2 class="title is-4">Human</h2> -->
+        <!-- <div id="results-carousel11" class="carousel results-carousel"> -->
+        <!-- <div id="results-carousel11" class="carousel results-carousel" data-interval="8000"> -->
+        <div id="results-carousel11" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/0d9isdWeEe6cSlLYCh-fwFGyV0W45IQRNrIdzAGSQK0.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Black Myth: Wukong</h5> -->
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/j2eQp5E2Mlv4NwCwDDUqjqslIsOfRgdaADyH3Ep8hmY.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Elden Ring</h5> -->
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/KOz_W75ftODc862xxfJc6BEAQBmxhVdSEWdWTazyops.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from NieR:Automata</h5> -->
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/Hh93iesFjA9QyHU7ppAY6iX_4BkMrCbINZhTSULl05E.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Hard pose: turning round</h5> -->
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/UXe3PMwebQcUI54KHG1L471h1vYA1_hH5X3oMsmagng.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Dragon Ball</h5> -->
+          </div>
+          <div class="item item-video6">
+            <video poster="" id="video6" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/zi6LOFM7GR7ns3w_LnaH5fnExymJf1qFsLb2DbLKx4Y.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Rick and Morty</h5> -->
+          </div>
+          <div class="item item-video7">
+            <video poster="" id="video7" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/N38vn3JWlHx9xEHvF6YVAFkuRpbgyghUU8ceOJLIRlE.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Black Myth: Wukong</h5> -->
+          </div>
+          <div class="item item-video8">
+            <video poster="" id="video8" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/oKISAC954fXQnwE8uV1blsDd46uFtujUGFiD7VkMCMU.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Black Myth: Wukong</h5> -->
+          </div>
+          <div class="item item-video9">
+            <video poster="" id="video9" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/_ljMu2LNv7wcN-EKZmynTB2R2w5Ler3SPtxJKVkhr9A.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Black Myth: Wukong</h5> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-centered has-text-centered">
+        <!-- <div class="hero-body"> -->
+        <h2 class="title is-3">Animating anthropomorphic characters in \( A^2Bench \)</h2>
+        <!-- <h2 class="title is-4">Human</h2> -->
+        <!-- <div id="results-carousel11" class="carousel results-carousel"> -->
+        <!-- <div id="results-carousel11" class="carousel results-carousel" data-interval="8000"> -->
+        <div id="results-carousel11" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/Tztq292wHCw3DhEkibl_NxnBE_yNP4f-0qkWl7LgLBo.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/ztveXHnUTOd8GAGrr_tHZo4I3yoWihcSm04joSr4IwA.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/mzAUR3qmUuhYO8rPHBSxA1NH2-F96cFKZaiNMC0WCsk.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/tCNxxYSL-V8bEUuYtGZqj8kocJi_nRdgLpjfGhDhHiA.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/CkWDIfZ5vUYVRvwr3oAmr3YChi55gSOF2s4ejgpEeSQ.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video6">
+            <video poster="" id="video6" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/tCb29SBEnujJ3OE8vzCwe1-J2sFO1mse6GshZSqvhPc.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="hero is-small is-light"> -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-centered has-text-centered">
+        <!-- <div class="hero-body"> -->
+        <h2 class="title is-3"> Cases in \( A^2Bench \) dataset </h2>
+        <!-- <h2 class="title is-4">Human</h2> -->
+        <!-- <div id="results-carousel11" class="carousel results-carousel"> -->
+        <!-- <div id="results-carousel11" class="carousel results-carousel" data-interval="8000"> -->
+        <div id="results-carousel11" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/IQpMJb5X3P9wzOr-UpWsSgkeCU89XsBUtbqDXwR_J1A.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Black Myth: Wukong</h5> -->
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/30uj47NQ3MSAHJq9cYOm1ccZz9kVdDpolVqMuQQHfsY.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Elden Ring</h5> -->
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/s7NHf2vyDXUpX5oUfLuU34y4epsYVQ-R6CAYaQg6nEM.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from NieR:Automata</h5> -->
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/ARTbU96vfBs_gYg3HHXNFknr72ox06G_C0oY1BVxp78.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Hard pose: turning round</h5> -->
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/8DO8CBJ3HN2xKnl7cUfR3gQBS9ih3O47cooEsySKNKU.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Dragon Ball</h5> -->
+          </div>
+          <div class="item item-video6">
+            <video poster="" id="video6" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/INwPvHXorkZSZ8EB_TLGe3MmEJKqHgaaFY8l1mqU1Kg.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Rick and Morty</h5> -->
+          </div>
+          <div class="item item-video7">
+            <video poster="" id="video7" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/M8VvVm-zcq51yJqPt5i6-nP6F1Z8BUvmuLaS3OBbDM4.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Black Myth: Wukong</h5> -->
+          </div>
+          <div class="item item-video8">
+            <video poster="" id="video8" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/rJaXcPDFzr09VldMRs5zUWW_AM1L9tp1EnVeqo8-EmM.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Black Myth: Wukong</h5> -->
+          </div>
+          <div class="item item-video9">
+            <video poster="" id="video9" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/528mQW9_QIoq0GOLAUYYBU5Y9xQO_0ngM6XiA0tH0zg.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Black Myth: Wukong</h5> -->
+          </div>
+
+          <div class="item item-video10">
+            <video poster="" id="video10" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/99CG9VbKjXollwMND6XzYlqUxelQZLcVsrh3Q-eZ7hI.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Black Myth: Wukong</h5> -->
+          </div>
+          <div class="item item-video11">
+            <video poster="" id="video11" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/lk0zxJlXBUXeWCPZGWnT4KbiNPotrPRZAL61qA5l-7M.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Black Myth: Wukong</h5> -->
+          </div>
+          <div class="item item-video12">
+            <video poster="" id="video12" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/InQC_j5ke-YCsoc6wq4g-bPTn1ECWcXaFyZmFr_xw0I.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Black Myth: Wukong</h5> -->
+          </div>
+          <div class="item item-video13">
+            <video poster="" id="video13" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/gtiB3uHfsBQ0WcKMSn_WJdse3ltu48C8uw3LLMnVIJ4.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Character from Black Myth: Wukong</h5> -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small is-light"> -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-centered has-text-centered">
+        <!-- <div class="hero-body"> -->
+        <h2 class="title is-3">Animating human-like characters</h2>
+        <!-- <h2 class="title is-4">Human</h2> -->
+        <!-- <div id="results-carousel11" class="carousel results-carousel"> -->
+        <!-- <div id="results-carousel11" class="carousel results-carousel" data-interval="8000"> -->
+        <div id="results-carousel14" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/xA9CWg4AD0qdrvPQKLkvnE0IKj2bcE5a7MDWqVbPCRo.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Musk dances for you~</h5> -->
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/48rKFzhnA-0IjT0jz1tHU5G-ao8LFumYlW8LwzDYUGM.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Musk dances for you~</h5> -->
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/fCM1pJyS6QX6tX1giH3-eRD7jGQKJPXykMKllZBvVxA.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Musk dances for you~</h5> -->
+          </div>
+
+
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/MADFc3exqZIE6OF_Zag-mjjG4Lze2A_yJ-RyZGIYOjY.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Hard pose: from sitting to standing</h5> -->
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/XfrGYXoAUNChNb50YR6zRWBhY7-CtszVEKt-Bi40NIY.mp4"
+                type="video/mp4">
+            </video>
+            <!-- <h5 class="title is-5">Hard pose: turning round</h5> -->
+          </div>
+          <div class="item item-video6">
+            <video poster="" id="video6" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/Z2MTzAcMh_qngkOHl3qqpK57dankAnxUHigfTFEEF1w.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+
+          <div class="item item-video7">
+            <video poster="" id="video7" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/Z3hOjn5WF2EuwrpXL1M9fF1mMjEbikNDIaVJOB3lUMI.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video8">
+            <video poster="" id="video8" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/BZz40As7gWzhD8s3qTMGR87p_xbei_o9rRGVxUsRcpY.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video9">
+            <video poster="" id="video9" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/r15B5tbmSsR8PuNjK_wCtGkxZIb7TCycx-JXEjq13FA.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+
+          <div class="item item-video10">
+            <video poster="" id="video10" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/DjNLgyDSynzN1qhBneFxmT9YicCeuzZ5l0QqKXTCo8Y.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video11">
+            <video poster="" id="video11" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/Suq-MAOQM7ju9pybfTtVw1tEo3JA9XKraagrjxRmXes.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video12">
+            <video poster="" id="video12" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/zjC0jNMXGwTG2F3nYsoyHc4prb8Dsy1HtRPYSAZ4Kb4.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video13">
+            <video poster="" id="video13" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/m4QZ0N5HHkAlZ53Rrg54c3MtmmyvWCl1-ClEZTxeDSQ.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small is-light"> -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-centered has-text-centered">
+        <!-- <div class="hero-body"> -->
+        <h2 class="title is-3">Animating long videos</h2>
+        <!-- <h2 class="title is-4">Human</h2> -->
+        <!-- <div id="results-carousel11" class="carousel results-carousel"> -->
+        <!-- <div id="results-carousel11" class="carousel results-carousel" data-interval="8000"> -->
+        <div id="results-carousel13" class="carousel results-carousel" data-bs-ride="carousel" data-interval="16000">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/39hDjOArXB1qbJslYlWLTIZDvZ8Hx4B1LMIh1-KUza0.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="90%">
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/1mMSlYLlPyli3utUMzaj3mEIYncLk8hD4kMwTdF36B8.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/1wDFCfJA8ignWfGHdEjeyTmesY9z6B4iirf1Djp8kcE.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/85_et_8nXkIdHIYH0PTnGi9alE3O_CSJrZx-sGwO4KY.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/Lw5LZ0o2XKxpiVp596A89tGJJsizvewEsF1HWkYfrTY.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="90%">\
+              <!-- Your video file here -->
+              <source src="https://cloud.video.taobao.com/vod/Taaz1TAsuI9aDgc80pqfcmlT9jRdBAO7C5O88bq_Osc.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+
+
+
+  <!-- End video carousel -->
+
+
+
+  <!-- End video carousel -->
+
+  <!-- Video carousel -->
+
+  <!-- End video carousel -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Reference</h2>
+      <pre>
+      <code>
+@article{AnimateX++2025,
+  title={Animate-X++: Universal Character Image Animation with Dynamic Backgrounds},
+  author={Tan, Shuai and Gong, Biao and Liu, Zhuoxin and Wang, Yan and Feng, Yifan and Zhao, Hengshuang},
+  journal={arXiv preprint arXiv:2508.xxxxx},
+  year={2025}
+}
+@inproceedings{AnimateX2025,
+  title={Animate-X: Universal Character Image Animation with Enhanced Motion Representation},
+  author={Tan, Shuai and Gong, Biao and Wang, Xiang and Zhang, Shiwei and Zheng, Dandan and Zheng, Ruobin and Zheng, Kecheng and Chen, Jingdong and Yang, Ming},
+  booktitle={International Conference on Learning Representations},
+  year={2025}}
+@article{tan2025SynMotion,
+  title={SynMotion: Semantic-Visual Adaptation for Motion Customized Video Generation},
+  author={Tan, Shuai and Gong, Biao and Wei, Yujie and Zhang, Shiwei and Liu, Zhuoxin and Zheng, Dandan and Chen, Jingdong and Wang, Yan and Ouyang, Hao and Zheng, Kecheng and Shen, Yujun},
+  journal={arXiv preprint arXiv:2506.23690},
+  year={2025}
+}
+@inproceedings{Mimir2025,
+  title={Mimir: Improving Video Diffusion Models for Precise Text Understanding},
+  author={Tan, Shuai and Gong, Biao and Feng, Yutong and Zheng, Kecheng and Zheng, Dandan and Shi, Shuwei and Shen, Yujun and Chen, Jingdong and Yang, Ming},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2025}}       
+</code>
+</pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8 text-center">
+          <div class="content text-center">
+
+            <p>
+              <font color='red'>
+                The images used in the demo videos are for academic purposes only and are not for commercial use. If you
+                feel that the images we use infringe your rights, please contact us and we will delete them immediately
+                and express our sincere apologies. Contact email: youtai.ts@antgroup.com.</font>
+              The source code of this webpage is borrowed from the <a href="https://nerfies.github.io"
+                target="_blank">Nerfies</a>  project webpage.
+            </p>
+            <p class="has-text-centered">Total clicks: <span id="busuanzi_value_site_pv"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // bulmaCarousel.attach('#results-carousel11', {
+    //     slidesToScroll: 1,
+    //     slidesToShow: 2,
+    //     infinite: true,
+    //     autoplay: true,
+    //     // autoplay: true,
+    // });
+    bulmaCarousel.attach('#results-carousel22', {
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      infinite: true,
+      autoplay: false,
+    });
+    bulmaCarousel.attach('#results-carousel33', {
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      infinite: true,
+      autoplay: false,
+    });
+  </script>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
