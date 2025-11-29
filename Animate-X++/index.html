@@ -69,7 +69,7 @@
                 <span style="color: rgb(223,126,35); font-weight: bold;font-size: 52px;">Animate-X++:</span>
                 <span style="color: white; font-weight: bold;  font-size: 52px;">Universal Character</span></br>
                 <span style="color: white; font-weight: bold;  font-size: 52px;">Image Animation with
-                  </span></br>
+                </span></br>
                 <span style="color: white; font-weight: bold;  font-size: 52px;">Dynamic Backgrounds</span>
 
               </span>
@@ -106,7 +106,8 @@
                   Feng</a><sup>5</sup>,&thinsp; </span>
               <span class="author-block">
                 <a href="https://xavierchen34.github.io/" target="_blank"
-                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Xi Chen</a><sup>1</sup>,&thinsp; </span>
+                  style="color: rgb(170,170,170) !important; text-decoration: underline;">Xi
+                  Chen</a><sup>1</sup>,&thinsp; </span>
 
               <span class="author-block">
                 <a href="https://hszhao.github.io/" target="_blank"
@@ -225,7 +226,8 @@
             of the driving video, thus imposing a pose sequence rigidly onto the target character. To this end, this
             paper proposes \(\texttt{Animate-X++}\), a universal animation framework based on DiT for various character
             types
-            (collectively named \(\texttt{X})\), including anthropomorphic characters. To enhance motion representation, we
+            (collectively named \(\texttt{X})\), including anthropomorphic characters. To enhance motion representation,
+            we
             introduce the Pose Indicator, which captures comprehensive motion pattern from the driving video through
             both implicit and explicit manner. The former leverages CLIP visual features of a driving video to extract
             its gist of motion, like the overall movement pattern and temporal relations among motions, while the latter
@@ -285,7 +287,8 @@
             \(f^r_{e}\) via CLIP image encoder \(\Phi\) and VAE encoder
             \(\mathcal{E}\). The proposed Implicit Pose Indicator (IPI) and Explicit Pose Indicator (EPI)
             produce motion feature \(f_i\) and pose feature \(f_e\), respectively. \(f^r_e\) is concatenated with the
-            noised input \(\epsilon\) along the channel dimension, then further add to \(f_e\) and \(f_i\). This serves as the
+            noised input \(\epsilon\) along the channel dimension, then further add to \(f_e\) and \(f_i\). This serves
+            as the
             input to the diffusion model \(\epsilon_\theta\) for progressive denoising. During the denoising process,
             \(\mathcal{T}\) provides background dynamics instruction via a T5 Encoder and cross-attention layer.
             At last, a VAE decoder \(\mathcal{D}\) is adopted to map the generated latent representation \(z_0\) to the
@@ -908,7 +911,13 @@
   title={Mimir: Improving Video Diffusion Models for Precise Text Understanding},
   author={Tan, Shuai and Gong, Biao and Feng, Yutong and Zheng, Kecheng and Zheng, Dandan and Shi, Shuwei and Shen, Yujun and Chen, Jingdong and Yang, Ming},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  year={2025}}       
+  year={2025}}     
+@article{CoDance2025,
+  title={CoDance: An Unbind-Rebind Paradigm for Robust Multi-Subject Animation},
+  author={Tan, Shuai and Gong, Biao and Ma, Ke and Feng, Yutong and Zhang, Qiyuan and Wang, Yan and Shen, Yujun and Zhao, Hengshuang},
+  journal={arXiv preprint arXiv:2512.xxxxx},
+  year={2025}
+}  
 </code>
 </pre>
     </div>
