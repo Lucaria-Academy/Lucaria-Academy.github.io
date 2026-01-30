@@ -10,3 +10,5 @@ https://lucaria-academy.github.io/Animate-X++/
 https://lucaria-academy.github.io/CoDance/
 # PhysRVG
 https://lucaria-academy.github.io/PhysRVG/
+# AGG
+https://lucaria-academy.github.io/AGG/
