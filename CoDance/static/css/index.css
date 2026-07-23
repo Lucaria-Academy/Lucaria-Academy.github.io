@@ -135,7 +135,7 @@ body {
 
 
 
-.animate-x-icon::before {
+.codance-icon::before {
   background-image: url(../images/logo.png);
   background-size: 1em 1em;
   display: inline-block;
