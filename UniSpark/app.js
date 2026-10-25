@@ -48,7 +48,9 @@ galleryMore.addEventListener('click', () => {
   if (collapse) $('#gallery').scrollIntoView({block: 'start'});
 });
 renderGallery();
-const editLabels = ['Coat color', 'Perfume color', 'Season change', 'Dessert glaze'];
+const originalEditLabels = {'coat': 'Coat color', 'perfume-edit': 'Perfume color', 'teahouse': 'Season change', 'dessert-red': 'Dessert glaze'};
+const editLabels = edits.map(item => item.title || originalEditLabels[item.name] || item.name);
+$('.edit-sidebar h3').textContent = `Image editing · ${edits.length} examples`;
 $('#edit-options').innerHTML = edits.map((item,i) => `<button data-edit="${i}" aria-pressed="${i===0}" class="${i===0?'active':''}">${editLabels[i]}</button>`).join('');
 function setComparison(value) {
   $('#comparison').style.setProperty('--position', `${value}%`);

@@ -42,5 +42,205 @@
         "website": "assets/dessert-red-after.jpg"
       }
     }
+  ],
+  "additional_batches": [
+    {
+      "run": "imgedit-ct95000-diverse48-20261026",
+      "candidate_count": 48,
+      "displayed_count": 9,
+      "audit": "editing-diverse48-quality-review.json",
+      "local_run": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-edit48-20261026",
+      "samples": [
+        {
+          "name": "edit95-add-flowers",
+          "sample_id": "add-flowers-s42",
+          "instruction": "Add one small terracotta pot filled with red geranium flowers on the floor to the left of the existing potted tree. Keep all three arches, the tree and architecture unchanged. Preserve the original camera angle, framing, object geometry, positions and all unrelated details. Do not add text or logos.",
+          "seed": 42,
+          "width": 1024,
+          "height": 768,
+          "type": "add",
+          "before": {
+            "original": "full/sources/add-flowers-s42.png",
+            "sha256": "4411af028aaa263573005cce47e02c44ac4a1acba32e21f22335b6a298a02550",
+            "website": "assets/edit95-add-flowers-before.jpg",
+            "website_sha256": "bcc4eea2dcb202e853e5aa383e71a7737dafe42f58d3e6beabd15f57d938a109"
+          },
+          "after": {
+            "original": "full/images/add-flowers-s42.png",
+            "sha256": "d2eed2e8e42b22948f73f8ac79a73eeb4c2e8d74ae4c8b7afa0935dbf17c5989",
+            "website": "assets/edit95-add-flowers-after.jpg",
+            "website_sha256": "8c394e9453cb38be041840e520331d108050cfe91e9088eb640d7f8f6d58b908"
+          }
+        },
+        {
+          "name": "edit95-remove-spoon",
+          "sample_id": "remove-spoon-s137",
+          "instruction": "Remove only the metal spoon from the saucer and naturally restore the surface that was behind it. Keep the cup, coffee, handle, saucer and table unchanged. Preserve the original camera angle, framing, object geometry, positions and all unrelated details. Do not add text or logos.",
+          "seed": 137,
+          "width": 896,
+          "height": 896,
+          "type": "remove",
+          "before": {
+            "original": "full/sources/remove-spoon-s137.png",
+            "sha256": "11eaad85c69e7ee70fee572bc1edf1a4d3f3d9d75eb1ca53d9b102d8719ab6a4",
+            "website": "assets/edit95-remove-spoon-before.jpg",
+            "website_sha256": "78617db4da7d70036dd70e20c5f2b004deb17811e9352f82f8dcc96f33df9d6f"
+          },
+          "after": {
+            "original": "full/images/remove-spoon-s137.png",
+            "sha256": "649435822e86a28ae6e0169b427320dd70e9c264845633ed289d4c8c05484f51",
+            "website": "assets/edit95-remove-spoon-after.jpg",
+            "website_sha256": "3731e376bb41770ac04b23ec0b4e7962e974b6563f27e117522c431b9423d446"
+          }
+        },
+        {
+          "name": "edit95-remove-lemon",
+          "sample_id": "remove-lemon-s137",
+          "instruction": "Remove only the lemon to the right of the blue ceramic bowl and restore the tabletop behind it. Keep the exact empty bowl, glaze, shadows and background unchanged. Preserve the original camera angle, framing, object geometry, positions and all unrelated details. Do not add text or logos.",
+          "seed": 137,
+          "width": 896,
+          "height": 896,
+          "type": "remove",
+          "before": {
+            "original": "full/sources/remove-lemon-s137.png",
+            "sha256": "d32e717e777a4f0b0d0a0a6c6611d2badc8dae12afcb3b92611d6bf18acbcfba",
+            "website": "assets/edit95-remove-lemon-before.jpg",
+            "website_sha256": "5b95b1b1a2c5bdcd46808771b152d46bd8714fc11f6dcd4f9fe1f6c716ddf692"
+          },
+          "after": {
+            "original": "full/images/remove-lemon-s137.png",
+            "sha256": "9df0b19aeafc440488ccce982a75eec633f5cd17c36559875e48ee576b1f709c",
+            "website": "assets/edit95-remove-lemon-after.jpg",
+            "website_sha256": "9d11759eb4fc3b77ac0a3b62af99c5df9bfb3ba4ad0f13a6ffaf2eda33ad0f04"
+          }
+        },
+        {
+          "name": "edit95-replace-pears",
+          "sample_id": "replace-pears-s42",
+          "instruction": "Replace the two pears with two whole red apples, one apple in each original pear position. Keep the white pitcher and background unchanged. Preserve the original camera angle, framing, object geometry, positions and all unrelated details. Do not add text or logos.",
+          "seed": 42,
+          "width": 896,
+          "height": 896,
+          "type": "replace",
+          "before": {
+            "original": "full/sources/replace-pears-s42.png",
+            "sha256": "3f819b5cff745bd6139b2ac82c81ad7f25703932a3ad606df7ca4c8e2ae66608",
+            "website": "assets/edit95-replace-pears-before.jpg",
+            "website_sha256": "95df361b9a2e012eb6f21de593cf0a107cfbb59932f8d3ecc249018e78b576f8"
+          },
+          "after": {
+            "original": "full/images/replace-pears-s42.png",
+            "sha256": "bdfd40361878a9b9b7263480bee8cbe142bf8f95390d0384fe9dc85031143dc1",
+            "website": "assets/edit95-replace-pears-after.jpg",
+            "website_sha256": "238f100b05d13d7def2afca8871164c3a9aff3bddab18dbdc6cab984cc2bd022"
+          }
+        },
+        {
+          "name": "edit95-background-bag",
+          "sample_id": "background-bag-s42",
+          "instruction": "Change only the background behind the leather satchel to a muted pale blue studio backdrop. Keep the original table, entire bag, handles, buckles, shadows and viewpoint unchanged.",
+          "seed": 42,
+          "width": 896,
+          "height": 896,
+          "type": "background",
+          "before": {
+            "original": "full/sources/background-bag-s42.png",
+            "sha256": "d6bfef8a11e00827a1b6d8c81226c180fd1d9af1fcd380c0324fcb407b96d4d9",
+            "website": "assets/edit95-background-bag-before.jpg",
+            "website_sha256": "05850c9ac2ff7acc0e545eaa5491f4afd14485c782c1460e2566a80175b2fe4c"
+          },
+          "after": {
+            "original": "full/images/background-bag-s42.png",
+            "sha256": "dc1b2d27c785daf75bce4d0e8f7c3111f3108fefcc4f0c3f12687481eb156194",
+            "website": "assets/edit95-background-bag-after.jpg",
+            "website_sha256": "73aa74283bf1256daea35a7958fc70c915dcc54e18ae254d799f20b562c4067a"
+          }
+        },
+        {
+          "name": "edit95-background-cabin",
+          "sample_id": "background-cabin-s42",
+          "instruction": "Change only the mountains behind the lakeside cabin into snow-covered mountains. Keep the cabin, roof, porch, all posts, windows, lake, immediate shoreline and viewpoint unchanged.",
+          "seed": 42,
+          "width": 1024,
+          "height": 768,
+          "type": "background",
+          "before": {
+            "original": "full/sources/background-cabin-s42.png",
+            "sha256": "801137266d870c1209203969565094c830217f1bd5c2b847586d3353b15d4db0",
+            "website": "assets/edit95-background-cabin-before.jpg",
+            "website_sha256": "3fe6aa96c483dfaa3892b5f7ed9d040761f0ca88b43688b59ef620f24cfff864"
+          },
+          "after": {
+            "original": "full/images/background-cabin-s42.png",
+            "sha256": "4a3c9b09acd74681e58cbee3d6739ac6d77a28b28a4221c120eca02c98828abb",
+            "website": "assets/edit95-background-cabin-after.jpg",
+            "website_sha256": "c41065ff1b5aa0dafa5d36a88dbfb0b83ac1720ed12ea13c0cf13d56490617ae"
+          }
+        },
+        {
+          "name": "edit95-style-cabin",
+          "sample_id": "style-cabin-s137",
+          "instruction": "Render this exact lakeside cabin scene as a delicate watercolor painting on white textured paper. Preserve the complete cabin geometry, number and positions of posts and windows, roof shape, shoreline, trees and camera composition. No new objects or lettering.",
+          "seed": 137,
+          "width": 1024,
+          "height": 768,
+          "type": "style",
+          "before": {
+            "original": "full/sources/style-cabin-s137.png",
+            "sha256": "801137266d870c1209203969565094c830217f1bd5c2b847586d3353b15d4db0",
+            "website": "assets/edit95-style-cabin-before.jpg",
+            "website_sha256": "3fe6aa96c483dfaa3892b5f7ed9d040761f0ca88b43688b59ef620f24cfff864"
+          },
+          "after": {
+            "original": "full/images/style-cabin-s137.png",
+            "sha256": "1381c1267ed088edfa8df4f75c57cc57a7a9d02e1fc3d31260077656ef2f37d2",
+            "website": "assets/edit95-style-cabin-after.jpg",
+            "website_sha256": "72b462de36f21da1f606c5b7810a173a675a6bf36e00aea2629224e192ff9802"
+          }
+        },
+        {
+          "name": "edit95-extract-bag",
+          "sample_id": "extract-bag-s42",
+          "instruction": "Isolate the entire leather satchel against a clean white background. Remove the table and original background, retaining a soft contact shadow directly below the bag. Preserve the exact bag silhouette, size in the image, viewpoint, brown leather, single handle, straps and buckles.",
+          "seed": 42,
+          "width": 896,
+          "height": 896,
+          "type": "extract",
+          "before": {
+            "original": "full/sources/extract-bag-s42.png",
+            "sha256": "d6bfef8a11e00827a1b6d8c81226c180fd1d9af1fcd380c0324fcb407b96d4d9",
+            "website": "assets/edit95-extract-bag-before.jpg",
+            "website_sha256": "05850c9ac2ff7acc0e545eaa5491f4afd14485c782c1460e2566a80175b2fe4c"
+          },
+          "after": {
+            "original": "full/images/extract-bag-s42.png",
+            "sha256": "febda272a8d01bf32ece526ba8260a28727bcb52482d70723b4ab74afa3e6dca",
+            "website": "assets/edit95-extract-bag-after.jpg",
+            "website_sha256": "6008f65a6edb3793a115b418d09db39160612c132ab86dc30e801361bf51706c"
+          }
+        },
+        {
+          "name": "edit95-lighting-courtyard",
+          "sample_id": "lighting-courtyard-s42",
+          "instruction": "Change this exact courtyard scene to early evening blue hour, with soft warm light coming from inside the arches. Preserve the three arches, all columns, roof, potted tree, floor pattern, object positions and camera framing. Do not add lamps, people or objects.",
+          "seed": 42,
+          "width": 1024,
+          "height": 768,
+          "type": "adjust",
+          "before": {
+            "original": "full/sources/lighting-courtyard-s42.png",
+            "sha256": "4411af028aaa263573005cce47e02c44ac4a1acba32e21f22335b6a298a02550",
+            "website": "assets/edit95-lighting-courtyard-before.jpg",
+            "website_sha256": "bcc4eea2dcb202e853e5aa383e71a7737dafe42f58d3e6beabd15f57d938a109"
+          },
+          "after": {
+            "original": "full/images/lighting-courtyard-s42.png",
+            "sha256": "e3780b64226efdc3102b12271efd8b866b60ad026e64d1eb888025dad8b11587",
+            "website": "assets/edit95-lighting-courtyard-after.jpg",
+            "website_sha256": "f95dcc503068166134714812216a69d5990757c45e3fffc70d7941c037a67a73"
+          }
+        }
+      ]
+    }
   ]
 }

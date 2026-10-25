@@ -514,6 +514,736 @@
       "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
       "display_status": "new_visually_reviewed",
       "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-freckles-portrait",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/freckles-portrait-exp2-s219.png",
+      "source_id": "freckles-portrait-exp2-s219",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A photographic head-and-shoulders portrait of an adult woman with freckles and straight copper-red hair tucked behind her ears, wearing a cream knit sweater. Her complete head is visible against a warm gray studio wall. Soft window light, relaxed neutral expression, natural skin texture, understated editorial photograph.",
+      "seed": 219,
+      "original_sha256": "e038614630b4a8494c1dee634d5063f5269a8b261ef6725de59a598f0543ec75",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_sha256": "0916b9e29f404aa59595ab35f6f57481b204655baab6f76c43ef22ab4f2fcacf",
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-round-glasses",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/man-round-glasses-exp2-s73.png",
+      "source_id": "man-round-glasses-exp2-s73",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A photographic head-and-shoulders portrait of a middle-aged East Asian man with short black hair and round thin metal eyeglasses, wearing a dark blue cotton shirt. Looking directly at the camera, quiet confident expression, plain warm beige background, soft diffused daylight, realistic skin and facial proportions.",
+      "seed": 73,
+      "original_sha256": "cb202ae35e3a0dc6aa5c23aeaf8a46ac7d80a83008b9bbe93302cf2444d469ea",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_sha256": "89ef7e702a48e201ec78e6bf7ff209c3578ec5bd9ee080447db97287b9a20ca1",
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "removed_by_user",
+      "review": "gallery-expansion60-quality-review.json",
+      "removal_date": "2026-10-26",
+      "removal_reason": "User requested removing these two gallery images."
+    },
+    {
+      "name": "g95-braided-portrait",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/woman-braids-exp2-s73.png",
+      "source_id": "woman-braids-exp2-s73",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A photographic portrait of an adult Black woman with two neat long braids and a mustard-yellow linen blouse. Complete head and shoulders in the frame, a gentle natural smile, matte muted green background, soft studio daylight, accurate facial anatomy and natural skin texture.",
+      "seed": 73,
+      "original_sha256": "c4b6ba4f0971e966622ea437bf2457383503a4a49d5b16013a5e379a7ec1862b",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_sha256": "93f22a98687dbcef5188736050c6d5c67fc5880539595bc8ef9b739fda9b965e",
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-indigo-portrait",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/elderly-woman-blue-exp2-s73.png",
+      "source_id": "elderly-woman-blue-exp2-s73",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A photographic head-and-shoulders portrait of an older East Asian woman with short silver-gray hair, wearing a simple indigo linen blouse. Her face is turned slightly toward a window, both eyes visible, subtle natural wrinkles and a calm expression. Plain pale gray background, soft realistic daylight.",
+      "seed": 73,
+      "original_sha256": "d9c8212c6bb8dad453b106774c423aaaa3495e6175bc64b3abc45453f73e816b",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_sha256": "3f90069b29132eed35527c617e9118079eec5701605653454d7bd902e65a777e",
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-window-seat",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/woman-window-seat-exp2-s219.png",
+      "source_id": "woman-window-seat-exp2-s219",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A photographic three-quarter portrait of an adult woman with shoulder-length dark hair wearing a pale blue shirt, seated beside a window on a wooden chair. Her hands rest separately and naturally on her lap, holding no objects. Calm expression, simple light-colored interior, soft daylight and believable body proportions.",
+      "seed": 219,
+      "original_sha256": "890eadcee7654df0906dde38e518818bd7cbba9b663f42f94ba810c3d1138648",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_sha256": "c8fd98ccb9fa8f73567eae8a8f7e30d0f03a1ae251faf12010068a7404f69063",
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "removed_by_user",
+      "review": "gallery-expansion60-quality-review.json",
+      "removal_date": "2026-10-26",
+      "removal_reason": "User requested removing these two gallery images."
+    },
+    {
+      "name": "g95-lakeside-cabin",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/timber-lakeside-cabin-exp2-s219.png",
+      "source_id": "timber-lakeside-cabin-exp2-s219",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "An architectural photograph of a compact timber cabin beside a quiet mountain lake. One simple gabled roof, a wooden porch supported by posts, a glazed entrance door and rectangular windows. The whole cabin is visible on firm land with a footpath leading to the porch. Clear soft daylight, no people, believable construction.",
+      "seed": 219,
+      "original_sha256": "801137266d870c1209203969565094c830217f1bd5c2b847586d3353b15d4db0",
+      "original_size": [
+        1024,
+        768
+      ],
+      "website_sha256": "30d52e6f0584245c54d28f54d5f6275dba5370348632ea4cd36b06d42968cb98",
+      "website_size": [
+        1024,
+        768
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-white-courtyard",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/white-courtyard-exp2-s219.png",
+      "source_id": "white-courtyard-exp2-s219",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "An architectural photograph of a small white stucco courtyard with a terracotta tiled floor, three rounded archways and a lemon tree in a large earthenware pot. The arches and columns connect clearly to the floor and roof. Mediterranean afternoon sunlight, calm restrained composition, no people.",
+      "seed": 219,
+      "original_sha256": "4411af028aaa263573005cce47e02c44ac4a1acba32e21f22335b6a298a02550",
+      "original_size": [
+        1024,
+        768
+      ],
+      "website_sha256": "a6e53ea0fd29c8a2345b8aedcfdb5fd858be43e1ca0fc217c1ce1edaf63abd34",
+      "website_size": [
+        1024,
+        768
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-timber-entry",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/japanese-entry-exp2-s219.png",
+      "source_id": "japanese-entry-exp2-s219",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "An architectural photograph of the entrance to a traditional Japanese timber house, viewed straight on. A tiled pitched roof, wooden posts, sliding lattice doors, a raised wooden threshold and two broad stone steps. A simple gravel garden in front, overcast daylight, coherent joinery, no people or writing.",
+      "seed": 219,
+      "original_sha256": "5a8ba26f64bf4e6f6bb7fa69026ea19a4ba86d4e226ebfacad43d21576ae7c94",
+      "original_size": [
+        1024,
+        768
+      ],
+      "website_sha256": "64e6ff499db85ef22b23c7ecd1ac2ef162ca07a95390c86931e4462faa5dd23d",
+      "website_size": [
+        1024,
+        768
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-fallow-deer",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/fallow-deer-exp2-s219.png",
+      "source_id": "fallow-deer-exp2-s219",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A wildlife photograph of a single female fallow deer standing in a meadow, viewed from the side. Brown spotted coat, no antlers, four slender legs visibly supporting the body on grass, head raised calmly, natural proportions. Soft woodland background and warm morning light.",
+      "seed": 219,
+      "original_sha256": "28d0d7e1ffc5f4ea06b1b1dbb799ea28bf58ef625f509103ce082e0c26107ef7",
+      "original_size": [
+        1024,
+        768
+      ],
+      "website_sha256": "e3e34c3f06c2c81a5ce76bb3b3445757918f18f24c7963c28b9caad4d2643127",
+      "website_size": [
+        1024,
+        768
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-woodland-waterfall",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/woodland-waterfall-exp2-s219.png",
+      "source_id": "woodland-waterfall-exp2-s219",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A landscape photograph of a small woodland waterfall flowing over dark layered rock into a clear shallow pool. Moss and ferns grow on both banks, continuous streams of falling water and natural ripples below. Soft overcast light, no buildings or people.",
+      "seed": 219,
+      "original_sha256": "c77170d5b34b45b8cace31108a1350c846e64fb7655468e86e0feb439da1de50",
+      "original_size": [
+        1024,
+        768
+      ],
+      "website_sha256": "a68106bf3bcf5ca5d42078dcc24fa291adc9459b636a97d954d90884ae390ecd",
+      "website_size": [
+        1024,
+        768
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-autumn-path",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/autumn-path-exp2-s73.png",
+      "source_id": "autumn-path-exp2-s73",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A landscape photograph of a narrow woodland footpath covered with golden fallen leaves, leading between mature beech trees with orange autumn foliage. Soft morning light filters through the branches, natural tree trunks rooted in the forest floor, quiet realistic colors, no people.",
+      "seed": 73,
+      "original_sha256": "1483ce8cfdd8e11323182cbb1d254ee01b4e50687ed3c932dec1fad82d5dba79",
+      "original_size": [
+        1024,
+        768
+      ],
+      "website_sha256": "aa0731661b34de0b95aed8b5cdea12a3818cb5ea2b4f0929f4d42c435cacbcb7",
+      "website_size": [
+        1024,
+        768
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-coffee-cup",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/coffee-cup-exp2-s73.png",
+      "source_id": "coffee-cup-exp2-s73",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A still-life photograph of one white porcelain coffee cup filled with a smooth layer of brown crema, sitting on a matching saucer on an oak table. The cup has one small curved handle attached at both ends. A single stainless-steel teaspoon rests on the saucer. Soft window light, coherent reflections, simple clean composition.",
+      "seed": 73,
+      "original_sha256": "11eaad85c69e7ee70fee572bc1edf1a4d3f3d9d75eb1ca53d9b102d8719ab6a4",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_sha256": "2f83321450bdb33d2eb89ac9d5c7b2c0e668ad4d422658587192d6c9ed4e738e",
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-leather-satchel",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/leather-satchel-exp2-s73.png",
+      "source_id": "leather-satchel-exp2-s73",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A studio product photograph of a small brown leather satchel resting upright on a light stone plinth. One top handle, a flap closure with two brass buckles and neat visible stitching. No straps crossing in front of the bag. Warm neutral background, soft daylight, realistic proportions and leather texture, no text or logo.",
+      "seed": 73,
+      "original_sha256": "d6bfef8a11e00827a1b6d8c81226c180fd1d9af1fcd380c0324fcb407b96d4d9",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_sha256": "b35d0f19a386949e3dae771e38a7a19b18baf1459536172ecdedef8edc904994",
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-blue-bowl",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/ceramic-bowl-exp2-s73.png",
+      "source_id": "ceramic-bowl-exp2-s73",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A studio photograph of a handmade pale blue ceramic bowl on a light beige tabletop. Its complete circular rim and stable foot are visible, gently speckled glaze and realistic wall thickness. One small lemon rests beside the bowl. Soft natural shadows, simple neutral background, no text.",
+      "seed": 73,
+      "original_sha256": "d32e717e777a4f0b0d0a0a6c6611d2badc8dae12afcb3b92611d6bf18acbcfba",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_sha256": "c33f7285f523f84ff6b73425c61b19ac239143de48bc9e4508e28c4578d778d4",
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-pears-pitcher",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/pears-pitcher-exp2-s219.png",
+      "source_id": "pears-pitcher-exp2-s219",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A still-life photograph of a tall ivory ceramic pitcher and two ripe yellow pears arranged on a dark wooden table. The pitcher has a single handle joining the body at two points and a small pouring spout. Warm muted brown background, soft side light, realistic ceramic and fruit textures, stable contact shadows.",
+      "seed": 219,
+      "original_sha256": "3f819b5cff745bd6139b2ac82c81ad7f25703932a3ad606df7ca4c8e2ae66608",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_sha256": "4417e24a519c869b0cc9853d45b5d5878b7a5bcd3c82c485a8c15189b1709691",
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-risograph-cactus",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/risograph-cactus-exp2-s219.png",
+      "source_id": "risograph-cactus-exp2-s219",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A two-color risograph print of a single prickly pear cactus in a simple terracotta pot. Sage-green cactus pads overlap naturally and connect to the plant base, rust-red pot and small ground shadow. Cream paper with a subtle grain, balanced flat graphic composition, no lettering.",
+      "seed": 219,
+      "original_sha256": "320bae9315e74ec14295d6b1ddaeac1177fd5f29ffe9cdefb7e09a15a80f861d",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_sha256": "24fd7423e4aba1f6bfd15233ae18c7e6f5be8129375619a4d29b23f1ffed1b46",
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-watercolor-village",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/watercolor-village-exp2-s73.png",
+      "source_id": "watercolor-village-exp2-s73",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A delicate watercolor painting of a small coastal village with white houses and terracotta roofs on a hillside above a quiet blue bay. Simple coherent buildings, a winding footpath and soft green shrubs. Transparent washes on textured watercolor paper, restrained details, no people or lettering.",
+      "seed": 73,
+      "original_sha256": "654cf34d6a29052e63f37666d48da51eb61a7b4ae9159aa0d9ad894f614536eb",
+      "original_size": [
+        1024,
+        768
+      ],
+      "website_sha256": "55ccc36e2c80e0622b05a3d0316e6079e984a5855eb2a7a199cee0c9052d4262",
+      "website_size": [
+        1024,
+        768
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-ceramic-fish",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/ceramic-fish-relief-exp2-s73.png",
+      "source_id": "ceramic-fish-relief-exp2-s73",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A photograph of a handmade rectangular ceramic relief tile depicting a single fish in side profile among flowing seaweed. The fish has one visible eye, a clearly shaped head, body, fins and tail. Blue and white glazed ceramic, raised forms within the tile border, simple coherent stylized anatomy, no text.",
+      "seed": 73,
+      "original_sha256": "817abcca9d559e05be83bdcb39fa07fca2ee51db724816860c8a3104a596811f",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_sha256": "67ed630bbd2c525e7b6983f3c28522d615cb6a0a29b7145e9d89ab17c99c0676",
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-woven-landscape",
+      "source": "../UniSpark-CT0095000-expansion60-20261026/full/images/woven-landscape-exp2-s219.png",
+      "source_id": "woven-landscape-exp2-s219",
+      "run": "expansion60-20261026",
+      "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A photograph of a small handwoven tapestry depicting rolling ochre hills and a deep blue river beneath a pale sky. Thick wool threads, clear woven texture, simple geometric shapes, finished rectangular textile edges, laid flat on a neutral surface. No people, animals or lettering.",
+      "seed": 219,
+      "original_sha256": "346e9c0ddcd5fbe51f30d2c59dbf0daa69785a6c2b692d6b78d36ced7f3641fc",
+      "original_size": [
+        1024,
+        768
+      ],
+      "website_sha256": "b5ef08898c76b101aad65b3096431b3f614dfe938307963fd966404e2f5f7335",
+      "website_size": [
+        1024,
+        768
+      ],
+      "processing": "Native-resolution JPEG conversion only; no crop, upscaling, retouching, or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-expansion60-quality-review.json"
+    },
+    {
+      "name": "g95-cartoon-anime-portrait",
+      "title": "Auburn in soft light",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024,
+      "sample_id": "anime-portrait-ctb-s219",
+      "style": "Anime",
+      "source": "../UniSpark-CT0095000-cartoon12b-20261026/full/images/anime-portrait-ctb-s219.png",
+      "run": "UniSpark-CT0095000-cartoon12b-20261026",
+      "seed": 219,
+      "prompt": "A beautifully drawn original anime portrait, head and shoulders of a young adult woman with softly layered auburn bobbed hair, warm brown eyes and a relaxed small smile. She wears a simple ivory sweater. Clean expressive linework, delicate cel shading, soft reflected daylight, muted sage-green background with a few blurred leaves. Natural stylized facial proportions, two clear eyes, one nose and a well-drawn mouth. Elegant hand-painted animation quality. No text, logo, signature, border or hands.",
+      "original_sha256": "edd511d069d17f12f6e9be71570408ff4225d0d14de950a427def815b09fb0c9",
+      "website_sha256": "64538482dd14d007870bf4c3a119cc6ca0c87641d165243dd27fcc9011a1b5ff",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
+    },
+    {
+      "name": "g95-cartoon-manga-portrait",
+      "title": "Winter in ink",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024,
+      "sample_id": "manga-portrait-ctb-s73",
+      "style": "Manga",
+      "source": "../UniSpark-CT0095000-cartoon12b-20261026/full/images/manga-portrait-ctb-s73.png",
+      "run": "UniSpark-CT0095000-cartoon12b-20261026",
+      "seed": 73,
+      "prompt": "An original black-and-white manga portrait of a young adult man with short slightly wavy black hair, a wool scarf and a dark simple coat. Head and shoulders, turned gently three-quarter toward the viewer, calm thoughtful expression. Delicate expressive ink contours, carefully drawn eyes, coherent stylized facial anatomy, crisp shadows and light screentone. A few bare winter branches fade into an otherwise white background. No text, captions, speech balloons, symbols, watermark, signature or hands.",
+      "original_sha256": "004b0a29064b44e34f02788c5e484e33e1d78f24b1646b04840d11a42558fef4",
+      "website_sha256": "e8efeaf743e04eb6319f6828c46f37ac1e39e68eaa0e2c9c0e4b8c33ed08eb25",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
+    },
+    {
+      "name": "g95-cartoon-bakery",
+      "title": "The corner bakery",
+      "category": "Cartoon",
+      "width": 896,
+      "height": 896,
+      "sample_id": "cartoon-bakery-ct-s219",
+      "style": "2D animation",
+      "source": "../UniSpark-CT0095000-cartoon24-20261026/full/images/cartoon-bakery-ct-s219.png",
+      "run": "UniSpark-CT0095000-cartoon24-20261026",
+      "seed": 219,
+      "prompt": "An original hand-drawn cartoon background of a tiny inviting corner bakery on a sunny cobblestone street. Pale mint facade, a red-and-cream striped fabric awning securely attached above one large display window, a small wooden entrance door beside it, three loaves of bread resting on a shelf behind the glass. Rounded but coherent architecture, gentle pastel cel shading, lively crisp outlines, charming animated-film art direction. No people, signs, labels, lettering or impossible floating objects.",
+      "original_sha256": "90673f863ee4059fe888aaab157f05139fe710c1e1dceb896cdf47c38914b616",
+      "website_sha256": "32bbdfc7df06d79f176721ee6b773841e94b8dbc90da95d635eac14400e899bb",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
+    },
+    {
+      "name": "g95-cartoon-robot",
+      "title": "Lunar scout",
+      "category": "Cartoon",
+      "width": 896,
+      "height": 896,
+      "sample_id": "cartoon-robot-ct-s219",
+      "style": "3D animation",
+      "source": "../UniSpark-CT0095000-cartoon24-20261026/full/images/cartoon-robot-ct-s219.png",
+      "run": "UniSpark-CT0095000-cartoon24-20261026",
+      "seed": 219,
+      "prompt": "An original stylized 3D animated-film still of a small cream-and-teal exploration robot standing on the Moon. One rounded rectangular head with two friendly circular camera eyes, one compact body, two clearly attached mechanical arms and two stable short legs with broad feet touching the ground. A single small antenna, no human face. Soft rounded forms, carefully built joints, long coherent shadows under direct sunlight, a small blue Earth in the dark sky. No writing, labels, logos or extra limbs.",
+      "original_sha256": "8d142c364f6b2b90c4c62c435577d954579d0cc7ab8f0227c8349a0fc79371e6",
+      "website_sha256": "804e394ae88232a3195ef9b9317744f017175cf15c4b2b805caeeee7f857f472",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
+    },
+    {
+      "name": "g95-cartoon-comic-portrait",
+      "title": "City lights",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024,
+      "sample_id": "comic-portrait-ct-s219",
+      "style": "Color comic",
+      "source": "../UniSpark-CT0095000-cartoon24-20261026/full/images/comic-portrait-ct-s219.png",
+      "run": "UniSpark-CT0095000-cartoon24-20261026",
+      "seed": 219,
+      "prompt": "An original color comic-book illustration, a close head-and-shoulders portrait of an adult woman with short curly dark hair wearing a simple rust-red jacket over a cream shirt. A calm, thoughtful expression, both eyes visible, coherent natural stylized facial anatomy. Deep navy night city shapes behind her, warm window light on one side of her face, bold confident black ink contours and subtle halftone shading. Complete hair silhouette, no hands in frame, no captions, lettering, signatures or logos.",
+      "original_sha256": "b34a67ce5a180afa544e3399324f84f11f5837a5163ac7804ee48b4e4efdac88",
+      "website_sha256": "170f5d7e0523e59f4fc61059706c2bed6eb91f3ef2ba15b80d885b647170376a",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
+    },
+    {
+      "name": "g95-cartoon-corgi",
+      "title": "A corgi afternoon",
+      "category": "Cartoon",
+      "width": 1024,
+      "height": 768,
+      "sample_id": "cartoon-corgi-ct-s73",
+      "style": "2D animation",
+      "source": "../UniSpark-CT0095000-cartoon24-20261026/full/images/cartoon-corgi-ct-s73.png",
+      "run": "UniSpark-CT0095000-cartoon24-20261026",
+      "seed": 73,
+      "prompt": "An original 2D animated-film still of one orange-and-white corgi lying comfortably on short grass beside a red rubber ball. The dog has a long low body, four short legs with anatomically clear joints and paws, two large upright ears, one black nose and a short tail. Its two forepaws stretch forward while its hind legs rest naturally at its sides. Warm afternoon sunlight, a simple garden fence and daisies in the background, confident clean ink outlines and cel shading, playful but physically coherent, no text.",
+      "original_sha256": "6d9702e5c7042b323a24aec4a14dfa581680c6fa5ec50bdc7376834b0858728c",
+      "website_sha256": "e1de53938a9cc3452dc4d19abe267079677df18c884fa8e354bd365f93441212",
+      "original_size": [
+        1024,
+        768
+      ],
+      "website_size": [
+        1024,
+        768
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
+    },
+    {
+      "name": "g95-cartoon-clay-rabbit",
+      "title": "A little clay rabbit",
+      "category": "Cartoon",
+      "width": 896,
+      "height": 896,
+      "sample_id": "clay-rabbit-ctb-s73",
+      "style": "Clay animation",
+      "source": "../UniSpark-CT0095000-cartoon12b-20261026/full/images/clay-rabbit-ctb-s73.png",
+      "run": "UniSpark-CT0095000-cartoon12b-20261026",
+      "seed": 73,
+      "prompt": "A charming stop-motion clay animation still of one small white rabbit sitting on a pale green miniature meadow. Two long upright ears with soft pink interiors, two black beadlike eyes, one tiny pink nose, two short front paws resting on the grass and two larger hind feet tucked naturally beside the body. A tiny round tail behind, visible handmade clay texture, rounded simple shapes, a few yellow daisies nearby. Gentle morning lighting and a clear soft contact shadow. Complete body in frame, no clothes, text or extra limbs.",
+      "original_sha256": "18068a88ab6c98b64d1041681bc27d792d657bb4e6d9e1a15339994561b5bf97",
+      "website_sha256": "b5f802534b7d0121703fe3f1a8f94b92df62a277c21cca8bb2edcc55070a6b27",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
     }
   ],
   "quality_review": "gallery-quality-review.json",
@@ -539,8 +1269,43 @@
     "g95-sunflower",
     "g95-ferns",
     "g95-sea-arch",
-    "g95-cherry-blossom"
+    "g95-cherry-blossom",
+    "g95-freckles-portrait",
+    "g95-braided-portrait",
+    "g95-indigo-portrait",
+    "g95-lakeside-cabin",
+    "g95-white-courtyard",
+    "g95-timber-entry",
+    "g95-fallow-deer",
+    "g95-woodland-waterfall",
+    "g95-autumn-path",
+    "g95-coffee-cup",
+    "g95-leather-satchel",
+    "g95-blue-bowl",
+    "g95-pears-pitcher",
+    "g95-risograph-cactus",
+    "g95-watercolor-village",
+    "g95-ceramic-fish",
+    "g95-woven-landscape",
+    "g95-cartoon-anime-portrait",
+    "g95-cartoon-manga-portrait",
+    "g95-cartoon-bakery",
+    "g95-cartoon-robot",
+    "g95-cartoon-comic-portrait",
+    "g95-cartoon-corgi",
+    "g95-cartoon-clay-rabbit"
   ],
   "display_policy": "Both existing and new samples require visual review. Exclude visible defects and withhold unresolved anatomy, geometry, contact, or common-sense concerns. Original assets remain unchanged.",
-  "new_quality_review": "gallery-new-quality-review.json"
+  "new_quality_review": "gallery-new-quality-review.json",
+  "expansion_quality_review": "gallery-expansion60-quality-review.json",
+  "active_gallery_count": 46,
+  "active_gallery_categories": {
+    "Nature": 8,
+    "Objects": 11,
+    "People": 7,
+    "Art": 7,
+    "Architecture": 6,
+    "Cartoon": 7
+  },
+  "cartoon_quality_review": "gallery-cartoon-quality-review.json"
 }

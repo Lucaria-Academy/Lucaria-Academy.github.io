@@ -426,5 +426,6 @@
     "Art": 3,
     "Architecture": 3
   },
-  "new_samples_review": "gallery-new-quality-review.json; 13 previously accepted samples retained without image or metadata changes"
+  "new_samples_review": "gallery-new-quality-review.json; 13 previously accepted samples retained without image or metadata changes",
+  "gallery_snapshot_note": "The 22-image aggregate below is the pre-expansion review snapshot. Current additions and 41-image aggregate are recorded in gallery-expansion60-quality-review.json."
 }

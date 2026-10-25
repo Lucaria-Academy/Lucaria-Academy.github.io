@@ -56,7 +56,7 @@ swift -module-cache-path /private/tmp/unispark-swift-cache website/scripts/prepa
 
 原有样本中的制图师手指融合、海龟头鳍连接异常、微缩交通轨道接入外墙等已撤下。首屏同步将制图师替换为黑色高领肖像、沙漠图书馆替换为运河花市。保留所有原始文件和网页图片，不通过裁切、拼贴、修补或改画掩盖生成错误。
 
-加上上一轮审核通过的 13 张 CT 0095000 新样本，图库共 22 张：People 4、Architecture 3、Nature 5、Objects 7、Art 3。All 默认显示 18 张，Show more 展开其余 4 张，Show fewer 收起；类别计数从实际内容自动计算。展示方式和交互保持不变。
+该次复查后，加上上一轮审核通过的 13 张 CT 0095000 新样本，形成 22 张的基础图库：People 4、Architecture 3、Nature 5、Objects 7、Art 3。以下新一批扩充保留这 22 张及其内容不变。
 
 原有素材来自 CT 0042500 文生图输出与论文素材，未混入编辑结果；来源映射、哈希及导出信息见 `scripts/gallery-provenance.json`。
 
@@ -65,3 +65,29 @@ swift -module-cache-path /private/tmp/unispark-swift-cache website/scripts/prepa
 上一轮在 PANProj4 的 0–3 卡使用 CT 0095000 推理 96 张候选，逐张检查后选入 13 张。本轮保留这 13 张及其既有审查记录，没有重新推理或修改图像。
 
 完整新候选检查见 `scripts/gallery-new-quality-review.json`；每个入选项记录指令、种子、权重文件信息及原图/网页图 SHA-256。原图和推理记录位于 Downloads 下的 `UniSpark-CT0095000-gallery60-20261026/`、`UniSpark-CT0095000-native1k20-20261026/` 和 `UniSpark-CT0095000-scene16-20261026/`。网页仅等比例缩小与 JPEG 导出，不放大、裁切或修补。审核是逐图定性筛选，accepted 表示本轮未发现明显问题，不表示对生成图零缺陷的保证。
+
+### 五类继续扩充（60 张真实推理候选）
+
+在 PANProj4（59220174）的 0–3 卡以 CT 0095000、50 步采样、CFG 4 完成 30 个主题 × 2 个种子（73、219），共 60 张候选，每类 12 张。四个推理工作进程均以 0 退出；60 个唯一 ID、尺寸和本地原图 SHA-256 与远端输出逐一匹配。
+
+检查全部候选，并对入选图以原始尺寸检查后，新增 19 张：People +5、Architecture +3、Nature +3、Objects +4、Art +4。按用户要求随后移除 “Portrait in navy” 和 “A quiet seat by the window”，该批当前展示 17 张。图库现为 **39 张：People 7、Architecture 6、Nature 8、Objects 11、Art 7**。All 默认 18 张，通过 Show more 展开至 36 张、再至 39 张；Show fewer 收起。分类计数自动更新，布局不变。
+
+双把手咖啡杯、雌鹿生成鹿角、截断人物和帆数不符等未入选；手爪、家具连接及花型等无法确认的候选暂缓；同主题的相近版本不重复展示。完整 60 条指令、种子、决策和观察见 `scripts/gallery-expansion60-quality-review.json`。入选图只作原生尺寸 JPEG 转换，不裁剪、放大、修补。
+
+原图及推理证据保存在 `/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/`；远端目录为 `Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/`。此次仅补充图库；此前 22 张素材和元数据、首屏、编辑及连续图像演示保持不变。
+
+## 编辑样例扩充（2026-10-26）
+
+使用 CT0095000 在 PANProj4 的 GPU 0–3 上完成 48 个编辑候选（24 个任务，每个任务两个种子 42 / 137，50 steps、CFG 4）。逐一对照源图和完整指令审阅，再对入选结果作原尺寸并排复核，新增 9 组：添加花盆、移除勺子、移除柠檬、梨替换为苹果、浅蓝背景、雪山背景、水彩风格、提取皮包、庭院蓝调傍晚。连同原有 4 组，编辑区共 13 组；原有滑动对比交互保留。文生图 gallery 的 39 张未改动。
+
+组合类候选存在物体遗漏、主体比例变化或水杯内容不明确，本批不展示；其他未入选结果包括残留勺头、杯把断裂、材质改变时铆钉丢失、非预期签名等。该筛选是目视展示审核，不是基准测试分数，也不宣称逐像素不变或零缺陷。
+
+完整原图、输出和推理清单位于 `/Users/jianchengpan/Downloads/UniSpark-CT0095000-edit48-20261026/`，远端同批次为 `inference-results/imgedit-ct95000-diverse48-20261026/`。48 个候选的决定、原因、指令、种子和哈希见 `scripts/editing-diverse48-quality-review.json`；入选样本映射追加在 `scripts/editing-provenance.json` 的 `additional_batches` 中。网页图片为完整原尺寸 JPEG（quality 94，4:4:4），未裁剪、变形、拼接或修图。
+
+## Cartoon 类别（2026-10-26）
+
+“From words to visual worlds” 新增第六类 `Cartoon`：动漫头像、黑白漫画、彩色漫画、二维卡通场景与动物、三维机器人及黏土兔，共 7 张；文生图总计 46 张。原有 39 张与编辑区 13 组保持不变，类别数量由页面数据自动计算，All images 的 Show more 继续生效。
+
+本次沿用 CT0095000、PANProj4 GPU 0–3、50 steps、CFG 4，分两批推理 24 + 12 = 36 个候选。所有候选先对照指令逐一审阅，入选 7 张再作原尺寸复核。分格漫画出现角色、物体或动作不连续，没有展示；尾巴断开、异常肢体连接、非预期文字等结果也未采用。这是目视展示筛选，不是基准测试，也不宣称零缺陷。
+
+完整指令、种子、检查理由、原始与网页文件哈希见 `scripts/gallery-cartoon-quality-review.json`；来源已并入 `scripts/gallery-provenance.json` 和 `scripts/asset-map.json`。原始结果保存在 Downloads 的 `UniSpark-CT0095000-cartoon24-20261026/` 与 `UniSpark-CT0095000-cartoon12b-20261026/`。网页导出保持原分辨率，JPEG quality 94、4:4:4，无裁剪、变形、修图或拼接。

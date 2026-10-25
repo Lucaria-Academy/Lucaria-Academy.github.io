@@ -1,0 +1,1282 @@
+{
+  "reviewed_on": "2026-10-26",
+  "target": "PANProj4 (59220174)",
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "checkpoint": {
+    "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+    "size": 65395436792,
+    "expected": 65395436792,
+    "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+    "mtime_ns": 1792948951804271816
+  },
+  "entrypoint": "inference/infer_custom_prompts_qwen35_wan.py",
+  "remote_run": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026",
+  "local_run": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026",
+  "inference": {
+    "steps": 50,
+    "cfg_text": 4,
+    "seeds": [
+      73,
+      219
+    ],
+    "worker_return_codes": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "method": "Visual inspection of all 60 candidates against their prompts; native-resolution inspection of every accepted image. No external judge API was used for this gallery review.",
+  "policy": "Exclude obvious deformation, anatomy, contact, support, geometry, prompt-following or common-sense failures. Withhold uncertain details. Select one variant per accepted topic to avoid near-duplicates. Accepted means no obvious issue was found in this inspection, not a guarantee of perfect generation.",
+  "generated_count": 60,
+  "generated_categories": {
+    "People": 12,
+    "Architecture": 12,
+    "Nature": 12,
+    "Objects": 12,
+    "Art": 12
+  },
+  "decision_counts": {
+    "not_selected": 15,
+    "accepted": 19,
+    "exclude": 9,
+    "hold": 17
+  },
+  "added_count": 19,
+  "added_categories": {
+    "People": 5,
+    "Architecture": 3,
+    "Nature": 3,
+    "Objects": 4,
+    "Art": 4
+  },
+  "previous_gallery_count": 22,
+  "active_gallery_count": 39,
+  "active_gallery_categories": {
+    "Nature": 8,
+    "Objects": 11,
+    "People": 7,
+    "Art": 7,
+    "Architecture": 6
+  },
+  "integrity": {
+    "local_originals_match_remote_sha256": 60,
+    "unique_ids_match_manifest": true,
+    "dimensions_match_manifest": true,
+    "prior_22_entries_unchanged": true
+  },
+  "items": [
+    {
+      "id": "freckles-portrait-exp2-s73",
+      "category": "People",
+      "width": 768,
+      "height": 1024,
+      "seed": 73,
+      "prompt": "A photographic head-and-shoulders portrait of an adult woman with freckles and straight copper-red hair tucked behind her ears, wearing a cream knit sweater. Her complete head is visible against a warm gray studio wall. Soft window light, relaxed neutral expression, natural skin texture, understated editorial photograph.",
+      "decision": "not_selected",
+      "observation": "同题材选择219版本，避免相近肖像重复展示。",
+      "original_sha256": "5aa03fbead85a24fcfe5ca20f3f7d73bb0f58a25d2c5c2e528800d7226dc56a0",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/freckles-portrait-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/freckles-portrait-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "freckles-portrait-exp2-s219",
+      "category": "People",
+      "width": 768,
+      "height": 1024,
+      "seed": 219,
+      "prompt": "A photographic head-and-shoulders portrait of an adult woman with freckles and straight copper-red hair tucked behind her ears, wearing a cream knit sweater. Her complete head is visible against a warm gray studio wall. Soft window light, relaxed neutral expression, natural skin texture, understated editorial photograph.",
+      "decision": "accepted",
+      "observation": "原尺寸检查五官、耳部、头颈与毛衣连接；头部完整，未见明显形体异常。",
+      "original_sha256": "e038614630b4a8494c1dee634d5063f5269a8b261ef6725de59a598f0543ec75",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/freckles-portrait-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/freckles-portrait-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-freckles-portrait",
+      "website_sha256": "0916b9e29f404aa59595ab35f6f57481b204655baab6f76c43ef22ab4f2fcacf",
+      "website_size": [
+        768,
+        1024
+      ]
+    },
+    {
+      "id": "man-round-glasses-exp2-s73",
+      "category": "People",
+      "width": 768,
+      "height": 1024,
+      "seed": 73,
+      "prompt": "A photographic head-and-shoulders portrait of a middle-aged East Asian man with short black hair and round thin metal eyeglasses, wearing a dark blue cotton shirt. Looking directly at the camera, quiet confident expression, plain warm beige background, soft diffused daylight, realistic skin and facial proportions.",
+      "decision": "accepted",
+      "observation": "原尺寸检查镜框、鼻梁、镜腿和五官，连接连贯，无明显穿插或重复结构。",
+      "original_sha256": "cb202ae35e3a0dc6aa5c23aeaf8a46ac7d80a83008b9bbe93302cf2444d469ea",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/man-round-glasses-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/man-round-glasses-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-round-glasses",
+      "website_sha256": "89ef7e702a48e201ec78e6bf7ff209c3578ec5bd9ee080447db97287b9a20ca1",
+      "website_size": [
+        768,
+        1024
+      ],
+      "display_status": "removed_by_user",
+      "removal_date": "2026-10-26"
+    },
+    {
+      "id": "man-round-glasses-exp2-s219",
+      "category": "People",
+      "width": 768,
+      "height": 1024,
+      "seed": 219,
+      "prompt": "A photographic head-and-shoulders portrait of a middle-aged East Asian man with short black hair and round thin metal eyeglasses, wearing a dark blue cotton shirt. Looking directly at the camera, quiet confident expression, plain warm beige background, soft diffused daylight, realistic skin and facial proportions.",
+      "decision": "not_selected",
+      "observation": "同题材选择73版本，避免重复。",
+      "original_sha256": "89f1bdb59b036482e93a39338ef79cc182f8fae10450307a3406a42841681b05",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/man-round-glasses-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/man-round-glasses-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "woman-braids-exp2-s73",
+      "category": "People",
+      "width": 768,
+      "height": 1024,
+      "seed": 73,
+      "prompt": "A photographic portrait of an adult Black woman with two neat long braids and a mustard-yellow linen blouse. Complete head and shoulders in the frame, a gentle natural smile, matte muted green background, soft studio daylight, accurate facial anatomy and natural skin texture.",
+      "decision": "accepted",
+      "observation": "原尺寸检查五官、两条发辫、耳部与衣领，未见明显融合或重复结构。",
+      "original_sha256": "c4b6ba4f0971e966622ea437bf2457383503a4a49d5b16013a5e379a7ec1862b",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/woman-braids-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/woman-braids-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-braided-portrait",
+      "website_sha256": "93f22a98687dbcef5188736050c6d5c67fc5880539595bc8ef9b739fda9b965e",
+      "website_size": [
+        768,
+        1024
+      ]
+    },
+    {
+      "id": "woman-braids-exp2-s219",
+      "category": "People",
+      "width": 768,
+      "height": 1024,
+      "seed": 219,
+      "prompt": "A photographic portrait of an adult Black woman with two neat long braids and a mustard-yellow linen blouse. Complete head and shoulders in the frame, a gentle natural smile, matte muted green background, soft studio daylight, accurate facial anatomy and natural skin texture.",
+      "decision": "not_selected",
+      "observation": "同题材选择73版本，避免重复。",
+      "original_sha256": "d0a54dca63c633cb5e897760ff87229b9be7cfb85bf094f429b7bd09c1356f65",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/woman-braids-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/woman-braids-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "elderly-woman-blue-exp2-s73",
+      "category": "People",
+      "width": 768,
+      "height": 1024,
+      "seed": 73,
+      "prompt": "A photographic head-and-shoulders portrait of an older East Asian woman with short silver-gray hair, wearing a simple indigo linen blouse. Her face is turned slightly toward a window, both eyes visible, subtle natural wrinkles and a calm expression. Plain pale gray background, soft realistic daylight.",
+      "decision": "accepted",
+      "observation": "原尺寸检查五官、耳部、颈肩连接；面部完整，光照与窗侧位置一致。",
+      "original_sha256": "d9c8212c6bb8dad453b106774c423aaaa3495e6175bc64b3abc45453f73e816b",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/elderly-woman-blue-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/elderly-woman-blue-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-indigo-portrait",
+      "website_sha256": "3f90069b29132eed35527c617e9118079eec5701605653454d7bd902e65a777e",
+      "website_size": [
+        768,
+        1024
+      ]
+    },
+    {
+      "id": "elderly-woman-blue-exp2-s219",
+      "category": "People",
+      "width": 768,
+      "height": 1024,
+      "seed": 219,
+      "prompt": "A photographic head-and-shoulders portrait of an older East Asian woman with short silver-gray hair, wearing a simple indigo linen blouse. Her face is turned slightly toward a window, both eyes visible, subtle natural wrinkles and a calm expression. Plain pale gray background, soft realistic daylight.",
+      "decision": "not_selected",
+      "observation": "同题材选择73版本，避免重复。",
+      "original_sha256": "8361b1cbec53927558c9bc10f8f6bae5698fa2c44ec667f0851a7c721a51db4d",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/elderly-woman-blue-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/elderly-woman-blue-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "man-olive-coat-exp2-s73",
+      "category": "People",
+      "width": 768,
+      "height": 1024,
+      "seed": 73,
+      "prompt": "A full-length editorial photograph of an adult man wearing an olive wool coat and brown trousers, standing on a wide stone pavement in front of a plain cream wall. Arms relaxed at his sides, empty hands, both shoes completely visible and resting on the ground. Natural proportions, soft overcast daylight, no other people.",
+      "decision": "exclude",
+      "observation": "生成画面截掉人物头部，与全身完整构图要求不符。",
+      "original_sha256": "0d385a3ac89e138858d1b5d972422d98f9a32d9f5cb67b523bb2b95582f2ca67",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/man-olive-coat-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/man-olive-coat-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "man-olive-coat-exp2-s219",
+      "category": "People",
+      "width": 768,
+      "height": 1024,
+      "seed": 219,
+      "prompt": "A full-length editorial photograph of an adult man wearing an olive wool coat and brown trousers, standing on a wide stone pavement in front of a plain cream wall. Arms relaxed at his sides, empty hands, both shoes completely visible and resting on the ground. Natural proportions, soft overcast daylight, no other people.",
+      "decision": "exclude",
+      "observation": "生成画面截掉人物头部，与全身完整构图要求不符。",
+      "original_sha256": "7e4516badda29d9a1f1ba122b6ceb6116b0f7cfc5961e9ddd852c00e1a9ce73e",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/man-olive-coat-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/man-olive-coat-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "woman-window-seat-exp2-s73",
+      "category": "People",
+      "width": 768,
+      "height": 1024,
+      "seed": 73,
+      "prompt": "A photographic three-quarter portrait of an adult woman with shoulder-length dark hair wearing a pale blue shirt, seated beside a window on a wooden chair. Her hands rest separately and naturally on her lap, holding no objects. Calm expression, simple light-colored interior, soft daylight and believable body proportions.",
+      "decision": "hold",
+      "observation": "头顶被边缘裁断，构图不够完整；采用另一版本。",
+      "original_sha256": "75ff578eaff33f8db19c36b74be395e2a2c618d49414a608b811f71a956fb86d",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/woman-window-seat-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/woman-window-seat-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "woman-window-seat-exp2-s219",
+      "category": "People",
+      "width": 768,
+      "height": 1024,
+      "seed": 219,
+      "prompt": "A photographic three-quarter portrait of an adult woman with shoulder-length dark hair wearing a pale blue shirt, seated beside a window on a wooden chair. Her hands rest separately and naturally on her lap, holding no objects. Calm expression, simple light-colored interior, soft daylight and believable body proportions.",
+      "decision": "accepted",
+      "observation": "原尺寸检查双手手指数量、分界、手腕连接与膝上接触，头部与椅背完整，未见明显融合。",
+      "original_sha256": "890eadcee7654df0906dde38e518818bd7cbba9b663f42f94ba810c3d1138648",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/woman-window-seat-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/woman-window-seat-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-window-seat",
+      "website_sha256": "c8fd98ccb9fa8f73567eae8a8f7e30d0f03a1ae251faf12010068a7404f69063",
+      "website_size": [
+        768,
+        1024
+      ],
+      "display_status": "removed_by_user",
+      "removal_date": "2026-10-26"
+    },
+    {
+      "id": "red-brick-townhouse-exp2-s73",
+      "category": "Architecture",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "An architectural photograph of a small red-brick townhouse facade seen straight on. A single dark green entrance door with three stone steps, white-framed sash windows, slate roof and a brick chimney. A clear paved sidewalk in front, no people or cars. Soft morning sunlight, coherent masonry and straight architectural lines.",
+      "decision": "exclude",
+      "observation": "左下角生成了非请求的文字/水印，未修除，撤下候选。",
+      "original_sha256": "b8ff8874e7cf2d25c28fbd58cec9b3422ea18372360eca0f17b513ec002e84e9",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/red-brick-townhouse-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/red-brick-townhouse-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "red-brick-townhouse-exp2-s219",
+      "category": "Architecture",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "An architectural photograph of a small red-brick townhouse facade seen straight on. A single dark green entrance door with three stone steps, white-framed sash windows, slate roof and a brick chimney. A clear paved sidewalk in front, no people or cars. Soft morning sunlight, coherent masonry and straight architectural lines.",
+      "decision": "hold",
+      "observation": "烟囱及立面两侧被画框截断，构图不够完整，暂不展示。",
+      "original_sha256": "9721e2a9faaad8ce4085d82ddb06996167123fbb309834c2c6d7643a959468ff",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/red-brick-townhouse-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/red-brick-townhouse-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "timber-lakeside-cabin-exp2-s73",
+      "category": "Architecture",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "An architectural photograph of a compact timber cabin beside a quiet mountain lake. One simple gabled roof, a wooden porch supported by posts, a glazed entrance door and rectangular windows. The whole cabin is visible on firm land with a footpath leading to the porch. Clear soft daylight, no people, believable construction.",
+      "decision": "not_selected",
+      "observation": "同题材选择219版本，避免相近建筑重复。",
+      "original_sha256": "211b4f2ad4916867e176e4968a7d53880a9f0f3d461d1ef9368260bddcd0d1af",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/timber-lakeside-cabin-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/timber-lakeside-cabin-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "timber-lakeside-cabin-exp2-s219",
+      "category": "Architecture",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "An architectural photograph of a compact timber cabin beside a quiet mountain lake. One simple gabled roof, a wooden porch supported by posts, a glazed entrance door and rectangular windows. The whole cabin is visible on firm land with a footpath leading to the porch. Clear soft daylight, no people, believable construction.",
+      "decision": "accepted",
+      "observation": "原尺寸检查屋檐、前廊立柱、门窗和地面接触；结构清楚，建筑完整。",
+      "original_sha256": "801137266d870c1209203969565094c830217f1bd5c2b847586d3353b15d4db0",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/timber-lakeside-cabin-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/timber-lakeside-cabin-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-lakeside-cabin",
+      "website_sha256": "30d52e6f0584245c54d28f54d5f6275dba5370348632ea4cd36b06d42968cb98",
+      "website_size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "white-courtyard-exp2-s73",
+      "category": "Architecture",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "An architectural photograph of a small white stucco courtyard with a terracotta tiled floor, three rounded archways and a lemon tree in a large earthenware pot. The arches and columns connect clearly to the floor and roof. Mediterranean afternoon sunlight, calm restrained composition, no people.",
+      "decision": "hold",
+      "observation": "可辨识的完整拱门只有两处，右侧截断，不如另一版本符合三拱构图。",
+      "original_sha256": "f6dc41364d09adcf1a5478ac5d0215ab778257b0244965a49dc41aacc103aa1d",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/white-courtyard-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/white-courtyard-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "white-courtyard-exp2-s219",
+      "category": "Architecture",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "An architectural photograph of a small white stucco courtyard with a terracotta tiled floor, three rounded archways and a lemon tree in a large earthenware pot. The arches and columns connect clearly to the floor and roof. Mediterranean afternoon sunlight, calm restrained composition, no people.",
+      "decision": "accepted",
+      "observation": "原尺寸检查三拱、柱脚、盆栽落地与屋瓦；未见明显悬浮或结构中断。",
+      "original_sha256": "4411af028aaa263573005cce47e02c44ac4a1acba32e21f22335b6a298a02550",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/white-courtyard-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/white-courtyard-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-white-courtyard",
+      "website_sha256": "a6e53ea0fd29c8a2345b8aedcfdb5fd858be43e1ca0fc217c1ce1edaf63abd34",
+      "website_size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "japanese-entry-exp2-s73",
+      "category": "Architecture",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "An architectural photograph of the entrance to a traditional Japanese timber house, viewed straight on. A tiled pitched roof, wooden posts, sliding lattice doors, a raised wooden threshold and two broad stone steps. A simple gravel garden in front, overcast daylight, coherent joinery, no people or writing.",
+      "decision": "not_selected",
+      "observation": "选择台阶数量与入口构图更接近指令的219版本。",
+      "original_sha256": "7b4b13f4876bc3c4df1b887dbb1943619148fd4494a4fddc07396d0ffab6afb2",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/japanese-entry-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/japanese-entry-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "japanese-entry-exp2-s219",
+      "category": "Architecture",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "An architectural photograph of the entrance to a traditional Japanese timber house, viewed straight on. A tiled pitched roof, wooden posts, sliding lattice doors, a raised wooden threshold and two broad stone steps. A simple gravel garden in front, overcast daylight, coherent joinery, no people or writing.",
+      "decision": "accepted",
+      "observation": "原尺寸检查门格、木柱、门槛和两级台阶；主要结构连续，未见明显穿插或支撑中断。",
+      "original_sha256": "5a8ba26f64bf4e6f6bb7fa69026ea19a4ba86d4e226ebfacad43d21576ae7c94",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/japanese-entry-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/japanese-entry-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-timber-entry",
+      "website_sha256": "64e6ff499db85ef22b23c7ecd1ac2ef162ca07a95390c86931e4462faa5dd23d",
+      "website_size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "reading-room-exp2-s73",
+      "category": "Architecture",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "An interior architectural photograph of a small quiet reading room with tall rectangular windows, built-in wooden bookshelves and one sturdy oak reading table with two chairs. Natural daylight from the windows, simple aligned floorboards, clear furniture support and consistent perspective. No people, no legible writing.",
+      "decision": "hold",
+      "observation": "密集的椅脚和桌脚重叠，难以可靠确认家具连接，暂不展示。",
+      "original_sha256": "133132b96d5a4189a369fad57515c4f308dd9d0c726554ddaf158ceae8272e42",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/reading-room-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/reading-room-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "reading-room-exp2-s219",
+      "category": "Architecture",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "An interior architectural photograph of a small quiet reading room with tall rectangular windows, built-in wooden bookshelves and one sturdy oak reading table with two chairs. Natural daylight from the windows, simple aligned floorboards, clear furniture support and consistent perspective. No people, no legible writing.",
+      "decision": "hold",
+      "observation": "原尺寸检查后，前侧椅面与桌下横撑连接仍不够明确，保守暂缓。",
+      "original_sha256": "e0762a4826aad19c4487e3c8eca87800c220b62d145f38d2e93a7d869503fe48",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/reading-room-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/reading-room-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "stone-chapel-exp2-s73",
+      "category": "Architecture",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "An architectural photograph of a small rural stone chapel with a simple steep slate roof, one modest bell gable, an arched wooden door and two narrow windows. Seen from a low front three-quarter view, the entire building and its gravel path visible. Soft late-afternoon light, green meadow, no people.",
+      "decision": "hold",
+      "observation": "窗户数量与两窗指令不一致，钟架细节也不够清晰；暂不展示。",
+      "original_sha256": "395f9324abfea342b6ac3030d1639d6d159cab137c84f5213ad197f2a86f5bf6",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/stone-chapel-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/stone-chapel-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "stone-chapel-exp2-s219",
+      "category": "Architecture",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "An architectural photograph of a small rural stone chapel with a simple steep slate roof, one modest bell gable, an arched wooden door and two narrow windows. Seen from a low front three-quarter view, the entire building and its gravel path visible. Soft late-afternoon light, green meadow, no people.",
+      "decision": "hold",
+      "observation": "建筑右侧被画框截断，不满足整栋建筑完整可见的构图要求。",
+      "original_sha256": "22f4b7787eb54ed3c974bd3c57d8016fc6d35aca33104b2cec8229be08e3ecda",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/stone-chapel-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/stone-chapel-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "robin-branch-exp2-s73",
+      "category": "Nature",
+      "width": 896,
+      "height": 896,
+      "seed": 73,
+      "prompt": "A detailed wildlife photograph of one European robin perched on a single horizontal moss-covered branch. The bird is seen in side profile with a small straight beak, orange breast and folded wings. Both feet grip the branch naturally. Soft blurred woodland background, gentle morning daylight.",
+      "decision": "hold",
+      "observation": "原尺寸检查鸟爪，部分趾端呈平直短棒，抓握与爪尖细节不清，暂缓。",
+      "original_sha256": "1fec55372181438b7da1ba0afcf661cee850f2462966d729cd608493d4f5f590",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/robin-branch-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/robin-branch-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "robin-branch-exp2-s219",
+      "category": "Nature",
+      "width": 896,
+      "height": 896,
+      "seed": 219,
+      "prompt": "A detailed wildlife photograph of one European robin perched on a single horizontal moss-covered branch. The bird is seen in side profile with a small straight beak, orange breast and folded wings. Both feet grip the branch naturally. Soft blurred woodland background, gentle morning daylight.",
+      "decision": "hold",
+      "observation": "鸟爪抓握关系不够清楚，翅背橙色分布也与目标鸟种典型外观有疑点，暂缓。",
+      "original_sha256": "52d6644b121b39a7a632ab7206d16661100341f4a82510104e2b706ef8737fd6",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/robin-branch-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/robin-branch-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "white-swan-exp2-s73",
+      "category": "Nature",
+      "width": 896,
+      "height": 896,
+      "seed": 73,
+      "prompt": "A wildlife photograph of one adult white swan floating calmly on a quiet lake, seen in side profile. A gracefully curved neck, orange bill with a dark base, folded white wings and a coherent body silhouette. Gentle ripples surround the bird, soft early morning light, no other birds.",
+      "decision": "hold",
+      "observation": "鸟体后半及尾部被大幅截断，无法检查完整身体轮廓，暂缓。",
+      "original_sha256": "ddb84c63715dcb9a9ca71602c87452477a5e120f0d1989c7efcbc89827fbcb3d",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/white-swan-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/white-swan-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "white-swan-exp2-s219",
+      "category": "Nature",
+      "width": 896,
+      "height": 896,
+      "seed": 219,
+      "prompt": "A wildlife photograph of one adult white swan floating calmly on a quiet lake, seen in side profile. A gracefully curved neck, orange bill with a dark base, folded white wings and a coherent body silhouette. Gentle ripples surround the bird, soft early morning light, no other birds.",
+      "decision": "hold",
+      "observation": "鸟体后半及尾部被大幅截断，无法检查完整身体轮廓，暂缓。",
+      "original_sha256": "265ad9c5c8a2e3fffe3e342f3c4f52ae05f9b13bdc61a01a384fbf133bba7466",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/white-swan-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/white-swan-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "fallow-deer-exp2-s73",
+      "category": "Nature",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "A wildlife photograph of a single female fallow deer standing in a meadow, viewed from the side. Brown spotted coat, no antlers, four slender legs visibly supporting the body on grass, head raised calmly, natural proportions. Soft woodland background and warm morning light.",
+      "decision": "exclude",
+      "observation": "要求雌鹿且无角，却出现鹿角，明确违背指令。",
+      "original_sha256": "2b29d00d1d4bf82e59582b197c4de4ede509bad3fa68fc82184a7e5f0307549a",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/fallow-deer-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/fallow-deer-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "fallow-deer-exp2-s219",
+      "category": "Nature",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "A wildlife photograph of a single female fallow deer standing in a meadow, viewed from the side. Brown spotted coat, no antlers, four slender legs visibly supporting the body on grass, head raised calmly, natural proportions. Soft woodland background and warm morning light.",
+      "decision": "accepted",
+      "observation": "原尺寸检查头耳、无角特征、四肢分界与草地接触；四腿可分辨，未见明显多肢或融合。",
+      "original_sha256": "28d0d7e1ffc5f4ea06b1b1dbb799ea28bf58ef625f509103ce082e0c26107ef7",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/fallow-deer-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/fallow-deer-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-fallow-deer",
+      "website_sha256": "e3e34c3f06c2c81a5ce76bb3b3445757918f18f24c7963c28b9caad4d2643127",
+      "website_size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "woodland-waterfall-exp2-s73",
+      "category": "Nature",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "A landscape photograph of a small woodland waterfall flowing over dark layered rock into a clear shallow pool. Moss and ferns grow on both banks, continuous streams of falling water and natural ripples below. Soft overcast light, no buildings or people.",
+      "decision": "not_selected",
+      "observation": "同题材选择219版本，避免重复。",
+      "original_sha256": "039769cc77567c2a42977325659f14a809a83e64f2ff8cf87960a7ad9fff5fe4",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/woodland-waterfall-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/woodland-waterfall-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "woodland-waterfall-exp2-s219",
+      "category": "Nature",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "A landscape photograph of a small woodland waterfall flowing over dark layered rock into a clear shallow pool. Moss and ferns grow on both banks, continuous streams of falling water and natural ripples below. Soft overcast light, no buildings or people.",
+      "decision": "accepted",
+      "observation": "原尺寸检查水流由岩沿向池面连续落下，落水点、波纹和两岸植物关系自然。",
+      "original_sha256": "c77170d5b34b45b8cace31108a1350c846e64fb7655468e86e0feb439da1de50",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/woodland-waterfall-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/woodland-waterfall-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-woodland-waterfall",
+      "website_sha256": "a68106bf3bcf5ca5d42078dcc24fa291adc9459b636a97d954d90884ae390ecd",
+      "website_size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "autumn-path-exp2-s73",
+      "category": "Nature",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "A landscape photograph of a narrow woodland footpath covered with golden fallen leaves, leading between mature beech trees with orange autumn foliage. Soft morning light filters through the branches, natural tree trunks rooted in the forest floor, quiet realistic colors, no people.",
+      "decision": "accepted",
+      "observation": "原尺寸检查树干分枝、根部落地、林间道路透视；未见明显悬浮或形体融合。",
+      "original_sha256": "1483ce8cfdd8e11323182cbb1d254ee01b4e50687ed3c932dec1fad82d5dba79",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/autumn-path-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/autumn-path-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-autumn-path",
+      "website_sha256": "aa0731661b34de0b95aed8b5cdea12a3818cb5ea2b4f0929f4d42c435cacbcb7",
+      "website_size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "autumn-path-exp2-s219",
+      "category": "Nature",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "A landscape photograph of a narrow woodland footpath covered with golden fallen leaves, leading between mature beech trees with orange autumn foliage. Soft morning light filters through the branches, natural tree trunks rooted in the forest floor, quiet realistic colors, no people.",
+      "decision": "not_selected",
+      "observation": "同题材选择73版本，避免重复。",
+      "original_sha256": "5d8b23946c869bbff3ec6c0acf2653ada02be43f17179b9a3aebd7a32662ec84",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/autumn-path-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/autumn-path-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "lavender-fields-exp2-s73",
+      "category": "Nature",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "A landscape photograph of orderly rows of lavender flowering in a field on gentle rolling hills. A single mature tree stands on the distant horizon under a soft summer sky. Natural plant forms and realistic field perspective, warm late afternoon light, no people or buildings.",
+      "decision": "hold",
+      "observation": "田垄在中景处的衔接关系不够清楚，暂缓展示。",
+      "original_sha256": "3bbf25f611ea8613351de7751354cc9dd7cac989d1ff932c7a0cfc802a9486be",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/lavender-fields-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/lavender-fields-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "lavender-fields-exp2-s219",
+      "category": "Nature",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "A landscape photograph of orderly rows of lavender flowering in a field on gentle rolling hills. A single mature tree stands on the distant horizon under a soft summer sky. Natural plant forms and realistic field perspective, warm late afternoon light, no people or buildings.",
+      "decision": "hold",
+      "observation": "原尺寸复查中景田垄，有分叉合并及对接不清的疑点，暂缓展示。",
+      "original_sha256": "02f82068a5bedcba33878a39c2b7b718503c98c6451b5c5df3c7e265677c0e04",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/lavender-fields-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/lavender-fields-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "coffee-cup-exp2-s73",
+      "category": "Objects",
+      "width": 896,
+      "height": 896,
+      "seed": 73,
+      "prompt": "A still-life photograph of one white porcelain coffee cup filled with a smooth layer of brown crema, sitting on a matching saucer on an oak table. The cup has one small curved handle attached at both ends. A single stainless-steel teaspoon rests on the saucer. Soft window light, coherent reflections, simple clean composition.",
+      "decision": "accepted",
+      "observation": "原尺寸检查单把手的两处连接、杯底、杯托和勺子接触；结构连续，未见明显异常。",
+      "original_sha256": "11eaad85c69e7ee70fee572bc1edf1a4d3f3d9d75eb1ca53d9b102d8719ab6a4",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/coffee-cup-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/coffee-cup-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-coffee-cup",
+      "website_sha256": "2f83321450bdb33d2eb89ac9d5c7b2c0e668ad4d422658587192d6c9ed4e738e",
+      "website_size": [
+        896,
+        896
+      ]
+    },
+    {
+      "id": "coffee-cup-exp2-s219",
+      "category": "Objects",
+      "width": 896,
+      "height": 896,
+      "seed": 219,
+      "prompt": "A still-life photograph of one white porcelain coffee cup filled with a smooth layer of brown crema, sitting on a matching saucer on an oak table. The cup has one small curved handle attached at both ends. A single stainless-steel teaspoon rests on the saucer. Soft window light, coherent reflections, simple clean composition.",
+      "decision": "exclude",
+      "observation": "单把手咖啡杯生成了两个把手，违背明确指令。",
+      "original_sha256": "08a3d3b966646be6c54f449ba30ae260fa58a46a0e9d97b974c6f868b9e7fa5f",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/coffee-cup-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/coffee-cup-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "leather-satchel-exp2-s73",
+      "category": "Objects",
+      "width": 896,
+      "height": 896,
+      "seed": 73,
+      "prompt": "A studio product photograph of a small brown leather satchel resting upright on a light stone plinth. One top handle, a flap closure with two brass buckles and neat visible stitching. No straps crossing in front of the bag. Warm neutral background, soft daylight, realistic proportions and leather texture, no text or logo.",
+      "decision": "accepted",
+      "observation": "原尺寸检查提手、皮带、搭扣及包底落台，未见明显断裂、融合或悬浮。",
+      "original_sha256": "d6bfef8a11e00827a1b6d8c81226c180fd1d9af1fcd380c0324fcb407b96d4d9",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/leather-satchel-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/leather-satchel-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-leather-satchel",
+      "website_sha256": "b35d0f19a386949e3dae771e38a7a19b18baf1459536172ecdedef8edc904994",
+      "website_size": [
+        896,
+        896
+      ]
+    },
+    {
+      "id": "leather-satchel-exp2-s219",
+      "category": "Objects",
+      "width": 896,
+      "height": 896,
+      "seed": 219,
+      "prompt": "A studio product photograph of a small brown leather satchel resting upright on a light stone plinth. One top handle, a flap closure with two brass buckles and neat visible stitching. No straps crossing in front of the bag. Warm neutral background, soft daylight, realistic proportions and leather texture, no text or logo.",
+      "decision": "hold",
+      "observation": "提手呈重叠双环，搭扣细节不足以确认符合单提手与双扣要求，暂缓。",
+      "original_sha256": "55656cba603c9caea54cae2a5845d9f77f489fb406b9b402f653a5687a0db462",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/leather-satchel-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/leather-satchel-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "figs-still-life-exp2-s73",
+      "category": "Objects",
+      "width": 896,
+      "height": 896,
+      "seed": 73,
+      "prompt": "A still-life photograph of three ripe purple figs on a small cream ceramic plate, with one fig cut in half to reveal its pink-red seeded interior. A folded linen napkin beside the plate on a light wooden table. Soft side light, natural fruit texture and clear contact shadows, no cutlery.",
+      "decision": "not_selected",
+      "observation": "同批已有水果静物入选；画面呈三整果加一切面，与三果中切开一果的预期有歧义，暂不添加。",
+      "original_sha256": "4a4077674f734e9298151c2ece78ec16b3b5c544469e85b8696fc99aa9d80513",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/figs-still-life-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/figs-still-life-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "figs-still-life-exp2-s219",
+      "category": "Objects",
+      "width": 896,
+      "height": 896,
+      "seed": 219,
+      "prompt": "A still-life photograph of three ripe purple figs on a small cream ceramic plate, with one fig cut in half to reveal its pink-red seeded interior. A folded linen napkin beside the plate on a light wooden table. Soft side light, natural fruit texture and clear contact shadows, no cutlery.",
+      "decision": "not_selected",
+      "observation": "同批已有水果静物入选；画面呈三整果加一切面，与三果中切开一果的预期有歧义，暂不添加。",
+      "original_sha256": "b599d85f9ebe3df9919cfd5014016203b553c75e0fe1f64f3fa8d78398fd9802",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/figs-still-life-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/figs-still-life-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "ceramic-bowl-exp2-s73",
+      "category": "Objects",
+      "width": 896,
+      "height": 896,
+      "seed": 73,
+      "prompt": "A studio photograph of a handmade pale blue ceramic bowl on a light beige tabletop. Its complete circular rim and stable foot are visible, gently speckled glaze and realistic wall thickness. One small lemon rests beside the bowl. Soft natural shadows, simple neutral background, no text.",
+      "decision": "accepted",
+      "observation": "原尺寸检查完整碗沿、碗足、柠檬及台面接触；无明显扭曲或悬浮。",
+      "original_sha256": "d32e717e777a4f0b0d0a0a6c6611d2badc8dae12afcb3b92611d6bf18acbcfba",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/ceramic-bowl-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/ceramic-bowl-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-blue-bowl",
+      "website_sha256": "c33f7285f523f84ff6b73425c61b19ac239143de48bc9e4508e28c4578d778d4",
+      "website_size": [
+        896,
+        896
+      ]
+    },
+    {
+      "id": "ceramic-bowl-exp2-s219",
+      "category": "Objects",
+      "width": 896,
+      "height": 896,
+      "seed": 219,
+      "prompt": "A studio photograph of a handmade pale blue ceramic bowl on a light beige tabletop. Its complete circular rim and stable foot are visible, gently speckled glaze and realistic wall thickness. One small lemon rests beside the bowl. Soft natural shadows, simple neutral background, no text.",
+      "decision": "not_selected",
+      "observation": "同题材选择碗足和果实更清楚的73版本。",
+      "original_sha256": "7c042359b6fa2bc03f703ceb31311b70967bff9fc16d243411cea89855e10e5f",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/ceramic-bowl-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/ceramic-bowl-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "canvas-sneakers-exp2-s73",
+      "category": "Objects",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "A studio product photograph of a pair of plain cream canvas low-top sneakers resting side by side on a light gray surface, both facing to the right. One left shoe and one right shoe, white rubber soles, neatly threaded white laces. Soft diffused lighting, coherent shoe construction, no logo or writing.",
+      "decision": "hold",
+      "observation": "左右脚鞋型与鞋带穿孔细节不易确认，暂不展示。",
+      "original_sha256": "1dfb82be315080fb459ae41e07fe2b60ea9674f2df9f2e9879583ba908e71b65",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/canvas-sneakers-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/canvas-sneakers-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "canvas-sneakers-exp2-s219",
+      "category": "Objects",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "A studio product photograph of a pair of plain cream canvas low-top sneakers resting side by side on a light gray surface, both facing to the right. One left shoe and one right shoe, white rubber soles, neatly threaded white laces. Soft diffused lighting, coherent shoe construction, no logo or writing.",
+      "decision": "exclude",
+      "observation": "鞋头均朝左，未满足朝右的明确构图指令。",
+      "original_sha256": "3ac3370c608b72b61ae6622526c9b93b55f584ee4ef0d095b734849602bd2222",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/canvas-sneakers-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/canvas-sneakers-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "pears-pitcher-exp2-s73",
+      "category": "Objects",
+      "width": 896,
+      "height": 896,
+      "seed": 73,
+      "prompt": "A still-life photograph of a tall ivory ceramic pitcher and two ripe yellow pears arranged on a dark wooden table. The pitcher has a single handle joining the body at two points and a small pouring spout. Warm muted brown background, soft side light, realistic ceramic and fruit textures, stable contact shadows.",
+      "decision": "not_selected",
+      "observation": "同题材选择把手与壶身连接更清楚的219版本。",
+      "original_sha256": "3a9cecb88eabe18974ba96f4d6eca429e1e9521c45034b488a411c669226f2ac",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/pears-pitcher-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/pears-pitcher-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "pears-pitcher-exp2-s219",
+      "category": "Objects",
+      "width": 896,
+      "height": 896,
+      "seed": 219,
+      "prompt": "A still-life photograph of a tall ivory ceramic pitcher and two ripe yellow pears arranged on a dark wooden table. The pitcher has a single handle joining the body at two points and a small pouring spout. Warm muted brown background, soft side light, realistic ceramic and fruit textures, stable contact shadows.",
+      "decision": "accepted",
+      "observation": "原尺寸检查壶嘴、单把手两处连接、双梨果柄和台面接触，未见明显结构异常。",
+      "original_sha256": "3f819b5cff745bd6139b2ac82c81ad7f25703932a3ad606df7ca4c8e2ae66608",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/pears-pitcher-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/pears-pitcher-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-pears-pitcher",
+      "website_sha256": "4417e24a519c869b0cc9853d45b5d5878b7a5bcd3c82c485a8c15189b1709691",
+      "website_size": [
+        896,
+        896
+      ]
+    },
+    {
+      "id": "risograph-cactus-exp2-s73",
+      "category": "Art",
+      "width": 896,
+      "height": 896,
+      "seed": 73,
+      "prompt": "A two-color risograph print of a single prickly pear cactus in a simple terracotta pot. Sage-green cactus pads overlap naturally and connect to the plant base, rust-red pot and small ground shadow. Cream paper with a subtle grain, balanced flat graphic composition, no lettering.",
+      "decision": "not_selected",
+      "observation": "同题材采用219版本，刺座轮廓更明确，避免重复。",
+      "original_sha256": "51bce2dcf3e582da9229d9e8e0fd3b187c1e38b50a42f3487565a8d4a9b81d6a",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/risograph-cactus-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/risograph-cactus-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "risograph-cactus-exp2-s219",
+      "category": "Art",
+      "width": 896,
+      "height": 896,
+      "seed": 219,
+      "prompt": "A two-color risograph print of a single prickly pear cactus in a simple terracotta pot. Sage-green cactus pads overlap naturally and connect to the plant base, rust-red pot and small ground shadow. Cream paper with a subtle grain, balanced flat graphic composition, no lettering.",
+      "decision": "accepted",
+      "observation": "原尺寸检查扁平仙人掌茎片、盆口、盆底与落地阴影；风格化轮廓连贯，未见明显结构问题。",
+      "original_sha256": "320bae9315e74ec14295d6b1ddaeac1177fd5f29ffe9cdefb7e09a15a80f861d",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/risograph-cactus-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/risograph-cactus-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-risograph-cactus",
+      "website_sha256": "24fd7423e4aba1f6bfd15233ae18c7e6f5be8129375619a4d29b23f1ffed1b46",
+      "website_size": [
+        896,
+        896
+      ]
+    },
+    {
+      "id": "watercolor-village-exp2-s73",
+      "category": "Art",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "A delicate watercolor painting of a small coastal village with white houses and terracotta roofs on a hillside above a quiet blue bay. Simple coherent buildings, a winding footpath and soft green shrubs. Transparent washes on textured watercolor paper, restrained details, no people or lettering.",
+      "decision": "accepted",
+      "observation": "原尺寸检查房屋屋顶、墙体与坡岸、水面关系；水彩风格下主体连接清楚，未见明显悬空或融合。",
+      "original_sha256": "654cf34d6a29052e63f37666d48da51eb61a7b4ae9159aa0d9ad894f614536eb",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/watercolor-village-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/watercolor-village-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-watercolor-village",
+      "website_sha256": "55ccc36e2c80e0622b05a3d0316e6079e984a5855eb2a7a199cee0c9052d4262",
+      "website_size": [
+        1024,
+        768
+      ]
+    },
+    {
+      "id": "watercolor-village-exp2-s219",
+      "category": "Art",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "A delicate watercolor painting of a small coastal village with white houses and terracotta roofs on a hillside above a quiet blue bay. Simple coherent buildings, a winding footpath and soft green shrubs. Transparent washes on textured watercolor paper, restrained details, no people or lettering.",
+      "decision": "not_selected",
+      "observation": "同题材选择73版本，避免重复。",
+      "original_sha256": "8fe3589de09b3cd7225dd101d9d63b481c0fc0bf689827f741c9bd36d31dfb90",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/watercolor-village-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/watercolor-village-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "botanical-orchid-exp2-s73",
+      "category": "Art",
+      "width": 768,
+      "height": 1024,
+      "seed": 73,
+      "prompt": "A botanical watercolor illustration of one potted moth orchid with pale pink flowers, two flowering stems and broad green leaves growing from the base. A simple white ceramic pot rests on a faint horizontal surface. Delicate natural petal shapes, cream paper background, no text or diagram labels.",
+      "decision": "exclude",
+      "observation": "花朵呈管状/喇叭状，与指定蝴蝶兰的花型不一致，未上架。",
+      "original_sha256": "b3216bb4d227f0992142beb5a0e77908e3d6615bd1b52f96eb25e2d41f21481c",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/botanical-orchid-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/botanical-orchid-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "botanical-orchid-exp2-s219",
+      "category": "Art",
+      "width": 768,
+      "height": 1024,
+      "seed": 219,
+      "prompt": "A botanical watercolor illustration of one potted moth orchid with pale pink flowers, two flowering stems and broad green leaves growing from the base. A simple white ceramic pot rests on a faint horizontal surface. Delicate natural petal shapes, cream paper background, no text or diagram labels.",
+      "decision": "hold",
+      "observation": "花朵细节和花型不足以确认符合蝴蝶兰指令，暂缓展示。",
+      "original_sha256": "ff3b302ef6b46495783b13fb3d5e3a1321885b056e8bfd51eeaf7534c8c23dd1",
+      "original_size": [
+        768,
+        1024
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/botanical-orchid-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/botanical-orchid-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "paper-sailboat-exp2-s73",
+      "category": "Art",
+      "width": 896,
+      "height": 896,
+      "seed": 73,
+      "prompt": "A handcrafted layered-paper illustration of a single small sailboat on blue water under a pale sun. A red hull sits on the water, one vertical mast supports one white triangular sail with clear attachment points. Clean cut-paper edges, gentle cast shadows, simple consistent geometry, no people or lettering.",
+      "decision": "exclude",
+      "observation": "画面出现两片帆，与明确要求一片三角帆不符。",
+      "original_sha256": "b3fa46a17235c51268331d67fb80fec2f3d019ee64ca914ba3778cf17827cdf9",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/paper-sailboat-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/paper-sailboat-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "paper-sailboat-exp2-s219",
+      "category": "Art",
+      "width": 896,
+      "height": 896,
+      "seed": 219,
+      "prompt": "A handcrafted layered-paper illustration of a single small sailboat on blue water under a pale sun. A red hull sits on the water, one vertical mast supports one white triangular sail with clear attachment points. Clean cut-paper edges, gentle cast shadows, simple consistent geometry, no people or lettering.",
+      "decision": "exclude",
+      "observation": "帆面被桅杆分为左右两片，与一片三角帆的指令不符。",
+      "original_sha256": "ba9396a61411f71a19df64e2694278fda378cb4bacebb3402e854cdc80d62f72",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/paper-sailboat-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/paper-sailboat-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "ceramic-fish-relief-exp2-s73",
+      "category": "Art",
+      "width": 896,
+      "height": 896,
+      "seed": 73,
+      "prompt": "A photograph of a handmade rectangular ceramic relief tile depicting a single fish in side profile among flowing seaweed. The fish has one visible eye, a clearly shaped head, body, fins and tail. Blue and white glazed ceramic, raised forms within the tile border, simple coherent stylized anatomy, no text.",
+      "decision": "accepted",
+      "observation": "原尺寸检查鱼的单侧眼睛、鳃盖、鳍、尾与方形陶板边框；浮雕造型连贯，无明显融合或断裂。",
+      "original_sha256": "817abcca9d559e05be83bdcb39fa07fca2ee51db724816860c8a3104a596811f",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/ceramic-fish-relief-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/ceramic-fish-relief-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-ceramic-fish",
+      "website_sha256": "67ed630bbd2c525e7b6983f3c28522d615cb6a0a29b7145e9d89ab17c99c0676",
+      "website_size": [
+        896,
+        896
+      ]
+    },
+    {
+      "id": "ceramic-fish-relief-exp2-s219",
+      "category": "Art",
+      "width": 896,
+      "height": 896,
+      "seed": 219,
+      "prompt": "A photograph of a handmade rectangular ceramic relief tile depicting a single fish in side profile among flowing seaweed. The fish has one visible eye, a clearly shaped head, body, fins and tail. Blue and white glazed ceramic, raised forms within the tile border, simple coherent stylized anatomy, no text.",
+      "decision": "hold",
+      "observation": "夸张的鳍与背景水草交叠，边界辨识不如73版本，暂缓。",
+      "original_sha256": "a45b08b1c13f0862c8f113823eecdb374eee7c5738a4349ac592bdeff63615c0",
+      "original_size": [
+        896,
+        896
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/ceramic-fish-relief-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/ceramic-fish-relief-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "woven-landscape-exp2-s73",
+      "category": "Art",
+      "width": 1024,
+      "height": 768,
+      "seed": 73,
+      "prompt": "A photograph of a small handwoven tapestry depicting rolling ochre hills and a deep blue river beneath a pale sky. Thick wool threads, clear woven texture, simple geometric shapes, finished rectangular textile edges, laid flat on a neutral surface. No people, animals or lettering.",
+      "decision": "not_selected",
+      "observation": "同题材选用219版本，织物边缘与景物层次更清楚。",
+      "original_sha256": "1726cf7ee6fe567f863fde3c92ae882877bdac022958a60d624a8767b7d0c2b6",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/woven-landscape-exp2-s73.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/woven-landscape-exp2-s73.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution."
+    },
+    {
+      "id": "woven-landscape-exp2-s219",
+      "category": "Art",
+      "width": 1024,
+      "height": 768,
+      "seed": 219,
+      "prompt": "A photograph of a small handwoven tapestry depicting rolling ochre hills and a deep blue river beneath a pale sky. Thick wool threads, clear woven texture, simple geometric shapes, finished rectangular textile edges, laid flat on a neutral surface. No people, animals or lettering.",
+      "decision": "accepted",
+      "observation": "原尺寸检查织物连续纹理、收边和抽象山水层次；完整平铺织物，未见明显异常结构。",
+      "original_sha256": "346e9c0ddcd5fbe51f30d2c59dbf0daa69785a6c2b692d6b78d36ced7f3641fc",
+      "original_size": [
+        1024,
+        768
+      ],
+      "local_original": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-expansion60-20261026/full/images/woven-landscape-exp2-s219.png",
+      "remote_original": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference-results/gallery-t2i-ct95000-expansion60-20261026/full/images/woven-landscape-exp2-s219.png",
+      "review_scope": "Contact sheet inspection; shortlisted candidates additionally inspected at native resolution.",
+      "website_name": "g95-woven-landscape",
+      "website_sha256": "b5ef08898c76b101aad65b3096431b3f614dfe938307963fd966404e2f5f7335",
+      "website_size": [
+        1024,
+        768
+      ]
+    }
+  ],
+  "currently_displayed_from_batch": 17,
+  "display_update": {
+    "date": "2026-10-26",
+    "removed_by_user": [
+      "g95-round-glasses",
+      "g95-window-seat"
+    ],
+    "note": "Original review decisions and initial 19 additions are retained as history. Two images were subsequently removed from display at user request."
+  }
+}
