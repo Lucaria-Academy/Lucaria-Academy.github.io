@@ -1244,6 +1244,156 @@
       ],
       "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
       "display_status": "reviewed_new"
+    },
+    {
+      "name": "g95-anime-sky-courier",
+      "title": "Letters above the clouds",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024,
+      "sample_id": "sky-courier-anime-s219",
+      "style": "Original Japanese anime / manga character",
+      "source": "../UniSpark-CT0095000-anime24-20261026/full/images/sky-courier-anime-s219.png",
+      "run": "UniSpark-CT0095000-anime24-20261026",
+      "seed": 219,
+      "prompt": "An original Japanese adventure anime character illustration. A confident young adult female airship courier with short windswept coral-red hair, amber eyes, a teal cropped flight jacket with cream shearling collar, dark high-waisted trousers, sturdy brown ankle boots, and a single tan canvas mail satchel worn across her torso. Full body, standing naturally on a wooden airship landing platform, both hands tucked into her jacket pockets. The satchel hangs at one hip, its strap visibly crossing from the opposite shoulder. Small brass flight goggles rest above her forehead. Distant airships and soft clouds, golden morning light. Lively memorable silhouette, expressive face, elegant clean contours, sophisticated cel shading and a softly painted background. Clear separation of the two legs and boots, coherent clothing seams, no writing or logos.",
+      "original_sha256": "29449f133befb82db9b7226a28c9d8132c1cf562072d6103159da24e3b497b15",
+      "website_sha256": "afcd870d9860fd96cd261908ed7e0e405706fb668333345d52dcd142ee5e77ae",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
+    },
+    {
+      "name": "g95-anime-forest-apothecary",
+      "title": "The forest apothecary",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024,
+      "sample_id": "forest-apothecary-anime-s219",
+      "style": "Original Japanese anime / manga character",
+      "source": "../UniSpark-CT0095000-anime24-20261026/full/images/forest-apothecary-anime-s219.png",
+      "run": "UniSpark-CT0095000-anime24-20261026",
+      "seed": 219,
+      "prompt": "An original Japanese fantasy animation character, waist-up portrait of a thoughtful young adult forest apothecary with a dark-brown bob, bright green eyes and small round freckles. A soft oversized moss-green pointed witch hat with one tiny mushroom brooch on the band. A short olive cape over a cream blouse, a neat dark leather strap fastening the cape. She stands behind a simple counter with three small terracotta pots of herbs; hands rest below the counter, outside view. A bright woodland cottage window and fern silhouettes behind her. Distinct rounded character silhouette, inviting hand-painted background, crisp expressive linework, delicate cel shading, dappled warm sunlight. Clearly recognizable hat, face and clothing; no lettering, labels or watermark.",
+      "original_sha256": "61e5e5f15790c23de3db613ffcc4a123c2b4e72298133de3139f3fbc840bd0ff",
+      "website_sha256": "236ba0ba38edcd7d561d3ced4d4452698c704914d4ff20086b3878c16be74b72",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
+    },
+    {
+      "name": "g95-anime-star-traveler",
+      "title": "A pocketful of constellations",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024,
+      "sample_id": "star-traveler-anime-s219",
+      "style": "Original Japanese anime / manga character",
+      "source": "../UniSpark-CT0095000-anime24-20261026/full/images/star-traveler-anime-s219.png",
+      "run": "UniSpark-CT0095000-anime24-20261026",
+      "seed": 219,
+      "prompt": "Original Japanese fantasy anime key visual, a young adult male astronomy traveler with wavy silver-white hair, deep blue eyes and a gentle curious expression. Three-quarter waist-up portrait. He wears a midnight-navy short cape with fine gold constellation embroidery and a single small brass star clasp at the throat, a cream high-collared tunic underneath. One closed round brass compass hangs from a simple cord at his chest. His hands are outside the frame. Behind him a hilltop observatory dome and a deep twilight sky with sparse stars. The cape drapes naturally over both shoulders, uncluttered elegant silhouette. Fine expressive line art, rich indigo and warm ivory palette, luminous hand-painted anime background, coherent stylized facial anatomy. No text, symbols resembling writing, borders or watermark.",
+      "original_sha256": "c51a788d6aa831bf75e0fde785d35c43e84c118ce719ec4e361c51d3c96fd502",
+      "website_sha256": "5b26e7bed7a07e7db0547757dad3b0b33cb83503adedba44f7a74e0e626a9819",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
+    },
+    {
+      "name": "g95-anime-lantern-spirit",
+      "title": "The little lantern keeper",
+      "category": "Cartoon",
+      "width": 896,
+      "height": 896,
+      "sample_id": "lantern-spirit-anime-s219",
+      "style": "Original Japanese anime / manga character",
+      "source": "../UniSpark-CT0095000-anime24-20261026/full/images/lantern-spirit-anime-s219.png",
+      "run": "UniSpark-CT0095000-anime24-20261026",
+      "seed": 219,
+      "prompt": "An original charming Japanese folklore-inspired anime creature, one friendly small paper-lantern spirit standing on a stone path at dusk. Its entire body is a single oval cream paper lantern with subtle horizontal bamboo ribs, two expressive dark oval eyes and one tiny smiling mouth painted clearly on the front. One small brown wooden cap on top. Exactly two short articulated wooden arms attached to the sides, ending in simple round mitten-shaped hands, and two short wooden legs with broad round wooden feet attached underneath. Both feet firmly touch the path. A gentle warm golden glow shines from inside its translucent paper body. A few mossy stones and blurred blue-green bamboo in the background. Full body centered, clean animation linework, soft cel shading, appealing clear silhouette, no writing, fire, extra limbs or border.",
+      "original_sha256": "b99c120608ec0ecc13b28f18b9b3a5b4bb87ef4de9157eb22ac772c42fd14ef3",
+      "website_sha256": "54e17f62ac5f2d77c5b7c33b47192b86429c70d9b59570a1fe50a156f81d7870",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
+    },
+    {
+      "name": "g95-anime-manga-detective",
+      "title": "The midnight investigator",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024,
+      "sample_id": "manga-detective-anime-s73",
+      "style": "Original Japanese anime / manga character",
+      "source": "../UniSpark-CT0095000-anime24-20261026/full/images/manga-detective-anime-s73.png",
+      "run": "UniSpark-CT0095000-anime24-20261026",
+      "seed": 73,
+      "prompt": "Original sophisticated black-and-white Japanese mystery manga portrait of an adult woman detective with a sleek chin-length black bob, sharply observant eyes and a faint knowing smile. Three-quarter chest-up view. She wears a dark narrow-brimmed fedora, a light trench coat with simple clean lapels, and a black turtleneck underneath. Her hands are outside the frame. Light rain and blurred old-city streetlamps behind her. Crisp expressive black ink contours, elegant solid-black shapes, restrained screentone, beautifully readable face and clothing, subtle dramatic noir lighting. Strong original character design with coherent anatomy, no cigarettes, text, speech balloons, signs, signatures or watermark.",
+      "original_sha256": "a3c4fcc9adfdc023a6df24d0d312b344f40747adfccc3aebac2ce0eb3c435e44",
+      "website_sha256": "037d872e3212acfd8c4c6e15b4182cd8d6d9ba5cfb4bb35b1cb9e798bddbe56b",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
+    },
+    {
+      "name": "g95-anime-ocean-explorer",
+      "title": "Beyond the coral window",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024,
+      "sample_id": "ocean-explorer-anime-s219",
+      "style": "Original Japanese anime / manga character",
+      "source": "../UniSpark-CT0095000-anime24-20261026/full/images/ocean-explorer-anime-s219.png",
+      "run": "UniSpark-CT0095000-anime24-20261026",
+      "seed": 219,
+      "prompt": "Original Japanese science-fiction anime portrait of a young adult marine explorer with short turquoise hair and warm brown eyes. Chest-up view, wearing a rounded transparent diving helmet attached securely to a cream and orange suit collar, simple coherent equipment, her entire face clearly visible through the clear curved visor. One compact orange lamp on the helmet side, one short breathing hose running neatly from the rear collar down behind her shoulder. She smiles in quiet wonder. Beyond her is a softly painted underwater coral garden with small distant fish and rays of sunlight. Beautiful expressive line art, controlled cel shading, luminous ocean blues and coral-orange accents, coherent helmet geometry and facial proportions. Hands outside frame, no writing, logos, extra hoses or watermark.",
+      "original_sha256": "351df4e5e1897a407b744c425948b3698a7eeaef432737e3d52f3b0afe9f3b6f",
+      "website_sha256": "6a2cb4199efd2404afa10dc631957269934fd93c2fab98fcbeb222c0f1c3c768",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Full native-resolution JPEG conversion, quality 94, 4:4:4. No cropping, retouching, compositing or warping.",
+      "display_status": "reviewed_new"
     }
   ],
   "quality_review": "gallery-quality-review.json",
@@ -1287,6 +1437,12 @@
     "g95-watercolor-village",
     "g95-ceramic-fish",
     "g95-woven-landscape",
+    "g95-anime-sky-courier",
+    "g95-anime-forest-apothecary",
+    "g95-anime-star-traveler",
+    "g95-anime-lantern-spirit",
+    "g95-anime-manga-detective",
+    "g95-anime-ocean-explorer",
     "g95-cartoon-anime-portrait",
     "g95-cartoon-manga-portrait",
     "g95-cartoon-bakery",
@@ -1298,14 +1454,15 @@
   "display_policy": "Both existing and new samples require visual review. Exclude visible defects and withhold unresolved anatomy, geometry, contact, or common-sense concerns. Original assets remain unchanged.",
   "new_quality_review": "gallery-new-quality-review.json",
   "expansion_quality_review": "gallery-expansion60-quality-review.json",
-  "active_gallery_count": 46,
+  "active_gallery_count": 52,
   "active_gallery_categories": {
     "Nature": 8,
     "Objects": 11,
     "People": 7,
     "Art": 7,
     "Architecture": 6,
-    "Cartoon": 7
+    "Cartoon": 13
   },
-  "cartoon_quality_review": "gallery-cartoon-quality-review.json"
+  "cartoon_quality_review": "gallery-cartoon-quality-review.json",
+  "anime_characters_quality_review": "gallery-anime-characters-quality-review.json"
 }

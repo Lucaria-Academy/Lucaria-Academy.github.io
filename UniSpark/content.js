@@ -274,6 +274,48 @@ window.UNISPARK = {
       "height": 768
     },
     {
+      "name": "g95-anime-sky-courier",
+      "title": "Letters above the clouds",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "g95-anime-forest-apothecary",
+      "title": "The forest apothecary",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "g95-anime-star-traveler",
+      "title": "A pocketful of constellations",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "g95-anime-lantern-spirit",
+      "title": "The little lantern keeper",
+      "category": "Cartoon",
+      "width": 896,
+      "height": 896
+    },
+    {
+      "name": "g95-anime-manga-detective",
+      "title": "The midnight investigator",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "g95-anime-ocean-explorer",
+      "title": "Beyond the coral window",
+      "category": "Cartoon",
+      "width": 768,
+      "height": 1024
+    },
+    {
       "name": "g95-cartoon-anime-portrait",
       "title": "Auburn in soft light",
       "category": "Cartoon",

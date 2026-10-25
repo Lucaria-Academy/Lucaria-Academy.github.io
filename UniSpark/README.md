@@ -91,3 +91,9 @@ swift -module-cache-path /private/tmp/unispark-swift-cache website/scripts/prepa
 本次沿用 CT0095000、PANProj4 GPU 0–3、50 steps、CFG 4，分两批推理 24 + 12 = 36 个候选。所有候选先对照指令逐一审阅，入选 7 张再作原尺寸复核。分格漫画出现角色、物体或动作不连续，没有展示；尾巴断开、异常肢体连接、非预期文字等结果也未采用。这是目视展示筛选，不是基准测试，也不宣称零缺陷。
 
 完整指令、种子、检查理由、原始与网页文件哈希见 `scripts/gallery-cartoon-quality-review.json`；来源已并入 `scripts/gallery-provenance.json` 和 `scripts/asset-map.json`。原始结果保存在 Downloads 的 `UniSpark-CT0095000-cartoon24-20261026/` 与 `UniSpark-CT0095000-cartoon12b-20261026/`。网页导出保持原分辨率，JPEG quality 94、4:4:4，无裁剪、变形、修图或拼接。
+
+## 日式动画角色扩充（2026-10-26）
+
+使用 CT0095000 在 PANProj4 的 GPU 0–3 推理 12 个原创日式动画/漫画角色设定，每个设定两个种子（73、219），共 24 张候选。采样 50 steps、CFG 4。全部候选完成逐项审阅，入选结果进一步以原始分辨率检查五官、肢体连接、服饰、道具和画面可读性。新增 6 张：Letters above the clouds、The forest apothecary、A pocketful of constellations、The little lantern keeper、The midnight investigator、Beyond the coral window。Cartoon 当前 13 张，图库合计 52 张；原有 46 张和编辑区 13 组均保留。新角色排在 Cartoon 类别前部。
+
+完整指令、种子、逐图决策和哈希见 `scripts/gallery-anime-characters-quality-review.json`。原始结果保存于 `/Users/jianchengpan/Downloads/UniSpark-CT0095000-anime24-20261026/`，远端同批次为 `inference-results/gallery-t2i-ct95000-anime24-20261026/`。网页仅作完整原分辨率 JPEG 转换，quality 94、4:4:4，没有裁剪、修图、变形或拼接。审核为目视展示筛选，不是基准测试，也不保证零缺陷。
