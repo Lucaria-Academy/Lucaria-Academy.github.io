@@ -97,3 +97,9 @@ swift -module-cache-path /private/tmp/unispark-swift-cache website/scripts/prepa
 使用 CT0095000 在 PANProj4 的 GPU 0–3 推理 12 个原创日式动画/漫画角色设定，每个设定两个种子（73、219），共 24 张候选。采样 50 steps、CFG 4。全部候选完成逐项审阅，入选结果进一步以原始分辨率检查五官、肢体连接、服饰、道具和画面可读性。新增 6 张：Letters above the clouds、The forest apothecary、A pocketful of constellations、The little lantern keeper、The midnight investigator、Beyond the coral window。Cartoon 当前 13 张，图库合计 52 张；原有 46 张和编辑区 13 组均保留。新角色排在 Cartoon 类别前部。
 
 完整指令、种子、逐图决策和哈希见 `scripts/gallery-anime-characters-quality-review.json`。原始结果保存于 `/Users/jianchengpan/Downloads/UniSpark-CT0095000-anime24-20261026/`，远端同批次为 `inference-results/gallery-t2i-ct95000-anime24-20261026/`。网页仅作完整原分辨率 JPEG 转换，quality 94、4:4:4，没有裁剪、修图、变形或拼接。审核为目视展示筛选，不是基准测试，也不保证零缺陷。
+
+## 热血动漫编辑扩充（2026-10-26）
+
+按用户选定的 shortlist 新增 6 组：祢豆子的樱花发饰与庭院背景、炭治郎的紫藤背景、善逸的羽织印花移除与蓝天背景、悟空的背部星形徽记。编辑区由 14 组增至 20 组，沿用现有滑动对比；原有 14 组、52 张文生图和其他板块内容保留。
+
+这 6 组来自 CT0095000 在 PANProj4 GPU 0–3 的 44 张真实推理结果，50 steps、CFG 4；逐图审查后由用户确认加入。源图来自《鬼灭之刃》及《龙珠超》官方角色页面，界面附有来源链接。悟空徽记边缘和部分衣褶有轻微重绘，详见 `scripts/editing-shonen-quality-review.json`。完整指令、种子、原图/输出/网页导出哈希已写入 `scripts/editing-provenance.json`。网页图片仅作完整原分辨率 JPEG 转换（quality 94、4:4:4），未裁剪、修补或变形。原始结果保存在 Downloads 的 `UniSpark-shonen-edits-20261026/`。

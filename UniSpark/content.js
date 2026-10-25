@@ -443,6 +443,54 @@ window.UNISPARK = {
       "description": "Change the brooch's green gemstone to blue, preserving its gold frame and the character's appearance.",
       "sourceCredit": "Violet Evergarden · Official episode still",
       "sourceUrl": "https://tv.violet-evergarden.jp/story/#13"
+    },
+    {
+      "name": "edit95-shonen-nezuko-flower",
+      "title": "Nezuko · Hair clip",
+      "type": "add",
+      "description": "Add a pale pink cherry-blossom hair clip near Nezuko’s temple, preserving her appearance and the room.",
+      "sourceCredit": "Demon Slayer · Official character still",
+      "sourceUrl": "https://demonslayer-anime.com/hta/character/"
+    },
+    {
+      "name": "edit95-shonen-nezuko-garden",
+      "title": "Nezuko · Garden",
+      "type": "background",
+      "description": "Replace the indoor background with a cherry-blossom garden, preserving Nezuko’s pose and appearance.",
+      "sourceCredit": "Demon Slayer · Official character still",
+      "sourceUrl": "https://demonslayer-anime.com/hta/character/"
+    },
+    {
+      "name": "edit95-shonen-tanjiro-wisteria",
+      "title": "Tanjiro · Wisteria",
+      "type": "background",
+      "description": "Replace the indoor background with a wisteria garden, preserving Tanjiro’s smile, scar, earrings and uniform.",
+      "sourceCredit": "Demon Slayer · Official character still",
+      "sourceUrl": "https://demonslayer-anime.com/hta/character/"
+    },
+    {
+      "name": "edit95-shonen-zenitsu-plain",
+      "title": "Zenitsu · Plain haori",
+      "type": "remove",
+      "description": "Remove the white triangle prints from Zenitsu’s yellow-orange haori, keeping the character and background.",
+      "sourceCredit": "Demon Slayer · Official character still",
+      "sourceUrl": "https://demonslayer-anime.com/hta/character/"
+    },
+    {
+      "name": "edit95-shonen-zenitsu-sky",
+      "title": "Zenitsu · Blue sky",
+      "type": "background",
+      "description": "Replace the yellow background with a pastel blue sky and white clouds, preserving Zenitsu and his outfit.",
+      "sourceCredit": "Demon Slayer · Official character still",
+      "sourceUrl": "https://demonslayer-anime.com/hta/character/"
+    },
+    {
+      "name": "edit95-shonen-goku-back-star",
+      "title": "Goku · Star emblem",
+      "type": "replace",
+      "description": "Replace the black character in Goku’s back emblem with a black five-pointed star, keeping his back-facing pose and outfit.",
+      "sourceCredit": "Dragon Ball Super · Official character art",
+      "sourceUrl": "https://www.toei-anim.co.jp/tv/dragon_s/chara/01.html"
     }
   ],
   "sequences": [

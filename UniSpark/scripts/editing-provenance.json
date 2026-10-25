@@ -293,6 +293,353 @@
           }
         }
       ]
+    },
+    {
+      "run": "imgedit-ct95000-shonen24-20261026",
+      "local_run": "/Users/jianchengpan/Downloads/UniSpark-shonen-edits-20261026",
+      "checkpoint": "UniBagel-Qwen35-A4-512-CT-0823/checkpoints/0095000/model.safetensors",
+      "candidate_count": 24,
+      "num_timesteps": 50,
+      "cfg_text_scale": 4,
+      "export": "Full original-resolution source and output converted to JPEG quality 94, 4:4:4; no cropping, warping, compositing or retouching.",
+      "approval": {
+        "status": "user_approved_for_editing_showcase",
+        "date": "2026-10-26",
+        "message": "更新到网页"
+      },
+      "samples": [
+        {
+          "name": "edit95-shonen-nezuko-flower",
+          "sample_id": "nezuko-flower-s219",
+          "instruction": "Add a small pale pink five-petal cherry-blossom hair clip attached to the black hair on the right side of the image, near the temple above her ear. Preserve all facial features, eyes, smile, hair shape and existing clothing. Keep the room background unchanged. Preserve the exact character identity, face, facial expression, hairstyle, pose, anatomy, outfit details outside the requested edit, line art and original framing. Do not add text or extra body parts.",
+          "seed": 219,
+          "width": 1024,
+          "height": 576,
+          "type": "add",
+          "source": {
+            "name": "祢豆子",
+            "page": "https://demonslayer-anime.com/hta/character/",
+            "image_url": "https://demonslayer-anime.com/hta/assets/img/chara/img_chara_nezuko.jpg",
+            "original_path": "/Users/jianchengpan/Downloads/UniSpark-shonen-edits-20261026/originals/nezuko.jpg",
+            "original_sha256": "f860833c7ed673e1b9f6943a614ad115d92a29423acdb815a3811c4e0dc95a72",
+            "source_file": "nezuko.png",
+            "source_sha256": "7e7e0bdc4852691319d43803917ef0e3bd82c8bed5b0c880d77584b7d9cf9594",
+            "width": 1024,
+            "height": 576,
+            "normalization": "Entire source scaled proportionally and centered on white canvas; no source cropping.",
+            "source_native_size": [
+              1600,
+              900
+            ]
+          },
+          "visual_review": {
+            "id": "nezuko-flower-s219",
+            "source_id": "nezuko",
+            "task": "nezuko-flower",
+            "title": "祢豆子 · 樱花发饰",
+            "edit_type": "add",
+            "seed": 219,
+            "decision": "candidate",
+            "reason": "添加了一朵五瓣樱花发饰，面部、眼睛、黑发、衣领及室内背景保持一致；原尺寸检查未见明显形变。",
+            "source_sha256": "7e7e0bdc4852691319d43803917ef0e3bd82c8bed5b0c880d77584b7d9cf9594",
+            "output_sha256": "0b804a51c68f2f3e9d5148fede9ea31f1858f47d12aa2eb0ca800be97b80be79",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/nezuko-flower-s219.png",
+            "sha256": "7e7e0bdc4852691319d43803917ef0e3bd82c8bed5b0c880d77584b7d9cf9594",
+            "website": "assets/edit95-shonen-nezuko-flower-before.jpg",
+            "website_sha256": "979db3a819ccdcc5b4897aea4addca2a09db576500e0c5b256903df72b1a4ec2"
+          },
+          "after": {
+            "original": "full/images/nezuko-flower-s219.png",
+            "sha256": "0b804a51c68f2f3e9d5148fede9ea31f1858f47d12aa2eb0ca800be97b80be79",
+            "website": "assets/edit95-shonen-nezuko-flower-after.jpg",
+            "website_sha256": "76fe086b779671c564a05d1663d2f7d03a5b2780f6d7ca88d015edbb9077cc96"
+          }
+        },
+        {
+          "name": "edit95-shonen-nezuko-garden",
+          "sample_id": "nezuko-garden-s219",
+          "instruction": "Replace only the indoor room background with a softly focused anime-style cherry-blossom garden in daylight. Keep Nezuko in exactly the same position, size, head tilt and pose, with her face, eyes, black hair, pink clothing and line art unchanged. Preserve the exact character identity, face, facial expression, hairstyle, pose, anatomy, outfit details outside the requested edit, line art and original framing. Do not add text or extra body parts.",
+          "seed": 219,
+          "width": 1024,
+          "height": 576,
+          "type": "background",
+          "source": {
+            "name": "祢豆子",
+            "page": "https://demonslayer-anime.com/hta/character/",
+            "image_url": "https://demonslayer-anime.com/hta/assets/img/chara/img_chara_nezuko.jpg",
+            "original_path": "/Users/jianchengpan/Downloads/UniSpark-shonen-edits-20261026/originals/nezuko.jpg",
+            "original_sha256": "f860833c7ed673e1b9f6943a614ad115d92a29423acdb815a3811c4e0dc95a72",
+            "source_file": "nezuko.png",
+            "source_sha256": "7e7e0bdc4852691319d43803917ef0e3bd82c8bed5b0c880d77584b7d9cf9594",
+            "width": 1024,
+            "height": 576,
+            "normalization": "Entire source scaled proportionally and centered on white canvas; no source cropping.",
+            "source_native_size": [
+              1600,
+              900
+            ]
+          },
+          "visual_review": {
+            "id": "nezuko-garden-s219",
+            "source_id": "nezuko",
+            "task": "nezuko-garden",
+            "title": "祢豆子 · 樱花庭院背景",
+            "edit_type": "background",
+            "seed": 219,
+            "decision": "candidate",
+            "reason": "樱花庭院背景替换完成，人物脸部、头部倾角、头发轮廓及衣领保持一致；背景质感偏写实。",
+            "source_sha256": "7e7e0bdc4852691319d43803917ef0e3bd82c8bed5b0c880d77584b7d9cf9594",
+            "output_sha256": "da546ddc46d253e7f9c42028ad4222c12f702ef72bebde11ae715d3718fcbcb4",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/nezuko-garden-s219.png",
+            "sha256": "7e7e0bdc4852691319d43803917ef0e3bd82c8bed5b0c880d77584b7d9cf9594",
+            "website": "assets/edit95-shonen-nezuko-garden-before.jpg",
+            "website_sha256": "979db3a819ccdcc5b4897aea4addca2a09db576500e0c5b256903df72b1a4ec2"
+          },
+          "after": {
+            "original": "full/images/nezuko-garden-s219.png",
+            "sha256": "da546ddc46d253e7f9c42028ad4222c12f702ef72bebde11ae715d3718fcbcb4",
+            "website": "assets/edit95-shonen-nezuko-garden-after.jpg",
+            "website_sha256": "e0e8fd1a76c6411c9e1860bb7901c86f4ccf4153cd1a8a7b71bd049b4994e47e"
+          }
+        }
+      ],
+      "displayed_count": 2
+    },
+    {
+      "run": "imgedit-ct95000-shonen-refine16-20261026",
+      "local_run": "/Users/jianchengpan/Downloads/UniSpark-shonen-edits-20261026/refine16",
+      "checkpoint": "UniBagel-Qwen35-A4-512-CT-0823/checkpoints/0095000/model.safetensors",
+      "candidate_count": 16,
+      "num_timesteps": 50,
+      "cfg_text_scale": 4,
+      "export": "Full original-resolution source and output converted to JPEG quality 94, 4:4:4; no cropping, warping, compositing or retouching.",
+      "approval": {
+        "status": "user_approved_for_editing_showcase",
+        "date": "2026-10-26",
+        "message": "更新到网页"
+      },
+      "samples": [
+        {
+          "name": "edit95-shonen-tanjiro-wisteria",
+          "sample_id": "tanjiro-wisteria-s42",
+          "instruction": "Replace only the indoor background with a softly focused anime-style wisteria garden with hanging purple flowers. Keep Tanjiro exactly unchanged, including his smiling face, closed eyes, forehead scar, earrings, hair, white uniform collar and red collar button. Keep the character identity, facial features, hairstyle, hands, pose, body proportions, framing and all other clothing exactly unchanged. Do not redraw the character. Do not add text.",
+          "seed": 42,
+          "width": 1024,
+          "height": 576,
+          "type": "background",
+          "source": {
+            "name": "炭治郎",
+            "page": "https://demonslayer-anime.com/hta/character/",
+            "image_url": "https://demonslayer-anime.com/hta/assets/img/chara/img_chara_tanjiro.jpg",
+            "original_path": "/Users/jianchengpan/Downloads/UniSpark-shonen-edits-20261026/originals/tanjiro-hta.jpg",
+            "original_sha256": "20eea1ec7c061d017d9ed361deb67f32aa807141e484e8346972742d52f44ed8",
+            "source_file": "tanjiro.png",
+            "source_sha256": "07f6bfedaeee5aa73d10298985c729dd0c295b337fc5c96fff8473e96d746e5f",
+            "width": 1024,
+            "height": 576,
+            "normalization": "Entire source scaled proportionally and centered on white canvas; no source cropping.",
+            "source_native_size": [
+              1600,
+              900
+            ]
+          },
+          "visual_review": {
+            "id": "tanjiro-wisteria-s42",
+            "source_id": "tanjiro",
+            "task": "tanjiro-wisteria",
+            "title": "炭治郎 · 紫藤庭院背景",
+            "edit_type": "background",
+            "seed": 42,
+            "decision": "candidate",
+            "reason": "室内背景换成紫藤庭院，人物笑容、闭眼、额头疤痕、耳饰、发型与衣领保留；原尺寸未见明显形变。",
+            "source_sha256": "07f6bfedaeee5aa73d10298985c729dd0c295b337fc5c96fff8473e96d746e5f",
+            "output_sha256": "275a07e79efbcf25a3fa60d090d7a13d816adf1f7df58b3a2c751993b6bcd812",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/tanjiro-wisteria-s42.png",
+            "sha256": "07f6bfedaeee5aa73d10298985c729dd0c295b337fc5c96fff8473e96d746e5f",
+            "website": "assets/edit95-shonen-tanjiro-wisteria-before.jpg",
+            "website_sha256": "ecb293620be46dd62f5abf30e92a492d32dfae01ab068cfb9958ed4e5a41e86d"
+          },
+          "after": {
+            "original": "full/images/tanjiro-wisteria-s42.png",
+            "sha256": "275a07e79efbcf25a3fa60d090d7a13d816adf1f7df58b3a2c751993b6bcd812",
+            "website": "assets/edit95-shonen-tanjiro-wisteria-after.jpg",
+            "website_sha256": "7d963056ef8cfb85d926a41c22d59af03330783462248f72a0a036c5e5bb82b6"
+          }
+        },
+        {
+          "name": "edit95-shonen-zenitsu-plain",
+          "sample_id": "zenitsu-plain-s137",
+          "instruction": "Remove only the white triangle prints from the yellow-orange haori fabric visible in the lower-left corner. Replace those prints with matching plain yellow-orange fabric, preserving the black garment outline. Keep all facial features, hair, black high-collared uniform and yellow background unchanged. Keep the character identity, facial features, hairstyle, hands, pose, body proportions, framing and all other clothing exactly unchanged. Do not redraw the character. Do not add text.",
+          "seed": 137,
+          "width": 1024,
+          "height": 576,
+          "type": "remove",
+          "source": {
+            "name": "善逸",
+            "page": "https://demonslayer-anime.com/hta/character/",
+            "image_url": "https://demonslayer-anime.com/hta/assets/img/chara/img_chara_zennitsu.jpg",
+            "original_path": "/Users/jianchengpan/Downloads/UniSpark-shonen-edits-20261026/sources/zenitsu.png",
+            "original_sha256": "742961b9efe87d6e7a8056e50b006562100e434d2e327a222d77c8f2e7df7d3b",
+            "source_file": "zenitsu.png",
+            "source_sha256": "742961b9efe87d6e7a8056e50b006562100e434d2e327a222d77c8f2e7df7d3b",
+            "width": 1024,
+            "height": 576,
+            "normalization": "Entire source scaled proportionally and centered on white canvas; no source cropping.",
+            "source_native_size": [
+              1024,
+              576
+            ]
+          },
+          "visual_review": {
+            "id": "zenitsu-plain-s137",
+            "source_id": "zenitsu",
+            "task": "zenitsu-plain",
+            "title": "善逸 · 移除羽织印花",
+            "edit_type": "remove",
+            "seed": 137,
+            "decision": "candidate",
+            "reason": "羽织上的白色三角纹已移除，脸部、发型、闭眼表情、黑色领口和背景保持一致。",
+            "source_sha256": "742961b9efe87d6e7a8056e50b006562100e434d2e327a222d77c8f2e7df7d3b",
+            "output_sha256": "e4483f8f2395f8b0779a4a8e4ba3e9131e0b2b11cb513e80c7d4be1d59d754f9",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/zenitsu-plain-s137.png",
+            "sha256": "742961b9efe87d6e7a8056e50b006562100e434d2e327a222d77c8f2e7df7d3b",
+            "website": "assets/edit95-shonen-zenitsu-plain-before.jpg",
+            "website_sha256": "d2b89d00b321db5cb89a4d33e09f796ac4da428403ccffa597b947f0bbf9d78e"
+          },
+          "after": {
+            "original": "full/images/zenitsu-plain-s137.png",
+            "sha256": "e4483f8f2395f8b0779a4a8e4ba3e9131e0b2b11cb513e80c7d4be1d59d754f9",
+            "website": "assets/edit95-shonen-zenitsu-plain-after.jpg",
+            "website_sha256": "b7eaa091fb2fa851ecef3e2a46fe1747b87d9bc3e2a7f876b140c4d75ff67579"
+          }
+        },
+        {
+          "name": "edit95-shonen-zenitsu-sky",
+          "sample_id": "zenitsu-sky-s42",
+          "instruction": "Replace only the yellow background with a simple pastel blue anime sky and a few soft white clouds. Preserve the entire smiling character exactly, especially his yellow-orange hair silhouette, face, eyes, yellow haori, white triangle prints and high black collar. Keep the character identity, facial features, hairstyle, hands, pose, body proportions, framing and all other clothing exactly unchanged. Do not redraw the character. Do not add text.",
+          "seed": 42,
+          "width": 1024,
+          "height": 576,
+          "type": "background",
+          "source": {
+            "name": "善逸",
+            "page": "https://demonslayer-anime.com/hta/character/",
+            "image_url": "https://demonslayer-anime.com/hta/assets/img/chara/img_chara_zennitsu.jpg",
+            "original_path": "/Users/jianchengpan/Downloads/UniSpark-shonen-edits-20261026/sources/zenitsu.png",
+            "original_sha256": "742961b9efe87d6e7a8056e50b006562100e434d2e327a222d77c8f2e7df7d3b",
+            "source_file": "zenitsu.png",
+            "source_sha256": "742961b9efe87d6e7a8056e50b006562100e434d2e327a222d77c8f2e7df7d3b",
+            "width": 1024,
+            "height": 576,
+            "normalization": "Entire source scaled proportionally and centered on white canvas; no source cropping.",
+            "source_native_size": [
+              1024,
+              576
+            ]
+          },
+          "visual_review": {
+            "id": "zenitsu-sky-s42",
+            "source_id": "zenitsu",
+            "task": "zenitsu-sky",
+            "title": "善逸 · 蓝天白云背景",
+            "edit_type": "background",
+            "seed": 42,
+            "decision": "candidate",
+            "reason": "黄色背景换为蓝天白云，人物面部、发丝边缘、服装轮廓与三角纹保留，目视未见明显形变。",
+            "source_sha256": "742961b9efe87d6e7a8056e50b006562100e434d2e327a222d77c8f2e7df7d3b",
+            "output_sha256": "de3318d726593700c9868f87499171c00237320b1b5901dc554484bf5469c91c",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/zenitsu-sky-s42.png",
+            "sha256": "742961b9efe87d6e7a8056e50b006562100e434d2e327a222d77c8f2e7df7d3b",
+            "website": "assets/edit95-shonen-zenitsu-sky-before.jpg",
+            "website_sha256": "d2b89d00b321db5cb89a4d33e09f796ac4da428403ccffa597b947f0bbf9d78e"
+          },
+          "after": {
+            "original": "full/images/zenitsu-sky-s42.png",
+            "sha256": "de3318d726593700c9868f87499171c00237320b1b5901dc554484bf5469c91c",
+            "website": "assets/edit95-shonen-zenitsu-sky-after.jpg",
+            "website_sha256": "d6e93cd6044bc61fd521be42a2ca4440fc119a9a6dfe4167664bfd263ccf1b1d"
+          }
+        }
+      ],
+      "displayed_count": 3
+    },
+    {
+      "run": "imgedit-ct95000-shonen-goku4-20261026",
+      "local_run": "/Users/jianchengpan/Downloads/UniSpark-shonen-edits-20261026/goku4",
+      "checkpoint": "UniBagel-Qwen35-A4-512-CT-0823/checkpoints/0095000/model.safetensors",
+      "candidate_count": 4,
+      "num_timesteps": 50,
+      "cfg_text_scale": 4,
+      "export": "Full original-resolution source and output converted to JPEG quality 94, 4:4:4; no cropping, warping, compositing or retouching.",
+      "approval": {
+        "status": "user_approved_for_editing_showcase",
+        "date": "2026-10-26",
+        "message": "更新到网页"
+      },
+      "samples": [
+        {
+          "name": "edit95-shonen-goku-back-star",
+          "sample_id": "goku-back-star-s42",
+          "instruction": "Replace only the black kanji inside the white circular emblem on Goku's upper back with a single black five-pointed star. Keep the white circular emblem, its black border, orange outfit, blue belt, arms, hands, black spiky hair, boots, exact back-facing pose and white background unchanged.",
+          "seed": 42,
+          "width": 768,
+          "height": 1024,
+          "type": "replace",
+          "source": {
+            "name": "悟空",
+            "page": "https://www.toei-anim.co.jp/tv/dragon_s/chara/01.html",
+            "image_url": "https://www.toei-anim.co.jp/tv/dragon_s/assets/img/chara/goku/img02.png",
+            "original_path": "/Users/jianchengpan/Downloads/UniSpark-shonen-edits-20261026/originals/goku-2.png",
+            "original_sha256": "2ac0a08a00a7cbdaef6bd938c962c844aa347428c2d260fbc523f5d50442b6ff",
+            "source_file": "goku.png",
+            "source_sha256": "67d4de925286a27d63a6f2b879d1e530f33e549d01f5a2bde8b184143a88115c",
+            "width": 768,
+            "height": 1024,
+            "normalization": "Full source scaled proportionally on white canvas; no crop."
+          },
+          "visual_review": {
+            "id": "goku-back-star-s42",
+            "source_id": "goku",
+            "task": "goku-back-star",
+            "title": "悟空 · 背部徽记换星星",
+            "edit_type": "replace",
+            "seed": 42,
+            "decision": "candidate",
+            "reason": "背部“悟”字换成黑色五角星，背向姿势、发型、四肢和靴子保持可辨识的一致，未见明显解剖形变；徽记边框与局部衣褶有轻微重绘。",
+            "source_sha256": "67d4de925286a27d63a6f2b879d1e530f33e549d01f5a2bde8b184143a88115c",
+            "output_sha256": "29e7ce3d9733b6ed975a8218bd8ed1abcb29b25c4554290cb2897d2fa611762c",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/goku-back-star-s42.png",
+            "sha256": "67d4de925286a27d63a6f2b879d1e530f33e549d01f5a2bde8b184143a88115c",
+            "website": "assets/edit95-shonen-goku-back-star-before.jpg",
+            "website_sha256": "c6cc392c9725850355f706da20becd5c8a47f6b83402320f3e904b81c6672384"
+          },
+          "after": {
+            "original": "full/images/goku-back-star-s42.png",
+            "sha256": "29e7ce3d9733b6ed975a8218bd8ed1abcb29b25c4554290cb2897d2fa611762c",
+            "website": "assets/edit95-shonen-goku-back-star-after.jpg",
+            "website_sha256": "21d451db2df6840c966bb39e38655825c5956b65612b790046726e7c078a6b9e"
+          }
+        }
+      ],
+      "displayed_count": 1
     }
   ]
 }
