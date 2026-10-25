@@ -241,6 +241,58 @@
           }
         }
       ]
+    },
+    {
+      "run": "imgedit-ct95000-anime-focused8-20261026",
+      "checkpoint": "UniBagel-Qwen35-A4-512-CT-0823/checkpoints/0095000/model.safetensors",
+      "local_run": "/Users/jianchengpan/Downloads/UniSpark-CT0095000-anime-focused8-20261026",
+      "candidate_count": 8,
+      "selection_total_across_rounds": 32,
+      "displayed_count": 1,
+      "num_timesteps": 50,
+      "cfg_text_scale": 4,
+      "unconditional_source": "keep",
+      "export": "Full 1024x576 source and model output converted to JPEG (quality 92); no cropping, warping, compositing, or retouching.",
+      "visual_review": "Best candidate: blue gem with an oval gold rim retained; facial identity, expression, hairstyle and pose remain visually coherent with no obvious deformation. Minor light/linework and brooch design changes remain; not pixel-identical. Candidate for user review, not automatically published.",
+      "approval": {
+        "status": "user_approved_for_editing_showcase",
+        "date": "2026-10-26",
+        "message": "这张可以，先加到编辑展示里"
+      },
+      "source": {
+        "page": "https://tv.violet-evergarden.jp/story/",
+        "image_url": "https://tv.violet-evergarden.jp/img/story/13/06.jpg",
+        "original_size": [
+          768,
+          432
+        ],
+        "processing": "Source resampled to 1024x576, matching output dimensions; no semantic retouch.",
+        "credit": "©暁佳奈・京都アニメーション／ヴァイオレット・エヴァーガーデン製作委員会",
+        "note": "Original anime frame is an external reference image, not a UniSpark generation."
+      },
+      "samples": [
+        {
+          "name": "edit95-anime-blue-brooch",
+          "sample_id": "violet-blue-gem-cn-s137",
+          "instruction": "仅把脖子上胸针中间的绿色宝石改成蓝色，保留原来的金色边框和原有的大小形状，人物和背景保持不变。",
+          "seed": 137,
+          "width": 1024,
+          "height": 576,
+          "type": "adjust",
+          "before": {
+            "original": "full/sources/violet-blue-gem-cn-s137.png",
+            "sha256": "edace3361fc9e014f5146db92429c69939caa0c8e01ee7fb0a4876826b866dee",
+            "website": "assets/edit95-anime-blue-brooch-before.jpg",
+            "website_sha256": "2000f9453d529f8a315d24a9b96399c2c004f3186061ee23dc0cd155b6c7eb90"
+          },
+          "after": {
+            "original": "full/images/violet-blue-gem-cn-s137.png",
+            "sha256": "8f9e60ebefa04292fca1f7c5dec41a9995574abeb356af12e1fc8cae45499cde",
+            "website": "assets/edit95-anime-blue-brooch-after.jpg",
+            "website_sha256": "f2f2d454b40597b44fbf11617a2a9e6a515ad0cb307bf4cfed5085a99213e825"
+          }
+        }
+      ]
     }
   ]
 }

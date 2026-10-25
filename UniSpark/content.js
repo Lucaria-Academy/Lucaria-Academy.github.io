@@ -435,6 +435,14 @@ window.UNISPARK = {
       "title": "Lighting · Blue hour",
       "type": "adjust",
       "description": "Change the courtyard to blue hour with soft warm light inside the arches."
+    },
+    {
+      "name": "edit95-anime-blue-brooch",
+      "title": "Anime · Blue brooch",
+      "type": "adjust",
+      "description": "Change the brooch's green gemstone to blue, preserving its gold frame and the character's appearance.",
+      "sourceCredit": "Violet Evergarden · Official episode still",
+      "sourceUrl": "https://tv.violet-evergarden.jp/story/#13"
     }
   ],
   "sequences": [

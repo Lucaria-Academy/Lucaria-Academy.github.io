@@ -63,6 +63,12 @@ function selectEdit(index) {
   $('#edit-after').src = `assets/${item.name}-after.jpg`;
   $('#edit-after').alt = `Edited image: ${item.description}`;
   $('#edit-description').textContent = item.description;
+  const credit = $('#edit-credit');
+  credit.hidden = !item.sourceUrl;
+  const sourceLink = credit.querySelector('a');
+  sourceLink.textContent = item.sourceCredit || '';
+  if (item.sourceUrl) sourceLink.href = item.sourceUrl;
+  else sourceLink.removeAttribute('href');
   $('#compare-range').value = 50;
   setComparison(50);
   activate(document.querySelector(`[data-edit="${index}"]`), '[data-edit]');
