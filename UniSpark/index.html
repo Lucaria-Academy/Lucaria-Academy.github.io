@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UniSpark: Hybrid Attention for Understanding and Generation</title>
+<meta name="description" content="UniSpark explores hybrid attention for multimodal understanding, image generation, editing, interleaved prediction, and video adaptation.">
+<meta name="theme-color" content="#08090b">
+<link rel="icon" href="assets/spark.svg" type="image/svg+xml">
+<link rel="preload" href="assets/manrope-regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script defer src="content.js"></script><script defer src="results-data.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="nav-wrap"><a class="brand" href="#" aria-label="UniSpark home"><img src="assets/spark.svg" width="28" height="28" alt="">UniSpark</a><nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#gallery">Gallery</a><a href="#results">Results</a><a href="#reference">Reference</a><a href="assets/unispark.pdf" target="_blank" rel="noopener">Paper</a></nav><div class="header-links"><a class="institute-brand" href="https://www.antresearch.com/" target="_blank" rel="noopener" aria-label="蚂蚁技术研究院 Ant Research"><img src="assets/ant-research.png" width="264" height="78" alt="蚂蚁技术研究院 Ant Research"></a></div></div></header>
+<main id="main">
+<section class="hero wrap" aria-labelledby="title">
+<h1 id="title">UniSpark</h1>
+<p class="hero-title">Exploring Hybrid Attention for<br class="desktop-break"> Multimodal Understanding and Generation</p>
+<p class="hero-summary">Understand, create, and edit within one shared framework.</p>
+<div class="actions"><a class="button primary" href="assets/unispark.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg>Technical report</a><a class="button" href="#gallery">Explore the gallery <span aria-hidden="true">↓</span></a></div>
+<div class="hero-mosaic" aria-label="Selected UniSpark image generations">
+<div class="hero-image"><img src="assets/cartographer.jpg" alt="Cartographer studying a map in a richly detailed room" fetchpriority="high"><span class="hero-image-label" aria-hidden="true">Portraits</span></div>
+<div class="hero-image"><img src="assets/library.jpg" alt="Curved library set in a sunlit desert" fetchpriority="high"><span class="hero-image-label" aria-hidden="true">Architecture</span></div>
+<div class="hero-image"><img src="assets/fox.jpg" alt="Red fox surrounded by frost" fetchpriority="high"><span class="hero-image-label" aria-hidden="true">Nature</span></div>
+<div class="hero-image"><img src="assets/embroidery.jpg" alt="Textured embroidered map of a river" fetchpriority="high"><span class="hero-image-label" aria-hidden="true">Art & craft</span></div>
+</div><div class="showcase-caption"><p>Selected generations from the UniSpark paper.</p><a href="#gallery">View the full gallery <span aria-hidden="true">↘</span></a></div>
+</section>
+<section id="overview" class="wrap section">
+<div class="section-heading"><h2>Hybrid attention.<br>Shared visual context.</h2><p>Can hybrid attention support both understanding and visual generation? UniSpark brings full attention and recurrent linear attention into a shared Mixture-of-Transformer-Experts backbone.</p></div>
+<div class="flow" aria-label="Architecture overview"><div class="operators"><div><span class="dot blue"></span>Full attention <small>Explicit token interactions</small></div><span class="plus">+</span><div><span class="dot pink"></span>GatedDeltaNet <small>Recurrent context states</small></div></div><div class="flow-stem"></div><div class="backbone"><strong>UniSpark-9B</strong><span>Shared multimodal context</span><small>Approximately 9B parameters per branch</small></div><div class="flow-stem"></div><div class="capabilities"><a href="#results"><strong>Understand</strong><span>Visual question answering, perception, and reasoning</span></a><a href="#gallery"><strong>Create & edit</strong><span>Text-to-image generation and instruction-guided editing</span></a><a href="#sequences"><strong>Continue & adapt</strong><span>Interleaved sequences and video generation and editing</span></a></div></div>
+<div class="overview-copy"><p>Autoregressive text prediction and visual flow matching connect language and images. Private noisy targets remain separate from reusable clean content, so completed outputs can provide context for later predictions.</p><p>Training progresses from image resolution scaling up to 2K to unified supervised refinement, followed by video adaptation with mixed image and video tasks. The understanding branch stays frozen during video adaptation.</p></div>
+<details class="architecture"><summary>Explore the model architecture <span aria-hidden="true">+</span></summary><figure><div class="figure-media"><img src="assets/architecture.jpg" alt="UniSpark architecture: understanding and generation branches with full attention and GatedDeltaNet" loading="lazy"></div><figcaption>Shared context connects text, semantic visual features, and visual latents.</figcaption></figure></details>
+</section>
+<section id="gallery" class="wrap section">
+<div class="section-heading"><h2>From words to visual worlds</h2><p>Portraits, architecture, natural scenes, and crafted objects. Explore text-to-image examples from the paper.</p></div>
+<div class="filters" role="group" aria-label="Filter image gallery"><button class="active" aria-pressed="true" data-filter="All">All images</button><button aria-pressed="false" data-filter="People">People</button><button aria-pressed="false" data-filter="Architecture">Architecture</button><button aria-pressed="false" data-filter="Nature">Nature</button><button aria-pressed="false" data-filter="Objects">Objects</button><button aria-pressed="false" data-filter="Art">Art</button></div>
+<div id="gallery-grid" class="gallery-grid"></div><p id="gallery-status" class="sr-only" aria-live="polite"></p>
+<noscript><p>Enable JavaScript for the interactive gallery. The examples are also available in the technical report.</p></noscript>
+</section>
+<section id="editing" class="wrap section">
+<div class="section-heading"><h2>Small instructions.<br>Meaningful changes.</h2><p>Reference-conditioned editing changes selected attributes while retaining the scene. Choose an example and drag the divider to compare.</p></div>
+<div class="editor"><div class="edit-sidebar"><h3>Image editing</h3><div id="edit-options" class="choice-list" role="group" aria-label="Editing examples"></div><p id="edit-description" aria-live="polite"></p><p class="small-note">Descriptions summarize the requested edits.</p></div><div class="compare-area"><div class="comparison" id="comparison"><img id="edit-after" src="assets/coat-after.jpg" alt="Edited image: emerald green coat" loading="lazy"><img id="edit-before" class="before" src="assets/coat-before.jpg" alt="Source image: red coat" loading="lazy"><span class="image-label source-label">Source</span><span class="image-label edited-label">Edited</span><div class="divider" aria-hidden="true"><span>‹ ›</span></div><input id="compare-range" type="range" min="0" max="100" value="50" aria-label="Source image visibility" aria-valuetext="50 percent source image"></div><p class="media-note">Drag to compare · Use arrow keys when the slider is focused</p></div></div>
+</section>
+<section id="sequences" class="wrap section">
+<div class="section-heading"><h2>Beyond a single image</h2><p>Interleaved prediction carries visual context across successive outputs. These four-image sequences illustrate scene continuity as actions unfold.</p></div><div class="sequence-toolbar"><div id="sequence-options" class="filters" role="group" aria-label="Sequence examples"></div><div class="arrows"><button id="previous-sequence" aria-label="Previous sequence">‹</button><button id="next-sequence" aria-label="Next sequence">›</button></div></div><p id="sequence-description" class="sequence-description" aria-live="polite"></p><div id="sequence-frames" class="sequence-frames"></div>
+</section>
+<section id="results" class="wrap section">
+<div class="section-heading"><h2>Understanding, generation, and efficiency</h2><p>Explore benchmark breakdowns, evaluation settings, and the trade-offs behind each result. Expand a table to see all model entries reported in the paper.</p></div>
+<div class="filters result-filters" role="group" aria-label="Select results table"><button aria-pressed="true" class="active" data-result="understanding">Understanding</button><button aria-pressed="false" data-result="geneval">GenEval</button><button aria-pressed="false" data-result="dpg">DPG-Bench</button><button aria-pressed="false" data-result="editing">Image editing</button><button aria-pressed="false" data-result="generation_efficiency">Generation speed</button><button aria-pressed="false" data-result="understanding_efficiency">Understanding speed</button></div>
+<div id="results-panel" aria-live="polite"></div>
+<details class="architecture"><summary>View the benchmark overview <span aria-hidden="true">+</span></summary><figure><div class="figure-media"><img src="assets/benchmarks.jpg" alt="Selected understanding, image generation, and image editing benchmark results" loading="lazy"></div><figcaption>Selected results from Figure 1. ImgEdit scores use different judges; see the editing tab for details.</figcaption></figure></details>
+<p class="small-note">Source: <a href="assets/unispark.pdf" target="_blank" rel="noopener">Technical report, Experiments</a>. Values follow the manuscript tables; benchmark papers are linked in each evaluation-settings panel.</p>
+</section>
+<section id="reference" class="wrap section reference">
+<div class="section-heading"><h2>Reference</h2></div><div class="citation-header"><span>Manuscript citation</span><button id="copy-citation" class="button">Copy BibTeX</button></div><pre><code id="citation">@misc{pan2026unispark,
+  title = {UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation},
+  author = {Pan, Jiancheng and Liu, Yuzheng and Cao, Hengyuan and Zhang, Qiyuan and Li, Yangyan and Gong, Biao},
+  year = {2026},
+  note = {Manuscript}
+}</code></pre><p id="copy-status" class="small-note" role="status"></p>
+</section>
+<section id="authors" class="wrap author-block" aria-labelledby="authors-heading">
+<h2 id="authors-heading" class="author-label">Authors</h2>
+<ul class="author-list">
+<li><a href="https://jianchengpan.space/" target="_blank" rel="noopener">Jiancheng Pan</a></li>
+<li><a href="https://ly-kc.github.io/" target="_blank" rel="noopener">Yuzheng Liu</a></li>
+<li><span>Hengyuan Cao</span></li>
+<li><span>Qiyuan Zhang</span></li>
+<li><a href="https://yangyan.li/" target="_blank" rel="noopener">Yangyan Li</a></li>
+<li><a href="https://scholar.google.com.hk/citations?user=BwdpTiQAAAAJ&amp;hl=zh-CN&amp;oi=ao" target="_blank" rel="noopener">Biao Gong</a></li>
+</ul>
+</section>
+</main><footer class="wrap"><a class="brand" href="#"><img src="assets/spark.svg" width="24" height="24" alt="">UniSpark</a><p>Exploring hybrid multimodal modeling.</p><p class="small-note">Page design inspired by <a href="https://lucaria-academy.github.io/AGG/" target="_blank" rel="noopener">AGG</a>.</p><a href="#">Back to top ↑</a></footer>
+</body></html>
