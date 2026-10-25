@@ -1,0 +1,46 @@
+{
+  "run": "imgedit-ct95000-consistency12-20261026",
+  "checkpoint": "UniBagel-Qwen35-A4-512-CT-0823/checkpoints/0095000/model.safetensors",
+  "candidate_count": 12,
+  "num_timesteps": 50,
+  "cfg_text_scale": 4,
+  "export": "Full model output converted to JPEG (quality 92); no cropping, warping, compositing, or retouching.",
+  "samples": [
+    {
+      "name": "perfume-edit",
+      "sample_id": "perfume-s42",
+      "seed": 42,
+      "instruction": "Change only the liquid inside the rectangular perfume bottle from dark green to warm amber. Keep the exact same bottle, glass outlines, silver cap, water droplets, slate slab and foliage. Preserve all object positions, proportions, lighting, viewpoint and framing. No other changes.",
+      "width": 768,
+      "height": 1024,
+      "before": {
+        "original": "full/sources/perfume-s42.png",
+        "sha256": "708db33c54bf26b8ad2c436102511895c53bab59c56717693f9050e0cdad9b8c",
+        "website": "assets/perfume-edit-before.jpg"
+      },
+      "after": {
+        "original": "full/images/perfume-s42.png",
+        "sha256": "d88307025530808a985d625d83971b18be920d8fafcd5813ce460bc82a286270",
+        "website": "assets/perfume-edit-after.jpg"
+      }
+    },
+    {
+      "name": "dessert-red",
+      "sample_id": "dessert-s20261026",
+      "seed": 20261026,
+      "instruction": "Change only the color of the glossy dark-chocolate sphere to glossy cherry red. Keep its perfectly spherical shape, size, surface highlight and exact position unchanged. Preserve the entire plate, sugar curls, fruit garnishes, background, lighting, camera angle and framing exactly as in the source image. No other changes.",
+      "width": 1024,
+      "height": 1024,
+      "before": {
+        "original": "full/sources/dessert-s20261026.png",
+        "sha256": "07c9ef2f06cf06138ffe927449626039f2c0c7e12ce43cbd5361af5798552cfa",
+        "website": "assets/dessert-red-before.jpg"
+      },
+      "after": {
+        "original": "full/images/dessert-s20261026.png",
+        "sha256": "5dd8ad887baf5c87bfdc74099531f5d4d8f0fa124e703d0d6cf74629f8ce5709",
+        "website": "assets/dessert-red-after.jpg"
+      }
+    }
+  ]
+}

@@ -1,0 +1,430 @@
+{
+  "reviewed_on": "2026-10-26",
+  "method": "逐张视觉复查网页整图，并对手指、肢体、接触点、支撑、倒影等疑点检查原图局部。无外部裁判评分。",
+  "policy": "明显错误排除；无法确认的样本暂缓展示。accepted 表示本轮未发现明显问题，不表示对生成图零缺陷的保证。原图和网页图片均未修补。",
+  "reviewed_count": 22,
+  "accepted_count": 9,
+  "excluded_count": 6,
+  "held_count": 7,
+  "active_categories": {
+    "Nature": 1,
+    "Objects": 3,
+    "People": 2,
+    "Art": 1,
+    "Architecture": 2
+  },
+  "hero_replacements": {
+    "cartographer": "short-hair-portrait",
+    "library": "market"
+  },
+  "items": [
+    {
+      "name": "library",
+      "title": "Desert solar library",
+      "category": "Architecture",
+      "width": 1200,
+      "height": 900,
+      "decision": "held",
+      "visible": false,
+      "observation": "远处人物肢体轮廓及屋顶面板连接细节不够清楚，不能通过本轮严格展示筛选。",
+      "source": "figs/showcase-ct0823/v5/02_architecture_5/01_desert_solar_library.jpg",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "6ac76a224bbe650434b9502061675992da5823bd0b9030525a562105fd30d85f",
+      "website_sha256": "bdd3b529804952d01f3feccddd0c51375b2046a79c626f23c61c264bf40e057e",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "cartographer",
+      "title": "The cartographer’s room",
+      "category": "People",
+      "width": 1200,
+      "height": 900,
+      "decision": "excluded",
+      "visible": false,
+      "observation": "画面右侧撑桌手的指尖及指缝融合、形状异常；原图局部复查仍可见。",
+      "source": "figs/showcase-ct0823/v5/01_people_5/03_cartographer_map_room.jpg",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "16aaa173f4dbc44c121c7c2d2d6386688f19d322bb7c55093bea10b2736ac26b",
+      "website_sha256": "451063a72fc39331132455b03fd21fec0c4496262249213537ed48dca06a22ef",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "fox",
+      "title": "Red fox in the frost",
+      "category": "Nature",
+      "width": 1200,
+      "height": 900,
+      "decision": "accepted",
+      "visible": true,
+      "observation": "复查头部、前肢及落地关系；未见明显多肢或结构融合，后肢被正面视角遮挡。",
+      "source": "figs/showcase-ct0823/v5/03_wildlife_4/01_red_fox_frost.jpg",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "009616a84a3bf7c5f306b7f1230bf4436cd7aafa1ef673ac85c2f4867bc53771",
+      "website_sha256": "653f040b90bcb27370b58f2e64859fd05c1c6a07323e9a44299a49ff6b8cc7b7",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "perfume",
+      "title": "Perfume on wet slate",
+      "category": "Objects",
+      "width": 900,
+      "height": 1200,
+      "decision": "accepted",
+      "visible": true,
+      "observation": "瓶盖、瓶身边缘和底部接触关系清楚；网页描述改为画面可见的湿石板。原始生成指令及文件名保留。",
+      "source": "figs/showcase-ct0823/v5/04_product_food_4/02_perfume_rain_glass.jpg",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "source_sha256": "8fab6cbdae12a95cf50073810c3b299549e4273135fc2e5b7a04a54a100aedf9",
+      "website_sha256": "267e0c2a1e4d1eea177ce94c993cf1ae8269612b828bc1de40916786f2903f34",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "greenhouse",
+      "title": "A station reimagined as a greenhouse",
+      "category": "Architecture",
+      "width": 1200,
+      "height": 900,
+      "decision": "held",
+      "visible": false,
+      "observation": "屋顶细密杆件出现波折、交汇关系不清；背景人物轮廓也不足以确认。",
+      "source": "figs/showcase-ct0823/v5/02_architecture_5/02_station_greenhouse.jpg",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "4d7b9ed71ed556d6109bc3193e42d2a01e3722aa37c25e0ea7dbc5d5790a1066",
+      "website_sha256": "d0c244fc3f518679e824b9fc8ebb33f82a9d24cbc2f0aca8dbc6990183d8e15c",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "portrait",
+      "title": "A portrait in natural light",
+      "category": "People",
+      "width": 900,
+      "height": 1200,
+      "decision": "accepted",
+      "visible": true,
+      "observation": "复查眼睛、耳部、面部及颈肩连接；未见明显重复或融合结构。",
+      "source": "figs/showcase-ct0823/02_person_t2i_logic_strict_5/01_elderly_black_woman.jpg",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "source_sha256": "9441aae5b9e9622e22404df5437ae62f2394f56bf4d2f37e1a194383f07ad69d",
+      "website_sha256": "bddc880040804d296da722e43bc8f2b29c44de72a9c7792baf412386c5ffd7aa",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "embroidery",
+      "title": "An embroidered river map",
+      "category": "Art",
+      "width": 1200,
+      "height": 900,
+      "decision": "accepted",
+      "visible": true,
+      "observation": "线材、织物边缘及河流山形作为刺绣图案连贯；无明显异常具象结构。",
+      "source": "figs/showcase-ct0823/v5/05_art_fantasy_2/01_embroidered_river_map.jpg",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "c0070bbed9cb330b0e5dade41f85d7f93c50ebec796c2ee3bf596223cbca7f2a",
+      "website_sha256": "d13f0ea766a5b630db8940a7ecefb2ef082fb69c8aa02297825119dc81e81e3f",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "market",
+      "title": "Canal-side flower market",
+      "category": "Architecture",
+      "width": 1200,
+      "height": 900,
+      "decision": "accepted",
+      "visible": true,
+      "observation": "复查舟体、岸线、水面及前景立柱；未见明显悬浮、穿插或支撑中断。",
+      "source": "figs/showcase-ct0823/v5/02_architecture_5/05_canal_flower_market.jpg",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "cb7a194dabb7f71cd3cb60881c4d33d4ca37303a24371a671b5c0ca886848406",
+      "website_sha256": "799db810501791678de2d9e77f5c4cdcec678d7ea76acc9e8e679acf5b0cfe53",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "lamp",
+      "title": "A kinetic desk lamp",
+      "category": "Objects",
+      "width": 1200,
+      "height": 1200,
+      "decision": "held",
+      "visible": false,
+      "observation": "底座附近琥珀色形体的支撑和倒影对应关系不够明确，暂缓展示；不据此断言设计在物理上不可能。",
+      "source": "figs/showcase-ct0823/v5/04_product_food_4/01_kinetic_desk_lamp.jpg",
+      "original_size": [
+        1792,
+        1792
+      ],
+      "source_sha256": "5b1eaad31cd40bc5888619a46446a52e53da292e02617fb49055e39935ade13e",
+      "website_sha256": "953077589313a2887e0910c2a95cf97734af2664dc2c7aa80a6195638052343a",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "moss",
+      "title": "Miniature moss transit",
+      "category": "Art",
+      "width": 1200,
+      "height": 900,
+      "decision": "excluded",
+      "visible": false,
+      "observation": "桥面轨道在右侧直接抵入外墙窗下，缺少可通行的衔接，微缩风格不能消除这一问题。",
+      "source": "figs/showcase-ct0823/v5/05_art_fantasy_2/02_miniature_moss_transit.jpg",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "0538316f996fbc1a1bf2d365079f2a8e9ec998d3ed97b96f38044223f0ae6ad7",
+      "website_sha256": "56552f2955cb9b94cdfabe7c2258d9bb15ddd3466107554f7e2e7208ac788fa7",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "tart",
+      "title": "Pear tart",
+      "category": "Objects",
+      "width": 1200,
+      "height": 1200,
+      "decision": "accepted",
+      "visible": true,
+      "observation": "果片、挞皮、盘沿及桌面接触清楚；未见明显扭曲或悬浮。",
+      "source": "figs/showcase-ct0823/v5/04_product_food_4/04_pear_tart.jpg",
+      "original_size": [
+        1792,
+        1792
+      ],
+      "source_sha256": "244d79c7c6ee84490872b050e1a4c45fe21afca48b048b04ff665e69a0593902",
+      "website_sha256": "d810907db633e00190a5998532f6a0d533a83d3b48f1ca629846dbae3511201a",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "school",
+      "title": "Monsoon courtyard school",
+      "category": "Architecture",
+      "width": 1200,
+      "height": 900,
+      "decision": "accepted",
+      "visible": true,
+      "observation": "复查主要柱脚、檐口及积水中的倒影关系；未见明显结构中断。",
+      "source": "figs/showcase-ct0823/v5/02_architecture_5/03_monsoon_courtyard_school.jpg",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "2a244435920629b0f491ad90e17c997748278bc860c351b70d5dc6b0bb86efc4",
+      "website_sha256": "332a3ddc4f8c88f2741409a6f67b9c09a2a860b52d87e347fef05fb7d5164206",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "turtle",
+      "title": "Sea turtle over seagrass",
+      "category": "Nature",
+      "width": 1200,
+      "height": 900,
+      "decision": "excluded",
+      "visible": false,
+      "observation": "头部与上方鳍肢连成一体，鳍肢位置和比例异常。",
+      "source": "figs/showcase-ct0823/v5/03_wildlife_4/04_sea_turtle_seagrass.jpg",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "d4b29edc7e954d6893b1f8e5a9c0467014a9e12546fa4584b575406a070b5def",
+      "website_sha256": "487eaf41cbaf0df159b227f7d075aea10bdb765c75029658b1f335ffaa682c0b",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "short-hair-portrait",
+      "title": "Portrait in a black turtleneck",
+      "category": "People",
+      "width": 900,
+      "height": 1200,
+      "decision": "accepted",
+      "visible": true,
+      "observation": "复查五官、耳部、头颈和衣领连接；未见明显形体异常。",
+      "source": "figs/showcase-ct0823/02_person_t2i_logic_strict_5/02_short_haired_woman.jpg",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "source_sha256": "5f4db28816d1e29e86dbb1016f41ac4130f9fd2c424d1f905a9593a4a455a3e3",
+      "website_sha256": "ad61477dda9a12d607703c1e069ed6f2d65c7069e403a982f657803787663583",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "papercut",
+      "title": "Papercut night festival",
+      "category": "Art",
+      "width": 1200,
+      "height": 900,
+      "decision": "excluded",
+      "visible": false,
+      "observation": "前景多个人物的腿、脚及身体轮廓融合或变形；不因剪纸风格而放宽结构要求。",
+      "source": "figs/showcase-ct0823/04_nonperson_edit_logic_strict_4/sources/01_papercut_blue_gold_source.jpg",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "6094c233d922d00d15192e2101673511862e2fbd83403bc732467392f8fdd803",
+      "website_sha256": "4a2514a17804a95e959ed53ecbce43846e91d33e9f3e74a72b79e361d384a788",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "ramen",
+      "title": "Mushroom ramen still life",
+      "category": "Objects",
+      "width": 1200,
+      "height": 1200,
+      "decision": "held",
+      "visible": false,
+      "observation": "蛋状食材切面缺乏清楚的结构，面条也无法辨认；与拉面描述的一致性不足。",
+      "source": "../UniSpark-gallery-expansion-20261026/v5-ramen-still-life.png",
+      "original_size": [
+        1792,
+        1792
+      ],
+      "source_sha256": "02afa3d8b3ebbe15831718d4e43dde9fee93c98b3bf54cbcd92ef0ff765aae72",
+      "website_sha256": "90c6f0612e3e21d7e105256c9ddbc0be1fb8723206df64260f55b82f9f0168e9",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "elephants",
+      "title": "Elephants on a reflective salt pan",
+      "category": "Nature",
+      "width": 1200,
+      "height": 900,
+      "decision": "excluded",
+      "visible": false,
+      "observation": "左侧象鼻中下段出现不连贯的尖状突出与分叉轮廓。排除依据为象鼻；不将右侧腹下可见结构认定为异常附肢。",
+      "source": "../UniSpark-gallery-expansion-20261026/v5-elephants-salt-pan.png",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "7502980e4c8c126d1cba05c2b3aae352a528d2af75a3ddbcb39deb4451e56b29",
+      "website_sha256": "4396d7188f0502968d9d47003acc27100a0b9ee7b477f1c57cf85c5b8063b3c9",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "architect",
+      "title": "Architect at the drawing table",
+      "category": "People",
+      "width": 1200,
+      "height": 900,
+      "decision": "held",
+      "visible": false,
+      "observation": "放大原图检查撑桌手，外侧指尖轮廓叠合，不能可靠排除手指融合，暂缓展示。",
+      "source": "figs/showcase-ct0823/02_person_t2i_logic_strict_5/04_architect_blueprint.jpg",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "aa8b08c1afcacf69ad2fea12852c79354abac5115a32d1e053dde772189f44cb",
+      "website_sha256": "c4c5331eb0c238d5b61145a0e410282bea15e0f3703537cb2173905fddb965f0",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "water-lab",
+      "title": "Alpine water laboratory",
+      "category": "Architecture",
+      "width": 1200,
+      "height": 900,
+      "decision": "held",
+      "visible": false,
+      "observation": "玻璃立面、外廊栏杆和基座细节的连接关系不够明确；未通过严格结构筛选。",
+      "source": "../UniSpark-gallery-expansion-20261026/v5-alpine-water-lab.png",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "source_sha256": "4b5e9d80bdc686717be87d8e406cec467c8c7e68874af3acbbb1e869ba3e0949",
+      "website_sha256": "1129389827aa8587eda8dbef131e7e45def1065faa7b385600f8b93138d3cdf0",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "beekeeper",
+      "title": "Beekeeper in a flowering orchard",
+      "category": "People",
+      "width": 900,
+      "height": 1200,
+      "decision": "held",
+      "visible": false,
+      "observation": "手部与木框边缘有融合感，所持器具形态也不够明确，保守撤下。",
+      "source": "figs/showcase-ct0823/v5/01_people_5/02_beekeeper_orchard.jpg",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "source_sha256": "756af13654029042f353756e80e8343b9d34ef191db158a2ad5feaf8efefdf93",
+      "website_sha256": "5dc8c2c3475b5daf1d09597427fe0e4c7ccfd538d9ec313557f1c3e463feab34",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "chocolate-dessert",
+      "title": "Chocolate sphere with sugar curls",
+      "category": "Objects",
+      "width": 1200,
+      "height": 1200,
+      "decision": "accepted",
+      "visible": true,
+      "observation": "球形主体、盘沿、糖环以及台面接触关系清楚；未见明显穿插或悬浮。",
+      "source": "figs/showcase-ct0823/04_nonperson_edit_logic_strict_4/sources/03_dessert_amber_source.jpg",
+      "original_size": [
+        1792,
+        1792
+      ],
+      "source_sha256": "0a80dd6f52d7a68b83630844ba31c892468559f5b0599f3510cc2acb113cbf5f",
+      "website_sha256": "7088b9ccd7278398cc5a7d75fc34a4d0880adb89c66e916eed53df7327dacb91",
+      "rechecked_on": "2026-10-26"
+    },
+    {
+      "name": "stained-glass",
+      "title": "Ocean stained glass",
+      "category": "Art",
+      "width": 900,
+      "height": 1200,
+      "decision": "excluded",
+      "visible": false,
+      "observation": "海洋动物的头、躯干、尾部比例和连接混乱；艺术材质不能解释主体结构错误。",
+      "source": "../UniSpark-gallery-expansion-20261026/v5-stained-glass-ocean.png",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "source_sha256": "2c4d801d0cc6c79728101e2c039f30f6ce25aa95dbd5e1950785c50cd7b8a6cd",
+      "website_sha256": "5a897352e9a8ab45defa95a848e4dccc38be1a9baeb08c8dc914f10a4ac40d3b",
+      "rechecked_on": "2026-10-26"
+    }
+  ],
+  "review_revision": "all-existing-rechecked-20261026",
+  "review_trigger": "用户要求原有样本也必须检查画面扭曲和常识错误；取消此前对原有样本的恢复展示豁免。",
+  "active_count": 9,
+  "active_gallery_total_including_new": 22,
+  "active_gallery_categories_including_new": {
+    "Nature": 5,
+    "Objects": 7,
+    "People": 4,
+    "Art": 3,
+    "Architecture": 3
+  },
+  "new_samples_review": "gallery-new-quality-review.json; 13 previously accepted samples retained without image or metadata changes"
+}

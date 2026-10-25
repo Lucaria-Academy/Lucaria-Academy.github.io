@@ -16,14 +16,14 @@ python3 -m http.server 8123 --bind 127.0.0.1 --directory website
 
 公开网址：https://unispark-research.jaychempan.chatgpt.site
 
-将 `website/` 目录内容上传至任意静态托管服务或 GitHub Pages 发布目录即可。所有图片、脚本和 PDF 均使用相对路径，支持仓库子路径部署，不依赖外部 CDN。Sites 发布目录为 `../sites/unispark-research/`，站点身份保存在该目录的 `.openai/hosting.json`。后续更新应复用该站点。网页使用约 8 MB 的论文压缩副本，原始论文 PDF 保留不变。
+将 `website/` 目录内容上传至任意静态托管服务或 GitHub Pages 发布目录即可。所有图片和脚本均使用相对路径，支持仓库子路径部署，不依赖外部 CDN。Sites 发布目录为 `../sites/unispark-research/`，站点身份保存在该目录的 `.openai/hosting.json`。后续更新应复用该站点。网页不再附带本地论文 PDF。`index.html` 中三个带 `data-paper-link` 的入口保留原样式，暂不可点击；后续为它们填写 `href` 外链，并移除 `aria-disabled` 和占位 `title` 即可。
 
 - `index.html`：标题、作者、介绍及引用。
 - `style.css`：深色主题、桌面和移动端布局。
 - `content.js`：图库、编辑对比和连续图像示例。
 - `results-data.js`：论文实验表格数据，包括完整基线、分类得分与两类效率测量。
 - `app.js`：图库过滤、对比滑块、示例切换、实验数据和引用复制。
-- `assets/`：优化后的图片及当前论文 PDF。
+- `assets/`：优化后的图片、字体和图标。
 - `scripts/asset-map.json`：网页图片与原始论文素材的对应关系。
 
 实验数据来自 `doc/6.exp.tex` 和 `doc/understanding-published-results.tex`。视频展示区已移除，视频素材仍保留在本地。BibTeX 标注为 manuscript，未虚构 arXiv 编号、代码仓库或模型下载地址。
@@ -36,10 +36,32 @@ python3 -m http.server 8123 --bind 127.0.0.1 --directory website
 swift -module-cache-path /private/tmp/unispark-swift-cache website/scripts/prepare-assets.swift
 ```
 
-该脚本根据素材清单生成网页 JPEG，并复制 `build/main.pdf` 为 `assets/unispark.pdf`。目前该 PDF 保留论文中的修订标红；正式发布时可先生成不标红版本再更新素材。脚本不会修改论文源码和原图。
+该脚本根据素材清单生成网页 JPEG，不再复制论文 PDF。脚本不会修改论文源码和原图。
 
 布局统一使用 `style.css` 的 `--width: 1120px` 和 `--gutter` 控制所有主区块、导航及页脚。页首白色蚂蚁技术研究院 logo 存在 `assets/ant-research.png`，来自参考 AGG 页面使用的同款官方标识，链接到 https://www.antresearch.com/ 。
 
 页面使用本地 Manrope 字体（400 / 600 / 700 字重），许可见 `assets/manrope-LICENSE.txt`；字体来自 Google Fonts，加载不依赖外部服务。图片均在页面内直接展示，不提供点击放大。导航会标记当前浏览区块。
 
 实验区提供六个任务入口，每项包含结果解读、评测设置与来源。宽表格在手机端局部横向滚动，完整基线默认收起。所有数值来自论文表格，不将不同 ImgEdit 裁判下的分数作直接排名。
+
+## 编辑示例来源（2026-10-26）
+
+`Hairstyle` 和旧 `Dessert` 已替换为 `Perfume color` 和 `Dessert glaze`，保留原有滑动对比交互与布局。两组均为 CT `0095000` 的真实模型输出，分别选自本次 12 个候选中的 `perfume-s42` 与 `dessert-s20261026`。采用 50 步采样、CFG 4；原始输入和输出尺寸分别为 768×1024、1024×1024。网站图片仅转换为 JPEG，未裁剪、配准、拼贴或修补。
+
+原始图片和完整推理记录位于 Downloads 下的 `UniBagel-CT0095000-consistency-12-20261026/`。完整指令、种子、源文件哈希及网站映射见 `scripts/editing-provenance.json`；`asset-map.json` 中这四张图片的路径相对于论文根目录指向同级下载目录。
+
+## 文生图图库与质量复查（2026-10-26）
+
+原有与新增样本采用相同的展示筛选标准：检查人体/动物结构、物体接触、建筑支撑、透视、倒影及常识；有明显问题的撤下，关键细节无法确认的暂缓展示。原有 22 张全部复查，保留 9 张、排除 6 张、暂缓 7 张。逐项原因与原图/网页图 SHA-256 见 `scripts/gallery-quality-review.json`。这次复查取代此前“恢复原有 22 张”的展示豁免。
+
+原有样本中的制图师手指融合、海龟头鳍连接异常、微缩交通轨道接入外墙等已撤下。首屏同步将制图师替换为黑色高领肖像、沙漠图书馆替换为运河花市。保留所有原始文件和网页图片，不通过裁切、拼贴、修补或改画掩盖生成错误。
+
+加上上一轮审核通过的 13 张 CT 0095000 新样本，图库共 22 张：People 4、Architecture 3、Nature 5、Objects 7、Art 3。All 默认显示 18 张，Show more 展开其余 4 张，Show fewer 收起；类别计数从实际内容自动计算。展示方式和交互保持不变。
+
+原有素材来自 CT 0042500 文生图输出与论文素材，未混入编辑结果；来源映射、哈希及导出信息见 `scripts/gallery-provenance.json`。
+
+### 新增候选审核
+
+上一轮在 PANProj4 的 0–3 卡使用 CT 0095000 推理 96 张候选，逐张检查后选入 13 张。本轮保留这 13 张及其既有审查记录，没有重新推理或修改图像。
+
+完整新候选检查见 `scripts/gallery-new-quality-review.json`；每个入选项记录指令、种子、权重文件信息及原图/网页图 SHA-256。原图和推理记录位于 Downloads 下的 `UniSpark-CT0095000-gallery60-20261026/`、`UniSpark-CT0095000-native1k20-20261026/` 和 `UniSpark-CT0095000-scene16-20261026/`。网页仅等比例缩小与 JPEG 导出，不放大、裁切或修补。审核是逐图定性筛选，accepted 表示本轮未发现明显问题，不表示对生成图零缺陷的保证。

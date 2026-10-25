@@ -8,17 +8,47 @@ function activate(button, selector) {
     item.setAttribute('aria-pressed', String(active));
   });
 }
-$('#gallery-grid').innerHTML = gallery.map(item => `<div class="gallery-item" data-category="${item.category}"><img src="assets/${item.name}.jpg" alt="${item.title}" loading="lazy" decoding="async"><span class="gallery-caption"><span>${item.title}</span><small>${item.category}</small></span></div>`).join('');
-document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
-  activate(button, '[data-filter]');
-  let count = 0;
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    item.hidden = button.dataset.filter !== 'All' && item.dataset.category !== button.dataset.filter;
-    if (!item.hidden) count++;
+const GALLERY_PAGE_SIZE = 18;
+let galleryFilter = 'All';
+let galleryLimit = GALLERY_PAGE_SIZE;
+$('#gallery-grid').innerHTML = gallery.map(item => `<div class="gallery-item" data-category="${item.category}"><img src="assets/${item.name}.jpg" alt="${item.title}" width="${item.width}" height="${item.height}" loading="lazy" decoding="async"><span class="gallery-caption"><span>${item.title}</span><small>${item.category}</small></span></div>`).join('');
+const galleryItems = [...document.querySelectorAll('.gallery-item')];
+const galleryMore = $('#gallery-more');
+function renderGallery() {
+  let matches = 0;
+  galleryItems.forEach(item => {
+    const matchesFilter = galleryFilter === 'All' || item.dataset.category === galleryFilter;
+    item.hidden = !matchesFilter || matches >= galleryLimit;
+    if (matchesFilter) matches++;
   });
-  $('#gallery-status').textContent = `${count} images shown`;
-}));
-const editLabels = ['Coat color', 'Hairstyle', 'Season change', 'Dessert'];
+  const shown = Math.min(matches, galleryLimit);
+  $('#gallery-status').textContent = `Showing ${shown} of ${matches} ${matches === 1 ? 'image' : 'images'}`;
+  galleryMore.hidden = matches <= GALLERY_PAGE_SIZE;
+  galleryMore.textContent = shown < matches ? `Show ${Math.min(GALLERY_PAGE_SIZE, matches - shown)} more` : 'Show fewer';
+  galleryMore.setAttribute('aria-expanded', String(galleryLimit > GALLERY_PAGE_SIZE));
+}
+document.querySelectorAll('[data-filter]').forEach(button => {
+  const category = button.dataset.filter;
+  const count = category === 'All' ? gallery.length : gallery.filter(item => item.category === category).length;
+  const label = category === 'All' ? 'All images' : category;
+  button.innerHTML = `${label}<span class="filter-count" aria-hidden="true">${count}</span>`;
+  button.setAttribute('aria-label', `${label}, ${count} ${count === 1 ? 'image' : 'images'}`);
+  button.addEventListener('click', () => {
+    activate(button, '[data-filter]');
+    galleryFilter = category;
+    galleryLimit = GALLERY_PAGE_SIZE;
+    renderGallery();
+  });
+});
+galleryMore.addEventListener('click', () => {
+  const total = galleryFilter === 'All' ? gallery.length : gallery.filter(item => item.category === galleryFilter).length;
+  const collapse = galleryLimit >= total;
+  galleryLimit = collapse ? GALLERY_PAGE_SIZE : galleryLimit + GALLERY_PAGE_SIZE;
+  renderGallery();
+  if (collapse) $('#gallery').scrollIntoView({block: 'start'});
+});
+renderGallery();
+const editLabels = ['Coat color', 'Perfume color', 'Season change', 'Dessert glaze'];
 $('#edit-options').innerHTML = edits.map((item,i) => `<button data-edit="${i}" aria-pressed="${i===0}" class="${i===0?'active':''}">${editLabels[i]}</button>`).join('');
 function setComparison(value) {
   $('#comparison').style.setProperty('--position', `${value}%`);

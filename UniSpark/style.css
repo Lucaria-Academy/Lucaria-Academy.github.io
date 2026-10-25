@@ -36,7 +36,8 @@
   font-synthesis: none;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 108px; }
+html { scroll-behavior: smooth; scroll-padding-top: 108px; scrollbar-width: none; }
+html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; width: 0; height: 0; }
 body { margin: 0; line-height: 1.7; background: var(--bg); }
 button, input { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -136,6 +137,13 @@ figcaption { font-size: 12px; color: var(--muted); margin-top: 15px; line-height
 .gallery-caption { display: flex; flex-direction: column; gap: 3px; padding: 12px 2px 0; font-size: 12px; color: #d7dae0; }
 .gallery-caption small { color: var(--muted); font-size: 10px; }
 .gallery-item[hidden] { display: none; }
+#gallery .filters { overflow-y: hidden; }
+#gallery .filters button::after { bottom: 0; }
+#gallery .filter-count { margin-left: 7px; color: var(--muted); font-size: 10px; font-weight: 400; font-variant-numeric: tabular-nums; }
+.gallery-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 10px; }
+#gallery-status { margin: 0; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+#gallery-more { white-space: nowrap; }
+#gallery-more[hidden] { display: none; }
 .editor { display: grid; grid-template-columns: 300px minmax(0, 1fr); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); }
 .edit-sidebar { padding: 34px 28px; }
 .edit-sidebar h3 { color: var(--muted); font-size: 12px; font-weight: 400; margin-bottom: 26px; }

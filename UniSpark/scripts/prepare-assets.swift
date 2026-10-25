@@ -31,7 +31,4 @@ for (name, path) in manifest.sorted(by: {$0.key < $1.key}) {
         guard task.terminationStatus == 0 else { fatalError("Image conversion failed: " + path) }
     }
 }
-let paper = output.appendingPathComponent("unispark.pdf")
-if fm.fileExists(atPath: paper.path) { try fm.removeItem(at: paper) }
-try fm.copyItem(at: root.appendingPathComponent("build/main.pdf"), to: paper)
-print("Prepared \(manifest.count) optimized images and manuscript PDF.")
+print("Prepared \(manifest.count) optimized images.")

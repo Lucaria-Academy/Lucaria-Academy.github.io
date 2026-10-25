@@ -1,0 +1,1107 @@
+{
+  "date": "2026-10-26",
+  "checkpoint_step": 95000,
+  "remote_target": "PANProj4 (59220174)",
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "scope": "New candidates only; existing 22 restored at user request.",
+  "review_method": "Visual inspection of every candidate, then original-resolution inspection of accepted candidates. Check prompt fidelity, framing, anatomy, geometry, support/contact, lighting/reflections, and unwanted lettering. Ambiguous candidates withheld. This is manual qualitative selection, not a benchmark score or a guarantee of error-free images.",
+  "generated": 96,
+  "selected": 13,
+  "decisions": {
+    "exclude": 40,
+    "not_selected": 10,
+    "hold": 33,
+    "accepted": 13
+  },
+  "selection": [
+    {
+      "run": "quality60",
+      "id": "curly-hair-portrait-s137",
+      "name": "g95-auburn-portrait",
+      "title": "Portrait with auburn curls"
+    },
+    {
+      "run": "quality60",
+      "id": "papercut-mountains-s41",
+      "name": "g95-paper-river",
+      "title": "A river in layered paper"
+    },
+    {
+      "run": "quality60",
+      "id": "green-teapot-s137",
+      "name": "g95-ceramic-teapot",
+      "title": "Sage-green ceramic teapot"
+    },
+    {
+      "run": "quality60",
+      "id": "linocut-flowers-s137",
+      "name": "g95-blue-anemones",
+      "title": "Anemones in blue"
+    },
+    {
+      "run": "quality60",
+      "id": "citrus-still-life-s137",
+      "name": "g95-citrus",
+      "title": "Citrus on linen"
+    },
+    {
+      "run": "quality60",
+      "id": "glass-vase-s137",
+      "name": "g95-eucalyptus",
+      "title": "Eucalyptus in glass"
+    },
+    {
+      "run": "quality60",
+      "id": "strawberry-cake-s137",
+      "name": "g95-strawberry-cake",
+      "title": "Strawberry sponge cake"
+    },
+    {
+      "run": "native1k20",
+      "id": "silver-haired-man-native1k-s20261026",
+      "name": "g95-silver-portrait",
+      "title": "Portrait in silver and charcoal"
+    },
+    {
+      "run": "scene16",
+      "id": "arched-corridor-scene1k-s137",
+      "name": "g95-cloister",
+      "title": "Sunlight through the cloister"
+    },
+    {
+      "run": "scene16",
+      "id": "sunflower-closeup-scene1k-s137",
+      "name": "g95-sunflower",
+      "title": "Sunflower in morning light"
+    },
+    {
+      "run": "scene16",
+      "id": "forest-ferns-scene1k-s41",
+      "name": "g95-ferns",
+      "title": "Ferns after the rain"
+    },
+    {
+      "run": "scene16",
+      "id": "coastal-arch-scene1k-s41",
+      "name": "g95-sea-arch",
+      "title": "A limestone arch by the sea"
+    },
+    {
+      "run": "scene16",
+      "id": "cherry-blossom-scene1k-s41",
+      "name": "g95-cherry-blossom",
+      "title": "Cherry blossoms in spring"
+    }
+  ],
+  "candidates": [
+    {
+      "run": "quality60",
+      "id": "silver-haired-man-s41",
+      "category": "People",
+      "prompt": "An intimate photographic portrait of an older man with short silver hair and a neatly trimmed beard, wearing a charcoal wool sweater. Head and shoulders, his entire head and both shoulders inside the frame, relaxed eyes looking toward the camera. Soft side light from a large window, plain warm-gray plaster background, natural skin texture and facial proportions, quiet editorial photography, no text or logos.",
+      "seed": 41,
+      "source_sha256": "bc45309cc0e12396274c69fb9891e1f317615590586f0bfb2995381655d02fb9",
+      "decision": "exclude",
+      "reason": "Large unintended black frame; portrait occupies only a small central region."
+    },
+    {
+      "run": "quality60",
+      "id": "curly-hair-portrait-s41",
+      "category": "People",
+      "prompt": "A photographic head-and-shoulders portrait of an adult woman with auburn curly hair wearing a simple dark teal blouse. Her face is turned slightly toward soft daylight, both eyes visible, natural features and believable skin texture. Muted pale-blue studio background, gentle shadows, complete head within the frame, elegant editorial photography, no text or logos.",
+      "seed": 41,
+      "source_sha256": "34fe4bb7d330da553025395b00d1ae2e260a8653edbec51e24dcf47b5afc1833",
+      "decision": "not_selected",
+      "reason": "Seed 137 has clearer exposure and was selected after full-resolution review; avoid a near-duplicate portrait."
+    },
+    {
+      "run": "quality60",
+      "id": "linen-coast-s41",
+      "category": "People",
+      "prompt": "A full-length editorial photograph of one adult woman wearing an ivory linen jacket and dark trousers, standing quietly on a broad coastal path. Both feet are flat on the stone path, arms relaxed with hands visible naturally at her sides, no objects in her hands. A low stone wall and blue sea behind her, soft overcast daylight, realistic anatomy and clothing folds, straight camera perspective, no other people, no text.",
+      "seed": 41,
+      "source_sha256": "66c9b1d310fddd6859a41b51bc239beababc05a5073b63c76e0613b37e2c4aed",
+      "decision": "exclude",
+      "reason": "Head and upper body cropped out despite full-length prompt; feet and fingers look simplified and blocky."
+    },
+    {
+      "run": "quality60",
+      "id": "baker-bread-s41",
+      "category": "People",
+      "prompt": "An environmental photographic portrait of one adult baker in a blue cotton shirt and a clean tan apron, standing behind a wooden workbench. One round loaf of crusty bread rests on a breadboard between the baker's two open hands, which rest separately flat on the workbench, fingers naturally spaced. Calm expression, natural anatomy, warm window light, a quiet uncluttered bakery with shelves in the background, no utensils being held, no text or logos.",
+      "seed": 41,
+      "source_sha256": "b0b7d5ca57643e115932f14801f0130739e87b1c499ef0fa118368223c5114d8",
+      "decision": "exclude",
+      "reason": "Open hands have ambiguous merged or missing finger structure; palms face upward instead of resting flat."
+    },
+    {
+      "run": "quality60",
+      "id": "stone-courtyard-s41",
+      "category": "Architecture",
+      "prompt": "Architectural photography of a small single-story limestone courtyard house in a Mediterranean landscape. A simple tiled roof rests on thick stone walls; a shaded colonnade opens onto a level stone courtyard with one mature olive tree in a planting bed. The column bases, paving and entrances are visible and physically connected, an unobstructed path leads to the front door. Warm late-afternoon sunlight, restrained earthy materials, realistic straight verticals, no people, no text.",
+      "seed": 41,
+      "source_sha256": "d56c08fece3d1a1e691fa13f4dc256ed186f3f39aa1ae95d837baff174f18c85",
+      "decision": "exclude",
+      "reason": "Very dark rendering; column/capital connections appear fragmented and tree type/count differs from prompt."
+    },
+    {
+      "run": "quality60",
+      "id": "coastal-observatory-s41",
+      "category": "Architecture",
+      "prompt": "Architectural photograph of a compact cylindrical white concrete observatory on a grassy coastal headland. A simple low dome sits directly on the round wall, one dark entrance door reached by three broad concrete steps connected to the ground. The entire small building is visible, natural cliffs and sea in the distance, quiet blue-hour sky, realistic construction and proportions, no floating parts, no people, no signage.",
+      "seed": 41,
+      "source_sha256": "c5b012d639a642b4c4dc2cb995e95bfa281884e87e7d44a69f96fdcd0d2b8583",
+      "decision": "exclude",
+      "reason": "Dark simplified scene with no clearly readable observing aperture; requested three-step entrance becomes five steps."
+    },
+    {
+      "run": "quality60",
+      "id": "timber-pavilion-s41",
+      "category": "Architecture",
+      "prompt": "Architectural photography of a small open-sided timber garden pavilion beside tall bamboo. Four thick vertical timber posts support a simple pitched roof through visible horizontal beams; every post is planted on the same raised wooden deck. One plain wooden bench with four visible legs rests firmly on the deck. Wide three-quarter view, overcast daylight, clear joinery and straight lines, realistic scale, no people or text.",
+      "seed": 41,
+      "source_sha256": "7d9179f45083700be40baaf2d3e040dffc3c5467ad09ddfe3fc79e7ff3b67ba0",
+      "decision": "hold",
+      "reason": "Dark beam junctions and bench rear legs are difficult to verify; background bamboo forms repetitive spikes."
+    },
+    {
+      "run": "quality60",
+      "id": "reading-room-s41",
+      "category": "Architecture",
+      "prompt": "A quiet light-filled reading room photographed from the doorway, with a tall rectangular window, built-in oak bookshelves along one wall, one solid oak desk and one simple wooden chair. The desk has four straight legs visibly meeting the floor, the chair sits beside it with a coherent back and seat. Pale plaster walls and a small vase on the desk, soft morning daylight, believable interior perspective, no people, no readable text.",
+      "seed": 41,
+      "source_sha256": "2376d22370a1533c089f67781bd9c9c5a3e9f5a09004594d436e6b517dfd785e",
+      "decision": "exclude",
+      "reason": "Large unintended black border; framing does not fill image."
+    },
+    {
+      "run": "quality60",
+      "id": "barn-owl-s41",
+      "category": "Nature",
+      "prompt": "A detailed wildlife photograph of one barn owl perched on a broad weathered wooden fence post at dusk. Its two feet with natural gripping talons are visible on top of the post, wings folded against its body, complete head and body within the frame, natural owl anatomy. Soft grassy meadow background, gentle warm light along the feathers, calm alert gaze, realistic wildlife photography, no accessories or text.",
+      "seed": 41,
+      "source_sha256": "f67a7ea6b44007ad36ac42d78b6fad70b2691b3f184f37439231572b24957bcf",
+      "decision": "hold",
+      "reason": "Large black vignette and unusually long apparent legs; toe anatomy requires closer review."
+    },
+    {
+      "run": "quality60",
+      "id": "roe-deer-s41",
+      "category": "Nature",
+      "prompt": "A wildlife photograph of one adult roe deer standing in a meadow in clear side profile. All four slender legs and hooves are visible and grounded, natural joint angles and body proportions, ears upright, head turned only slightly toward the camera. Short meadow grass does not obscure the feet, early morning mist behind distant trees, soft natural light, lifelike fur, no other animals or objects.",
+      "seed": 41,
+      "source_sha256": "374c4f9e8e45b7d20d0d5d3154594bba10f7d01e0ab1265b8700795fea4f41e5",
+      "decision": "hold",
+      "reason": "Four limbs are present but front limb transition and hooves are simplified; dark artificial background."
+    },
+    {
+      "run": "quality60",
+      "id": "forest-waterfall-s41",
+      "category": "Nature",
+      "prompt": "A realistic landscape photograph of a small waterfall in a lush temperate rainforest. Water flows continuously from an upstream stream over a dark rock ledge into a pool below, with moss-covered boulders and ferns on the banks. Coherent gravity-driven water flow, varied leaf detail, soft daylight filtered through the canopy, restrained natural colors, no people, animals or buildings, no text.",
+      "seed": 41,
+      "source_sha256": "2e80247f95d2387bd15db760d813b85ecf35e7c2315ae4bff9dac8be5976191e",
+      "decision": "exclude",
+      "reason": "Nearly the entire image is black; landscape is confined to a small central spot."
+    },
+    {
+      "run": "quality60",
+      "id": "alpine-lake-s41",
+      "category": "Nature",
+      "prompt": "A panoramic-style landscape photograph of a clear alpine lake below a rugged mountain ridge. Pale stones are visible under shallow water in the foreground, a forested shore surrounds the lake, distant peaks catch warm early-morning light. The calm water has a natural inverted reflection aligned with the mountains above it and subtle ripples near the shore. Realistic geology, clear atmospheric depth, no people, boats or buildings, no text.",
+      "seed": 41,
+      "source_sha256": "db6a4b8cd053c70addb130540dec5f45d6a2d5cbed21bfe1c0c21d2f6fdc3895",
+      "decision": "exclude",
+      "reason": "Severe underexposure hides mountain and forest detail; reflected skyline not clearly verifiable."
+    },
+    {
+      "run": "quality60",
+      "id": "green-teapot-s41",
+      "category": "Objects",
+      "prompt": "A studio product photograph of one matte sage-green ceramic teapot on a pale stone tabletop. A single rounded body, one lid seated on its opening, one curved handle attached at both ends on the right and one short spout smoothly joined on the left, all physically coherent. Three-quarter view showing the complete pot, soft side light, subtle ceramic grain and clear contact shadow, a warm beige background, no extra objects, no text.",
+      "seed": 41,
+      "source_sha256": "f5de17c6f2c029eb0e6170bc3e709afe4476872e191d400407a0e652c5bcad6e",
+      "decision": "hold",
+      "reason": "Spout tip appears sealed or has an unreadable opening in this view; do not add while uncertain.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "quality60",
+      "id": "citrus-still-life-s41",
+      "category": "Objects",
+      "prompt": "A still-life photograph of two whole oranges and one freshly cut orange half on a white ceramic plate, with a folded cream linen napkin on a wooden table. The cut half has a coherent circular rind and radial pulp segments, the fruit rests naturally on the plate, no floating pieces. Soft morning window light, warm restrained colors, realistic peel texture, careful editorial food photography, no hands, utensils or text.",
+      "seed": 41,
+      "source_sha256": "afbd0a5a1cac28d56a13e849b82d39a02c79e624561800632b0dee6bc9bae218",
+      "decision": "hold",
+      "reason": "Fruit and plate appear coherent, but only one whole orange is visible instead of the requested two."
+    },
+    {
+      "run": "quality60",
+      "id": "glass-vase-s41",
+      "category": "Objects",
+      "prompt": "An elegant product still-life photograph of one clear cylindrical glass vase holding a single eucalyptus branch on a pale wooden table. The continuous stem enters the open top of the vase and is visible through the glass below the water line, each leaf attaches naturally to a stem. The vase has a flat circular base resting on the tabletop, subtle coherent refraction and contact shadow, neutral plaster wall, soft daylight, no text.",
+      "seed": 41,
+      "source_sha256": "73d201dfa49eaf61f58b1f19f11cad9cc66ba9a05638c837500ca99c116d6d6c",
+      "decision": "hold",
+      "reason": "Vase contacts tabletop and stem continues below water; crowded leaves/refraction around water surface need comparison with other seeds."
+    },
+    {
+      "run": "quality60",
+      "id": "strawberry-cake-s41",
+      "category": "Objects",
+      "prompt": "An editorial food photograph of one triangular slice of strawberry sponge cake resting on a plain white plate. Two straight layers of golden sponge are separated by white cream and strawberry pieces, and a small fresh strawberry sits on the top frosting. The cut faces clearly show coherent layers, the slice rests flat on the plate, soft window light, cream linen tablecloth, realistic textures, no utensils, hands or text.",
+      "seed": 41,
+      "source_sha256": "332c45dcf53d8a2237c9c28b3d613e93f23846b6f0afe4514ee9ddca98b229c0",
+      "decision": "hold",
+      "reason": "Visually coherent cake and plate, but three sponge layers instead of two requested."
+    },
+    {
+      "run": "quality60",
+      "id": "papercut-mountains-s41",
+      "category": "Art",
+      "prompt": "A carefully crafted layered paper-cut artwork of mountain ridges and a winding river through a pine forest. Clean continuous cut edges, deep navy and teal paper layers with a small warm ivory sun above the distant horizon. Overlapping paper layers cast delicate shadows on the layers below, photographed as a flat handmade composition on a neutral background. Clear simplified tree silhouettes, balanced negative space, no people, buildings, animals or lettering.",
+      "seed": 41,
+      "source_sha256": "cf562f1f34d90727a7e1c50f78e3017926011ad5258639fcfbebeb007d34c012",
+      "decision": "accepted",
+      "reason": "Full-resolution paper edges, tree silhouettes, river continuity and layer shadows checked; coherent paper artwork without ambiguous anatomy.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "quality60",
+      "id": "linocut-flowers-s41",
+      "category": "Art",
+      "prompt": "A refined two-color linocut print on textured cream paper, showing a single vase of anemone flowers. Bold dark-blue contours and muted ochre flower centers, coherent stems running into the vase, clearly separated petals and simple leaves, intentional carved line texture and generous blank margins. A balanced handmade botanical print, no words, signature or border decorations.",
+      "seed": 41,
+      "source_sha256": "c1a69142b9235d3a9610386b90a99d8569deff55e709524ccb81151373f90e33",
+      "decision": "hold",
+      "reason": "Right flower center is oddly crescent-shaped and vase linework merges with stems; prefer clearer alternatives."
+    },
+    {
+      "run": "quality60",
+      "id": "lemon-mosaic-s41",
+      "category": "Art",
+      "prompt": "A square handmade ceramic mosaic depicting one lemon branch with three yellow lemons and green leaves on a cream background. Individual glazed tiles have clean separated grout lines; each leaf and fruit joins the continuous branch in a readable botanical arrangement. The flat mosaic panel lies on a simple wooden work surface, softly lit from the side, rich material detail and restrained colors, no text or extra objects.",
+      "seed": 41,
+      "source_sha256": "313f191a9919f5fd4775386127fa61be7674e45d00db3420520ba7a1a486cdbd",
+      "decision": "exclude",
+      "reason": "Looks like a single glazed relief tile rather than a mosaic of individual tiles; panel is standing rather than lying on work surface."
+    },
+    {
+      "run": "quality60",
+      "id": "felt-cottage-s41",
+      "category": "Art",
+      "prompt": "A handcrafted miniature wool-felt cottage on a flat green felt base, photographed on a neutral studio tabletop. One small red-roofed house with a single front door and two square windows, a simple felt path leading from the door to the edge of the base, and two rounded felt trees planted beside the house. Every miniature rests on the same base, clearly defined stitched edges, soft warm lighting, believable handmade construction, no people, vehicles or text.",
+      "seed": 41,
+      "source_sha256": "8da3840e86a6ea3c7d18b7d711668b8715f1cbdd67a9a8e2e60c68a1d58727a8",
+      "decision": "hold",
+      "reason": "House, two windows and two trees are coherent; image is dim and path stops before reaching base edge."
+    },
+    {
+      "run": "quality60",
+      "id": "silver-haired-man-s137",
+      "category": "People",
+      "prompt": "An intimate photographic portrait of an older man with short silver hair and a neatly trimmed beard, wearing a charcoal wool sweater. Head and shoulders, his entire head and both shoulders inside the frame, relaxed eyes looking toward the camera. Soft side light from a large window, plain warm-gray plaster background, natural skin texture and facial proportions, quiet editorial photography, no text or logos.",
+      "seed": 137,
+      "source_sha256": "568fd52b663b66f21653bcaf5a7dfc1aaee2670e29dd59e6a35abaefa83e71db",
+      "decision": "exclude",
+      "reason": "Strong unnatural rectangular black vignette isolates the portrait."
+    },
+    {
+      "run": "quality60",
+      "id": "curly-hair-portrait-s137",
+      "category": "People",
+      "prompt": "A photographic head-and-shoulders portrait of an adult woman with auburn curly hair wearing a simple dark teal blouse. Her face is turned slightly toward soft daylight, both eyes visible, natural features and believable skin texture. Muted pale-blue studio background, gentle shadows, complete head within the frame, elegant editorial photography, no text or logos.",
+      "seed": 137,
+      "source_sha256": "186efc0d6ca0d19289e05d0fe44dd619d37ad74d591d5b8684f71a3165225470",
+      "decision": "accepted",
+      "reason": "Full-resolution face, eyes, lips, hairline and shoulder/clothing contours checked; no obvious deformation found. Good framing and exposure.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "quality60",
+      "id": "linen-coast-s137",
+      "category": "People",
+      "prompt": "A full-length editorial photograph of one adult woman wearing an ivory linen jacket and dark trousers, standing quietly on a broad coastal path. Both feet are flat on the stone path, arms relaxed with hands visible naturally at her sides, no objects in her hands. A low stone wall and blue sea behind her, soft overcast daylight, realistic anatomy and clothing folds, straight camera perspective, no other people, no text.",
+      "seed": 137,
+      "source_sha256": "c8841a8bcbfb09aa8b969bc59195e3418c9f2790cad688a23a754ef5a705b3f1",
+      "decision": "exclude",
+      "reason": "Upper body and head are absent, contradicting the full-length portrait instruction."
+    },
+    {
+      "run": "quality60",
+      "id": "baker-bread-s137",
+      "category": "People",
+      "prompt": "An environmental photographic portrait of one adult baker in a blue cotton shirt and a clean tan apron, standing behind a wooden workbench. One round loaf of crusty bread rests on a breadboard between the baker's two open hands, which rest separately flat on the workbench, fingers naturally spaced. Calm expression, natural anatomy, warm window light, a quiet uncluttered bakery with shelves in the background, no utensils being held, no text or logos.",
+      "seed": 137,
+      "source_sha256": "5d402acb17a78fb9b97de49988975692d3435028fda146571bf41dcc6b0c2d0d",
+      "decision": "exclude",
+      "reason": "Face cropped off; finger outlines merge and tips are unclear."
+    },
+    {
+      "run": "quality60",
+      "id": "stone-courtyard-s137",
+      "category": "Architecture",
+      "prompt": "Architectural photography of a small single-story limestone courtyard house in a Mediterranean landscape. A simple tiled roof rests on thick stone walls; a shaded colonnade opens onto a level stone courtyard with one mature olive tree in a planting bed. The column bases, paving and entrances are visible and physically connected, an unobstructed path leads to the front door. Warm late-afternoon sunlight, restrained earthy materials, realistic straight verticals, no people, no text.",
+      "seed": 137,
+      "source_sha256": "be3d8e1e79c8ef33f3d0015c064955396a17c543b9f9c25c0e6001cc99d84f0a",
+      "decision": "exclude",
+      "reason": "Large nearly black foreground hides approach and architectural connections."
+    },
+    {
+      "run": "quality60",
+      "id": "coastal-observatory-s137",
+      "category": "Architecture",
+      "prompt": "Architectural photograph of a compact cylindrical white concrete observatory on a grassy coastal headland. A simple low dome sits directly on the round wall, one dark entrance door reached by three broad concrete steps connected to the ground. The entire small building is visible, natural cliffs and sea in the distance, quiet blue-hour sky, realistic construction and proportions, no floating parts, no people, no signage.",
+      "seed": 137,
+      "source_sha256": "756c67272cbf5ef815d8f7be431c0bb9b52f08c2a787cdaf15295fcdc1a9afa3",
+      "decision": "exclude",
+      "reason": "Entrance step sequence is interrupted by a grassy gap; no clear observing aperture and dark simplified scene."
+    },
+    {
+      "run": "quality60",
+      "id": "timber-pavilion-s137",
+      "category": "Architecture",
+      "prompt": "Architectural photography of a small open-sided timber garden pavilion beside tall bamboo. Four thick vertical timber posts support a simple pitched roof through visible horizontal beams; every post is planted on the same raised wooden deck. One plain wooden bench with four visible legs rests firmly on the deck. Wide three-quarter view, overcast daylight, clear joinery and straight lines, realistic scale, no people or text.",
+      "seed": 137,
+      "source_sha256": "2adcaac6db8f7ebcee2ba4560b2ef8ecc41e1fbc032e45a1b244f14e981b9ca0",
+      "decision": "exclude",
+      "reason": "Deck appears suspended in a black void; ground contact is absent and post structure does not match instruction."
+    },
+    {
+      "run": "quality60",
+      "id": "reading-room-s137",
+      "category": "Architecture",
+      "prompt": "A quiet light-filled reading room photographed from the doorway, with a tall rectangular window, built-in oak bookshelves along one wall, one solid oak desk and one simple wooden chair. The desk has four straight legs visibly meeting the floor, the chair sits beside it with a coherent back and seat. Pale plaster walls and a small vase on the desk, soft morning daylight, believable interior perspective, no people, no readable text.",
+      "seed": 137,
+      "source_sha256": "93e2eb635be6d4daae7b26034768d9d41593e432e966d50461a0068a4dc619b3",
+      "decision": "exclude",
+      "reason": "Interior is confined to a small upper rectangle surrounded by black."
+    },
+    {
+      "run": "quality60",
+      "id": "barn-owl-s137",
+      "category": "Nature",
+      "prompt": "A detailed wildlife photograph of one barn owl perched on a broad weathered wooden fence post at dusk. Its two feet with natural gripping talons are visible on top of the post, wings folded against its body, complete head and body within the frame, natural owl anatomy. Soft grassy meadow background, gentle warm light along the feathers, calm alert gaze, realistic wildlife photography, no accessories or text.",
+      "seed": 137,
+      "source_sha256": "20e8fc3ea6ca1072ee0813286ad61460136a0852bdf5da9b062dcbf9855e9c20",
+      "decision": "hold",
+      "reason": "Toe positions and long overlapping wing/tail contours need closer confirmation; do not add yet."
+    },
+    {
+      "run": "quality60",
+      "id": "roe-deer-s137",
+      "category": "Nature",
+      "prompt": "A wildlife photograph of one adult roe deer standing in a meadow in clear side profile. All four slender legs and hooves are visible and grounded, natural joint angles and body proportions, ears upright, head turned only slightly toward the camera. Short meadow grass does not obscure the feet, early morning mist behind distant trees, soft natural light, lifelike fur, no other animals or objects.",
+      "seed": 137,
+      "source_sha256": "725ad371810f4a4489cfc73b51b9a5e99392083df5f733d2e05b317bd64d18e4",
+      "decision": "hold",
+      "reason": "Hooves obscured by grass and foreleg separation unclear; fails the explicit visible-hoof check."
+    },
+    {
+      "run": "quality60",
+      "id": "forest-waterfall-s137",
+      "category": "Nature",
+      "prompt": "A realistic landscape photograph of a small waterfall in a lush temperate rainforest. Water flows continuously from an upstream stream over a dark rock ledge into a pool below, with moss-covered boulders and ferns on the banks. Coherent gravity-driven water flow, varied leaf detail, soft daylight filtered through the canopy, restrained natural colors, no people, animals or buildings, no text.",
+      "seed": 137,
+      "source_sha256": "739f6a76f865d66fd40170eaed0769e04676a965974d0d4475ba78b10d8e34a1",
+      "decision": "exclude",
+      "reason": "Small rectangular landscape embedded in a mostly black image."
+    },
+    {
+      "run": "quality60",
+      "id": "alpine-lake-s137",
+      "category": "Nature",
+      "prompt": "A panoramic-style landscape photograph of a clear alpine lake below a rugged mountain ridge. Pale stones are visible under shallow water in the foreground, a forested shore surrounds the lake, distant peaks catch warm early-morning light. The calm water has a natural inverted reflection aligned with the mountains above it and subtle ripples near the shore. Realistic geology, clear atmospheric depth, no people, boats or buildings, no text.",
+      "seed": 137,
+      "source_sha256": "616a676b5338246f4414c34e471b34867f8d518281440981cedf81ee72a8448f",
+      "decision": "exclude",
+      "reason": "Severely underexposed landscape with nearly black mountains and unclear reflection detail."
+    },
+    {
+      "run": "quality60",
+      "id": "green-teapot-s137",
+      "category": "Objects",
+      "prompt": "A studio product photograph of one matte sage-green ceramic teapot on a pale stone tabletop. A single rounded body, one lid seated on its opening, one curved handle attached at both ends on the right and one short spout smoothly joined on the left, all physically coherent. Three-quarter view showing the complete pot, soft side light, subtle ceramic grain and clear contact shadow, a warm beige background, no extra objects, no text.",
+      "seed": 137,
+      "source_sha256": "4d21a908e50086470ad795b2c8122794a7e8196101fdb12ddb39f5b8d2b2f287",
+      "decision": "accepted",
+      "reason": "Spout opening, handle attachments, lid seating and base/table contact checked in original-detail crops; no obvious structural error found.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "quality60",
+      "id": "citrus-still-life-s137",
+      "category": "Objects",
+      "prompt": "A still-life photograph of two whole oranges and one freshly cut orange half on a white ceramic plate, with a folded cream linen napkin on a wooden table. The cut half has a coherent circular rind and radial pulp segments, the fruit rests naturally on the plate, no floating pieces. Soft morning window light, warm restrained colors, realistic peel texture, careful editorial food photography, no hands, utensils or text.",
+      "seed": 137,
+      "source_sha256": "2b9c786db090b08a0ce77a75c23b5d35b0a080ff156008c95de8fa98817e0c6a",
+      "decision": "accepted",
+      "reason": "Fruit count, continuous rind, pulp segments, whole-fruit shape and plate contacts checked in original-detail crops; no obvious distortion found.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "quality60",
+      "id": "glass-vase-s137",
+      "category": "Objects",
+      "prompt": "An elegant product still-life photograph of one clear cylindrical glass vase holding a single eucalyptus branch on a pale wooden table. The continuous stem enters the open top of the vase and is visible through the glass below the water line, each leaf attaches naturally to a stem. The vase has a flat circular base resting on the tabletop, subtle coherent refraction and contact shadow, neutral plaster wall, soft daylight, no text.",
+      "seed": 137,
+      "source_sha256": "4ff5c5f617d46203343269df5193a7a593f1296eecd50afec407f3a4d36f456f",
+      "decision": "accepted",
+      "reason": "Stem continuity, leaf attachments, open rim, waterline and bottom contact checked in original-detail crops; no obvious broken connection found.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "quality60",
+      "id": "strawberry-cake-s137",
+      "category": "Objects",
+      "prompt": "An editorial food photograph of one triangular slice of strawberry sponge cake resting on a plain white plate. Two straight layers of golden sponge are separated by white cream and strawberry pieces, and a small fresh strawberry sits on the top frosting. The cut faces clearly show coherent layers, the slice rests flat on the plate, soft window light, cream linen tablecloth, realistic textures, no utensils, hands or text.",
+      "seed": 137,
+      "source_sha256": "119cab2350fcf6006c5b4fa1c71ebeb504768f53d121019c1eaa3d3693a5da36",
+      "decision": "accepted",
+      "reason": "Two sponge layers, cream/fruit filling, strawberry shape and cake/plate contact checked in original-detail crops; no obvious distortion found.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "quality60",
+      "id": "papercut-mountains-s137",
+      "category": "Art",
+      "prompt": "A carefully crafted layered paper-cut artwork of mountain ridges and a winding river through a pine forest. Clean continuous cut edges, deep navy and teal paper layers with a small warm ivory sun above the distant horizon. Overlapping paper layers cast delicate shadows on the layers below, photographed as a flat handmade composition on a neutral background. Clear simplified tree silhouettes, balanced negative space, no people, buildings, animals or lettering.",
+      "seed": 137,
+      "source_sha256": "4ee6f2ab72b5e3bf8437dad330676d0298deac03181280086f1d9555b0c9086f",
+      "decision": "hold",
+      "reason": "Simplified cropped ridges and less readable winding river; seed 41 is more complete."
+    },
+    {
+      "run": "quality60",
+      "id": "linocut-flowers-s137",
+      "category": "Art",
+      "prompt": "A refined two-color linocut print on textured cream paper, showing a single vase of anemone flowers. Bold dark-blue contours and muted ochre flower centers, coherent stems running into the vase, clearly separated petals and simple leaves, intentional carved line texture and generous blank margins. A balanced handmade botanical print, no words, signature or border decorations.",
+      "seed": 137,
+      "source_sha256": "aa8e9d0ceb18cf9b3451677ccb1ce40c2eaebacd7e4e4d52333ff75285fa69b8",
+      "decision": "accepted",
+      "reason": "Full original inspected: flower contours, centers, stems entering vase and print texture are readable and coherent.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "quality60",
+      "id": "lemon-mosaic-s137",
+      "category": "Art",
+      "prompt": "A square handmade ceramic mosaic depicting one lemon branch with three yellow lemons and green leaves on a cream background. Individual glazed tiles have clean separated grout lines; each leaf and fruit joins the continuous branch in a readable botanical arrangement. The flat mosaic panel lies on a simple wooden work surface, softly lit from the side, rich material detail and restrained colors, no text or extra objects.",
+      "seed": 137,
+      "source_sha256": "6122aaf4bc7edfcd04f5d65dbb16eaac1afe9e9f3b1896d4ac1a5ade4e3f1f0e",
+      "decision": "exclude",
+      "reason": "Four lemons rather than three; single relief tile rather than tiled mosaic."
+    },
+    {
+      "run": "quality60",
+      "id": "felt-cottage-s137",
+      "category": "Art",
+      "prompt": "A handcrafted miniature wool-felt cottage on a flat green felt base, photographed on a neutral studio tabletop. One small red-roofed house with a single front door and two square windows, a simple felt path leading from the door to the edge of the base, and two rounded felt trees planted beside the house. Every miniature rests on the same base, clearly defined stitched edges, soft warm lighting, believable handmade construction, no people, vehicles or text.",
+      "seed": 137,
+      "source_sha256": "b55ec624f6e752a6bc6cb3419baa106b4ed9775448c6b3d02d6d3bda715b4813",
+      "decision": "exclude",
+      "reason": "Windows multiply onto the roof; path stops short and cottage structure deviates from specified simple design."
+    },
+    {
+      "run": "quality60",
+      "id": "silver-haired-man-s20261026",
+      "category": "People",
+      "prompt": "An intimate photographic portrait of an older man with short silver hair and a neatly trimmed beard, wearing a charcoal wool sweater. Head and shoulders, his entire head and both shoulders inside the frame, relaxed eyes looking toward the camera. Soft side light from a large window, plain warm-gray plaster background, natural skin texture and facial proportions, quiet editorial photography, no text or logos.",
+      "seed": 20261026,
+      "source_sha256": "35b22b1736f2692e84f913053356697b681db54028c5571f0892a80ee02ec41a",
+      "decision": "exclude",
+      "reason": "Small central portrait surrounded by a large black frame."
+    },
+    {
+      "run": "quality60",
+      "id": "curly-hair-portrait-s20261026",
+      "category": "People",
+      "prompt": "A photographic head-and-shoulders portrait of an adult woman with auburn curly hair wearing a simple dark teal blouse. Her face is turned slightly toward soft daylight, both eyes visible, natural features and believable skin texture. Muted pale-blue studio background, gentle shadows, complete head within the frame, elegant editorial photography, no text or logos.",
+      "seed": 20261026,
+      "source_sha256": "9007cc932e7433a1061cde9830d11b1dca62915b5222599ae4efd28d5cd05b53",
+      "decision": "exclude",
+      "reason": "Shoulders fade into an artificial solid vignette; full-frame seed 137 is clearer."
+    },
+    {
+      "run": "quality60",
+      "id": "linen-coast-s20261026",
+      "category": "People",
+      "prompt": "A full-length editorial photograph of one adult woman wearing an ivory linen jacket and dark trousers, standing quietly on a broad coastal path. Both feet are flat on the stone path, arms relaxed with hands visible naturally at her sides, no objects in her hands. A low stone wall and blue sea behind her, soft overcast daylight, realistic anatomy and clothing folds, straight camera perspective, no other people, no text.",
+      "seed": 20261026,
+      "source_sha256": "6162482bf4f12cb139b856691e195ebd33be463de526c1f3e98c8cc4882fc806",
+      "decision": "exclude",
+      "reason": "Head and feet absent; trousers become an almost solid merged shape."
+    },
+    {
+      "run": "quality60",
+      "id": "baker-bread-s20261026",
+      "category": "People",
+      "prompt": "An environmental photographic portrait of one adult baker in a blue cotton shirt and a clean tan apron, standing behind a wooden workbench. One round loaf of crusty bread rests on a breadboard between the baker's two open hands, which rest separately flat on the workbench, fingers naturally spaced. Calm expression, natural anatomy, warm window light, a quiet uncluttered bakery with shelves in the background, no utensils being held, no text or logos.",
+      "seed": 20261026,
+      "source_sha256": "59757d5507079c01dd52922f1514e084e5920fe3d96bbe2adcdc72ab36cbcd77",
+      "decision": "hold",
+      "reason": "Hands are disproportionately emphasized and finger joints unclear at this view; background portrait is soft."
+    },
+    {
+      "run": "quality60",
+      "id": "stone-courtyard-s20261026",
+      "category": "Architecture",
+      "prompt": "Architectural photography of a small single-story limestone courtyard house in a Mediterranean landscape. A simple tiled roof rests on thick stone walls; a shaded colonnade opens onto a level stone courtyard with one mature olive tree in a planting bed. The column bases, paving and entrances are visible and physically connected, an unobstructed path leads to the front door. Warm late-afternoon sunlight, restrained earthy materials, realistic straight verticals, no people, no text.",
+      "seed": 20261026,
+      "source_sha256": "f405f3f92556ad77dde8d94360890a327488544d1f36c4e8a6a2c1a40289809c",
+      "decision": "exclude",
+      "reason": "Deep black vignette hides courtyard context; requested tree absent."
+    },
+    {
+      "run": "quality60",
+      "id": "coastal-observatory-s20261026",
+      "category": "Architecture",
+      "prompt": "Architectural photograph of a compact cylindrical white concrete observatory on a grassy coastal headland. A simple low dome sits directly on the round wall, one dark entrance door reached by three broad concrete steps connected to the ground. The entire small building is visible, natural cliffs and sea in the distance, quiet blue-hour sky, realistic construction and proportions, no floating parts, no people, no signage.",
+      "seed": 20261026,
+      "source_sha256": "ecd9731386d750f30d63dc17350addad169c248b81564842f75d28b83d0d448d",
+      "decision": "exclude",
+      "reason": "Building appears isolated against black/blue void without grass or clear ground connection."
+    },
+    {
+      "run": "quality60",
+      "id": "timber-pavilion-s20261026",
+      "category": "Architecture",
+      "prompt": "Architectural photography of a small open-sided timber garden pavilion beside tall bamboo. Four thick vertical timber posts support a simple pitched roof through visible horizontal beams; every post is planted on the same raised wooden deck. One plain wooden bench with four visible legs rests firmly on the deck. Wide three-quarter view, overcast daylight, clear joinery and straight lines, realistic scale, no people or text.",
+      "seed": 20261026,
+      "source_sha256": "a4d3d29839964aa960ca4bf3d1ef97253d9a817545a0f976458833f8b1cbe214",
+      "decision": "exclude",
+      "reason": "Dark lower area hides ground contact and post connections."
+    },
+    {
+      "run": "quality60",
+      "id": "reading-room-s20261026",
+      "category": "Architecture",
+      "prompt": "A quiet light-filled reading room photographed from the doorway, with a tall rectangular window, built-in oak bookshelves along one wall, one solid oak desk and one simple wooden chair. The desk has four straight legs visibly meeting the floor, the chair sits beside it with a coherent back and seat. Pale plaster walls and a small vase on the desk, soft morning daylight, believable interior perspective, no people, no readable text.",
+      "seed": 20261026,
+      "source_sha256": "55b08caecc38b435596f372c7e7dcce0d724a2459bffbed0e81c40e06ed87ad2",
+      "decision": "exclude",
+      "reason": "Small interior rectangle is surrounded by a large black frame."
+    },
+    {
+      "run": "quality60",
+      "id": "barn-owl-s20261026",
+      "category": "Nature",
+      "prompt": "A detailed wildlife photograph of one barn owl perched on a broad weathered wooden fence post at dusk. Its two feet with natural gripping talons are visible on top of the post, wings folded against its body, complete head and body within the frame, natural owl anatomy. Soft grassy meadow background, gentle warm light along the feathers, calm alert gaze, realistic wildlife photography, no accessories or text.",
+      "seed": 20261026,
+      "source_sha256": "b6ecc9b0cadc02ea1a2f0351acda5810d4c0581b0c1b40e50e59f8a0adcd6e4a",
+      "decision": "exclude",
+      "reason": "Strong vignette and small subject make gripping-foot structure unclear; not selected."
+    },
+    {
+      "run": "quality60",
+      "id": "roe-deer-s20261026",
+      "category": "Nature",
+      "prompt": "A wildlife photograph of one adult roe deer standing in a meadow in clear side profile. All four slender legs and hooves are visible and grounded, natural joint angles and body proportions, ears upright, head turned only slightly toward the camera. Short meadow grass does not obscure the feet, early morning mist behind distant trees, soft natural light, lifelike fur, no other animals or objects.",
+      "seed": 20261026,
+      "source_sha256": "915ce5a0a303654b05ec568f2fa9f3cd0cc0ee9c1e9bdd296eebc7c4cfc55444",
+      "decision": "exclude",
+      "reason": "Leg separation and hoof-ground contact are unclear, with a strongly darkened background."
+    },
+    {
+      "run": "quality60",
+      "id": "forest-waterfall-s20261026",
+      "category": "Nature",
+      "prompt": "A realistic landscape photograph of a small waterfall in a lush temperate rainforest. Water flows continuously from an upstream stream over a dark rock ledge into a pool below, with moss-covered boulders and ferns on the banks. Coherent gravity-driven water flow, varied leaf detail, soft daylight filtered through the canopy, restrained natural colors, no people, animals or buildings, no text.",
+      "seed": 20261026,
+      "source_sha256": "64549e0141a33afb56527ad4d4a7049b4abce4afdfd11f11a292c5fe1729b0a3",
+      "decision": "exclude",
+      "reason": "Tiny central waterfall surrounded by black."
+    },
+    {
+      "run": "quality60",
+      "id": "alpine-lake-s20261026",
+      "category": "Nature",
+      "prompt": "A panoramic-style landscape photograph of a clear alpine lake below a rugged mountain ridge. Pale stones are visible under shallow water in the foreground, a forested shore surrounds the lake, distant peaks catch warm early-morning light. The calm water has a natural inverted reflection aligned with the mountains above it and subtle ripples near the shore. Realistic geology, clear atmospheric depth, no people, boats or buildings, no text.",
+      "seed": 20261026,
+      "source_sha256": "cd5ff1ee16c38513b694b7959be84406b5ce1e610ee3fe3f0fa61aee6dfb082a",
+      "decision": "exclude",
+      "reason": "Severe underexposure and vignette hide most landscape detail."
+    },
+    {
+      "run": "quality60",
+      "id": "green-teapot-s20261026",
+      "category": "Objects",
+      "prompt": "A studio product photograph of one matte sage-green ceramic teapot on a pale stone tabletop. A single rounded body, one lid seated on its opening, one curved handle attached at both ends on the right and one short spout smoothly joined on the left, all physically coherent. Three-quarter view showing the complete pot, soft side light, subtle ceramic grain and clear contact shadow, a warm beige background, no extra objects, no text.",
+      "seed": 20261026,
+      "source_sha256": "3770a4c87d066145eda9d217824c25f1d72ea83656276a6d2cec53267affc5c7",
+      "decision": "not_selected",
+      "reason": "Preview looks coherent, but seed 137 already passed detail review and is selected to avoid near-duplicate displays."
+    },
+    {
+      "run": "quality60",
+      "id": "citrus-still-life-s20261026",
+      "category": "Objects",
+      "prompt": "A still-life photograph of two whole oranges and one freshly cut orange half on a white ceramic plate, with a folded cream linen napkin on a wooden table. The cut half has a coherent circular rind and radial pulp segments, the fruit rests naturally on the plate, no floating pieces. Soft morning window light, warm restrained colors, realistic peel texture, careful editorial food photography, no hands, utensils or text.",
+      "seed": 20261026,
+      "source_sha256": "aac4e78bdbdb45a40b8b5c33aef602cb1adb54303f74b36943b779e837b2e4e7",
+      "decision": "not_selected",
+      "reason": "Correct fruit count and plausible structure in preview; seed 137 has clearer exposure and is already reviewed."
+    },
+    {
+      "run": "quality60",
+      "id": "glass-vase-s20261026",
+      "category": "Objects",
+      "prompt": "An elegant product still-life photograph of one clear cylindrical glass vase holding a single eucalyptus branch on a pale wooden table. The continuous stem enters the open top of the vase and is visible through the glass below the water line, each leaf attaches naturally to a stem. The vase has a flat circular base resting on the tabletop, subtle coherent refraction and contact shadow, neutral plaster wall, soft daylight, no text.",
+      "seed": 20261026,
+      "source_sha256": "4329cf96b0fc04fb03018e12683938e55dfacf84427673e05507738f862faebf",
+      "decision": "hold",
+      "reason": "Stem end hangs above the bottom with little evident rim support, making balance unclear; use reviewed seed 137 instead."
+    },
+    {
+      "run": "quality60",
+      "id": "strawberry-cake-s20261026",
+      "category": "Objects",
+      "prompt": "An editorial food photograph of one triangular slice of strawberry sponge cake resting on a plain white plate. Two straight layers of golden sponge are separated by white cream and strawberry pieces, and a small fresh strawberry sits on the top frosting. The cut faces clearly show coherent layers, the slice rests flat on the plate, soft window light, cream linen tablecloth, realistic textures, no utensils, hands or text.",
+      "seed": 20261026,
+      "source_sha256": "5a61717a31228154f58cfebaca0287aa7c583647c560efc15f43439cad3f350d",
+      "decision": "hold",
+      "reason": "Three sponge layers instead of the requested two; seed 137 matches the instruction."
+    },
+    {
+      "run": "quality60",
+      "id": "papercut-mountains-s20261026",
+      "category": "Art",
+      "prompt": "A carefully crafted layered paper-cut artwork of mountain ridges and a winding river through a pine forest. Clean continuous cut edges, deep navy and teal paper layers with a small warm ivory sun above the distant horizon. Overlapping paper layers cast delicate shadows on the layers below, photographed as a flat handmade composition on a neutral background. Clear simplified tree silhouettes, balanced negative space, no people, buildings, animals or lettering.",
+      "seed": 20261026,
+      "source_sha256": "fde1adfb40f45f03501d5daf070d2c292271559864856e66cc9996c95f00beff",
+      "decision": "not_selected",
+      "reason": "Readable paper artwork, but seed 41 has cleaner connected river and less crowded contours."
+    },
+    {
+      "run": "quality60",
+      "id": "linocut-flowers-s20261026",
+      "category": "Art",
+      "prompt": "A refined two-color linocut print on textured cream paper, showing a single vase of anemone flowers. Bold dark-blue contours and muted ochre flower centers, coherent stems running into the vase, clearly separated petals and simple leaves, intentional carved line texture and generous blank margins. A balanced handmade botanical print, no words, signature or border decorations.",
+      "seed": 20261026,
+      "source_sha256": "2eda84cdfce101515c7856e2e70e0615389572396a1b1ac2c244b7008d4e1e5e",
+      "decision": "not_selected",
+      "reason": "Simplified print has less distinct stem and petal structure than the selected seed 137."
+    },
+    {
+      "run": "quality60",
+      "id": "lemon-mosaic-s20261026",
+      "category": "Art",
+      "prompt": "A square handmade ceramic mosaic depicting one lemon branch with three yellow lemons and green leaves on a cream background. Individual glazed tiles have clean separated grout lines; each leaf and fruit joins the continuous branch in a readable botanical arrangement. The flat mosaic panel lies on a simple wooden work surface, softly lit from the side, rich material detail and restrained colors, no text or extra objects.",
+      "seed": 20261026,
+      "source_sha256": "ca2366fc934e49f2e7d55353ff7224c78dac49f70faf32ee4de4cf09b5d83397",
+      "decision": "exclude",
+      "reason": "Four lemons instead of three; relief sits on a tiled base but fruit-to-branch connections are unclear."
+    },
+    {
+      "run": "quality60",
+      "id": "felt-cottage-s20261026",
+      "category": "Art",
+      "prompt": "A handcrafted miniature wool-felt cottage on a flat green felt base, photographed on a neutral studio tabletop. One small red-roofed house with a single front door and two square windows, a simple felt path leading from the door to the edge of the base, and two rounded felt trees planted beside the house. Every miniature rests on the same base, clearly defined stitched edges, soft warm lighting, believable handmade construction, no people, vehicles or text.",
+      "seed": 20261026,
+      "source_sha256": "3c1c59ac8709938f2e5ee0ba7886a49739af15634c3d6d8db9cb9e9345de5ab4",
+      "decision": "hold",
+      "reason": "House, two windows and two trees are coherent, but exposure is dim and path stops short of the edge."
+    },
+    {
+      "run": "native1k20",
+      "id": "silver-haired-man-native1k-s20261026",
+      "category": "People",
+      "prompt": "An intimate photographic portrait of an older man with short silver hair and a neatly trimmed beard, wearing a charcoal wool sweater. Head and shoulders, his entire head and both shoulders inside the frame, relaxed eyes looking toward the camera. Soft side light from a large window, plain warm-gray plaster background, natural skin texture and facial proportions, quiet editorial photography, no text or logos.",
+      "seed": 20261026,
+      "source_sha256": "94e0bff93b02e15557ca97c33a1b2a4f9eee5f9557e6397bde2cf43ffe1d79af",
+      "decision": "accepted",
+      "reason": "Full original inspected: coherent facial features, eye alignment, hairline, beard, neck and shoulders; head entirely framed; no visible watermark or deformation.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "native1k20",
+      "id": "curly-hair-portrait-native1k-s20261026",
+      "category": "People",
+      "prompt": "A photographic head-and-shoulders portrait of an adult woman with auburn curly hair wearing a simple dark teal blouse. Her face is turned slightly toward soft daylight, both eyes visible, natural features and believable skin texture. Muted pale-blue studio background, gentle shadows, complete head within the frame, elegant editorial photography, no text or logos.",
+      "seed": 20261026,
+      "source_sha256": "40ad7af6e9e00bb805cdf96a9405184dc01cd11e667dd4aa7f09adef842b4ae2",
+      "decision": "not_selected",
+      "reason": "Plausible portrait, but the already selected high-resolution seed 137 covers the same subject.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "linen-coast-native1k-s20261026",
+      "category": "People",
+      "prompt": "A full-length editorial photograph of one adult woman wearing an ivory linen jacket and dark trousers, standing quietly on a broad coastal path. Both feet are flat on the stone path, arms relaxed with hands visible naturally at her sides, no objects in her hands. A low stone wall and blue sea behind her, soft overcast daylight, realistic anatomy and clothing folds, straight camera perspective, no other people, no text.",
+      "seed": 20261026,
+      "source_sha256": "0c95403777baf0bb3ae0554e9ae9c0b4e60b684462781ea5b4dffe468bad552e",
+      "decision": "exclude",
+      "reason": "Head and upper body are cut off despite the full-length portrait prompt.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "baker-bread-native1k-s20261026",
+      "category": "People",
+      "prompt": "An environmental photographic portrait of one adult baker in a blue cotton shirt and a clean tan apron, standing behind a wooden workbench. One round loaf of crusty bread rests on a breadboard between the baker's two open hands, which rest separately flat on the workbench, fingers naturally spaced. Calm expression, natural anatomy, warm window light, a quiet uncluttered bakery with shelves in the background, no utensils being held, no text or logos.",
+      "seed": 20261026,
+      "source_sha256": "053804acd258e0003c99746804f9928e047821398e2e32bdff8794cde2443b96",
+      "decision": "exclude",
+      "reason": "Face cut off; palms face upward and fingers overlap ambiguously instead of resting separately flat on bench.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "stone-courtyard-native1k-s20261026",
+      "category": "Architecture",
+      "prompt": "Architectural photography of a small single-story limestone courtyard house in a Mediterranean landscape. A simple tiled roof rests on thick stone walls; a shaded colonnade opens onto a level stone courtyard with one mature olive tree in a planting bed. The column bases, paving and entrances are visible and physically connected, an unobstructed path leads to the front door. Warm late-afternoon sunlight, restrained earthy materials, realistic straight verticals, no people, no text.",
+      "seed": 20261026,
+      "source_sha256": "3d60a62ceaad64dd2f7461877bb860a798b58863b37ab35be60b189a70a6dc45",
+      "decision": "exclude",
+      "reason": "Tree emerges directly from continuous paving with no planting bed; requested colonnade is absent.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "coastal-observatory-native1k-s20261026",
+      "category": "Architecture",
+      "prompt": "Architectural photograph of a compact cylindrical white concrete observatory on a grassy coastal headland. A simple low dome sits directly on the round wall, one dark entrance door reached by three broad concrete steps connected to the ground. The entire small building is visible, natural cliffs and sea in the distance, quiet blue-hour sky, realistic construction and proportions, no floating parts, no people, no signage.",
+      "seed": 20261026,
+      "source_sha256": "c6c0ba0b3ad79080f563401abe6372ab6a9dc4192796792915186fba5135c29a",
+      "decision": "hold",
+      "reason": "No readable observing aperture; step count differs from prompt. Do not present as a verified observatory.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "timber-pavilion-native1k-s20261026",
+      "category": "Architecture",
+      "prompt": "Architectural photography of a small open-sided timber garden pavilion beside tall bamboo. Four thick vertical timber posts support a simple pitched roof through visible horizontal beams; every post is planted on the same raised wooden deck. One plain wooden bench with four visible legs rests firmly on the deck. Wide three-quarter view, overcast daylight, clear joinery and straight lines, realistic scale, no people or text.",
+      "seed": 20261026,
+      "source_sha256": "9304246a70bd1b64bed344d679f001554f435e954564c88cc1bac38a0d775d44",
+      "decision": "hold",
+      "reason": "Roof is flat and partially cropped, not the requested pitched roof and three-quarter view; rear post connections are not verifiable.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "reading-room-native1k-s20261026",
+      "category": "Architecture",
+      "prompt": "A quiet light-filled reading room photographed from the doorway, with a tall rectangular window, built-in oak bookshelves along one wall, one solid oak desk and one simple wooden chair. The desk has four straight legs visibly meeting the floor, the chair sits beside it with a coherent back and seat. Pale plaster walls and a small vase on the desk, soft morning daylight, believable interior perspective, no people, no readable text.",
+      "seed": 20261026,
+      "source_sha256": "5b8bf8e910b2032d2ea98c3dc2e2414cb5a3035801cb198070657318a66f5c00",
+      "decision": "hold",
+      "reason": "Desk rear support cannot be verified and overlaps shelving. Retain privately rather than claim structural correctness.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "barn-owl-native1k-s20261026",
+      "category": "Nature",
+      "prompt": "A detailed wildlife photograph of one barn owl perched on a broad weathered wooden fence post at dusk. Its two feet with natural gripping talons are visible on top of the post, wings folded against its body, complete head and body within the frame, natural owl anatomy. Soft grassy meadow background, gentle warm light along the feathers, calm alert gaze, realistic wildlife photography, no accessories or text.",
+      "seed": 20261026,
+      "source_sha256": "e04b719f84c5de9c347960905356708a71cd8ef7b01fffabaad7561034d1e985",
+      "decision": "exclude",
+      "reason": "Generated pseudo-watermark at lower left; do not crop it away.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "roe-deer-native1k-s20261026",
+      "category": "Nature",
+      "prompt": "A wildlife photograph of one adult roe deer standing in a meadow in clear side profile. All four slender legs and hooves are visible and grounded, natural joint angles and body proportions, ears upright, head turned only slightly toward the camera. Short meadow grass does not obscure the feet, early morning mist behind distant trees, soft natural light, lifelike fur, no other animals or objects.",
+      "seed": 20261026,
+      "source_sha256": "cdef6ae442641a605c97ef8196b67f4af934aa4eab9a58054432a525e0e3533f",
+      "decision": "hold",
+      "reason": "Leg joints and elongated hind limb proportions look questionable; hooves hidden despite prompt.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "forest-waterfall-native1k-s20261026",
+      "category": "Nature",
+      "prompt": "A realistic landscape photograph of a small waterfall in a lush temperate rainforest. Water flows continuously from an upstream stream over a dark rock ledge into a pool below, with moss-covered boulders and ferns on the banks. Coherent gravity-driven water flow, varied leaf detail, soft daylight filtered through the canopy, restrained natural colors, no people, animals or buildings, no text.",
+      "seed": 20261026,
+      "source_sha256": "11a5ea519dfda3a1083cebe75100d823d4e45584c7f5e8505173ea006b08e6a4",
+      "decision": "exclude",
+      "reason": "Large unintended black side borders and dark foliage.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "alpine-lake-native1k-s20261026",
+      "category": "Nature",
+      "prompt": "A panoramic-style landscape photograph of a clear alpine lake below a rugged mountain ridge. Pale stones are visible under shallow water in the foreground, a forested shore surrounds the lake, distant peaks catch warm early-morning light. The calm water has a natural inverted reflection aligned with the mountains above it and subtle ripples near the shore. Realistic geology, clear atmospheric depth, no people, boats or buildings, no text.",
+      "seed": 20261026,
+      "source_sha256": "cde935fbf45cd54faf8b3d8b71ee2a683184e383365d965a2e3c6b49bf05b11c",
+      "decision": "exclude",
+      "reason": "Generated pseudo-watermark at lower right; do not crop it away.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "green-teapot-native1k-s20261026",
+      "category": "Objects",
+      "prompt": "A studio product photograph of one matte sage-green ceramic teapot on a pale stone tabletop. A single rounded body, one lid seated on its opening, one curved handle attached at both ends on the right and one short spout smoothly joined on the left, all physically coherent. Three-quarter view showing the complete pot, soft side light, subtle ceramic grain and clear contact shadow, a warm beige background, no extra objects, no text.",
+      "seed": 20261026,
+      "source_sha256": "157cf4bdb031d29afd390bc4917849a90e4560c5d8c3761491be009c661deb16",
+      "decision": "hold",
+      "reason": "Lid has an unusual large hollow opening instead of a clearly readable knob; selected higher-resolution seed 137 has more credible construction.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "citrus-still-life-native1k-s20261026",
+      "category": "Objects",
+      "prompt": "A still-life photograph of two whole oranges and one freshly cut orange half on a white ceramic plate, with a folded cream linen napkin on a wooden table. The cut half has a coherent circular rind and radial pulp segments, the fruit rests naturally on the plate, no floating pieces. Soft morning window light, warm restrained colors, realistic peel texture, careful editorial food photography, no hands, utensils or text.",
+      "seed": 20261026,
+      "source_sha256": "076a2b6cef40fdb120d098262cf2e87716dc96dae028462d7ef6bda230cda584",
+      "decision": "not_selected",
+      "reason": "Coherent fruit count, rind and plate contact, but near duplicate of already selected high-resolution seed 137.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "glass-vase-native1k-s20261026",
+      "category": "Objects",
+      "prompt": "An elegant product still-life photograph of one clear cylindrical glass vase holding a single eucalyptus branch on a pale wooden table. The continuous stem enters the open top of the vase and is visible through the glass below the water line, each leaf attaches naturally to a stem. The vase has a flat circular base resting on the tabletop, subtle coherent refraction and contact shadow, neutral plaster wall, soft daylight, no text.",
+      "seed": 20261026,
+      "source_sha256": "d807bdb44a5728f2b151cacfaa92aba7625c0486cc6f2501ce6ad507dc7ad63c",
+      "decision": "hold",
+      "reason": "Stem tip appears suspended above vase base without clear support; branch also cropped by top edge.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "strawberry-cake-native1k-s20261026",
+      "category": "Objects",
+      "prompt": "An editorial food photograph of one triangular slice of strawberry sponge cake resting on a plain white plate. Two straight layers of golden sponge are separated by white cream and strawberry pieces, and a small fresh strawberry sits on the top frosting. The cut faces clearly show coherent layers, the slice rests flat on the plate, soft window light, cream linen tablecloth, realistic textures, no utensils, hands or text.",
+      "seed": 20261026,
+      "source_sha256": "bad0f9321078e5523a8a90600e6b05f18d2d7534d23c957d2e0ef24c515adc0f",
+      "decision": "hold",
+      "reason": "Three apparent sponge bands conflict with the requested two-layer structure.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "papercut-mountains-native1k-s20261026",
+      "category": "Art",
+      "prompt": "A carefully crafted layered paper-cut artwork of mountain ridges and a winding river through a pine forest. Clean continuous cut edges, deep navy and teal paper layers with a small warm ivory sun above the distant horizon. Overlapping paper layers cast delicate shadows on the layers below, photographed as a flat handmade composition on a neutral background. Clear simplified tree silhouettes, balanced negative space, no people, buildings, animals or lettering.",
+      "seed": 20261026,
+      "source_sha256": "d3ad6b706c66c4fa65074bcae906e55dab8898907393e332d0716b85f775cfc5",
+      "decision": "hold",
+      "reason": "Foreground river forms an implausible closed loop rather than a continuous winding course.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "linocut-flowers-native1k-s20261026",
+      "category": "Art",
+      "prompt": "A refined two-color linocut print on textured cream paper, showing a single vase of anemone flowers. Bold dark-blue contours and muted ochre flower centers, coherent stems running into the vase, clearly separated petals and simple leaves, intentional carved line texture and generous blank margins. A balanced handmade botanical print, no words, signature or border decorations.",
+      "seed": 20261026,
+      "source_sha256": "602bbf8c91ee87507508f4d255ba638fc9b7da04a0283912135cc66f551932bc",
+      "decision": "not_selected",
+      "reason": "Plausible print, but near duplicate of already selected seed 137.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "lemon-mosaic-native1k-s20261026",
+      "category": "Art",
+      "prompt": "A square handmade ceramic mosaic depicting one lemon branch with three yellow lemons and green leaves on a cream background. Individual glazed tiles have clean separated grout lines; each leaf and fruit joins the continuous branch in a readable botanical arrangement. The flat mosaic panel lies on a simple wooden work surface, softly lit from the side, rich material detail and restrained colors, no text or extra objects.",
+      "seed": 20261026,
+      "source_sha256": "0234ea7fbe05052cc34c1f0df52b3ddd36714a4b9ccf8a61ffef0a7fea295391",
+      "decision": "hold",
+      "reason": "Looks like a few large relief pieces rather than a tiled mosaic; panel upright instead of flat as prompted.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "native1k20",
+      "id": "felt-cottage-native1k-s20261026",
+      "category": "Art",
+      "prompt": "A handcrafted miniature wool-felt cottage on a flat green felt base, photographed on a neutral studio tabletop. One small red-roofed house with a single front door and two square windows, a simple felt path leading from the door to the edge of the base, and two rounded felt trees planted beside the house. Every miniature rests on the same base, clearly defined stitched edges, soft warm lighting, believable handmade construction, no people, vehicles or text.",
+      "seed": 20261026,
+      "source_sha256": "c2f26c086ee0ad561c00edd0a2a8783e52f2c5333fff1abb0628ed44eda90a8b",
+      "decision": "hold",
+      "reason": "Path stops short of the base edge specified in the prompt; limited detail and dark exposure.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "scene16",
+      "id": "stone-cottage-scene1k-s41",
+      "category": "Architecture",
+      "prompt": "A photograph of a small English stone cottage with a slate roof, a chimney, a blue front door and white-framed windows. A gravel footpath leads through a green garden to the doorstep. The whole house is visible in soft morning sunlight.",
+      "seed": 41,
+      "source_sha256": "60e6b45c8b43c434247c42978016ac4ccfb74017844ec40fe21957df58a58815",
+      "decision": "hold",
+      "reason": "House cut at left despite whole-house framing; uneven roof tiles and low exposure reduce clarity.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "scene16",
+      "id": "stone-cottage-scene1k-s137",
+      "category": "Architecture",
+      "prompt": "A photograph of a small English stone cottage with a slate roof, a chimney, a blue front door and white-framed windows. A gravel footpath leads through a green garden to the doorstep. The whole house is visible in soft morning sunlight.",
+      "seed": 137,
+      "source_sha256": "55dcd1c15c496950a07995e0b2445bdd3c21f5a858270bacc755906f9ced4b11",
+      "decision": "hold",
+      "reason": "Building and left chimney cut off; dark facade and skewed door detailing are weaker than selected scene.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "scene16",
+      "id": "garden-teahouse-scene1k-s41",
+      "category": "Architecture",
+      "prompt": "A photograph of a Japanese wooden teahouse in a peaceful garden. Timber posts support its tiled roof above a low veranda. Open sliding doors reveal a quiet tatami room. A stone path approaches the entrance through green moss. Soft daylight.",
+      "seed": 41,
+      "source_sha256": "590318d608707bd0b925c871a0ea105d2a80767e5e785cd149b1fdaffa019e13",
+      "decision": "exclude",
+      "reason": "Prominent invented lettering on central post and distorted tile pattern.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "scene16",
+      "id": "garden-teahouse-scene1k-s137",
+      "category": "Architecture",
+      "prompt": "A photograph of a Japanese wooden teahouse in a peaceful garden. Timber posts support its tiled roof above a low veranda. Open sliding doors reveal a quiet tatami room. A stone path approaches the entrance through green moss. Soft daylight.",
+      "seed": 137,
+      "source_sha256": "d95a8926249473305200512ddf3bdfc248d994ebcedc58bdeffbc017bcd4ac5c",
+      "decision": "exclude",
+      "reason": "Pseudo-lettering on several wooden members; roof rows appear wavy and smeared.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "scene16",
+      "id": "arched-corridor-scene1k-s41",
+      "category": "Architecture",
+      "prompt": "A photograph looking along a cloister with a row of stone arches and a terracotta tiled floor. Warm sunlight falls through the arches from a quiet garden on the left. The stone pillars and vaulted ceiling have a simple regular rhythm.",
+      "seed": 41,
+      "source_sha256": "315f4520c9809f633a96578df8e04ba12b4481e18ad372e854220002d9bbace9",
+      "decision": "hold",
+      "reason": "Far ceiling junction has an ambiguous dark break; floor lines curve inconsistently.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "scene16",
+      "id": "arched-corridor-scene1k-s137",
+      "category": "Architecture",
+      "prompt": "A photograph looking along a cloister with a row of stone arches and a terracotta tiled floor. Warm sunlight falls through the arches from a quiet garden on the left. The stone pillars and vaulted ceiling have a simple regular rhythm.",
+      "seed": 137,
+      "source_sha256": "e6c26841a38b4a2526e2fb50528af0bddba74e8d4354ed87b1d0b141bc4581fa",
+      "decision": "accepted",
+      "reason": "Original inspected: columns meet continuous bases, capitals support arches, vaults and floor recede coherently, garden light and shadows consistent; no visible watermark.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "scene16",
+      "id": "glass-conservatory-scene1k-s41",
+      "category": "Architecture",
+      "prompt": "A photograph of a Victorian glass conservatory with a white metal frame, clear glass roof panels and green potted plants. A straight brick path leads to the glass doorway. The building stands in a well-kept garden in daylight.",
+      "seed": 41,
+      "source_sha256": "4a5aa900e5318f2cd3ef1c4bced9a9042074567f7cc62f22c8b7d2f074b995b0",
+      "decision": "hold",
+      "reason": "Roof frame joints and decorative pieces appear irregular; insufficient confidence in construction details.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "scene16",
+      "id": "glass-conservatory-scene1k-s137",
+      "category": "Architecture",
+      "prompt": "A photograph of a Victorian glass conservatory with a white metal frame, clear glass roof panels and green potted plants. A straight brick path leads to the glass doorway. The building stands in a well-kept garden in daylight.",
+      "seed": 137,
+      "source_sha256": "7446cb0c27d6e53f7cc3327b78cfc8156601a2e1f453c609f449472881050b25",
+      "decision": "hold",
+      "reason": "Door and neighboring mullion connections look skewed and discontinuous.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "scene16",
+      "id": "sunflower-closeup-scene1k-s41",
+      "category": "Nature",
+      "prompt": "A close-up photograph of a bright yellow sunflower growing in a summer garden. Its dark center is surrounded by yellow petals, with a green stem and leaves beneath. Soft green background and gentle morning sunlight.",
+      "seed": 41,
+      "source_sha256": "041d528815bff325418b9a40960be4f863793f240839ad5cdb4541b62ac3ae43",
+      "decision": "not_selected",
+      "reason": "Plausible flower, but seed 137 has a clearer stem and leaf composition; avoid duplicate.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "scene16",
+      "id": "sunflower-closeup-scene1k-s137",
+      "category": "Nature",
+      "prompt": "A close-up photograph of a bright yellow sunflower growing in a summer garden. Its dark center is surrounded by yellow petals, with a green stem and leaves beneath. Soft green background and gentle morning sunlight.",
+      "seed": 137,
+      "source_sha256": "abc553e13e76d729503f5ee78c95d5e9b823338e049d92cec15942dbabfeaf0b",
+      "decision": "accepted",
+      "reason": "Original inspected: radial flower head with distinct petals, readable center texture, continuous stem and attached leaves; no obvious structural distortion or lettering.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "scene16",
+      "id": "forest-ferns-scene1k-s41",
+      "category": "Nature",
+      "prompt": "A detailed photograph of fresh green fern fronds growing from damp moss on a forest floor. Tiny droplets cling to the leaves. Soft natural light and a gently blurred woodland background.",
+      "seed": 41,
+      "source_sha256": "74acb7afe050749de10ada1a571157b42260161dd75f3b2199c92e7aea64723c",
+      "decision": "accepted",
+      "reason": "Original inspected: fronds have continuous central stalks with attached leaflets, grounded in moss; natural depth of field and droplet detail.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "scene16",
+      "id": "forest-ferns-scene1k-s137",
+      "category": "Nature",
+      "prompt": "A detailed photograph of fresh green fern fronds growing from damp moss on a forest floor. Tiny droplets cling to the leaves. Soft natural light and a gently blurred woodland background.",
+      "seed": 137,
+      "source_sha256": "4459c77dcd23d020e977210710de7e9dc87b21e66f309b93397133d19ed6d145",
+      "decision": "not_selected",
+      "reason": "Similar scene; seed 41 has clearer separated fronds and readable ground contact.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "scene16",
+      "id": "coastal-arch-scene1k-s41",
+      "category": "Nature",
+      "prompt": "A landscape photograph of a natural limestone sea arch on a calm coast. Pale rock surrounds the opening, blue water passes beneath it, and gentle waves meet a pebble beach in the foreground. Clear morning sky.",
+      "seed": 41,
+      "source_sha256": "88799c03f22a1e562abccbc55889fa79583dddf438c72cbdbd5139b7e924383f",
+      "decision": "accepted",
+      "reason": "Original inspected: continuous rock bridge meets both rock masses, water passes beneath the opening, horizontal sea level and connected shore surf; no visible watermark or broken geometry.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "scene16",
+      "id": "coastal-arch-scene1k-s137",
+      "category": "Nature",
+      "prompt": "A landscape photograph of a natural limestone sea arch on a calm coast. Pale rock surrounds the opening, blue water passes beneath it, and gentle waves meet a pebble beach in the foreground. Clear morning sky.",
+      "seed": 137,
+      "source_sha256": "8cdbb072eef03e09ed3151eff994b3519b01705d35c7dc3a6befdddf3692c686",
+      "decision": "hold",
+      "reason": "Opening has an unusually squared inner edge and horizontal band; avoid uncertain geometry.",
+      "full_resolution_review": false
+    },
+    {
+      "run": "scene16",
+      "id": "cherry-blossom-scene1k-s41",
+      "category": "Nature",
+      "prompt": "A close-up photograph of pale pink cherry blossoms growing on a slender brown branch. The delicate petals and small yellow stamens are in focus against a soft green garden background. Gentle spring daylight.",
+      "seed": 41,
+      "source_sha256": "6ffea71148ac858452c37849d0b8dbe2691929791c972ea8f06a1f473ff61e1d",
+      "decision": "accepted",
+      "reason": "Original inspected: coherent blossom cluster attached to brown branching stems, distinct petals and visible stamens; natural focus falloff and no visible text.",
+      "full_resolution_review": true
+    },
+    {
+      "run": "scene16",
+      "id": "cherry-blossom-scene1k-s137",
+      "category": "Nature",
+      "prompt": "A close-up photograph of pale pink cherry blossoms growing on a slender brown branch. The delicate petals and small yellow stamens are in focus against a soft green garden background. Gentle spring daylight.",
+      "seed": 137,
+      "source_sha256": "2089e9432f4b528a77f4fc81b1291d49406b9055baa48febe1b9aae81b8c4212",
+      "decision": "hold",
+      "reason": "Central green-yellow stamen cluster looks clumped and artificial; seed 41 has clearer floral detail.",
+      "full_resolution_review": false
+    }
+  ]
+}

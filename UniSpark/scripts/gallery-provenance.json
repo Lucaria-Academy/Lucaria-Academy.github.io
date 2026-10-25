@@ -1,0 +1,546 @@
+{
+  "source_collection": "Existing CT 0042500 text-to-image outputs and paper showcase assets, plus visually reviewed CT 0095000 text-to-image outputs.",
+  "added": [
+    {
+      "name": "short-hair-portrait",
+      "source": "figs/showcase-ct0823/02_person_t2i_logic_strict_5/02_short_haired_woman.jpg",
+      "original_sha256": "5f4db28816d1e29e86dbb1016f41ac4130f9fd2c424d1f905a9593a4a455a3e3",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "website_size": [
+        900,
+        1200
+      ],
+      "processing": "Aspect-preserving downsample and JPEG conversion only.",
+      "display_status": "reviewed_existing"
+    },
+    {
+      "name": "architect",
+      "source": "figs/showcase-ct0823/02_person_t2i_logic_strict_5/04_architect_blueprint.jpg",
+      "original_sha256": "aa8b08c1afcacf69ad2fea12852c79354abac5115a32d1e053dde772189f44cb",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "website_size": [
+        1200,
+        900
+      ],
+      "processing": "Aspect-preserving downsample and JPEG conversion only.",
+      "display_status": "held_existing"
+    },
+    {
+      "name": "beekeeper",
+      "source": "figs/showcase-ct0823/v5/01_people_5/02_beekeeper_orchard.jpg",
+      "original_sha256": "756af13654029042f353756e80e8343b9d34ef191db158a2ad5feaf8efefdf93",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "website_size": [
+        900,
+        1200
+      ],
+      "processing": "Aspect-preserving downsample and JPEG conversion only.",
+      "display_status": "held_existing"
+    },
+    {
+      "name": "turtle",
+      "source": "figs/showcase-ct0823/v5/03_wildlife_4/04_sea_turtle_seagrass.jpg",
+      "original_sha256": "d4b29edc7e954d6893b1f8e5a9c0467014a9e12546fa4584b575406a070b5def",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "website_size": [
+        1200,
+        900
+      ],
+      "processing": "Aspect-preserving downsample and JPEG conversion only.",
+      "display_status": "excluded_existing"
+    },
+    {
+      "name": "elephants",
+      "source": "../UniSpark-gallery-expansion-20261026/v5-elephants-salt-pan.png",
+      "original_sha256": "7502980e4c8c126d1cba05c2b3aae352a528d2af75a3ddbcb39deb4451e56b29",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "website_size": [
+        1200,
+        900
+      ],
+      "processing": "Aspect-preserving downsample and JPEG conversion only.",
+      "display_status": "excluded_existing"
+    },
+    {
+      "name": "water-lab",
+      "source": "../UniSpark-gallery-expansion-20261026/v5-alpine-water-lab.png",
+      "original_sha256": "4b5e9d80bdc686717be87d8e406cec467c8c7e68874af3acbbb1e869ba3e0949",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "website_size": [
+        1200,
+        900
+      ],
+      "processing": "Aspect-preserving downsample and JPEG conversion only.",
+      "display_status": "held_existing"
+    },
+    {
+      "name": "ramen",
+      "source": "../UniSpark-gallery-expansion-20261026/v5-ramen-still-life.png",
+      "original_sha256": "02afa3d8b3ebbe15831718d4e43dde9fee93c98b3bf54cbcd92ef0ff765aae72",
+      "original_size": [
+        1792,
+        1792
+      ],
+      "website_size": [
+        1200,
+        1200
+      ],
+      "processing": "Aspect-preserving downsample and JPEG conversion only.",
+      "display_status": "held_existing"
+    },
+    {
+      "name": "chocolate-dessert",
+      "source": "figs/showcase-ct0823/04_nonperson_edit_logic_strict_4/sources/03_dessert_amber_source.jpg",
+      "original_sha256": "0a80dd6f52d7a68b83630844ba31c892468559f5b0599f3510cc2acb113cbf5f",
+      "original_size": [
+        1792,
+        1792
+      ],
+      "website_size": [
+        1200,
+        1200
+      ],
+      "processing": "Aspect-preserving downsample and JPEG conversion only.",
+      "display_status": "reviewed_existing"
+    },
+    {
+      "name": "papercut",
+      "source": "figs/showcase-ct0823/04_nonperson_edit_logic_strict_4/sources/01_papercut_blue_gold_source.jpg",
+      "original_sha256": "6094c233d922d00d15192e2101673511862e2fbd83403bc732467392f8fdd803",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "website_size": [
+        1200,
+        900
+      ],
+      "processing": "Aspect-preserving downsample and JPEG conversion only.",
+      "display_status": "excluded_existing"
+    },
+    {
+      "name": "stained-glass",
+      "source": "../UniSpark-gallery-expansion-20261026/v5-stained-glass-ocean.png",
+      "original_sha256": "2c4d801d0cc6c79728101e2c039f30f6ce25aa95dbd5e1950785c50cd7b8a6cd",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "website_size": [
+        900,
+        1200
+      ],
+      "processing": "Aspect-preserving downsample and JPEG conversion only.",
+      "display_status": "excluded_existing"
+    },
+    {
+      "name": "g95-auburn-portrait",
+      "source": "../UniSpark-CT0095000-gallery60-20261026/originals/curly-hair-portrait-s137.png",
+      "source_id": "curly-hair-portrait-s137",
+      "run": "quality60",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A photographic head-and-shoulders portrait of an adult woman with auburn curly hair wearing a simple dark teal blouse. Her face is turned slightly toward soft daylight, both eyes visible, natural features and believable skin texture. Muted pale-blue studio background, gentle shadows, complete head within the frame, elegant editorial photography, no text or logos.",
+      "seed": 137,
+      "original_sha256": "186efc0d6ca0d19289e05d0fe44dd619d37ad74d591d5b8684f71a3165225470",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "website_sha256": "2f32316bd7c548e508c083817795c2bee15cccbafeee2557a561c5d871e7d31c",
+      "website_size": [
+        900,
+        1200
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-paper-river",
+      "source": "../UniSpark-CT0095000-gallery60-20261026/originals/papercut-mountains-s41.png",
+      "source_id": "papercut-mountains-s41",
+      "run": "quality60",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A carefully crafted layered paper-cut artwork of mountain ridges and a winding river through a pine forest. Clean continuous cut edges, deep navy and teal paper layers with a small warm ivory sun above the distant horizon. Overlapping paper layers cast delicate shadows on the layers below, photographed as a flat handmade composition on a neutral background. Clear simplified tree silhouettes, balanced negative space, no people, buildings, animals or lettering.",
+      "seed": 41,
+      "original_sha256": "cf562f1f34d90727a7e1c50f78e3017926011ad5258639fcfbebeb007d34c012",
+      "original_size": [
+        2048,
+        1536
+      ],
+      "website_sha256": "683c34d90d84509c9440950c3d7075dbe4b09107a5e986e23fe21352d18ffbf9",
+      "website_size": [
+        1200,
+        900
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-ceramic-teapot",
+      "source": "../UniSpark-CT0095000-gallery60-20261026/originals/green-teapot-s137.png",
+      "source_id": "green-teapot-s137",
+      "run": "quality60",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A studio product photograph of one matte sage-green ceramic teapot on a pale stone tabletop. A single rounded body, one lid seated on its opening, one curved handle attached at both ends on the right and one short spout smoothly joined on the left, all physically coherent. Three-quarter view showing the complete pot, soft side light, subtle ceramic grain and clear contact shadow, a warm beige background, no extra objects, no text.",
+      "seed": 137,
+      "original_sha256": "4d21a908e50086470ad795b2c8122794a7e8196101fdb12ddb39f5b8d2b2f287",
+      "original_size": [
+        1792,
+        1792
+      ],
+      "website_sha256": "46adb6bd6f721c2177b788cd1765f2e55d9c64504ff931315c3cbdfb2c9de7e2",
+      "website_size": [
+        1200,
+        1200
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-blue-anemones",
+      "source": "../UniSpark-CT0095000-gallery60-20261026/originals/linocut-flowers-s137.png",
+      "source_id": "linocut-flowers-s137",
+      "run": "quality60",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A refined two-color linocut print on textured cream paper, showing a single vase of anemone flowers. Bold dark-blue contours and muted ochre flower centers, coherent stems running into the vase, clearly separated petals and simple leaves, intentional carved line texture and generous blank margins. A balanced handmade botanical print, no words, signature or border decorations.",
+      "seed": 137,
+      "original_sha256": "aa8e9d0ceb18cf9b3451677ccb1ce40c2eaebacd7e4e4d52333ff75285fa69b8",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "website_sha256": "73dec0209c7deb75e3f50f1e8ea74d65fd691ce61e30fe15ffce927a0a43bb64",
+      "website_size": [
+        900,
+        1200
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-citrus",
+      "source": "../UniSpark-CT0095000-gallery60-20261026/originals/citrus-still-life-s137.png",
+      "source_id": "citrus-still-life-s137",
+      "run": "quality60",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A still-life photograph of two whole oranges and one freshly cut orange half on a white ceramic plate, with a folded cream linen napkin on a wooden table. The cut half has a coherent circular rind and radial pulp segments, the fruit rests naturally on the plate, no floating pieces. Soft morning window light, warm restrained colors, realistic peel texture, careful editorial food photography, no hands, utensils or text.",
+      "seed": 137,
+      "original_sha256": "2b9c786db090b08a0ce77a75c23b5d35b0a080ff156008c95de8fa98817e0c6a",
+      "original_size": [
+        1792,
+        1792
+      ],
+      "website_sha256": "21c875fa558696f535cd9d724001cce6d173762e545280977aaf2bd4d4e69667",
+      "website_size": [
+        1200,
+        1200
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-eucalyptus",
+      "source": "../UniSpark-CT0095000-gallery60-20261026/originals/glass-vase-s137.png",
+      "source_id": "glass-vase-s137",
+      "run": "quality60",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "An elegant product still-life photograph of one clear cylindrical glass vase holding a single eucalyptus branch on a pale wooden table. The continuous stem enters the open top of the vase and is visible through the glass below the water line, each leaf attaches naturally to a stem. The vase has a flat circular base resting on the tabletop, subtle coherent refraction and contact shadow, neutral plaster wall, soft daylight, no text.",
+      "seed": 137,
+      "original_sha256": "4ff5c5f617d46203343269df5193a7a593f1296eecd50afec407f3a4d36f456f",
+      "original_size": [
+        1536,
+        2048
+      ],
+      "website_sha256": "8a1db5c079a09cb3da880245fdf21c74d569335dff15b64428c29d7363deb902",
+      "website_size": [
+        900,
+        1200
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-strawberry-cake",
+      "source": "../UniSpark-CT0095000-gallery60-20261026/originals/strawberry-cake-s137.png",
+      "source_id": "strawberry-cake-s137",
+      "run": "quality60",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "An editorial food photograph of one triangular slice of strawberry sponge cake resting on a plain white plate. Two straight layers of golden sponge are separated by white cream and strawberry pieces, and a small fresh strawberry sits on the top frosting. The cut faces clearly show coherent layers, the slice rests flat on the plate, soft window light, cream linen tablecloth, realistic textures, no utensils, hands or text.",
+      "seed": 137,
+      "original_sha256": "119cab2350fcf6006c5b4fa1c71ebeb504768f53d121019c1eaa3d3693a5da36",
+      "original_size": [
+        1792,
+        1792
+      ],
+      "website_sha256": "60b2b4446aad8f33940c1e6386c5975eb6fb26aaf88a6ce76ad862433c93e419",
+      "website_size": [
+        1200,
+        1200
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-silver-portrait",
+      "source": "../UniSpark-CT0095000-native1k20-20261026/originals/silver-haired-man-native1k-s20261026.png",
+      "source_id": "silver-haired-man-native1k-s20261026",
+      "run": "native1k20",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "An intimate photographic portrait of an older man with short silver hair and a neatly trimmed beard, wearing a charcoal wool sweater. Head and shoulders, his entire head and both shoulders inside the frame, relaxed eyes looking toward the camera. Soft side light from a large window, plain warm-gray plaster background, natural skin texture and facial proportions, quiet editorial photography, no text or logos.",
+      "seed": 20261026,
+      "original_sha256": "94e0bff93b02e15557ca97c33a1b2a4f9eee5f9557e6397bde2cf43ffe1d79af",
+      "original_size": [
+        768,
+        1024
+      ],
+      "website_sha256": "576bbfb3b293a8fab5aa002a502fe3d2905fc322bdd62e78ef73ff79345b845c",
+      "website_size": [
+        768,
+        1024
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-cloister",
+      "source": "../UniSpark-CT0095000-scene16-20261026/originals/arched-corridor-scene1k-s137.png",
+      "source_id": "arched-corridor-scene1k-s137",
+      "run": "scene16",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A photograph looking along a cloister with a row of stone arches and a terracotta tiled floor. Warm sunlight falls through the arches from a quiet garden on the left. The stone pillars and vaulted ceiling have a simple regular rhythm.",
+      "seed": 137,
+      "original_sha256": "e6c26841a38b4a2526e2fb50528af0bddba74e8d4354ed87b1d0b141bc4581fa",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_sha256": "7f364ed34b2f49deec91c051dd930aad5325d95ef3e25606a734510555e180c2",
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-sunflower",
+      "source": "../UniSpark-CT0095000-scene16-20261026/originals/sunflower-closeup-scene1k-s137.png",
+      "source_id": "sunflower-closeup-scene1k-s137",
+      "run": "scene16",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A close-up photograph of a bright yellow sunflower growing in a summer garden. Its dark center is surrounded by yellow petals, with a green stem and leaves beneath. Soft green background and gentle morning sunlight.",
+      "seed": 137,
+      "original_sha256": "abc553e13e76d729503f5ee78c95d5e9b823338e049d92cec15942dbabfeaf0b",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_sha256": "da87f2a02073434f9d6c579e90561dacbc478c1e351e1456890b7ae99df997d4",
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-ferns",
+      "source": "../UniSpark-CT0095000-scene16-20261026/originals/forest-ferns-scene1k-s41.png",
+      "source_id": "forest-ferns-scene1k-s41",
+      "run": "scene16",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A detailed photograph of fresh green fern fronds growing from damp moss on a forest floor. Tiny droplets cling to the leaves. Soft natural light and a gently blurred woodland background.",
+      "seed": 41,
+      "original_sha256": "74acb7afe050749de10ada1a571157b42260161dd75f3b2199c92e7aea64723c",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_sha256": "337b1510e0728275510cb9423fb08826ef29d2e3b7430b1a6b1c6960f956b498",
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-sea-arch",
+      "source": "../UniSpark-CT0095000-scene16-20261026/originals/coastal-arch-scene1k-s41.png",
+      "source_id": "coastal-arch-scene1k-s41",
+      "run": "scene16",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A landscape photograph of a natural limestone sea arch on a calm coast. Pale rock surrounds the opening, blue water passes beneath it, and gentle waves meet a pebble beach in the foreground. Clear morning sky.",
+      "seed": 41,
+      "original_sha256": "88799c03f22a1e562abccbc55889fa79583dddf438c72cbdbd5139b7e924383f",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_sha256": "e1725bffa0ea955fc1f24c64a7ccd086cc5ca33bce814198b0b9fcd1926eb8e7",
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    },
+    {
+      "name": "g95-cherry-blossom",
+      "source": "../UniSpark-CT0095000-scene16-20261026/originals/cherry-blossom-scene1k-s41.png",
+      "source_id": "cherry-blossom-scene1k-s41",
+      "run": "scene16",
+      "checkpoint": {
+        "path": "/robby/share/cpfs/panjiancheng.pjc/unimodel3/Bagel_pjc/inference/checkpoints/UniBagel-Qwen35-A4-512-CT-0823-model/0095000/model.safetensors",
+        "size": 65395436792,
+        "expected": 65395436792,
+        "header_sha256": "d6a4c6df4b41378f8b8badb7811cdd2af6835efcd5618af5ced21352d13378f3",
+        "mtime_ns": 1792948951804271816
+      },
+      "prompt": "A close-up photograph of pale pink cherry blossoms growing on a slender brown branch. The delicate petals and small yellow stamens are in focus against a soft green garden background. Gentle spring daylight.",
+      "seed": 41,
+      "original_sha256": "6ffea71148ac858452c37849d0b8dbe2691929791c972ea8f06a1f473ff61e1d",
+      "original_size": [
+        896,
+        896
+      ],
+      "website_sha256": "dba2b964770a368835f189455260f2a5a23a10e5241820e39a317126f28596f9",
+      "website_size": [
+        896,
+        896
+      ],
+      "processing": "Aspect-preserving downsample (no upscaling) and JPEG conversion only; no crop, retouching or content edits.",
+      "display_status": "new_visually_reviewed",
+      "review": "gallery-new-quality-review.json"
+    }
+  ],
+  "quality_review": "gallery-quality-review.json",
+  "active_gallery": [
+    "fox",
+    "perfume",
+    "portrait",
+    "embroidery",
+    "market",
+    "tart",
+    "school",
+    "short-hair-portrait",
+    "chocolate-dessert",
+    "g95-auburn-portrait",
+    "g95-paper-river",
+    "g95-ceramic-teapot",
+    "g95-blue-anemones",
+    "g95-citrus",
+    "g95-eucalyptus",
+    "g95-strawberry-cake",
+    "g95-silver-portrait",
+    "g95-cloister",
+    "g95-sunflower",
+    "g95-ferns",
+    "g95-sea-arch",
+    "g95-cherry-blossom"
+  ],
+  "display_policy": "Both existing and new samples require visual review. Exclude visible defects and withhold unresolved anatomy, geometry, contact, or common-sense concerns. Original assets remain unchanged.",
+  "new_quality_review": "gallery-new-quality-review.json"
+}
