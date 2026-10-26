@@ -81,7 +81,16 @@ $('#sequence-options').innerHTML = sequences.map((item,i) => `<button data-seque
 function selectSequence(index) {
   sequenceIndex = (index + sequences.length) % sequences.length;
   const item = sequences[sequenceIndex];
-  activate(document.querySelector(`[data-sequence="${sequenceIndex}"]`), '[data-sequence]');
+  const activeButton = document.querySelector(`[data-sequence="${sequenceIndex}"]`);
+  activate(activeButton, '[data-sequence]');
+  const options = $('#sequence-options');
+  const optionsRect = options.getBoundingClientRect();
+  const buttonRect = activeButton.getBoundingClientRect();
+  if (buttonRect.left < optionsRect.left) {
+    options.scrollLeft += buttonRect.left - optionsRect.left;
+  } else if (buttonRect.right > optionsRect.right) {
+    options.scrollLeft += buttonRect.right - optionsRect.right;
+  }
   $('#sequence-description').textContent = item.description;
   $('#sequence-frames').innerHTML = [1,2,3,4].map(n => {
     const caption = item.frameLabels?.[n-1];
