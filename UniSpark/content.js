@@ -491,6 +491,46 @@ window.UNISPARK = {
       "description": "Replace the black character in Goku’s back emblem with a black five-pointed star, keeping his back-facing pose and outfit.",
       "sourceCredit": "Dragon Ball Super · Official character art",
       "sourceUrl": "https://www.toei-anim.co.jp/tv/dragon_s/chara/01.html"
+    },
+    {
+      "name": "edit95-cartoon-purin-no-beret",
+      "title": "Pompompurin · No beret",
+      "type": "remove",
+      "description": "Remove Pompompurin’s brown beret, preserving his face, ears and body.",
+      "sourceCredit": "Sanrio · Official character art",
+      "sourceUrl": "https://www.sanrio.co.jp/characters/pompompurin/"
+    },
+    {
+      "name": "edit95-cartoon-kuromi-heart",
+      "title": "Kuromi · Heart emblem",
+      "type": "replace",
+      "description": "Replace the pink skull emblem on Kuromi’s hood with a pink heart.",
+      "sourceCredit": "Sanrio · Official character art",
+      "sourceUrl": "https://www.sanrio.co.jp/characters/kuromi/"
+    },
+    {
+      "name": "edit95-cartoon-sam-crown",
+      "title": "Tuxedosam · Crown",
+      "type": "replace",
+      "description": "Replace Tuxedosam’s sailor hat with a golden crown, preserving his pose and outfit.",
+      "sourceCredit": "Sanrio · Official character art",
+      "sourceUrl": "https://www.sanrio.co.jp/characters/tuxedosam/"
+    },
+    {
+      "name": "edit95-cartoon-cinnamon-ear-bow",
+      "title": "Cinnamoroll · Ear bow",
+      "type": "add",
+      "description": "Add a pink bow at the base of Cinnamoroll’s left ear in the image, preserving his appearance.",
+      "sourceCredit": "Sanrio · Official character art",
+      "sourceUrl": "https://www.sanrio.co.jp/characters/cinnamon/"
+    },
+    {
+      "name": "edit95-cartoon-cinnamon-star",
+      "title": "Cinnamoroll · Little star",
+      "type": "add",
+      "description": "Add a small yellow star beside Cinnamoroll’s right foot in the image, keeping it separate from his body.",
+      "sourceCredit": "Sanrio · Official character art",
+      "sourceUrl": "https://www.sanrio.co.jp/characters/cinnamon/"
     }
   ],
   "sequences": [

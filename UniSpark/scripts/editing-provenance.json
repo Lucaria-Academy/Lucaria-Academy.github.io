@@ -640,6 +640,290 @@
         }
       ],
       "displayed_count": 1
+    },
+    {
+      "run": "imgedit-ct95000-newcharacters24-20261026",
+      "local_run": "/Users/jianchengpan/Downloads/UniSpark-cartoon-characters-20261026",
+      "checkpoint": "UniBagel-Qwen35-A4-512-CT-0823/checkpoints/0095000/model.safetensors",
+      "candidate_count": 24,
+      "num_timesteps": 50,
+      "cfg_text_scale": 4,
+      "export": "Full original-resolution JPEG quality 94, 4:4:4; no crop, deformation or retouching.",
+      "samples": [
+        {
+          "name": "edit95-cartoon-purin-no-beret",
+          "sample_id": "purin-no-beret-s73",
+          "instruction": "Remove only the brown beret from Pompompurin's head, revealing a smooth yellow head underneath. Keep his ears, face, body, arms, feet, pose, thick brown outlines and white background unchanged.",
+          "seed": 73,
+          "width": 1024,
+          "height": 1024,
+          "type": "remove",
+          "source": {
+            "name": "pompompurin",
+            "page": "https://www.sanrio.co.jp/characters/pompompurin/",
+            "image_url": "https://www.sanrio.co.jp/wp-content/uploads/2022/06/list-pompompurin.png",
+            "original_file": "originals/pompompurin-0.png",
+            "original_size": [
+              560,
+              560
+            ],
+            "original_sha256": "88c5a9f17886159de250607cb9cb5ca7dcee436dfb2789c3f0a19e434c7b7de1",
+            "source_file": "sources/pompompurin.png",
+            "source_sha256": "90d78f2ed4e010119c38ce04675b2c4825dffc9ac5fc75566138c6b5da0525bb",
+            "size": [
+              1024,
+              1024
+            ],
+            "processing": "Full original fitted proportionally with Lanczos on white; transparent pixels composited on white; no crop or semantic retouch."
+          },
+          "visual_review": {
+            "id": "purin-no-beret-s73",
+            "source_id": "pompompurin",
+            "task": "purin-no-beret",
+            "title": "布丁狗 · 摘下贝雷帽",
+            "edit_type": "remove",
+            "seed": 73,
+            "decision": "candidate",
+            "reason": "帽子完整去除，五官、耳朵和四肢保留；头顶轮廓已补全，未见明显形变。",
+            "source_sha256": "90d78f2ed4e010119c38ce04675b2c4825dffc9ac5fc75566138c6b5da0525bb",
+            "output_sha256": "ce92c5a0c0feab0384b70b7dab4d259f9917e175b06f645ddbff10001266c780",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/purin-no-beret-s73.png",
+            "sha256": "90d78f2ed4e010119c38ce04675b2c4825dffc9ac5fc75566138c6b5da0525bb",
+            "website": "assets/edit95-cartoon-purin-no-beret-before.jpg",
+            "website_sha256": "5def54a090efca50231c84d0bc5b8f0d9a35f3fd677276b7960556ede35a6429"
+          },
+          "after": {
+            "original": "full/images/purin-no-beret-s73.png",
+            "sha256": "ce92c5a0c0feab0384b70b7dab4d259f9917e175b06f645ddbff10001266c780",
+            "website": "assets/edit95-cartoon-purin-no-beret-after.jpg",
+            "website_sha256": "b9802d9d8d7de1a3870cb4f000fd04bd025fda06192d3125834d53af3127f03c"
+          }
+        },
+        {
+          "name": "edit95-cartoon-kuromi-heart",
+          "sample_id": "kuromi-heart-s73",
+          "instruction": "Replace only the pink skull emblem on Kuromi's black hood with a simple solid pink heart in the same location and size. Keep her hood shape, ears, face, body, collar, tail, pose and white background unchanged. Preserve the flat cartoon style.",
+          "seed": 73,
+          "width": 1024,
+          "height": 1024,
+          "type": "replace",
+          "source": {
+            "name": "kuromi",
+            "page": "https://www.sanrio.co.jp/characters/kuromi/",
+            "image_url": "https://www.sanrio.co.jp/wp-content/uploads/2022/06/list-kuromi.png",
+            "original_file": "originals/kuromi-0.png",
+            "original_size": [
+              560,
+              560
+            ],
+            "original_sha256": "3dc52aac57897374436c3394c434de26090482a8c11e6bdf4bd7f3dce581d4d0",
+            "source_file": "sources/kuromi.png",
+            "source_sha256": "41eaab2d7806538a8a2f41c1eed463fed8cb60b5ea8259ae92dfcc82ea8523a0",
+            "size": [
+              1024,
+              1024
+            ],
+            "processing": "Full original fitted proportionally with Lanczos on white; transparent pixels composited on white; no crop or semantic retouch."
+          },
+          "visual_review": {
+            "id": "kuromi-heart-s73",
+            "source_id": "kuromi",
+            "task": "kuromi-heart",
+            "title": "库洛米 · 骷髅徽记换爱心",
+            "edit_type": "replace",
+            "seed": 73,
+            "decision": "candidate",
+            "reason": "骷髅徽记完整替换为粉色爱心，黑色帽形、表情、四肢和尾巴保持一致。",
+            "source_sha256": "41eaab2d7806538a8a2f41c1eed463fed8cb60b5ea8259ae92dfcc82ea8523a0",
+            "output_sha256": "5d8f1649bffb146d41ede478040c5edf5886bbf657a3cd5b13e9814f3079b882",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/kuromi-heart-s73.png",
+            "sha256": "41eaab2d7806538a8a2f41c1eed463fed8cb60b5ea8259ae92dfcc82ea8523a0",
+            "website": "assets/edit95-cartoon-kuromi-heart-before.jpg",
+            "website_sha256": "a4d403c3356d0022982a3425c71db723b96ae4c869054b3a1afbdd7b14b53ff7"
+          },
+          "after": {
+            "original": "full/images/kuromi-heart-s73.png",
+            "sha256": "5d8f1649bffb146d41ede478040c5edf5886bbf657a3cd5b13e9814f3079b882",
+            "website": "assets/edit95-cartoon-kuromi-heart-after.jpg",
+            "website_sha256": "73d7c46b5fa6d239d3e62f47bbc463a79f55dde52b2450f8e8535872c73c05f5"
+          }
+        },
+        {
+          "name": "edit95-cartoon-sam-crown",
+          "sample_id": "sam-crown-s73",
+          "instruction": "Replace only the small white sailor hat on Tuxedosam's head with a small golden crown. Keep his blue head and body, facial features, yellow beak, white belly, pink bow tie, flippers, feet, pose and white background unchanged. Preserve the original flat cartoon style and black outlines.",
+          "seed": 73,
+          "width": 1024,
+          "height": 1024,
+          "type": "replace",
+          "source": {
+            "name": "tuxedosam",
+            "page": "https://www.sanrio.co.jp/characters/tuxedosam/",
+            "image_url": "https://www.sanrio.co.jp/wp-content/uploads/2022/06/list-tuxedosam.png",
+            "original_file": "originals/tuxedosam-0.png",
+            "original_size": [
+              560,
+              560
+            ],
+            "original_sha256": "6623fb3184d259402dd4e06f66ab6f72bd5e9484b644228be8cd5bec7890e04f",
+            "source_file": "sources/tuxedosam.png",
+            "source_sha256": "82d62f0da1f1a3524e31189ffa256778eadbee177dda95c9c04d6a341b94820e",
+            "size": [
+              1024,
+              1024
+            ],
+            "processing": "Full original fitted proportionally with Lanczos on white; transparent pixels composited on white; no crop or semantic retouch."
+          },
+          "visual_review": {
+            "id": "sam-crown-s73",
+            "source_id": "tuxedosam",
+            "task": "sam-crown",
+            "title": "山姆企鹅 · 水手帽换皇冠",
+            "edit_type": "replace",
+            "seed": 73,
+            "decision": "candidate",
+            "reason": "水手帽替换为皇冠，眼睛、嘴、领结、双鳍和双脚保留；身体蓝色有轻微明暗变化，未见明显形变。",
+            "source_sha256": "82d62f0da1f1a3524e31189ffa256778eadbee177dda95c9c04d6a341b94820e",
+            "output_sha256": "7ed0b47e225793d4a9183d55a1a03a0ab8305c51b11caa1295b9c2c39b0515e7",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/sam-crown-s73.png",
+            "sha256": "82d62f0da1f1a3524e31189ffa256778eadbee177dda95c9c04d6a341b94820e",
+            "website": "assets/edit95-cartoon-sam-crown-before.jpg",
+            "website_sha256": "230e7edab7f2a30370c24b171b8cc9f2b13032c57259259e08d384cf61703d82"
+          },
+          "after": {
+            "original": "full/images/sam-crown-s73.png",
+            "sha256": "7ed0b47e225793d4a9183d55a1a03a0ab8305c51b11caa1295b9c2c39b0515e7",
+            "website": "assets/edit95-cartoon-sam-crown-after.jpg",
+            "website_sha256": "9e5f7212f6fc617b4d9942e56e8c3f0dc816caa9f144545d079a91b0d93b3bdb"
+          }
+        }
+      ],
+      "displayed_count": 3
+    },
+    {
+      "run": "imgedit-ct95000-newcharacters-refine12-20261026",
+      "local_run": "/Users/jianchengpan/Downloads/UniSpark-cartoon-characters-20261026/refine12",
+      "checkpoint": "UniBagel-Qwen35-A4-512-CT-0823/checkpoints/0095000/model.safetensors",
+      "candidate_count": 12,
+      "num_timesteps": 50,
+      "cfg_text_scale": 4,
+      "export": "Full original-resolution JPEG quality 94, 4:4:4; no crop, deformation or retouching.",
+      "samples": [
+        {
+          "name": "edit95-cartoon-cinnamon-ear-bow",
+          "sample_id": "cinnamon-ear-bow-s42",
+          "instruction": "在大耳狗画面左侧长耳朵的根部系上一个小巧的粉红色蝴蝶结。保留整只耳朵的长度和形状，脸、双手、身体、尾巴与姿势都保持原样。保持原来的平面画风与白色背景。",
+          "seed": 42,
+          "width": 1024,
+          "height": 1024,
+          "type": "add",
+          "source": {
+            "name": "cinnamon",
+            "page": "https://www.sanrio.co.jp/characters/cinnamon/",
+            "image_url": "https://www.sanrio.co.jp/wp-content/uploads/2022/06/mv-cinnamon.png",
+            "original_file": "../originals/cinnamon-0.png",
+            "original_size": [
+              1004,
+              560
+            ],
+            "original_sha256": "9344d335e7591c8599e7cc32730b315401037d58e15c14dcf23853de74867520",
+            "source_file": "sources/cinnamon.png",
+            "source_sha256": "b08a8c87f3dab76ea8f76cf99b159746ff33f2248f4a35d11f4ea5789af2f12a",
+            "size": [
+              1024,
+              1024
+            ],
+            "processing": "Whole original fitted proportionally within 832x832 on a 1024x1024 white canvas, centered with additional clear margins; no cropping, no semantic edits."
+          },
+          "visual_review": {
+            "id": "cinnamon-ear-bow-s42",
+            "source_id": "cinnamon",
+            "task": "cinnamon-ear-bow",
+            "title": "大耳狗 · 耳朵上的蝴蝶结",
+            "edit_type": "add",
+            "seed": 42,
+            "decision": "candidate",
+            "reason": "耳根新增粉色蝴蝶结，双耳、双爪、五官、身体与卷尾完整保留；目视未见明显形变。",
+            "source_sha256": "b08a8c87f3dab76ea8f76cf99b159746ff33f2248f4a35d11f4ea5789af2f12a",
+            "output_sha256": "083eafa3ba4db2bc2102949d030ae7038bcbd8c149b40d253e08005d2b0ff13a",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/cinnamon-ear-bow-s42.png",
+            "sha256": "b08a8c87f3dab76ea8f76cf99b159746ff33f2248f4a35d11f4ea5789af2f12a",
+            "website": "assets/edit95-cartoon-cinnamon-ear-bow-before.jpg",
+            "website_sha256": "18de8279521b29035c560157a39c5a5fdd60ffa5b7c16f2f80aaa1c53cc54852"
+          },
+          "after": {
+            "original": "full/images/cinnamon-ear-bow-s42.png",
+            "sha256": "083eafa3ba4db2bc2102949d030ae7038bcbd8c149b40d253e08005d2b0ff13a",
+            "website": "assets/edit95-cartoon-cinnamon-ear-bow-after.jpg",
+            "website_sha256": "d8eafab3263ed8e80a93018bb730f29956a665d7dac7dfd284a92bd16e53bc0c"
+          }
+        },
+        {
+          "name": "edit95-cartoon-cinnamon-star",
+          "sample_id": "cinnamon-star-s42",
+          "instruction": "在大耳狗右脚旁边的白色空白处添加一颗独立的小黄色五角星，与身体分开。大耳狗的双耳、脸、双手、身体、尾巴和原来的线条完全保留。保持原来的平面画风。",
+          "seed": 42,
+          "width": 1024,
+          "height": 1024,
+          "type": "add",
+          "source": {
+            "name": "cinnamon",
+            "page": "https://www.sanrio.co.jp/characters/cinnamon/",
+            "image_url": "https://www.sanrio.co.jp/wp-content/uploads/2022/06/mv-cinnamon.png",
+            "original_file": "../originals/cinnamon-0.png",
+            "original_size": [
+              1004,
+              560
+            ],
+            "original_sha256": "9344d335e7591c8599e7cc32730b315401037d58e15c14dcf23853de74867520",
+            "source_file": "sources/cinnamon.png",
+            "source_sha256": "b08a8c87f3dab76ea8f76cf99b159746ff33f2248f4a35d11f4ea5789af2f12a",
+            "size": [
+              1024,
+              1024
+            ],
+            "processing": "Whole original fitted proportionally within 832x832 on a 1024x1024 white canvas, centered with additional clear margins; no cropping, no semantic edits."
+          },
+          "visual_review": {
+            "id": "cinnamon-star-s42",
+            "source_id": "cinnamon",
+            "task": "cinnamon-star",
+            "title": "大耳狗 · 添加小星星",
+            "edit_type": "add",
+            "seed": 42,
+            "decision": "candidate",
+            "reason": "右脚旁添加独立黄色五角星，人物完整，未出现明显误改或残影。",
+            "source_sha256": "b08a8c87f3dab76ea8f76cf99b159746ff33f2248f4a35d11f4ea5789af2f12a",
+            "output_sha256": "72c7eb5056db459a66be707e74a6e5108b93c1f80b96eaf68c84d078a353e784",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/cinnamon-star-s42.png",
+            "sha256": "b08a8c87f3dab76ea8f76cf99b159746ff33f2248f4a35d11f4ea5789af2f12a",
+            "website": "assets/edit95-cartoon-cinnamon-star-before.jpg",
+            "website_sha256": "18de8279521b29035c560157a39c5a5fdd60ffa5b7c16f2f80aaa1c53cc54852"
+          },
+          "after": {
+            "original": "full/images/cinnamon-star-s42.png",
+            "sha256": "72c7eb5056db459a66be707e74a6e5108b93c1f80b96eaf68c84d078a353e784",
+            "website": "assets/edit95-cartoon-cinnamon-star-after.jpg",
+            "website_sha256": "ea2881dae73bdbc6a0eda6766e30127c8023375f2689321fec944a31929830a5"
+          }
+        }
+      ],
+      "displayed_count": 2
     }
   ]
 }

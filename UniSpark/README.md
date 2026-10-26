@@ -118,3 +118,7 @@ swift -module-cache-path /private/tmp/unispark-swift-cache website/scripts/prepa
 三批完整指令、种子、逐组决策和原图哈希分别见 `scripts/interleave75-quality-review.json`、`scripts/interleave75-transitions-quality-review.json`、`scripts/interleave75-creative-quality-review.json`。入选图与网页图对应关系见 `scripts/interleave-provenance.json`；下载、传输核对与汇总见 `scripts/interleave75-run-summary.json`。
 
 原始结果、运行脚本及复查图保存在 `/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/`、`unispark-interleave75-transitions-20261026/`、`unispark-interleave75-creative-20261026/`。远端结果位于 `/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/` 下对应的三个日期目录。本批通过 GitHub 仓库的 main 分支发布；线上生效状态以 GitHub Pages 部署为准。
+
+## 补充卡通编辑展示（2026-10-26）
+
+将已完成筛选的 5 组本地候选加入网页：布丁狗摘帽、库洛米爱心徽记、山姆企鹅皇冠、大耳狗耳根蝴蝶结与旁侧星星。原有 20 组保留，编辑区共 25 组。图片只作完整原尺寸 JPEG 转换；官方 Sanrio 来源、真实推理指令、种子、哈希和检查理由见 `scripts/editing-provenance.json` 与 `scripts/editing-cartoon-characters-quality-review.json`。山姆企鹅存在轻微蓝色明暗变化，未对模型输出修图。
