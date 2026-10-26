@@ -531,6 +531,38 @@ window.UNISPARK = {
       "description": "Add a small yellow star beside Cinnamoroll’s right foot in the image, keeping it separate from his body.",
       "sourceCredit": "Sanrio · Official character art",
       "sourceUrl": "https://www.sanrio.co.jp/characters/cinnamon/"
+    },
+    {
+      "name": "edit95-cartoon-pikachu-meadow",
+      "title": "Pikachu · Spring meadow",
+      "type": "background",
+      "description": "Replace the white background with a spring meadow and small daisies, preserving Pikachu’s joyful pose and appearance.",
+      "sourceCredit": "Pokémon · Official character art",
+      "sourceUrl": "https://www.pokemon.com/us/pokedex/pikachu"
+    },
+    {
+      "name": "edit95-cartoon-eevee-snow",
+      "title": "Eevee · Snowy woodland",
+      "type": "background",
+      "description": "Replace the white background with a snowy woodland, preserving Eevee’s ears, fur, paws and tail.",
+      "sourceCredit": "Pokémon · Official character art",
+      "sourceUrl": "https://www.pokemon.com/us/pokedex/eevee"
+    },
+    {
+      "name": "edit95-cartoon-psyduck-seaside",
+      "title": "Psyduck · Seaside",
+      "type": "background",
+      "description": "Replace the white background with a sandy beach and turquoise sea, preserving Psyduck’s pose and appearance.",
+      "sourceCredit": "Pokémon · Official character art",
+      "sourceUrl": "https://www.pokemon.com/us/pokedex/psyduck"
+    },
+    {
+      "name": "edit95-cartoon-snorlax-forest",
+      "title": "Snorlax · Forest clearing",
+      "type": "background",
+      "description": "Replace the white background with a sunlit forest clearing, preserving Snorlax’s seated pose and appearance.",
+      "sourceCredit": "Pokémon · Official character art",
+      "sourceUrl": "https://www.pokemon.com/us/pokedex/snorlax"
     }
   ],
   "sequences": [

@@ -924,6 +924,202 @@
         }
       ],
       "displayed_count": 2
+    },
+    {
+      "run": "imgedit-ct95000-cartoon-more36-20261026",
+      "local_run": "/Users/jianchengpan/Downloads/UniSpark-cartoon-more-20261026",
+      "checkpoint": "UniBagel-Qwen35-A4-512-CT-0823/checkpoints/0095000/model.safetensors",
+      "candidate_count": 36,
+      "num_timesteps": 50,
+      "cfg_text_scale": 4,
+      "export": "Full original-resolution JPEG quality 94, 4:4:4; no crop, deformation or retouching.",
+      "samples": [
+        {
+          "name": "edit95-cartoon-pikachu-meadow",
+          "sample_id": "pikachu-meadow-s73",
+          "instruction": "Replace the white background with a softly painted spring meadow of short grass and a few small daisies, with a pale blue sky. Keep Pikachu's joyful jumping pose, face, both ears, arms, feet, lightning-shaped tail, position and size exactly the same. Pikachu should appear slightly above the grass, with no extra limbs or objects attached to it. Preserve the exact character identity, original facial features and expression, pose, limb count, proportions, outlines, shading, and framing outside the requested change. Do not add text or a signature. Do not distort or redraw unrelated details.",
+          "seed": 73,
+          "width": 1024,
+          "height": 1024,
+          "type": "background",
+          "source": {
+            "name": "皮卡丘",
+            "page": "https://www.pokemon.com/us/pokedex/pikachu",
+            "image_url": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/025.png",
+            "original_path": "/Users/jianchengpan/Downloads/UniSpark-cartoon-more-20261026/originals/pikachu.png",
+            "original_sha256": "759ceafdb4b8d637dfcfe673cf672bc3c472354a3b2e7e0835d9cdcacd8d195d",
+            "source_file": "pikachu.png",
+            "source_sha256": "ce31c75961f3a581f025c76589e19d01fb94ee0f80e6813a3f0dbca1f0afa188",
+            "width": 1024,
+            "height": 1024,
+            "normalization": "Entire source fitted proportionally within 896x896 on a 1024x1024 white canvas; original alpha composited on white; no cropping or semantic retouch."
+          },
+          "visual_review": {
+            "id": "pikachu-meadow-s73",
+            "source_id": "pikachu",
+            "task": "pikachu-meadow",
+            "title": "皮卡丘 · 春日草地",
+            "edit_type": "background",
+            "seed": 73,
+            "decision": "candidate",
+            "reason": "更换为春日草地；对照检查了双耳、脸颊、前爪、双脚及闪电尾巴，跳跃姿态保留，未见明显结构变形。",
+            "source_sha256": "ce31c75961f3a581f025c76589e19d01fb94ee0f80e6813a3f0dbca1f0afa188",
+            "output_sha256": "81b14a4a453e211d408977969f6457c6c3d6670be92fc5bd8577e37afa84808b",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/pikachu-meadow-s73.png",
+            "sha256": "ce31c75961f3a581f025c76589e19d01fb94ee0f80e6813a3f0dbca1f0afa188",
+            "website": "assets/edit95-cartoon-pikachu-meadow-before.jpg",
+            "website_sha256": "7c940a683f44b42bde4ab9ba7f80b8466a443e7c71279c38552955f99e09d26b"
+          },
+          "after": {
+            "original": "full/images/pikachu-meadow-s73.png",
+            "sha256": "81b14a4a453e211d408977969f6457c6c3d6670be92fc5bd8577e37afa84808b",
+            "website": "assets/edit95-cartoon-pikachu-meadow-after.jpg",
+            "website_sha256": "cf7fc486b2f72916d29b83791ceb3bf35583d3e3f7225596c02bf43513bd5914"
+          }
+        },
+        {
+          "name": "edit95-cartoon-eevee-snow",
+          "sample_id": "eevee-snow-s73",
+          "instruction": "Replace only the white background with a softly painted snowy woodland, a few snow-covered fir trees in the distance, and a snowy ground under Eevee's paws. Keep Eevee completely unchanged in the exact same position and scale, including the ears, eyes, cream fur, paws and tail. Preserve the exact character identity, original facial features and expression, pose, limb count, proportions, outlines, shading, and framing outside the requested change. Do not add text or a signature. Do not distort or redraw unrelated details.",
+          "seed": 73,
+          "width": 1024,
+          "height": 1024,
+          "type": "background",
+          "source": {
+            "name": "伊布",
+            "page": "https://www.pokemon.com/us/pokedex/eevee",
+            "image_url": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/133.png",
+            "original_path": "/Users/jianchengpan/Downloads/UniSpark-cartoon-more-20261026/originals/eevee.png",
+            "original_sha256": "33ea993d3478ee920062b0bf27792a045b3a2f75d941bdb8cb3912ef50b1fb44",
+            "source_file": "eevee.png",
+            "source_sha256": "d8477b8d43c8ec2fa77e4ce43c5a201607d095ebe83d23286a6e71c27b68c66f",
+            "width": 1024,
+            "height": 1024,
+            "normalization": "Entire source fitted proportionally within 896x896 on a 1024x1024 white canvas; original alpha composited on white; no cropping or semantic retouch."
+          },
+          "visual_review": {
+            "id": "eevee-snow-s73",
+            "source_id": "eevee",
+            "task": "eevee-snow",
+            "title": "伊布 · 雪林背景",
+            "edit_type": "background",
+            "seed": 73,
+            "decision": "candidate",
+            "reason": "更换为雪地树林；双耳、眼睛、胸前毛簇、腿脚和尾巴对照完整，脚下雪地关系合理，未见明显结构变形。",
+            "source_sha256": "d8477b8d43c8ec2fa77e4ce43c5a201607d095ebe83d23286a6e71c27b68c66f",
+            "output_sha256": "c225041c4217e29f790fabce561f626471203feadb6dae84acf6eec5e2bc259f",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/eevee-snow-s73.png",
+            "sha256": "d8477b8d43c8ec2fa77e4ce43c5a201607d095ebe83d23286a6e71c27b68c66f",
+            "website": "assets/edit95-cartoon-eevee-snow-before.jpg",
+            "website_sha256": "d31677c2a904791dbc816957a72b893fe0cc21b527561434ccc2948a47ec489f"
+          },
+          "after": {
+            "original": "full/images/eevee-snow-s73.png",
+            "sha256": "c225041c4217e29f790fabce561f626471203feadb6dae84acf6eec5e2bc259f",
+            "website": "assets/edit95-cartoon-eevee-snow-after.jpg",
+            "website_sha256": "efc5ad60c6e8e9f35d1509c45b84ac3ab1f719d4190b1566fc8f5376186a3ef1"
+          }
+        },
+        {
+          "name": "edit95-cartoon-psyduck-seaside",
+          "sample_id": "psyduck-seaside-s73",
+          "instruction": "Replace the white background with a simple softly painted sandy beach and calm turquoise sea behind Psyduck. Keep the entire Psyduck unchanged in its original pose and scale, including the hands on its head, beak, eyes, three hairs, body, feet and tail. The lower planted foot should rest naturally on the sand. Preserve the exact character identity, original facial features and expression, pose, limb count, proportions, outlines, shading, and framing outside the requested change. Do not add text or a signature. Do not distort or redraw unrelated details.",
+          "seed": 73,
+          "width": 1024,
+          "height": 1024,
+          "type": "background",
+          "source": {
+            "name": "可达鸭",
+            "page": "https://www.pokemon.com/us/pokedex/psyduck",
+            "image_url": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/054.png",
+            "original_path": "/Users/jianchengpan/Downloads/UniSpark-cartoon-more-20261026/originals/psyduck.png",
+            "original_sha256": "87110a75d9d9c67e0d82b912abcea3c25a96bc394e366812c65639ea1bacdf40",
+            "source_file": "psyduck.png",
+            "source_sha256": "c8bebcf1a3d282c5d28cfc656645fc1c2dc60d337b5b8d622e6cb56adf6a4f39",
+            "width": 1024,
+            "height": 1024,
+            "normalization": "Entire source fitted proportionally within 896x896 on a 1024x1024 white canvas; original alpha composited on white; no cropping or semantic retouch."
+          },
+          "visual_review": {
+            "id": "psyduck-seaside-s73",
+            "source_id": "psyduck",
+            "task": "psyduck-seaside",
+            "title": "可达鸭 · 海边沙滩",
+            "edit_type": "background",
+            "seed": 73,
+            "decision": "candidate",
+            "reason": "更换为海边沙滩；保留抱头动作、三根头发、嘴、尾巴和抬脚姿态，落地脚与沙地和阴影衔接合理。",
+            "source_sha256": "c8bebcf1a3d282c5d28cfc656645fc1c2dc60d337b5b8d622e6cb56adf6a4f39",
+            "output_sha256": "e4ec0a643b1ef13ce96bb7a4340658a83ab8e60c2caa995f35315efd95ad45c1",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/psyduck-seaside-s73.png",
+            "sha256": "c8bebcf1a3d282c5d28cfc656645fc1c2dc60d337b5b8d622e6cb56adf6a4f39",
+            "website": "assets/edit95-cartoon-psyduck-seaside-before.jpg",
+            "website_sha256": "a5220a83005484b2b11e328fd8bc640a87a51f4c421e577d3bc05dbbc442ba56"
+          },
+          "after": {
+            "original": "full/images/psyduck-seaside-s73.png",
+            "sha256": "e4ec0a643b1ef13ce96bb7a4340658a83ab8e60c2caa995f35315efd95ad45c1",
+            "website": "assets/edit95-cartoon-psyduck-seaside-after.jpg",
+            "website_sha256": "a472451d6f59cffa22fb5b756e86daf827af10433e007a6c48f1ab4738c3197d"
+          }
+        },
+        {
+          "name": "edit95-cartoon-snorlax-forest",
+          "sample_id": "snorlax-forest-s73",
+          "instruction": "Replace only the white background with a softly painted woodland clearing with short grass beneath Snorlax and sunlit trees behind it. Keep the whole Snorlax in exactly its original seated sleeping pose, size and position, including its face, teeth, ears, arms, claws, belly and feet. Preserve the exact character identity, original facial features and expression, pose, limb count, proportions, outlines, shading, and framing outside the requested change. Do not add text or a signature. Do not distort or redraw unrelated details.",
+          "seed": 73,
+          "width": 1024,
+          "height": 1024,
+          "type": "background",
+          "source": {
+            "name": "卡比兽",
+            "page": "https://www.pokemon.com/us/pokedex/snorlax",
+            "image_url": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/143.png",
+            "original_path": "/Users/jianchengpan/Downloads/UniSpark-cartoon-more-20261026/originals/snorlax.png",
+            "original_sha256": "1afd32e5f6053a50860d67c5d7cc3bc6ca9a174634097fe65880523a0a13a55a",
+            "source_file": "snorlax.png",
+            "source_sha256": "a3c0019f7fd03112f73543be52971ae6721e64e81f020ea65da9d9798e728d19",
+            "width": 1024,
+            "height": 1024,
+            "normalization": "Entire source fitted proportionally within 896x896 on a 1024x1024 white canvas; original alpha composited on white; no cropping or semantic retouch."
+          },
+          "visual_review": {
+            "id": "snorlax-forest-s73",
+            "source_id": "snorlax",
+            "task": "snorlax-forest",
+            "title": "卡比兽 · 林间午睡",
+            "edit_type": "background",
+            "seed": 73,
+            "decision": "candidate",
+            "reason": "更换为阳光林间草地；保留闭眼、双牙、双耳、手爪和脚爪及坐姿，身体与地面接触自然。",
+            "source_sha256": "a3c0019f7fd03112f73543be52971ae6721e64e81f020ea65da9d9798e728d19",
+            "output_sha256": "b0a7436f1275aac617cc40fab455b5e1a218f0365afb5245ad15277cf6dab244",
+            "download_verified": true
+          },
+          "before": {
+            "original": "full/sources/snorlax-forest-s73.png",
+            "sha256": "a3c0019f7fd03112f73543be52971ae6721e64e81f020ea65da9d9798e728d19",
+            "website": "assets/edit95-cartoon-snorlax-forest-before.jpg",
+            "website_sha256": "0253cdd666d01897295d23467105a92a9c6e903e01a6cb63012266fe539c8610"
+          },
+          "after": {
+            "original": "full/images/snorlax-forest-s73.png",
+            "sha256": "b0a7436f1275aac617cc40fab455b5e1a218f0365afb5245ad15277cf6dab244",
+            "website": "assets/edit95-cartoon-snorlax-forest-after.jpg",
+            "website_sha256": "f2e83b9da26c6d4febf82661b50d68f1b7a9d0136f92cf140b2a678864e4a998"
+          }
+        }
+      ],
+      "displayed_count": 4
     }
   ]
 }

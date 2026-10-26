@@ -122,3 +122,9 @@ swift -module-cache-path /private/tmp/unispark-swift-cache website/scripts/prepa
 ## 补充卡通编辑展示（2026-10-26）
 
 将已完成筛选的 5 组本地候选加入网页：布丁狗摘帽、库洛米爱心徽记、山姆企鹅皇冠、大耳狗耳根蝴蝶结与旁侧星星。原有 20 组保留，编辑区共 25 组。图片只作完整原尺寸 JPEG 转换；官方 Sanrio 来源、真实推理指令、种子、哈希和检查理由见 `scripts/editing-provenance.json` 与 `scripts/editing-cartoon-characters-quality-review.json`。山姆企鹅存在轻微蓝色明暗变化，未对模型输出修图。
+
+## 宝可梦背景编辑扩充（2026-10-26）
+
+从 6 个角色、18 个任务 × 2 个种子的 36 张真实 CT0095000 结果中，经源图对照和精选图原尺寸复查，加入皮卡丘春日草地、伊布雪林、可达鸭海滩、卡比兽林间草地共 4 组。编辑区由 25 组增至 29 组，沿用现有滑动对比与官方来源链接。
+
+推理使用 PANProj4 GPU 0–3，50 steps、CFG 4；全部 36 张完成且四个工作进程正常退出。配饰错位、面部误改、肢体变化等候选没有加入精选。全部逐图结论见 `scripts/editing-cartoon-more-quality-review.json`；入选指令、种子、原图和网页图哈希见 `scripts/editing-provenance.json`。源图来自 Pokémon 官方图鉴，模型输出只作完整 1024×1024 JPEG 转换（quality 94、4:4:4），未裁剪、修补或变形。原始结果位于 Downloads 的 `UniSpark-cartoon-more-20261026/`。
