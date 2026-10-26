@@ -495,6 +495,19 @@ window.UNISPARK = {
   ],
   "sequences": [
     {
+      "name": "il75-ink",
+      "title": "Blue ink in water",
+      "description": "Blue dye enters a glass of water, forms delicate sinking trails and spreads into a soft cloud of color.",
+      "frameLabels": [
+        "A falling drop",
+        "Blue tendrils",
+        "Color spreads",
+        "A soft blue cloud"
+      ],
+      "width": 576,
+      "height": 384
+    },
+    {
       "name": "kitten",
       "title": "Kitten & yarn",
       "description": "An orange tabby kitten lifts a paw, taps a blue yarn ball, and continues playing on a beige rug."
@@ -508,6 +521,97 @@ window.UNISPARK = {
       "name": "parrot",
       "title": "Parrot stretching",
       "description": "A green parrot raises its wings, stretches them outward, and folds them back on the same perch."
+    },
+    {
+      "name": "il75-tulip",
+      "title": "A tulip opens",
+      "description": "A red tulip bud parts and opens on the same windowsill, with its pot, stem and leaves carried across all four frames.",
+      "frameLabels": [
+        "Closed bud",
+        "Petals loosen",
+        "Opening petals",
+        "An open flower"
+      ],
+      "width": 768,
+      "height": 512
+    },
+    {
+      "name": "il75-ice",
+      "title": "Ice into water",
+      "description": "Meltwater gathers around an ice cube on slate, leaving a shallow puddle in the final frame.",
+      "frameLabels": [
+        "Ice on slate",
+        "A pool begins",
+        "Meltwater spreads",
+        "A puddle remains"
+      ],
+      "width": 768,
+      "height": 512
+    },
+    {
+      "name": "il75-rain",
+      "title": "Rain at the window",
+      "description": "Raindrops gather and form descending trails on the same wooden window, with the garden softly visible beyond.",
+      "frameLabels": [
+        "Almost dry",
+        "First drops",
+        "Rain beads",
+        "Water trails"
+      ],
+      "width": 768,
+      "height": 512
+    },
+    {
+      "name": "il75-tea",
+      "title": "A cup of tea",
+      "description": "Amber tea pours into a white porcelain cup. The liquid rises, and the pour ends with the cup ready on its saucer.",
+      "frameLabels": [
+        "The pour begins",
+        "A steady stream",
+        "The cup fills",
+        "Ready to drink"
+      ],
+      "width": 576,
+      "height": 384
+    },
+    {
+      "name": "il75-bouquet",
+      "title": "A spring bouquet",
+      "description": "Greenery, yellow flowers and purple irises build into a spring arrangement in the same clear glass vase.",
+      "frameLabels": [
+        "A first stem",
+        "Greenery",
+        "Yellow flowers",
+        "A mixed bouquet"
+      ],
+      "width": 576,
+      "height": 384
+    },
+    {
+      "name": "il75-rose",
+      "title": "A rose unfolds",
+      "description": "A closed pink rose bud gradually opens into layered petals against the same softly blurred garden.",
+      "frameLabels": [
+        "A closed bud",
+        "First petals",
+        "Opening layers",
+        "In bloom"
+      ],
+      "width": 576,
+      "height": 384
+    },
+    {
+      "name": "il75-campfire",
+      "title": "Flame to embers",
+      "description": "A small campfire burns brightly, settles to low flames, and leaves ash and embers inside the same stone ring.",
+      "frameLabels": [
+        "Small flames",
+        "Burning brightly",
+        "Burning low",
+        "Ash and embers"
+      ],
+      "width": 576,
+      "height": 384
     }
   ]
 };

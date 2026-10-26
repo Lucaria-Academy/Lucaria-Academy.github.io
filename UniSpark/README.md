@@ -103,3 +103,18 @@ swift -module-cache-path /private/tmp/unispark-swift-cache website/scripts/prepa
 按用户选定的 shortlist 新增 6 组：祢豆子的樱花发饰与庭院背景、炭治郎的紫藤背景、善逸的羽织印花移除与蓝天背景、悟空的背部星形徽记。编辑区由 14 组增至 20 组，沿用现有滑动对比；原有 14 组、52 张文生图和其他板块内容保留。
 
 这 6 组来自 CT0095000 在 PANProj4 GPU 0–3 的 44 张真实推理结果，50 steps、CFG 4；逐图审查后由用户确认加入。源图来自《鬼灭之刃》及《龙珠超》官方角色页面，界面附有来源链接。悟空徽记边缘和部分衣褶有轻微重绘，详见 `scripts/editing-shonen-quality-review.json`。完整指令、种子、原图/输出/网页导出哈希已写入 `scripts/editing-provenance.json`。网页图片仅作完整原分辨率 JPEG 转换（quality 94、4:4:4），未裁剪、修补或变形。原始结果保存在 Downloads 的 `UniSpark-shonen-edits-20261026/`。
+
+
+## Beyond a single image 扩充（SFT 0075000，2026-10-26）
+
+指定 OSS `UniBagel-Qwen35-A4-24-SFT-Interleave-0924/checkpoints/0075000/` 的 `model.safetensors` 与 `ema.safetensors` 已下载到 PANProj4（59220174）的 `Bagel_pjc/works/UniSTAGE/SFT/UniBagel-Qwen35-A4-24-SFT-Interleave-0924/checkpoints/0075000/`。两份文件各 65,395,436,792 bytes、1196 个张量；OSS 下载成功，推理加载时通过参数覆盖检查。
+
+在 GPU 0–3 完成三批四帧联合生成：32 组 768×512 non-EMA、32 组 576×384 non-EMA（简短描述与显式帧间变化）、24 组 576×384 EMA（增加装饰、植物、物理过程等主题）。均为 50 steps、CFG 4；全部 88 组 / 352 帧成功，12 个工作进程正常结束。352 张本地原图的文件大小与 SHA-256 均与远端一致。
+
+逐组审阅全部候选，并对入选序列作原尺寸复查后，新增 **8 组 / 32 张**：郁金香开放、融冰、雨窗、倒茶、插花、墨水扩散、玫瑰开放、篝火。连同原有小猫、海浪、鹦鹉共 **11 组**；默认展示墨水扩散。文案描述实际可见变化，不把未完整执行的指令当作已经完成。未入选的情况包括动物结构异常、重复或消失的物体、机械结构变化、种子数量不守恒、动作不足及手部细节不明确。
+
+网页图片只作原生尺寸 JPEG 转换（quality 94、4:4:4），没有裁剪、拼接、修补、变形或放大。序列区改为 3:2 完整画幅，并为新案例添加逐帧说明与替代文本。当前 52 张图库、20 组编辑和原有 3 组序列均保留。此审核属于目视展示筛选，不是基准测试或零缺陷保证。
+
+三批完整指令、种子、逐组决策和原图哈希分别见 `scripts/interleave75-quality-review.json`、`scripts/interleave75-transitions-quality-review.json`、`scripts/interleave75-creative-quality-review.json`。入选图与网页图对应关系见 `scripts/interleave-provenance.json`；下载、传输核对与汇总见 `scripts/interleave75-run-summary.json`。
+
+原始结果、运行脚本及复查图保存在 `/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/`、`unispark-interleave75-transitions-20261026/`、`unispark-interleave75-creative-20261026/`。远端结果位于 `/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/` 下对应的三个日期目录。本批通过 GitHub 仓库的 main 分支发布；线上生效状态以 GitHub Pages 部署为准。

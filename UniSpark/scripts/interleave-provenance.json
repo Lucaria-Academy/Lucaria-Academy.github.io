@@ -1,0 +1,760 @@
+{
+  "batches": [
+    {
+      "batch": "interleave75",
+      "checkpoint": {
+        "oss": "oss://antsys-ssdata-dataset-hy-video2/TRAINING/panjiancheng/works_ckpt/SFT/UniBagel-Qwen35-A4-24-SFT-Interleave-0924/checkpoints/0075000/model.safetensors",
+        "weight": "non-EMA",
+        "size": 65395436792,
+        "etag": "545DB12386E1461C7C14984042907E10-400"
+      },
+      "sampling": {
+        "mode": "joint_all_frames",
+        "frames": 4,
+        "steps": 50,
+        "cfg": 4,
+        "width": 768,
+        "height": 512,
+        "explicit_transitions": false
+      },
+      "selection": [
+        {
+          "name": "il75-tulip",
+          "title": "A tulip opens",
+          "description": "A red tulip bud parts and opens on the same windowsill, with its pot, stem and leaves carried across all four frames.",
+          "frameLabels": [
+            "Closed bud",
+            "Petals loosen",
+            "Opening petals",
+            "An open flower"
+          ],
+          "width": 768,
+          "height": 512,
+          "id": "tulip-bloom-s20261026",
+          "seed": 20261026,
+          "captions": [
+            "Botanical time-lapse photograph of a single red tulip on one green stem with two green leaves in a matte cream ceramic pot on a windowsill. Fixed camera, neutral pale background, consistent pot, leaves and lighting. The red tulip bud is tightly closed.",
+            "Botanical time-lapse photograph of a single red tulip on one green stem with two green leaves in a matte cream ceramic pot on a windowsill. Fixed camera, neutral pale background, consistent pot, leaves and lighting. The red petals begin to part at their tips.",
+            "Botanical time-lapse photograph of a single red tulip on one green stem with two green leaves in a matte cream ceramic pot on a windowsill. Fixed camera, neutral pale background, consistent pot, leaves and lighting. The tulip opens into a broad cup, its red petals spreading outward.",
+            "Botanical time-lapse photograph of a single red tulip on one green stem with two green leaves in a matte cream ceramic pot on a windowsill. Fixed camera, neutral pale background, consistent pot, leaves and lighting. The tulip is fully open, revealing dark stamens in its center."
+          ],
+          "images": [
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/tulip-bloom-s20261026/frame_01.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026/tulip-bloom-s20261026/frame_01.png",
+              "original_sha256": "63d42e22c69fc7eea3325076739ad8bd8a33239386d0fd6d32694be2acc693da",
+              "website_file": "assets/il75-tulip-1.jpg",
+              "website_sha256": "1b3a713879bcdd7e7b99d5562bc469bab03ab5b34ad29701caae87367e4c1a4d",
+              "original_size": [
+                768,
+                512
+              ],
+              "website_size": [
+                768,
+                512
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/tulip-bloom-s20261026/frame_02.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026/tulip-bloom-s20261026/frame_02.png",
+              "original_sha256": "13bfef3a7b1bdd3b78c77b5b9872009e76cf113a37791b29266eab722bb98f4f",
+              "website_file": "assets/il75-tulip-2.jpg",
+              "website_sha256": "07aea7694f3708fa79f33c543c4df7c057de4eec7bc39a11778bfcb8db3f3e5d",
+              "original_size": [
+                768,
+                512
+              ],
+              "website_size": [
+                768,
+                512
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/tulip-bloom-s20261026/frame_03.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026/tulip-bloom-s20261026/frame_03.png",
+              "original_sha256": "093b925e9e6e5c49ee0395986bf7cc1d6ee38c1236ac4103ed72a80f9f039fcd",
+              "website_file": "assets/il75-tulip-3.jpg",
+              "website_sha256": "fe0a914975c6d1d26d40ddda50395ed98f091feef21ff7cececb86ad5dbfd25d",
+              "original_size": [
+                768,
+                512
+              ],
+              "website_size": [
+                768,
+                512
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/tulip-bloom-s20261026/frame_04.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026/tulip-bloom-s20261026/frame_04.png",
+              "original_sha256": "e80d46c35861b01a11ebf507329f8f6c425d8bf25394aa3665e327e16b77e06d",
+              "website_file": "assets/il75-tulip-4.jpg",
+              "website_sha256": "b4732585b0fde6f5b84eb774cf08e3a5e49a06dd63d561ac6ab04336aee54694",
+              "original_size": [
+                768,
+                512
+              ],
+              "website_size": [
+                768,
+                512
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            }
+          ]
+        },
+        {
+          "name": "il75-ice",
+          "title": "Ice into water",
+          "description": "Meltwater gathers around an ice cube on slate, leaving a shallow puddle in the final frame.",
+          "frameLabels": [
+            "Ice on slate",
+            "A pool begins",
+            "Meltwater spreads",
+            "A puddle remains"
+          ],
+          "width": 768,
+          "height": 512,
+          "id": "ice-melt-s20261026",
+          "seed": 20261026,
+          "captions": [
+            "Macro product photograph of one clear ice cube resting on a dark gray slate surface. Plain background, fixed camera, consistent soft side lighting, no other objects. A time-lapse at room temperature. A complete ice cube with sharp square edges rests on the slate.",
+            "Macro product photograph of one clear ice cube resting on a dark gray slate surface. Plain background, fixed camera, consistent soft side lighting, no other objects. A time-lapse at room temperature. The ice cube has rounded edges and a small pool of water around its base.",
+            "Macro product photograph of one clear ice cube resting on a dark gray slate surface. Plain background, fixed camera, consistent soft side lighting, no other objects. A time-lapse at room temperature. A smaller rounded piece of ice sits in a wider shallow puddle.",
+            "Macro product photograph of one clear ice cube resting on a dark gray slate surface. Plain background, fixed camera, consistent soft side lighting, no other objects. A time-lapse at room temperature. Only a clear shallow puddle remains on the slate, with no solid ice."
+          ],
+          "images": [
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/ice-melt-s20261026/frame_01.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026/ice-melt-s20261026/frame_01.png",
+              "original_sha256": "5aedd913e46e60cf9bcd307d232b691f2422dd8f310aaffe3a8ba6ee5c23f1fc",
+              "website_file": "assets/il75-ice-1.jpg",
+              "website_sha256": "df45a16f7210802c1dc6b7978389658689ef94d0a8a7354ef6a3896a1b465af2",
+              "original_size": [
+                768,
+                512
+              ],
+              "website_size": [
+                768,
+                512
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/ice-melt-s20261026/frame_02.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026/ice-melt-s20261026/frame_02.png",
+              "original_sha256": "08014977681b7d14f82bb0f56613683757420f9664ec61e0b0d259a08508dc04",
+              "website_file": "assets/il75-ice-2.jpg",
+              "website_sha256": "f9774662c2b8887d11619dfeef0f730ba907224a3441e18f986cd5c3518705be",
+              "original_size": [
+                768,
+                512
+              ],
+              "website_size": [
+                768,
+                512
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/ice-melt-s20261026/frame_03.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026/ice-melt-s20261026/frame_03.png",
+              "original_sha256": "7a67756572d5e8a4a769dab6f808566a81c754afb9edf022d04d1bfffc6deffc",
+              "website_file": "assets/il75-ice-3.jpg",
+              "website_sha256": "28fb80e4cec6966e7e990998af1d01e205bd8f47ba716000b1af7715960bbd8c",
+              "original_size": [
+                768,
+                512
+              ],
+              "website_size": [
+                768,
+                512
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/ice-melt-s20261026/frame_04.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026/ice-melt-s20261026/frame_04.png",
+              "original_sha256": "a52992f5b9f8287aeaba25138fa2777daa07cb8119b5cf443691dc861d8630b6",
+              "website_file": "assets/il75-ice-4.jpg",
+              "website_sha256": "b15345afb1c0f7c4fd5c1f95a42e9f40dd44957f68c8ef300f511b934f5ef488",
+              "original_size": [
+                768,
+                512
+              ],
+              "website_size": [
+                768,
+                512
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            }
+          ]
+        },
+        {
+          "name": "il75-rain",
+          "title": "Rain at the window",
+          "description": "Raindrops gather and form descending trails on the same wooden window, with the garden softly visible beyond.",
+          "frameLabels": [
+            "Almost dry",
+            "First drops",
+            "Rain beads",
+            "Water trails"
+          ],
+          "width": 768,
+          "height": 512,
+          "id": "rain-window-s20261026",
+          "seed": 20261026,
+          "captions": [
+            "Close-up photograph of the same rectangular window looking out onto a softly blurred leafy garden. The window has a dark wooden frame. Fixed indoor camera, natural overcast light, no people or lettering. The window glass is dry and the garden is visible through it.",
+            "Close-up photograph of the same rectangular window looking out onto a softly blurred leafy garden. The window has a dark wooden frame. Fixed indoor camera, natural overcast light, no people or lettering. A few separate raindrops appear on the glass.",
+            "Close-up photograph of the same rectangular window looking out onto a softly blurred leafy garden. The window has a dark wooden frame. Fixed indoor camera, natural overcast light, no people or lettering. Many raindrops bead on the window, softly blurring the garden.",
+            "Close-up photograph of the same rectangular window looking out onto a softly blurred leafy garden. The window has a dark wooden frame. Fixed indoor camera, natural overcast light, no people or lettering. Larger drops run downward in thin trails across the wet glass."
+          ],
+          "images": [
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/rain-window-s20261026/frame_01.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026/rain-window-s20261026/frame_01.png",
+              "original_sha256": "e0fe36fe9a45702e63aefbde9ea4ef8aafeae635bce25d83fe2076b53fdc0aed",
+              "website_file": "assets/il75-rain-1.jpg",
+              "website_sha256": "3ac1215ecac3cf02c37a7b3e3d5374a2b69455b4ede1144130805999ec5d732b",
+              "original_size": [
+                768,
+                512
+              ],
+              "website_size": [
+                768,
+                512
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/rain-window-s20261026/frame_02.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026/rain-window-s20261026/frame_02.png",
+              "original_sha256": "a893a228a3a3711d3b6b09a1bca6589525db0225f1128705102e18b2f5a8aca1",
+              "website_file": "assets/il75-rain-2.jpg",
+              "website_sha256": "d8277c3c3b2c741c5d57c646a5504d5ea7d467a6a71f541a90f7d8c5b063bda2",
+              "original_size": [
+                768,
+                512
+              ],
+              "website_size": [
+                768,
+                512
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/rain-window-s20261026/frame_03.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026/rain-window-s20261026/frame_03.png",
+              "original_sha256": "666058d1d00b33dfd4c20fb5b96895d9ea8285ac1e0cf219f751bdd0ea87dc62",
+              "website_file": "assets/il75-rain-3.jpg",
+              "website_sha256": "de5c42328639da78a9cf9f35a286eb5f42d48c8f36d109b084e7d18e9f3fe1bd",
+              "original_size": [
+                768,
+                512
+              ],
+              "website_size": [
+                768,
+                512
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-20261026/rain-window-s20261026/frame_04.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026/rain-window-s20261026/frame_04.png",
+              "original_sha256": "cfb58b72b5487857a5b853f72e280da6a83030d0893f021c0327c9d1f4a5adc4",
+              "website_file": "assets/il75-rain-4.jpg",
+              "website_sha256": "4e62b84808aa05c2eb928ab1890327647e011dd6eba94bf3c377656133ed066c",
+              "original_size": [
+                768,
+                512
+              ],
+              "website_size": [
+                768,
+                512
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "interleave75-transitions",
+      "checkpoint": {
+        "oss": "oss://antsys-ssdata-dataset-hy-video2/TRAINING/panjiancheng/works_ckpt/SFT/UniBagel-Qwen35-A4-24-SFT-Interleave-0924/checkpoints/0075000/model.safetensors",
+        "weight": "non-EMA",
+        "size": 65395436792,
+        "etag": "545DB12386E1461C7C14984042907E10-400"
+      },
+      "sampling": {
+        "mode": "joint_all_frames",
+        "frames": 4,
+        "steps": 50,
+        "cfg": 4,
+        "width": 576,
+        "height": 384,
+        "explicit_transitions": true
+      },
+      "selection": [
+        {
+          "name": "il75-tea",
+          "title": "A cup of tea",
+          "description": "Amber tea pours into a white porcelain cup. The liquid rises, and the pour ends with the cup ready on its saucer.",
+          "frameLabels": [
+            "The pour begins",
+            "A steady stream",
+            "The cup fills",
+            "Ready to drink"
+          ],
+          "width": 576,
+          "height": 384,
+          "id": "tea-pour-transition-s20261026",
+          "seed": 20261026,
+          "captions": [
+            "Close-up still-life photograph of a white porcelain teacup on a matching saucer, on a wooden table. The curved spout of a white teapot enters from the upper left, teapot handle and hands outside the frame. Fixed camera, soft window light, consistent cup and saucer. The teacup is empty and the teapot spout is above the rim.",
+            "Same scene and subject. A thin stream of amber tea falls from the spout into the cup.",
+            "Same scene and subject. Tea continues pouring and the cup is half full, with small ripples on the liquid.",
+            "Same scene and subject. The tea stream stops and the teacup is three-quarters full, with the spout lifted slightly away."
+          ],
+          "images": [
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-transitions-20261026/tea-pour-transition-s20261026/frame_01.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-transitions/tea-pour-transition-s20261026/frame_01.png",
+              "original_sha256": "ec688946e256a44cd2fb45255629204632e964d04b591120c6b315d42b336d41",
+              "website_file": "assets/il75-tea-1.jpg",
+              "website_sha256": "c11c8069a03823ea2a93831cc13e7ebde3fb3816a9371b956976948d0aa59c27",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-transitions-20261026/tea-pour-transition-s20261026/frame_02.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-transitions/tea-pour-transition-s20261026/frame_02.png",
+              "original_sha256": "2a36920e4cda9dfaa09e27c71bf8773fd89cf412eda565331c97e3f81b173689",
+              "website_file": "assets/il75-tea-2.jpg",
+              "website_sha256": "a3b3424178f781e113c083785cf0d69ddf9ee50fd6eda9e7166b15e1b528c7d3",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-transitions-20261026/tea-pour-transition-s20261026/frame_03.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-transitions/tea-pour-transition-s20261026/frame_03.png",
+              "original_sha256": "3fa398caa42aaa83e442ff71990bd428ba4c953ea19e02c11e6d6aa435286f14",
+              "website_file": "assets/il75-tea-3.jpg",
+              "website_sha256": "ae21a21afaba3c425d8117e657bb35785469c66539d570f1f748aa4a80f30d38",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-transitions-20261026/tea-pour-transition-s20261026/frame_04.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-transitions/tea-pour-transition-s20261026/frame_04.png",
+              "original_sha256": "782827857e937298b63d179d6a733fb32120d7c917cbc4359af6258aa6255d60",
+              "website_file": "assets/il75-tea-4.jpg",
+              "website_sha256": "fa0ce4a53c48c392061c06760977fc98a09541c8afee1892bf40a7561c04fabd",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "batch": "interleave75-creative",
+      "checkpoint": {
+        "oss": "oss://antsys-ssdata-dataset-hy-video2/TRAINING/panjiancheng/works_ckpt/SFT/UniBagel-Qwen35-A4-24-SFT-Interleave-0924/checkpoints/0075000/ema.safetensors",
+        "weight": "EMA",
+        "size": 65395436792,
+        "etag": "6BDE540603937F6EB420B5E1A4EF65DF-400"
+      },
+      "sampling": {
+        "mode": "joint_all_frames",
+        "frames": 4,
+        "steps": 50,
+        "cfg": 4,
+        "width": 576,
+        "height": 384,
+        "explicit_transitions": true
+      },
+      "selection": [
+        {
+          "name": "il75-bouquet",
+          "title": "A spring bouquet",
+          "description": "Greenery, yellow flowers and purple irises build into a spring arrangement in the same clear glass vase.",
+          "frameLabels": [
+            "A first stem",
+            "Greenery",
+            "Yellow flowers",
+            "A mixed bouquet"
+          ],
+          "width": 576,
+          "height": 384,
+          "id": "vase-creative-s73",
+          "seed": 73,
+          "captions": [
+            "Still-life photograph of one clear glass vase containing water on a pale wooden table. Neutral cream background, fixed camera. Flowers are added between exposures by an off-camera florist. The vase contains only water, with no stems.",
+            "Same scene. Two green leafy stems have been placed in the vase.",
+            "Same scene. Yellow daffodils have been added among the green stems.",
+            "Same scene. Purple irises have been added to complete a small mixed spring bouquet."
+          ],
+          "images": [
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/vase-creative-s73/frame_01.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/vase-creative-s73/frame_01.png",
+              "original_sha256": "47e629694b83098245d84e79198999797723bf668665576574e81e4ac0986659",
+              "website_file": "assets/il75-bouquet-1.jpg",
+              "website_sha256": "48e02eea6df37acca9567cfa3ed4cecf7e92e6762f36e4c9be36b60d5ae1fb9f",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/vase-creative-s73/frame_02.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/vase-creative-s73/frame_02.png",
+              "original_sha256": "45858b7666569b7cfe45fb9db8e9d509b59eca6857d12320e32e8554cf3fc698",
+              "website_file": "assets/il75-bouquet-2.jpg",
+              "website_sha256": "89cca0c857e910c028e95a0358900999653aae2cdea26bb91377f1369054870f",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/vase-creative-s73/frame_03.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/vase-creative-s73/frame_03.png",
+              "original_sha256": "a0f9759bafa4818c6be0d7db668bf08dc441517190bea8c38da3c6d3081c3a74",
+              "website_file": "assets/il75-bouquet-3.jpg",
+              "website_sha256": "0aac0fddd6091029940b6e1f90ff17b88d04f646a0729d32818d5c40b618f643",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/vase-creative-s73/frame_04.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/vase-creative-s73/frame_04.png",
+              "original_sha256": "47d29b616527cb09e93ff31d0e87c0f2e601779640b3efbc2eac89ff24f5f0d6",
+              "website_file": "assets/il75-bouquet-4.jpg",
+              "website_sha256": "08f0fbe9bc57dc17131eea45c780f2b143b79d2cf595d5847339abb4aecca5ce",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            }
+          ]
+        },
+        {
+          "name": "il75-ink",
+          "title": "Blue ink in water",
+          "description": "Blue dye enters a glass of water, forms delicate sinking trails and spreads into a soft cloud of color.",
+          "frameLabels": [
+            "A falling drop",
+            "Blue tendrils",
+            "Color spreads",
+            "A soft blue cloud"
+          ],
+          "width": 576,
+          "height": 384,
+          "id": "ink-water-creative-s73",
+          "seed": 73,
+          "captions": [
+            "Macro studio photograph of one straight-sided clear glass filled with still water against a white background. Fixed camera, same glass, base fully supported on a white table. A drop of blue liquid dye is released into the water from above. The water is clear, with one small blue drop just under the surface.",
+            "Same scene. The blue dye sinks in thin branching tendrils through the clear water.",
+            "Same scene. A soft blue cloud spreads through the lower half of the glass.",
+            "Same scene. The dye has diffused into a pale blue tint throughout the water."
+          ],
+          "images": [
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/ink-water-creative-s73/frame_01.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/ink-water-creative-s73/frame_01.png",
+              "original_sha256": "af265b49628bd2035efed2ef4d6028ec8096e123c3f19b43f892e11252d34568",
+              "website_file": "assets/il75-ink-1.jpg",
+              "website_sha256": "929caafab84788f734703832d003a89fb3d7659d52e78e98c3a525da2f972698",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/ink-water-creative-s73/frame_02.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/ink-water-creative-s73/frame_02.png",
+              "original_sha256": "7b7f5e0745460b21fb9ca1c359c8f2641db571695e3b5c72e9e26655136ad7fe",
+              "website_file": "assets/il75-ink-2.jpg",
+              "website_sha256": "b69d13300739668a07deefb2264ab978cdb2ab9ef748c41f4c8b663700a5c10a",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/ink-water-creative-s73/frame_03.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/ink-water-creative-s73/frame_03.png",
+              "original_sha256": "6eed0ac45843411f3c29a0abd1870c456069779f8ed6006e9473370830b55c19",
+              "website_file": "assets/il75-ink-3.jpg",
+              "website_sha256": "9bbcd3a418eb66bb600f6becd94cc234c6cce252a507dd3ff2e0771122e36b3a",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/ink-water-creative-s73/frame_04.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/ink-water-creative-s73/frame_04.png",
+              "original_sha256": "fdf3115e8a18c6ef49bc192cf99d824ff68b1b8ecaff80a976239990e8f8f7fe",
+              "website_file": "assets/il75-ink-4.jpg",
+              "website_sha256": "f31c4a60cbcce6c60f6e80ebaa0b5ea7caa216d84cd70824add9edc98e9ef600",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            }
+          ]
+        },
+        {
+          "name": "il75-rose",
+          "title": "A rose unfolds",
+          "description": "A closed pink rose bud gradually opens into layered petals against the same softly blurred garden.",
+          "frameLabels": [
+            "A closed bud",
+            "First petals",
+            "Opening layers",
+            "In bloom"
+          ],
+          "width": 576,
+          "height": 384,
+          "id": "rose-creative-s219",
+          "seed": 219,
+          "captions": [
+            "Botanical time-lapse photograph of a single pink rose bud on a green stem, against a soft dark green garden background. Fixed close-up camera, same rose and stem. The pink rose bud is closed, green sepals cupping its base.",
+            "Same scene. The outer pink petals begin to unfurl.",
+            "Same scene. The rose opens halfway, revealing layered pink petals.",
+            "Same scene. The rose is fully open, with a rounded spiral of layered petals."
+          ],
+          "images": [
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/rose-creative-s219/frame_01.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/rose-creative-s219/frame_01.png",
+              "original_sha256": "f99578932ed990591c1d9c337a7849538fcd8f4cf54225b958922f4addbca5b2",
+              "website_file": "assets/il75-rose-1.jpg",
+              "website_sha256": "ca809e08f0d166ec6bf19a1477c92e878e0909b91b2c4d94c24f9b92590a85d2",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/rose-creative-s219/frame_02.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/rose-creative-s219/frame_02.png",
+              "original_sha256": "3c76970ec15b3ae421d10524454769fbe3d5502a92bb23cd4a494126beb24667",
+              "website_file": "assets/il75-rose-2.jpg",
+              "website_sha256": "dc947aa04a2ecbc205600ba9ded7241f47f4f1d1707abce40986439bd2e5c697",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/rose-creative-s219/frame_03.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/rose-creative-s219/frame_03.png",
+              "original_sha256": "25bcc0d11b3473727317441f96cf7e48ecc8d0232ddac2e0ee5bf71b815d842e",
+              "website_file": "assets/il75-rose-3.jpg",
+              "website_sha256": "1cba820871398f5af61de66098426f0730b8348ccbbbfd4838148ae5acd9c417",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/rose-creative-s219/frame_04.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/rose-creative-s219/frame_04.png",
+              "original_sha256": "a166a0de727ff48fc983327fc69cfbbe2f7507513c87668aff1f286456598678",
+              "website_file": "assets/il75-rose-4.jpg",
+              "website_sha256": "8bba235d66b1cf7bfb2d710d4649454d4c4a270551180054fff3f050e635669c",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            }
+          ]
+        },
+        {
+          "name": "il75-campfire",
+          "title": "Flame to embers",
+          "description": "A small campfire burns brightly, settles to low flames, and leaves ash and embers inside the same stone ring.",
+          "frameLabels": [
+            "Small flames",
+            "Burning brightly",
+            "Burning low",
+            "Ash and embers"
+          ],
+          "width": 576,
+          "height": 384,
+          "id": "campfire-creative-s73",
+          "seed": 73,
+          "captions": [
+            "Outdoor photograph of a small campfire in a circular stone fire ring on bare earth at a campsite. Fixed camera, no people, same surrounding stones. Several dry logs rest inside the ring. Time passes between photographs. Small orange flames begin to burn between the dry logs.",
+            "Same scene. A bright campfire burns around the same logs inside the stone ring.",
+            "Same scene. The flames become low as the charred logs glow red.",
+            "Same scene. The fire has burned down to glowing red embers and gray ash within the stone ring."
+          ],
+          "images": [
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/campfire-creative-s73/frame_01.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/campfire-creative-s73/frame_01.png",
+              "original_sha256": "34377fed8ec301ba6c22faa7c624c58628973074f50666f06081b636c6310ba2",
+              "website_file": "assets/il75-campfire-1.jpg",
+              "website_sha256": "5928d4ed74457467231c9219781762262aa54e4c837444e7ea9c41c43e9d9ce5",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/campfire-creative-s73/frame_02.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/campfire-creative-s73/frame_02.png",
+              "original_sha256": "4b2219b23358227c1651651442ce2ebb69791e1c87df30a3dda083e246d3c246",
+              "website_file": "assets/il75-campfire-2.jpg",
+              "website_sha256": "b340b81fabf26ac76b9ea35b51117e1ee052802dcf0306d6261afba282fd3046",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/campfire-creative-s73/frame_03.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/campfire-creative-s73/frame_03.png",
+              "original_sha256": "eb4b0a93b95fcb3d344a8eef566fb35131a4a636aada035fcab8bad66aa86178",
+              "website_file": "assets/il75-campfire-3.jpg",
+              "website_sha256": "ee47fa94332fbdf7661b1f2820159109c5f72e8ddd65d084a6a8bb4ffad0a2c5",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            },
+            {
+              "source": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026/campfire-creative-s73/frame_04.png",
+              "remote_source": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative/campfire-creative-s73/frame_04.png",
+              "original_sha256": "e5f8ea98f432e0ffa8ac9d898ef67638d598b6a115a0a33a127dd7a48c284231",
+              "website_file": "assets/il75-campfire-4.jpg",
+              "website_sha256": "1f59abb289292ed3d81d2a157c7b14b76a08629e24d9716b7bdd5ea6f62f90b7",
+              "original_size": [
+                576,
+                384
+              ],
+              "website_size": [
+                576,
+                384
+              ],
+              "processing": "Full-frame native-resolution JPEG conversion only; no cropping, compositing, retouching or deformation."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

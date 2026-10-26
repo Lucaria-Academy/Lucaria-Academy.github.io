@@ -83,7 +83,11 @@ function selectSequence(index) {
   const item = sequences[sequenceIndex];
   activate(document.querySelector(`[data-sequence="${sequenceIndex}"]`), '[data-sequence]');
   $('#sequence-description').textContent = item.description;
-  $('#sequence-frames').innerHTML = [1,2,3,4].map(n => `<div class="sequence-frame"><img src="assets/${item.name}-${n}.jpg" alt="${item.title}, successive image ${n} of 4" loading="lazy"><span>Image ${n}</span></div>`).join('');
+  $('#sequence-frames').innerHTML = [1,2,3,4].map(n => {
+    const caption = item.frameLabels?.[n-1];
+    const alt = caption ? `${item.title}, image ${n} of 4: ${caption}` : `${item.title}, successive image ${n} of 4`;
+    return `<div class="sequence-frame"><img src="assets/${item.name}-${n}.jpg" alt="${alt}" width="${item.width || 576}" height="${item.height || 384}" loading="lazy" decoding="async"><span>${caption ? `${n}. ${caption}` : `Image ${n}`}</span></div>`;
+  }).join('');
 }
 document.querySelectorAll('[data-sequence]').forEach(button => button.addEventListener('click', () => selectSequence(Number(button.dataset.sequence))));
 $('#previous-sequence').addEventListener('click', () => selectSequence(sequenceIndex-1));

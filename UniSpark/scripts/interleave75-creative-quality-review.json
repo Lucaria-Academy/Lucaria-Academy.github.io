@@ -1,0 +1,1401 @@
+{
+  "date": "2026-10-26",
+  "checkpoint_step": 75000,
+  "remote_target": "PANProj4 (59220174)",
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "checkpoint": {
+    "oss": "oss://antsys-ssdata-dataset-hy-video2/TRAINING/panjiancheng/works_ckpt/SFT/UniBagel-Qwen35-A4-24-SFT-Interleave-0924/checkpoints/0075000/ema.safetensors",
+    "weight": "EMA",
+    "size": 65395436792,
+    "etag": "6BDE540603937F6EB420B5E1A4EF65DF-400"
+  },
+  "sampling": {
+    "mode": "joint_all_frames",
+    "frames": 4,
+    "steps": 50,
+    "cfg": 4,
+    "width": 576,
+    "height": 384,
+    "explicit_transitions": true
+  },
+  "generated": 24,
+  "selected": 4,
+  "review_method": "Every candidate reviewed as a four-frame sequence, with original-resolution follow-up on selected candidates. Check anatomy, geometry, contact/support, plausible state changes, identity and scene continuity, actual progression, and prompt fidelity. Hold ambiguous details. Manual qualitative showcase selection, not a benchmark or a guarantee of error-free images.",
+  "local_originals": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-creative-20261026",
+  "remote_originals": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-creative",
+  "candidates": [
+    {
+      "id": "cake-creative-s73",
+      "scene": "cake",
+      "title": "Decorating a strawberry cake",
+      "captions": [
+        "Studio food photograph, a round single-layer sponge cake centered on a white pedestal on a pale blue table. Fixed camera. Between exposures a baker decorates the same cake off camera, no hands visible. A plain golden sponge cake with a bare top.",
+        "Same scene. The same cake now has a smooth layer of white cream on top.",
+        "Same scene. Fresh red strawberries have been arranged on the white cream.",
+        "Same scene. Small green mint leaves are added between the strawberries on the finished cake."
+      ],
+      "transitions": [
+        "",
+        "The same cake now has a smooth layer of white cream on top.",
+        "Fresh red strawberries have been arranged on the white cream.",
+        "Small green mint leaves are added between the strawberries on the finished cake."
+      ],
+      "seed": 73,
+      "status": "success",
+      "decision": "hold",
+      "reason": "Cropped hands/arms enter the upper edge, and the final mint addition is not distinct; held for composition/anatomy ambiguity.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "cake-creative-s73/frame_01.png",
+          "sha256": "adf8ce85f5010837182fb93d2abba89c171e0b4506e7995f6f476ae3795507b3",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "cake-creative-s73/frame_02.png",
+          "sha256": "8bf1584ea2d99400710ba654df2ed00b3db9c68ddc87a94635bbb345d5eb2e30",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "cake-creative-s73/frame_03.png",
+          "sha256": "fe9cab38dfc7704bea8a01dcd0bde95875197cda1b12f90761bb8a5fcc2a82fc",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "cake-creative-s73/frame_04.png",
+          "sha256": "16ca7d201f6baabca1b5886a62a29800312576d32aee411e4e423b5063b411f7",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "5d0e5af70621bbbdb38711917975a336836debf3357f1640fc5b41d85d583e22"
+    },
+    {
+      "id": "cake-creative-s219",
+      "scene": "cake",
+      "title": "Decorating a strawberry cake",
+      "captions": [
+        "Studio food photograph, a round single-layer sponge cake centered on a white pedestal on a pale blue table. Fixed camera. Between exposures a baker decorates the same cake off camera, no hands visible. A plain golden sponge cake with a bare top.",
+        "Same scene. The same cake now has a smooth layer of white cream on top.",
+        "Same scene. Fresh red strawberries have been arranged on the white cream.",
+        "Same scene. Small green mint leaves are added between the strawberries on the finished cake."
+      ],
+      "transitions": [
+        "",
+        "The same cake now has a smooth layer of white cream on top.",
+        "Fresh red strawberries have been arranged on the white cream.",
+        "Small green mint leaves are added between the strawberries on the finished cake."
+      ],
+      "seed": 219,
+      "status": "success",
+      "decision": "hold",
+      "reason": "Background hand anatomy is ambiguous, and the cake layering/composition changes; held.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "cake-creative-s219/frame_01.png",
+          "sha256": "7246fd11db02b1527ce3f24f202347cd5cb363b1f4a0933ac3a1212d45cdd91f",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "cake-creative-s219/frame_02.png",
+          "sha256": "bdd3fcb23d976e20b85ea9940c6a09cd063495a6e5a9b8dad9b7e24b8a669c84",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "cake-creative-s219/frame_03.png",
+          "sha256": "808f3587539aacf34ee9e06e875c0a10a2a0679cdf5348dfdc2284f1a603648b",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "cake-creative-s219/frame_04.png",
+          "sha256": "b60e5cabe07755d8a358994b685f919138229e5544dc9a227c33300a463def64",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "936fb605ac46f905247b80404adec93272fffa50ddaa2da878742222356b7ffe"
+    },
+    {
+      "id": "pancakes-creative-s73",
+      "scene": "pancakes",
+      "title": "Breakfast comes together",
+      "captions": [
+        "Food photograph of a white ceramic plate on a wooden breakfast table, fixed three-quarter camera. A cook adds toppings between photographs off camera. Consistent plate and soft morning light, no hands. Three plain golden pancakes are stacked on the plate.",
+        "Same scene. A small pat of butter now rests on the top pancake.",
+        "Same scene. Amber maple syrup now coats the pancakes and runs down their edges.",
+        "Same scene. Several blueberries have been added on and around the syrup-covered pancakes."
+      ],
+      "transitions": [
+        "",
+        "A small pat of butter now rests on the top pancake.",
+        "Amber maple syrup now coats the pancakes and runs down their edges.",
+        "Several blueberries have been added on and around the syrup-covered pancakes."
+      ],
+      "seed": 73,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The second frame lacks the requested butter addition; a head intrudes over the plate and the pancakes read as overlapping crepes.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "pancakes-creative-s73/frame_01.png",
+          "sha256": "f75e8a1c30f9445d3099fdeda2ac061a55a1cae718756c31d6d7682699093258",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "pancakes-creative-s73/frame_02.png",
+          "sha256": "f40ebd8883146dd54a5cc1206b5169f0b599bef4b0b80484bb3b31765204ff14",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "pancakes-creative-s73/frame_03.png",
+          "sha256": "4d2903801f6f5be8adadb900f91695c762115271b86ac95a0267f2a94ffd396d",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "pancakes-creative-s73/frame_04.png",
+          "sha256": "21eab5c51b66d97625e32578e0c232290aada620d7910e7b5fc1c8f0216375ca",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "e2b6e3957fd6d2768e0bfd7d0970cd5e98dbfa49f794e9ccc898922b5ee92316"
+    },
+    {
+      "id": "pancakes-creative-s219",
+      "scene": "pancakes",
+      "title": "Breakfast comes together",
+      "captions": [
+        "Food photograph of a white ceramic plate on a wooden breakfast table, fixed three-quarter camera. A cook adds toppings between photographs off camera. Consistent plate and soft morning light, no hands. Three plain golden pancakes are stacked on the plate.",
+        "Same scene. A small pat of butter now rests on the top pancake.",
+        "Same scene. Amber maple syrup now coats the pancakes and runs down their edges.",
+        "Same scene. Several blueberries have been added on and around the syrup-covered pancakes."
+      ],
+      "transitions": [
+        "",
+        "A small pat of butter now rests on the top pancake.",
+        "Amber maple syrup now coats the pancakes and runs down their edges.",
+        "Several blueberries have been added on and around the syrup-covered pancakes."
+      ],
+      "seed": 219,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The requested butter stage is absent and berries appear before the final stage; stack count and action fidelity are weak.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "pancakes-creative-s219/frame_01.png",
+          "sha256": "209608c380fc4057675cd7220188dc8f730337f7e5986f8f6df6be93ae89bdec",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "pancakes-creative-s219/frame_02.png",
+          "sha256": "d37f509bc10207022c3239128a56a16d2809b7194e3176ef6b54d3fb82cf129d",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "pancakes-creative-s219/frame_03.png",
+          "sha256": "2a169fabd12309c2e8a38fda26027b844f09d77f39c25d26603d99a5b3ee3291",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "pancakes-creative-s219/frame_04.png",
+          "sha256": "eb54f331441cfabec3867823f2ff1bfaaf23019f43df3987c22e7527c4abfc2e",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "4585127f2c7be9983a249dc7d74cbad0a8952368fb4e0133f521092897fd7162"
+    },
+    {
+      "id": "vase-creative-s73",
+      "scene": "vase",
+      "title": "Arranging spring flowers",
+      "captions": [
+        "Still-life photograph of one clear glass vase containing water on a pale wooden table. Neutral cream background, fixed camera. Flowers are added between exposures by an off-camera florist. The vase contains only water, with no stems.",
+        "Same scene. Two green leafy stems have been placed in the vase.",
+        "Same scene. Yellow daffodils have been added among the green stems.",
+        "Same scene. Purple irises have been added to complete a small mixed spring bouquet."
+      ],
+      "transitions": [
+        "",
+        "Two green leafy stems have been placed in the vase.",
+        "Yellow daffodils have been added among the green stems.",
+        "Purple irises have been added to complete a small mixed spring bouquet."
+      ],
+      "seed": 73,
+      "status": "success",
+      "decision": "accepted",
+      "reason": "Full-resolution review: greenery and flowers build into a mixed bouquet in the same water-filled supported glass. An initial slender stem is already present, so display labels do not claim an empty vase. No obvious broken stem/support geometry.",
+      "reviewed_original_resolution": true,
+      "frames": [
+        {
+          "source": "vase-creative-s73/frame_01.png",
+          "sha256": "47e629694b83098245d84e79198999797723bf668665576574e81e4ac0986659",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "vase-creative-s73/frame_02.png",
+          "sha256": "45858b7666569b7cfe45fb9db8e9d509b59eca6857d12320e32e8554cf3fc698",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "vase-creative-s73/frame_03.png",
+          "sha256": "a0f9759bafa4818c6be0d7db668bf08dc441517190bea8c38da3c6d3081c3a74",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "vase-creative-s73/frame_04.png",
+          "sha256": "47d29b616527cb09e93ff31d0e87c0f2e601779640b3efbc2eac89ff24f5f0d6",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "d2583675f6c380dfcaa2d31ea3f64e58351d926d1cb7aa208853b2e4fff38d0d"
+    },
+    {
+      "id": "vase-creative-s219",
+      "scene": "vase",
+      "title": "Arranging spring flowers",
+      "captions": [
+        "Still-life photograph of one clear glass vase containing water on a pale wooden table. Neutral cream background, fixed camera. Flowers are added between exposures by an off-camera florist. The vase contains only water, with no stems.",
+        "Same scene. Two green leafy stems have been placed in the vase.",
+        "Same scene. Yellow daffodils have been added among the green stems.",
+        "Same scene. Purple irises have been added to complete a small mixed spring bouquet."
+      ],
+      "transitions": [
+        "",
+        "Two green leafy stems have been placed in the vase.",
+        "Yellow daffodils have been added among the green stems.",
+        "Purple irises have been added to complete a small mixed spring bouquet."
+      ],
+      "seed": 219,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "Yellow flowers are replaced by purple flowers rather than retained in a mixed bouquet; object/arrangement continuity is incomplete.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "vase-creative-s219/frame_01.png",
+          "sha256": "1ad3d6f233d0c18f163e94f2dd08badfd16de92b1707cdc49db61e8832a07d4c",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "vase-creative-s219/frame_02.png",
+          "sha256": "93e7e54e368f3ba42177735f602a732fb99d4bd904a589e11f083a708e0b047f",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "vase-creative-s219/frame_03.png",
+          "sha256": "356359a97da63a629f0a05b4d5cb12730ccbdbcc60cc7c2efb227bea2e64d771",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "vase-creative-s219/frame_04.png",
+          "sha256": "5e6c301ef58e81008d94e7a923e90cffd6b3aab6cc551caa585944c23a415d66",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "6c637ad3b08f567ad653e12d9fee0286ccaf40ac78ec1919fe5830fa391a34a6"
+    },
+    {
+      "id": "maple-seasons-creative-s73",
+      "scene": "maple-seasons",
+      "title": "Four seasons of a maple tree",
+      "captions": [
+        "Landscape photograph of one mature maple tree beside a curved gravel path in a grassy park. Fixed camera, same trunk, branches and path, a time-lapse across the seasons of one year. In summer the tree has a full green canopy and the grass is green.",
+        "Same scene. In early autumn the canopy has turned golden yellow and orange.",
+        "Same scene. In late autumn the branches are nearly bare and fallen orange leaves cover the ground.",
+        "Same scene. In winter the tree is bare and snow covers the grass and path."
+      ],
+      "transitions": [
+        "",
+        "In early autumn the canopy has turned golden yellow and orange.",
+        "In late autumn the branches are nearly bare and fallen orange leaves cover the ground.",
+        "In winter the tree is bare and snow covers the grass and path."
+      ],
+      "seed": 73,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The tree is already autumnal at the start and remains leafy/green at the requested winter endpoint.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "maple-seasons-creative-s73/frame_01.png",
+          "sha256": "7a73cc147052f792e58781213ec7d4ebf685755efde1eab964982924bbce823d",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "maple-seasons-creative-s73/frame_02.png",
+          "sha256": "4b034d2706b84155788822d65f0d59443fc55b19ee73a5b175437f4f48ad46ee",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "maple-seasons-creative-s73/frame_03.png",
+          "sha256": "e407d88e37aea545b834e42abc6cac62d070bb22c593ef197d5ec5a7f17311b0",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "maple-seasons-creative-s73/frame_04.png",
+          "sha256": "a727bef418d00fe511ab37f153ec980ffdf74894796be5df4a1b300191248fef",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "7834b6d9e35f737c8c78f2d3f6a3f3bdbdbfbedce0ec86c0de2c42c4bf6607cf"
+    },
+    {
+      "id": "maple-seasons-creative-s219",
+      "scene": "maple-seasons",
+      "title": "Four seasons of a maple tree",
+      "captions": [
+        "Landscape photograph of one mature maple tree beside a curved gravel path in a grassy park. Fixed camera, same trunk, branches and path, a time-lapse across the seasons of one year. In summer the tree has a full green canopy and the grass is green.",
+        "Same scene. In early autumn the canopy has turned golden yellow and orange.",
+        "Same scene. In late autumn the branches are nearly bare and fallen orange leaves cover the ground.",
+        "Same scene. In winter the tree is bare and snow covers the grass and path."
+      ],
+      "transitions": [
+        "",
+        "In early autumn the canopy has turned golden yellow and orange.",
+        "In late autumn the branches are nearly bare and fallen orange leaves cover the ground.",
+        "In winter the tree is bare and snow covers the grass and path."
+      ],
+      "seed": 219,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The requested summer-to-bare-winter progression is absent; leaves remain and the grass stays green.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "maple-seasons-creative-s219/frame_01.png",
+          "sha256": "1b6d3ef26c2888fcf2dd9c7b5775d08213c3143a063d2513364ecd6037598308",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "maple-seasons-creative-s219/frame_02.png",
+          "sha256": "440e70933e4fdf5d5381a3985a5e72b9adb822884db9615f7676cd3dbde7234f",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "maple-seasons-creative-s219/frame_03.png",
+          "sha256": "24da54dcabbf83675fa6ae8a37d0e801e4c2854f2da113a7a5722dacf3c780ea",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "maple-seasons-creative-s219/frame_04.png",
+          "sha256": "cc2d0090a3597bf2febe7d838dceaf336806dad244fe16cebcfa957e71d98144",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "46f1ca8db7756680b99ce6e0484a42f8b01b73c02a04595d7468f481917d5d84"
+    },
+    {
+      "id": "snowman-creative-s73",
+      "scene": "snowman",
+      "title": "The last snowman of winter",
+      "captions": [
+        "Time-lapse photograph of one small snowman on a flat garden lawn, built from two snowballs with a carrot nose and pebble eyes, no scarf, no hat. Fixed camera and fence in the background. It slowly melts in warm weather. The complete two-ball snowman stands on snow-covered grass.",
+        "Same scene. The snowman is smaller and rounder as snow melts around its base.",
+        "Same scene. Only a low mound of snow remains, with the carrot and pebbles resting beside it.",
+        "Same scene. The snow is gone, leaving wet grass with the carrot and pebbles on the ground."
+      ],
+      "transitions": [
+        "",
+        "The snowman is smaller and rounder as snow melts around its base.",
+        "Only a low mound of snow remains, with the carrot and pebbles resting beside it.",
+        "The snow is gone, leaving wet grass with the carrot and pebbles on the ground."
+      ],
+      "seed": 73,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The head reads as a brown peg-like object rather than a snowball; snowman structure and final melted-lawn state fail.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "snowman-creative-s73/frame_01.png",
+          "sha256": "c793842fd440b1d85c80b0600afd4f460caed7dd08fa8918b3c22a83736a84a5",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "snowman-creative-s73/frame_02.png",
+          "sha256": "c996e2af322e8a0c70ea98ec254487ca00d1b8caf8062b8597d1995f3dc84f29",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "snowman-creative-s73/frame_03.png",
+          "sha256": "1b34376466d0a5a123f962a15632a5c04aadec91c7a2f5ee711d0957327498e0",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "snowman-creative-s73/frame_04.png",
+          "sha256": "f00dcfb583cf1578a6c59d61030a07239873dd7955c0a039b41d03372f02775b",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "9982d6537b5e108678443491b458117a45c897af32a7bfd1e6c6dcef1a321588"
+    },
+    {
+      "id": "snowman-creative-s219",
+      "scene": "snowman",
+      "title": "The last snowman of winter",
+      "captions": [
+        "Time-lapse photograph of one small snowman on a flat garden lawn, built from two snowballs with a carrot nose and pebble eyes, no scarf, no hat. Fixed camera and fence in the background. It slowly melts in warm weather. The complete two-ball snowman stands on snow-covered grass.",
+        "Same scene. The snowman is smaller and rounder as snow melts around its base.",
+        "Same scene. Only a low mound of snow remains, with the carrot and pebbles resting beside it.",
+        "Same scene. The snow is gone, leaving wet grass with the carrot and pebbles on the ground."
+      ],
+      "transitions": [
+        "",
+        "The snowman is smaller and rounder as snow melts around its base.",
+        "Only a low mound of snow remains, with the carrot and pebbles resting beside it.",
+        "The snow is gone, leaving wet grass with the carrot and pebbles on the ground."
+      ],
+      "seed": 219,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The small object does not form a recognizable two-ball snowman or visibly melt; wrong subject and near-static output.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "snowman-creative-s219/frame_01.png",
+          "sha256": "5e793b83bcc5c270e61994fd8d4c974319d54aee51f34980879e74a9450e654e",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "snowman-creative-s219/frame_02.png",
+          "sha256": "309c987e93362b3b35619269b75da7de6bb99cfb3034d368a5d91b424608c226",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "snowman-creative-s219/frame_03.png",
+          "sha256": "740984432be6f89f45f39436fd0751e723ee16aa65fabfc4042ca79d4e9a697e",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "snowman-creative-s219/frame_04.png",
+          "sha256": "6f4d2384f2abdb37d4a0de996dc9761825309b74b440ac6e3526d34db32aae59",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "2202c81efa003eac0efc1a8a89bd8dfdc73e43e44649932d7fed7288af94cf98"
+    },
+    {
+      "id": "campfire-creative-s73",
+      "scene": "campfire",
+      "title": "From flame to embers",
+      "captions": [
+        "Outdoor photograph of a small campfire in a circular stone fire ring on bare earth at a campsite. Fixed camera, no people, same surrounding stones. Several dry logs rest inside the ring. Time passes between photographs. Small orange flames begin to burn between the dry logs.",
+        "Same scene. A bright campfire burns around the same logs inside the stone ring.",
+        "Same scene. The flames become low as the charred logs glow red.",
+        "Same scene. The fire has burned down to glowing red embers and gray ash within the stone ring."
+      ],
+      "transitions": [
+        "",
+        "A bright campfire burns around the same logs inside the stone ring.",
+        "The flames become low as the charred logs glow red.",
+        "The fire has burned down to glowing red embers and gray ash within the stone ring."
+      ],
+      "seed": 73,
+      "status": "success",
+      "decision": "accepted",
+      "reason": "Full-resolution review: flame grows, subsides, and leaves ash/embers within the same supported stone fire ring. Logs darken naturally; no obvious floating wood or geometry break.",
+      "reviewed_original_resolution": true,
+      "frames": [
+        {
+          "source": "campfire-creative-s73/frame_01.png",
+          "sha256": "34377fed8ec301ba6c22faa7c624c58628973074f50666f06081b636c6310ba2",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "campfire-creative-s73/frame_02.png",
+          "sha256": "4b2219b23358227c1651651442ce2ebb69791e1c87df30a3dda083e246d3c246",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "campfire-creative-s73/frame_03.png",
+          "sha256": "eb4b0a93b95fcb3d344a8eef566fb35131a4a636aada035fcab8bad66aa86178",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "campfire-creative-s73/frame_04.png",
+          "sha256": "e5f8ea98f432e0ffa8ac9d898ef67638d598b6a115a0a33a127dd7a48c284231",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "693e2d88b39833fa79f8e15213ebb5803e82ba1355b385e0ffeecaa87b2e3706"
+    },
+    {
+      "id": "campfire-creative-s219",
+      "scene": "campfire",
+      "title": "From flame to embers",
+      "captions": [
+        "Outdoor photograph of a small campfire in a circular stone fire ring on bare earth at a campsite. Fixed camera, no people, same surrounding stones. Several dry logs rest inside the ring. Time passes between photographs. Small orange flames begin to burn between the dry logs.",
+        "Same scene. A bright campfire burns around the same logs inside the stone ring.",
+        "Same scene. The flames become low as the charred logs glow red.",
+        "Same scene. The fire has burned down to glowing red embers and gray ash within the stone ring."
+      ],
+      "transitions": [
+        "",
+        "A bright campfire burns around the same logs inside the stone ring.",
+        "The flames become low as the charred logs glow red.",
+        "The fire has burned down to glowing red embers and gray ash within the stone ring."
+      ],
+      "seed": 219,
+      "status": "success",
+      "decision": "not_selected",
+      "reason": "Flames remain active at the end and intermediate progression is weak; the clearer other seed is selected.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "campfire-creative-s219/frame_01.png",
+          "sha256": "6cd658f7c1cb022f2360b17e3092e790773192aec371f402454b484e5ff44755",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "campfire-creative-s219/frame_02.png",
+          "sha256": "cc3206fbc253dd9151f1ba39886de54595f71840a1091f7ac2de7c94f344841e",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "campfire-creative-s219/frame_03.png",
+          "sha256": "fc4db923ce1f697926d317c4f63a56eae018e7232c7c046712e8514112dc94e1",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "campfire-creative-s219/frame_04.png",
+          "sha256": "1a518491cef9854849683d25681d526c75d151f000db7ebc11196ce14e4ca13a",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "abe6110457e2627bd1af1ae4c2dfb2fb48a8e3243ca927ffcd1cacedd6c1988f"
+    },
+    {
+      "id": "ink-water-creative-s73",
+      "scene": "ink-water",
+      "title": "Ink unfolds in water",
+      "captions": [
+        "Macro studio photograph of one straight-sided clear glass filled with still water against a white background. Fixed camera, same glass, base fully supported on a white table. A drop of blue liquid dye is released into the water from above. The water is clear, with one small blue drop just under the surface.",
+        "Same scene. The blue dye sinks in thin branching tendrils through the clear water.",
+        "Same scene. A soft blue cloud spreads through the lower half of the glass.",
+        "Same scene. The dye has diffused into a pale blue tint throughout the water."
+      ],
+      "transitions": [
+        "",
+        "The blue dye sinks in thin branching tendrils through the clear water.",
+        "A soft blue cloud spreads through the lower half of the glass.",
+        "The dye has diffused into a pale blue tint throughout the water."
+      ],
+      "seed": 73,
+      "status": "success",
+      "decision": "accepted",
+      "reason": "Full-resolution review: blue dye enters the water, forms sinking tendrils and disperses through the lower water column. The glass remains coherent and supported, with minor framing variation. Final color remains a gradient, so display text does not claim completely uniform mixing.",
+      "reviewed_original_resolution": true,
+      "frames": [
+        {
+          "source": "ink-water-creative-s73/frame_01.png",
+          "sha256": "af265b49628bd2035efed2ef4d6028ec8096e123c3f19b43f892e11252d34568",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "ink-water-creative-s73/frame_02.png",
+          "sha256": "7b7f5e0745460b21fb9ca1c359c8f2641db571695e3b5c72e9e26655136ad7fe",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "ink-water-creative-s73/frame_03.png",
+          "sha256": "6eed0ac45843411f3c29a0abd1870c456069779f8ed6006e9473370830b55c19",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "ink-water-creative-s73/frame_04.png",
+          "sha256": "fdf3115e8a18c6ef49bc192cf99d824ff68b1b8ecaff80a976239990e8f8f7fe",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "d2783c7ef525bce47c597b7048d1623f86e993725594d463d4c7e40d7711c4f5"
+    },
+    {
+      "id": "ink-water-creative-s219",
+      "scene": "ink-water",
+      "title": "Ink unfolds in water",
+      "captions": [
+        "Macro studio photograph of one straight-sided clear glass filled with still water against a white background. Fixed camera, same glass, base fully supported on a white table. A drop of blue liquid dye is released into the water from above. The water is clear, with one small blue drop just under the surface.",
+        "Same scene. The blue dye sinks in thin branching tendrils through the clear water.",
+        "Same scene. A soft blue cloud spreads through the lower half of the glass.",
+        "Same scene. The dye has diffused into a pale blue tint throughout the water."
+      ],
+      "transitions": [
+        "",
+        "The blue dye sinks in thin branching tendrils through the clear water.",
+        "A soft blue cloud spreads through the lower half of the glass.",
+        "The dye has diffused into a pale blue tint throughout the water."
+      ],
+      "seed": 219,
+      "status": "success",
+      "decision": "hold",
+      "reason": "Airborne branching strands above the rim are physically ambiguous; the other seed gives a clearer in-water diffusion sequence.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "ink-water-creative-s219/frame_01.png",
+          "sha256": "c0b99b623aca72e63fe4e5946d8cc7fabcceb8bf6ca7101542e5d8fe551b49f4",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "ink-water-creative-s219/frame_02.png",
+          "sha256": "f383c40b4c6342546cd442e69cf7fe64a4bcaed8b13785728a3354dca0863b73",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "ink-water-creative-s219/frame_03.png",
+          "sha256": "dcc9f62df1aef869dbd77891205bd44063b1840bd2de70e28957470211ca56c3",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "ink-water-creative-s219/frame_04.png",
+          "sha256": "5582fadfe8ddfd6147024fecf62b856d49d43d6e51c07d63033481cbe575ca0a",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "73e84b97dcd0ae2606ac55f52916b2cad4d64d846f1f0fa1dc033d9beb362167"
+    },
+    {
+      "id": "rose-creative-s73",
+      "scene": "rose",
+      "title": "A rose opens",
+      "captions": [
+        "Botanical time-lapse photograph of a single pink rose bud on a green stem, against a soft dark green garden background. Fixed close-up camera, same rose and stem. The pink rose bud is closed, green sepals cupping its base.",
+        "Same scene. The outer pink petals begin to unfurl.",
+        "Same scene. The rose opens halfway, revealing layered pink petals.",
+        "Same scene. The rose is fully open, with a rounded spiral of layered petals."
+      ],
+      "transitions": [
+        "",
+        "The outer pink petals begin to unfurl.",
+        "The rose opens halfway, revealing layered pink petals.",
+        "The rose is fully open, with a rounded spiral of layered petals."
+      ],
+      "seed": 73,
+      "status": "success",
+      "decision": "not_selected",
+      "reason": "Opening is less clearly ordered between the last two frames; not selected over the clearer bud-to-bloom seed.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "rose-creative-s73/frame_01.png",
+          "sha256": "169a289d36fe628deaf278c5ebbe06c31abb14df4cd2c8eea14e3f738a4ed0c1",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "rose-creative-s73/frame_02.png",
+          "sha256": "9f040e337694991298eaacd2dfe981a698e943fe8569387f0c194b66012e0c28",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "rose-creative-s73/frame_03.png",
+          "sha256": "525d741637dfb20bf03a23095f9988c6f49936092ae65db7fdfdfc483cc5a44e",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "rose-creative-s73/frame_04.png",
+          "sha256": "34ff89f24606351e4b2836420c92eea1eea29366d826493fc288aebb1974a7d3",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "31ede1c166c2752e779317a947204f97bc20ed984aa5b17015c601dbec2b524d"
+    },
+    {
+      "id": "rose-creative-s219",
+      "scene": "rose",
+      "title": "A rose opens",
+      "captions": [
+        "Botanical time-lapse photograph of a single pink rose bud on a green stem, against a soft dark green garden background. Fixed close-up camera, same rose and stem. The pink rose bud is closed, green sepals cupping its base.",
+        "Same scene. The outer pink petals begin to unfurl.",
+        "Same scene. The rose opens halfway, revealing layered pink petals.",
+        "Same scene. The rose is fully open, with a rounded spiral of layered petals."
+      ],
+      "transitions": [
+        "",
+        "The outer pink petals begin to unfurl.",
+        "The rose opens halfway, revealing layered pink petals.",
+        "The rose is fully open, with a rounded spiral of layered petals."
+      ],
+      "seed": 219,
+      "status": "success",
+      "decision": "accepted",
+      "reason": "Full-resolution review: a closed pink bud gradually opens into layered petals, with attached sepals/stem and a coherent garden background. No obvious broken botanical structure.",
+      "reviewed_original_resolution": true,
+      "frames": [
+        {
+          "source": "rose-creative-s219/frame_01.png",
+          "sha256": "f99578932ed990591c1d9c337a7849538fcd8f4cf54225b958922f4addbca5b2",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "rose-creative-s219/frame_02.png",
+          "sha256": "3c76970ec15b3ae421d10524454769fbe3d5502a92bb23cd4a494126beb24667",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "rose-creative-s219/frame_03.png",
+          "sha256": "25bcc0d11b3473727317441f96cf7e48ecc8d0232ddac2e0ee5bf71b815d842e",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "rose-creative-s219/frame_04.png",
+          "sha256": "a166a0de727ff48fc983327fc69cfbbe2f7507513c87668aff1f286456598678",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "ec9a8eb0c56a65c04050cab063f328c855b68e8f85371da56fc793dce2302b71"
+    },
+    {
+      "id": "dandelion-creative-s73",
+      "scene": "dandelion",
+      "title": "A wish in the wind",
+      "captions": [
+        "Macro nature photograph of one white dandelion seed head on one green stem in a grassy meadow. Fixed side camera, softly blurred green background, same seed head and stem. The round white seed head is intact.",
+        "Same scene. A breeze lifts a few white seeds away toward the right.",
+        "Same scene. Many seeds drift to the right, leaving the left half of the seed head exposed.",
+        "Same scene. Most seeds have blown away, leaving the nearly bare seed head on the same stem."
+      ],
+      "transitions": [
+        "",
+        "A breeze lifts a few white seeds away toward the right.",
+        "Many seeds drift to the right, leaving the left half of the seed head exposed.",
+        "Most seeds have blown away, leaving the nearly bare seed head on the same stem."
+      ],
+      "seed": 73,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "Seeds appear in flight while the seed head remains almost intact; requested progressive seed loss is absent.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "dandelion-creative-s73/frame_01.png",
+          "sha256": "e2513b9c02198763e54e79bc120f1eb58634dd6f02b83744551d0f41bd9d94b7",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "dandelion-creative-s73/frame_02.png",
+          "sha256": "2bb3c65e4ebafca8cd245c9bb3769ef4fb10aabec46bbd4fcb6cbb8c4f3f336a",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "dandelion-creative-s73/frame_03.png",
+          "sha256": "2c30187ad38e6f7f0c91ea2f37ceac8e921a7a87a18859e14ea067e843e64a0a",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "dandelion-creative-s73/frame_04.png",
+          "sha256": "7370952ac428404b42b12813313326ceca17ad5962d3242217f6627a21772b15",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "3e9f628216e90d141f23f16d6d972e2cdf54ac3a133b6209d92770df599ab5bc"
+    },
+    {
+      "id": "dandelion-creative-s219",
+      "scene": "dandelion",
+      "title": "A wish in the wind",
+      "captions": [
+        "Macro nature photograph of one white dandelion seed head on one green stem in a grassy meadow. Fixed side camera, softly blurred green background, same seed head and stem. The round white seed head is intact.",
+        "Same scene. A breeze lifts a few white seeds away toward the right.",
+        "Same scene. Many seeds drift to the right, leaving the left half of the seed head exposed.",
+        "Same scene. Most seeds have blown away, leaving the nearly bare seed head on the same stem."
+      ],
+      "transitions": [
+        "",
+        "A breeze lifts a few white seeds away toward the right.",
+        "Many seeds drift to the right, leaving the left half of the seed head exposed.",
+        "Most seeds have blown away, leaving the nearly bare seed head on the same stem."
+      ],
+      "seed": 219,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The final head becomes full again after seeds drift away; seed conservation/state progression fails.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "dandelion-creative-s219/frame_01.png",
+          "sha256": "ccd41bab5b1a228d97e5fc2af899da0d0c7c5f21c7f01ce8a083fb2b220092ad",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "dandelion-creative-s219/frame_02.png",
+          "sha256": "d3594d6bbc07bd32a131a626758cbb949f723e68510357015625c657f46671ae",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "dandelion-creative-s219/frame_03.png",
+          "sha256": "c2559834ce54238e9e8133254cdbd58335b77392680bf2a643a67594a7890d02",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "dandelion-creative-s219/frame_04.png",
+          "sha256": "66e533ca16d89143e3c7bd0997326001329f5551fbc5bb25ae69f2338a5b6e9e",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "5b0096a27535ff1b426614bb48b66f3413d881ec7c1dfd7680872438d81cdadd"
+    },
+    {
+      "id": "terrace-creative-s73",
+      "scene": "terrace",
+      "title": "A terrace through the evening",
+      "captions": [
+        "Architectural photograph of a small stone terrace with a wooden bench and a potted olive tree beside a white wall. Fixed camera, same furniture and geometry. One wall lamp is mounted beside the bench. Time-lapse from afternoon into night. The terrace is sunlit in late afternoon, the wall lamp is off.",
+        "Same scene. Warm sunset light grazes the white wall and bench.",
+        "Same scene. At blue hour the wall lamp turns on, casting a warm pool of light.",
+        "Same scene. At night the lamp illuminates the bench and olive tree against a deep blue sky."
+      ],
+      "transitions": [
+        "",
+        "Warm sunset light grazes the white wall and bench.",
+        "At blue hour the wall lamp turns on, casting a warm pool of light.",
+        "At night the lamp illuminates the bench and olive tree against a deep blue sky."
+      ],
+      "seed": 73,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The lamp is already illuminated at the start and changes in daylight are small; requested afternoon-to-night transition is incomplete.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "terrace-creative-s73/frame_01.png",
+          "sha256": "a1049297f9efe01224b269b479f88ee2e15f3ba05db035ac4b96a9b0bd40927b",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "terrace-creative-s73/frame_02.png",
+          "sha256": "4008545267fb062f4cc37010e795525e4ec510e46cbafbfe3a7172b714bc910f",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "terrace-creative-s73/frame_03.png",
+          "sha256": "447620855ac41965b4361c0a1375b7df1961156c84c19fc9975d8e1c0c0d0cdd",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "terrace-creative-s73/frame_04.png",
+          "sha256": "b30e813ee1b7abebaf4d41bcf41aebccca3b0e2388220834880c24f8bc4cfa8d",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "3d92eb6e331d24e674e403b8d4eb4a31ffe9ed1906fb5b31bf73dab69ec12b9e"
+    },
+    {
+      "id": "terrace-creative-s219",
+      "scene": "terrace",
+      "title": "A terrace through the evening",
+      "captions": [
+        "Architectural photograph of a small stone terrace with a wooden bench and a potted olive tree beside a white wall. Fixed camera, same furniture and geometry. One wall lamp is mounted beside the bench. Time-lapse from afternoon into night. The terrace is sunlit in late afternoon, the wall lamp is off.",
+        "Same scene. Warm sunset light grazes the white wall and bench.",
+        "Same scene. At blue hour the wall lamp turns on, casting a warm pool of light.",
+        "Same scene. At night the lamp illuminates the bench and olive tree against a deep blue sky."
+      ],
+      "transitions": [
+        "",
+        "Warm sunset light grazes the white wall and bench.",
+        "At blue hour the wall lamp turns on, casting a warm pool of light.",
+        "At night the lamp illuminates the bench and olive tree against a deep blue sky."
+      ],
+      "seed": 219,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The terrace stays dark with a bright wall patch throughout; lamp/light relation and temporal progression are ambiguous.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "terrace-creative-s219/frame_01.png",
+          "sha256": "a7afd690955ffdd000999f30607ff9b51ed33450b431f9c0f18bcf367fba9888",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "terrace-creative-s219/frame_02.png",
+          "sha256": "f21793da885dd0980050a78231d2c6e575f05135d887ecdbdc64dcd237641b87",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "terrace-creative-s219/frame_03.png",
+          "sha256": "cdc9abb5c9044697e9000c6fdc5134270722b6c7577fde16617f31a0fcf8395e",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "terrace-creative-s219/frame_04.png",
+          "sha256": "0300879419953cb669a308757747a19318a30dc8623087cad17709472a3bac96",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "1cb05b911820825ceb601f2a2f5637b44620bf26825c879a5fa8cbb2e9405755"
+    },
+    {
+      "id": "peony-paint-creative-s73",
+      "scene": "peony-paint",
+      "title": "A watercolor takes shape",
+      "captions": [
+        "Overhead photograph of one sheet of white watercolor paper lying flat on a wooden desk. The same floral watercolor is developed by an artist between exposures, artist and brushes outside the frame. Fixed camera, paper edges remain in place. A light pencil outline of a single peony flower and two leaves is visible on the paper.",
+        "Same scene. Pale pink watercolor washes fill the peony petals.",
+        "Same scene. Deeper pink shadows define the layers of petals.",
+        "Same scene. Green watercolor fills the two leaves, completing the single-flower painting."
+      ],
+      "transitions": [
+        "",
+        "Pale pink watercolor washes fill the peony petals.",
+        "Deeper pink shadows define the layers of petals.",
+        "Green watercolor fills the two leaves, completing the single-flower painting."
+      ],
+      "seed": 73,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The first frame is already painted, and drawn petal/leaf contours change rather than showing the requested staged watercolor development.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "peony-paint-creative-s73/frame_01.png",
+          "sha256": "ad134aa45bb975707325e9969de7ad9867a4ecf9f4769574c3f1e49ae532d280",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "peony-paint-creative-s73/frame_02.png",
+          "sha256": "36dedb2b4c9de0a4da6885719b80a3b3f3c24360610cc7bc36bb2e2fe4d3ce1c",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "peony-paint-creative-s73/frame_03.png",
+          "sha256": "dc356077cce4daed391f3b8f7ccc314c8588b51831a5896c148f92e43bf23e17",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "peony-paint-creative-s73/frame_04.png",
+          "sha256": "b55798361e8035bf5c6d8fe01bd0e80ced8487c2461304b6a942d8f942a5c3c5",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "a9987241f624bd6c8980d7707bc530814c93aaea96ffbbf50ace6605c8b83f8a"
+    },
+    {
+      "id": "peony-paint-creative-s219",
+      "scene": "peony-paint",
+      "title": "A watercolor takes shape",
+      "captions": [
+        "Overhead photograph of one sheet of white watercolor paper lying flat on a wooden desk. The same floral watercolor is developed by an artist between exposures, artist and brushes outside the frame. Fixed camera, paper edges remain in place. A light pencil outline of a single peony flower and two leaves is visible on the paper.",
+        "Same scene. Pale pink watercolor washes fill the peony petals.",
+        "Same scene. Deeper pink shadows define the layers of petals.",
+        "Same scene. Green watercolor fills the two leaves, completing the single-flower painting."
+      ],
+      "transitions": [
+        "",
+        "Pale pink watercolor washes fill the peony petals.",
+        "Deeper pink shadows define the layers of petals.",
+        "Green watercolor fills the two leaves, completing the single-flower painting."
+      ],
+      "seed": 219,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "Multiple simultaneous brush-holding hands appear around one drawing; anatomy/action ambiguity and no clean outline-to-color progression.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "peony-paint-creative-s219/frame_01.png",
+          "sha256": "c0dbe8e1c559fc0f743a941eb92934d5826876a9849222401782192bf0bdb24d",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "peony-paint-creative-s219/frame_02.png",
+          "sha256": "63383c61b610dbbc6a27c7753f9b06ed56d74ae64df919943ae279a7f86c9b9a",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "peony-paint-creative-s219/frame_03.png",
+          "sha256": "92ad373455508df3227075553bb48323ecf22451d498670fb1549fe2d2f9ca6a",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "peony-paint-creative-s219/frame_04.png",
+          "sha256": "6d64e4ced07ce1da87aca1bb49f3587a7de4de1d5a9e072ae4a3c2213e115a47",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "63b620ba64b9b6a60a51add94e4f17b52fb7c0ad7d84f76bb06c8adfe93b7a90"
+    },
+    {
+      "id": "orange-peel-creative-s73",
+      "scene": "orange-peel",
+      "title": "Peeling a mandarin",
+      "captions": [
+        "Food still-life photograph of one small mandarin orange on a white ceramic plate on a dark wooden table. Fixed camera, same fruit and plate. A person peels the fruit between photographs off camera; no hands visible. An intact unpeeled mandarin rests on the plate.",
+        "Same scene. A small section of peel has been removed from the top and rests beside the fruit.",
+        "Same scene. The peel has been opened halfway, revealing orange segments still joined together.",
+        "Same scene. The fully peeled mandarin rests beside the opened orange peel on the plate."
+      ],
+      "transitions": [
+        "",
+        "A small section of peel has been removed from the top and rests beside the fruit.",
+        "The peel has been opened halfway, revealing orange segments still joined together.",
+        "The fully peeled mandarin rests beside the opened orange peel on the plate."
+      ],
+      "seed": 73,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The orange becomes a cross-section-like sliced object rather than a peeled joined mandarin; physical operation mismatch.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "orange-peel-creative-s73/frame_01.png",
+          "sha256": "1cb5a7ecb16ff2e911e934a52d2e1e2bcd8fd65ff5fd10e78b66e61e73053fab",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "orange-peel-creative-s73/frame_02.png",
+          "sha256": "4b1aa38a3719385d226417ba67fddea882b47c5fcc0b0beb43be5d10b965acd0",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "orange-peel-creative-s73/frame_03.png",
+          "sha256": "bf5796281dba03d3db4f5450cda479562b0a8bf197c7252a5a4434d5ce36288b",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "orange-peel-creative-s73/frame_04.png",
+          "sha256": "1566bcd8155b814ec9e157d2ef7495ff97c4c2f6ce16cfc58d6660426b5e01cb",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "559fecaa4f8415685208fef111cd97ef9f620622f0b0371dddc1be2d8088e966"
+    },
+    {
+      "id": "orange-peel-creative-s219",
+      "scene": "orange-peel",
+      "title": "Peeling a mandarin",
+      "captions": [
+        "Food still-life photograph of one small mandarin orange on a white ceramic plate on a dark wooden table. Fixed camera, same fruit and plate. A person peels the fruit between photographs off camera; no hands visible. An intact unpeeled mandarin rests on the plate.",
+        "Same scene. A small section of peel has been removed from the top and rests beside the fruit.",
+        "Same scene. The peel has been opened halfway, revealing orange segments still joined together.",
+        "Same scene. The fully peeled mandarin rests beside the opened orange peel on the plate."
+      ],
+      "transitions": [
+        "",
+        "A small section of peel has been removed from the top and rests beside the fruit.",
+        "The peel has been opened halfway, revealing orange segments still joined together.",
+        "The fully peeled mandarin rests beside the opened orange peel on the plate."
+      ],
+      "seed": 219,
+      "status": "success",
+      "decision": "hold",
+      "reason": "Additional fruit/peel forms and cropped hands are ambiguous; held rather than claiming a clean one-fruit peeling sequence.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "orange-peel-creative-s219/frame_01.png",
+          "sha256": "0c9eb9f38d147c2c78aac4227eda4428655ae0d7ee4db9f072f0e6d1a18ad8c9",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "orange-peel-creative-s219/frame_02.png",
+          "sha256": "1297806fb13a54b415a10d722e858be1d3bfb4a366a0261b05ec0ea599355cc8",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "orange-peel-creative-s219/frame_03.png",
+          "sha256": "a3e83012bce5387936a2f86839bb1007134e80c0d6c707d3a302f27a6fe8804a",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "orange-peel-creative-s219/frame_04.png",
+          "sha256": "e4499ae1ea74ffe7c04f381a201de865bc7b70fca94b0b3194dac257961581f7",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "53ae5696eaff2c8a5a9fd42f1b5c06edd56efa453477c25fe95a046461ac3901"
+    }
+  ]
+}

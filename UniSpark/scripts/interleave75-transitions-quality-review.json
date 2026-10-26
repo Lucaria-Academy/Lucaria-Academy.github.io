@@ -1,0 +1,1857 @@
+{
+  "date": "2026-10-26",
+  "checkpoint_step": 75000,
+  "remote_target": "PANProj4 (59220174)",
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "checkpoint": {
+    "oss": "oss://antsys-ssdata-dataset-hy-video2/TRAINING/panjiancheng/works_ckpt/SFT/UniBagel-Qwen35-A4-24-SFT-Interleave-0924/checkpoints/0075000/model.safetensors",
+    "weight": "non-EMA",
+    "size": 65395436792,
+    "etag": "545DB12386E1461C7C14984042907E10-400"
+  },
+  "sampling": {
+    "mode": "joint_all_frames",
+    "frames": 4,
+    "steps": 50,
+    "cfg": 4,
+    "width": 576,
+    "height": 384,
+    "explicit_transitions": true
+  },
+  "generated": 32,
+  "selected": 1,
+  "review_method": "Every candidate reviewed as a four-frame sequence, with original-resolution follow-up on selected candidates. Check anatomy, geometry, contact/support, plausible state changes, identity and scene continuity, actual progression, and prompt fidelity. Hold ambiguous details. Manual qualitative showcase selection, not a benchmark or a guarantee of error-free images.",
+  "local_originals": "/Users/jianchengpan/Documents/Bagel/outputs/unispark-interleave75-transitions-20261026",
+  "remote_originals": "/root/rdev/users/panjiancheng.pjc/inference-results/unispark-interleave75/20261026-transitions",
+  "candidates": [
+    {
+      "id": "fox-transition-snow-transition-s20261026",
+      "scene": "fox-snow",
+      "title": "A fox listening in the snow",
+      "captions": [
+        "Wildlife photograph of one red fox with a white chest and black lower legs standing on a snowy clearing beside a small spruce. Full animal visible, side view, fixed camera, soft winter daylight, same fox and landscape. The fox stands still facing right, ears upright.",
+        "Same scene and subject. The fox lowers its head toward the snow, ears pointing forward.",
+        "Same scene and subject. The fox pushes its muzzle into the soft snow while keeping all four paws on the ground.",
+        "Same scene and subject. The fox lifts its head again with a little snow on its nose."
+      ],
+      "transitions": [
+        "",
+        "The fox lowers its head toward the snow, ears pointing forward.",
+        "The fox pushes its muzzle into the soft snow while keeping all four paws on the ground.",
+        "The fox lifts its head again with a little snow on its nose."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The head turns and dips, but the requested muzzle-in-snow action and snow-covered return are absent.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "fox-transition-snow-transition-s20261026/frame_01.png",
+          "sha256": "d511a9552f9c6bc22e5f6e114b27d1208f51cb3905655a05c2aec50843cd5c8d",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "fox-transition-snow-transition-s20261026/frame_02.png",
+          "sha256": "ee390f3991c026ddfb736b63e55f810b3d607a4c35ac5074c962bd2e99c691a6",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "fox-transition-snow-transition-s20261026/frame_03.png",
+          "sha256": "2a7630330ee3b12861a67442b553e3ebf49cdf51c5ceab260075a98f25567830",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "fox-transition-snow-transition-s20261026/frame_04.png",
+          "sha256": "d7c04f52d6072a73837ced22bd3e694b082b937a3e1804cd70ef3937ff5d5581",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "61a422475f9d90b945b158c994e5884bc26f2d478063b0a22790084cffe03600"
+    },
+    {
+      "id": "fox-transition-snow-transition-s20262026",
+      "scene": "fox-snow",
+      "title": "A fox listening in the snow",
+      "captions": [
+        "Wildlife photograph of one red fox with a white chest and black lower legs standing on a snowy clearing beside a small spruce. Full animal visible, side view, fixed camera, soft winter daylight, same fox and landscape. The fox stands still facing right, ears upright.",
+        "Same scene and subject. The fox lowers its head toward the snow, ears pointing forward.",
+        "Same scene and subject. The fox pushes its muzzle into the soft snow while keeping all four paws on the ground.",
+        "Same scene and subject. The fox lifts its head again with a little snow on its nose."
+      ],
+      "transitions": [
+        "",
+        "The fox lowers its head toward the snow, ears pointing forward.",
+        "The fox pushes its muzzle into the soft snow while keeping all four paws on the ground.",
+        "The fox lifts its head again with a little snow on its nose."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The fox lowers its head but never visibly investigates under the snow or returns as requested.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "fox-transition-snow-transition-s20262026/frame_01.png",
+          "sha256": "5d004e542b15adaa73932e0427e1e0b59ac6efdc3d539fb6f603703a1a95ebdb",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "fox-transition-snow-transition-s20262026/frame_02.png",
+          "sha256": "31626aa457e88c368f12209236e6621fa970270b88a09b71d5d3e75880501e33",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "fox-transition-snow-transition-s20262026/frame_03.png",
+          "sha256": "327cbb9414e18487e1c1c542713eafff0b143467b612817a2ca4516740b3d516",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "fox-transition-snow-transition-s20262026/frame_04.png",
+          "sha256": "d0c99d1f493a80f26afda228a2f9d79b84f9de04201b86fc0be81714a0d19c29",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "f19f700464e2b9db8571b91d799e7bdbac837b52f5abaa4c4ce0c02a689c9eda"
+    },
+    {
+      "id": "owl-turn-transition-s20261026",
+      "scene": "owl-turn",
+      "title": "An owl follows a sound",
+      "captions": [
+        "Wildlife portrait photograph of one tawny owl perched on a thick oak branch, its body facing the camera. Both feet grip the same branch, blurred autumn woodland behind it, fixed camera and soft daylight. The owl looks toward the left of the image.",
+        "Same scene and subject. The owl turns its head toward the camera.",
+        "Same scene and subject. The owl looks toward the right of the image, keeping its body facing forward.",
+        "Same scene and subject. The owl looks directly toward the camera again."
+      ],
+      "transitions": [
+        "",
+        "The owl turns its head toward the camera.",
+        "The owl looks toward the right of the image, keeping its body facing forward.",
+        "The owl looks directly toward the camera again."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The owl changes its head angle only slightly, without a clear left/front/right sequence.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "owl-turn-transition-s20261026/frame_01.png",
+          "sha256": "a4afde95cbae1255a7eac0ac5e5b91ba1abe757d6f39f7b23587a7b58bdee7a2",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "owl-turn-transition-s20261026/frame_02.png",
+          "sha256": "34d62b8f6727ec85b61f08ada561919e7cba8a49ff9b1f51ebd213bfdf96b316",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "owl-turn-transition-s20261026/frame_03.png",
+          "sha256": "5766bbefaf2c6950380b241c9ac13a4a08d4170a91beb5bd8341a6e8f9f19d16",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "owl-turn-transition-s20261026/frame_04.png",
+          "sha256": "13c03ab467a0afb226a5eeed9fb26502888456040c2d144ea7d58f9c2eae72a0",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "7bc0e0999d2ae81909888d1cfa270b4904d2d1f12766f409cdc8717b13b3172b"
+    },
+    {
+      "id": "owl-turn-transition-s20262026",
+      "scene": "owl-turn",
+      "title": "An owl follows a sound",
+      "captions": [
+        "Wildlife portrait photograph of one tawny owl perched on a thick oak branch, its body facing the camera. Both feet grip the same branch, blurred autumn woodland behind it, fixed camera and soft daylight. The owl looks toward the left of the image.",
+        "Same scene and subject. The owl turns its head toward the camera.",
+        "Same scene and subject. The owl looks toward the right of the image, keeping its body facing forward.",
+        "Same scene and subject. The owl looks directly toward the camera again."
+      ],
+      "transitions": [
+        "",
+        "The owl turns its head toward the camera.",
+        "The owl looks toward the right of the image, keeping its body facing forward.",
+        "The owl looks directly toward the camera again."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "Near-static front-facing owl; the requested directional progression is absent.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "owl-turn-transition-s20262026/frame_01.png",
+          "sha256": "7d4ce771d1d642181a25f3be18c57535477a39c6acb552819b6fec9f09f44ae0",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "owl-turn-transition-s20262026/frame_02.png",
+          "sha256": "8834e2f7020d73a770d13d15fa575b30888a1b4371262982be1a7ac230f8ef02",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "owl-turn-transition-s20262026/frame_03.png",
+          "sha256": "9040dd746099eb8c9670f2995bf5c0d5f380876ae0f5d33065d601a69451a301",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "owl-turn-transition-s20262026/frame_04.png",
+          "sha256": "21c250f90cbcd0db16cca94c8d9eef20836dd65e296872d320d182b26836cb27",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "29d12b6843c6c844f2904ba93635605bac15e5f6d823a5c6fd9a099780111d41"
+    },
+    {
+      "id": "red-panda-transition-s20261026",
+      "scene": "red-panda",
+      "title": "A red panda investigates bamboo",
+      "captions": [
+        "Wildlife photograph of one red panda sitting on a broad horizontal mossy log in a leafy forest. Its ringed tail rests along the log, a leafy bamboo twig grows beside its head. Fixed camera, complete animal visible, same red panda and log. The red panda sits upright and looks at the bamboo leaves.",
+        "Same scene and subject. The red panda leans its nose toward the bamboo leaves.",
+        "Same scene and subject. The red panda touches the leaves with its nose.",
+        "Same scene and subject. The red panda sits back upright and looks toward the camera."
+      ],
+      "transitions": [
+        "",
+        "The red panda leans its nose toward the bamboo leaves.",
+        "The red panda touches the leaves with its nose.",
+        "The red panda sits back upright and looks toward the camera."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "Tail structure duplicates/curls unnaturally and body/species identity is unreliable.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "red-panda-transition-s20261026/frame_01.png",
+          "sha256": "3018c156f54d9a24f7ede0ffc2a12843febb2f5e00a84a84525a99c6d9f0ebca",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "red-panda-transition-s20261026/frame_02.png",
+          "sha256": "93a9ecd9fa42ce7cb45605c97ca8d3cd060f84c36ff870fe8eb0660200d03420",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "red-panda-transition-s20261026/frame_03.png",
+          "sha256": "b70d423853eb932f262806c7b73c83a300f5aa02dfa622263602d914be5def6f",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "red-panda-transition-s20261026/frame_04.png",
+          "sha256": "d17aada097a88ab7e75989e869a4c7e2d29888c9d21df22d959c546eb282ac75",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "ea18baad288e8ec99b021dc79f3f0a83096e47dbb24f4d39ec53be5b0ea48419"
+    },
+    {
+      "id": "red-panda-transition-s20262026",
+      "scene": "red-panda",
+      "title": "A red panda investigates bamboo",
+      "captions": [
+        "Wildlife photograph of one red panda sitting on a broad horizontal mossy log in a leafy forest. Its ringed tail rests along the log, a leafy bamboo twig grows beside its head. Fixed camera, complete animal visible, same red panda and log. The red panda sits upright and looks at the bamboo leaves.",
+        "Same scene and subject. The red panda leans its nose toward the bamboo leaves.",
+        "Same scene and subject. The red panda touches the leaves with its nose.",
+        "Same scene and subject. The red panda sits back upright and looks toward the camera."
+      ],
+      "transitions": [
+        "",
+        "The red panda leans its nose toward the bamboo leaves.",
+        "The red panda touches the leaves with its nose.",
+        "The red panda sits back upright and looks toward the camera."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "Tail has multiple branch-like extensions; severe anatomy failure.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "red-panda-transition-s20262026/frame_01.png",
+          "sha256": "600b432db4c9f3c1634b66fab72686e1ba48445e28597c9473996dc196232e42",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "red-panda-transition-s20262026/frame_02.png",
+          "sha256": "ab08d061a82e0cfbfb310632c91a0ae6644e380422e834b6cda2ac01a412d7a1",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "red-panda-transition-s20262026/frame_03.png",
+          "sha256": "df77ac261187c56b7a6ed6cb5c7af437a5926912da7612bf7b2e2197ae7a29f4",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "red-panda-transition-s20262026/frame_04.png",
+          "sha256": "333c2cb6b06aa58e9e0585b62ea4219100ca12701d51023d0531ed4aafd54068",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "370e60ce5a1d31dc19482a5a1af7f883835b0c5b0f23f243d261596f0a9770d3"
+    },
+    {
+      "id": "duck-dive-transition-s20261026",
+      "scene": "duck-dive",
+      "title": "A mallard feeding",
+      "captions": [
+        "Nature photograph of one male mallard floating in a quiet pond near green reeds. Emerald head, yellow bill, brown chest and gray body, fixed water-level camera, same duck and pond, realistic reflections. The duck floats horizontally with its head above the water.",
+        "Same scene and subject. The duck lowers its bill into the water.",
+        "Same scene and subject. The duck tips forward to feed underwater, head submerged and tail pointing upward.",
+        "Same scene and subject. The duck floats horizontally again with its green head above the water."
+      ],
+      "transitions": [
+        "",
+        "The duck lowers its bill into the water.",
+        "The duck tips forward to feed underwater, head submerged and tail pointing upward.",
+        "The duck floats horizontally again with its green head above the water."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The duck dips its bill but does not show a tail-up feeding posture or clear return.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "duck-dive-transition-s20261026/frame_01.png",
+          "sha256": "41bf0070ae79b0d60f6b51973d77c845e75ceafefb4e3bc74d06a4b0ebfd9b77",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "duck-dive-transition-s20261026/frame_02.png",
+          "sha256": "1684c49742737a38244f0cb208d53fc9a708a7b6a4e35a343b91d3bb6eb6d94c",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "duck-dive-transition-s20261026/frame_03.png",
+          "sha256": "59c9417c9afe0dd740be349184adfdf47e9949130de3f9ed20565c0f577a8907",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "duck-dive-transition-s20261026/frame_04.png",
+          "sha256": "5c2cf8922864faaa512963760282d02999cf458c65dbbd324dbd366cee6f8451",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "0b13f6cefca19138d648615f03c9943177810717e2e0a880c724fe54dbb46b2c"
+    },
+    {
+      "id": "duck-dive-transition-s20262026",
+      "scene": "duck-dive",
+      "title": "A mallard feeding",
+      "captions": [
+        "Nature photograph of one male mallard floating in a quiet pond near green reeds. Emerald head, yellow bill, brown chest and gray body, fixed water-level camera, same duck and pond, realistic reflections. The duck floats horizontally with its head above the water.",
+        "Same scene and subject. The duck lowers its bill into the water.",
+        "Same scene and subject. The duck tips forward to feed underwater, head submerged and tail pointing upward.",
+        "Same scene and subject. The duck floats horizontally again with its green head above the water."
+      ],
+      "transitions": [
+        "",
+        "The duck lowers its bill into the water.",
+        "The duck tips forward to feed underwater, head submerged and tail pointing upward.",
+        "The duck floats horizontally again with its green head above the water."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The duck partly dips its head but does not complete the requested feeding sequence.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "duck-dive-transition-s20262026/frame_01.png",
+          "sha256": "e53399a4971b53c0dafc121a17c90489759fb163048c47db8597fdac81a5fbeb",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "duck-dive-transition-s20262026/frame_02.png",
+          "sha256": "6c0274d2bfe20555d04b7a62bd4d7356d417f3e6a6d87e1202b2e693b2462361",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "duck-dive-transition-s20262026/frame_03.png",
+          "sha256": "1eb4d96936ab40fc8b1188fb559af678bb1b7425f604b43be598b751db9e57a7",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "duck-dive-transition-s20262026/frame_04.png",
+          "sha256": "1fa2eb5c8178a32c0487f1a030b9e9d686cc74450c5c043217568edc87f60112",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "30c8d7782f348d0674f9a80479e8fbc70d20e6db262d2de34da232f11a207a7b"
+    },
+    {
+      "id": "tulip-bloom-transition-s20261026",
+      "scene": "tulip-bloom",
+      "title": "A tulip opens to the light",
+      "captions": [
+        "Botanical time-lapse photograph of a single red tulip on one green stem with two green leaves in a matte cream ceramic pot on a windowsill. Fixed camera, neutral pale background, consistent pot, leaves and lighting. The red tulip bud is tightly closed.",
+        "Same scene and subject. The red petals begin to part at their tips.",
+        "Same scene and subject. The tulip opens into a broad cup, its red petals spreading outward.",
+        "Same scene and subject. The tulip is fully open, revealing dark stamens in its center."
+      ],
+      "transitions": [
+        "",
+        "The red petals begin to part at their tips.",
+        "The tulip opens into a broad cup, its red petals spreading outward.",
+        "The tulip is fully open, revealing dark stamens in its center."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "not_selected",
+      "reason": "Plausible gradual opening, but a tulip sequence is already selected from the first batch.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "tulip-bloom-transition-s20261026/frame_01.png",
+          "sha256": "bd6a5a9073bbc1187da97765ee572419e378801a81735ded41b52daf5697b7e0",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "tulip-bloom-transition-s20261026/frame_02.png",
+          "sha256": "a1fb0bd42d0e323d65bbce358acbccde173f49185b079a626ce4f885a0e347c7",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "tulip-bloom-transition-s20261026/frame_03.png",
+          "sha256": "a45af873e17d660a382d28373ac51182fa364342e847c71630c1f73a4c605bd0",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "tulip-bloom-transition-s20261026/frame_04.png",
+          "sha256": "954104c41e2fa7c538b7d5f0d4caf6608bced4b5d1d09eb56c1d9737efc551e4",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "e4b6251bcbcc80a0a1ed10684e86f55dd39ea37b1ab5aaee19ee65def7c37afd"
+    },
+    {
+      "id": "tulip-bloom-transition-s20262026",
+      "scene": "tulip-bloom",
+      "title": "A tulip opens to the light",
+      "captions": [
+        "Botanical time-lapse photograph of a single red tulip on one green stem with two green leaves in a matte cream ceramic pot on a windowsill. Fixed camera, neutral pale background, consistent pot, leaves and lighting. The red tulip bud is tightly closed.",
+        "Same scene and subject. The red petals begin to part at their tips.",
+        "Same scene and subject. The tulip opens into a broad cup, its red petals spreading outward.",
+        "Same scene and subject. The tulip is fully open, revealing dark stamens in its center."
+      ],
+      "transitions": [
+        "",
+        "The red petals begin to part at their tips.",
+        "The tulip opens into a broad cup, its red petals spreading outward.",
+        "The tulip is fully open, revealing dark stamens in its center."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "not_selected",
+      "reason": "Plausible bud-to-open progression; same theme already represented in the first batch.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "tulip-bloom-transition-s20262026/frame_01.png",
+          "sha256": "a8868fbf98fe4fa02c233c973d3824347a096c253f6a43922bdfb97d8a236ff6",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "tulip-bloom-transition-s20262026/frame_02.png",
+          "sha256": "45ad6916dc3d6e5d493ceb389e7225f2d3c6d16359830164f36be2b858619033",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "tulip-bloom-transition-s20262026/frame_03.png",
+          "sha256": "d94addd1a23c85367eef373a0ae5df88dc5387e05f8b571e3e6e8e5f52dfa6be",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "tulip-bloom-transition-s20262026/frame_04.png",
+          "sha256": "404c67bb027626ee79aa99ce34996a38ee94af1bbf3876a0a63d8c2f26c01b0b",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "582194e44e4bd44ed0612bfdf7e8192b32500eecd87529c8cb61ec094162eac7"
+    },
+    {
+      "id": "ice-melt-transition-s20261026",
+      "scene": "ice-melt",
+      "title": "An ice cube becomes a puddle",
+      "captions": [
+        "Macro product photograph of one clear ice cube resting on a dark gray slate surface. Plain background, fixed camera, consistent soft side lighting, no other objects. A time-lapse at room temperature. A complete ice cube with sharp square edges rests on the slate.",
+        "Same scene and subject. The ice cube has rounded edges and a small pool of water around its base.",
+        "Same scene and subject. A smaller rounded piece of ice sits in a wider shallow puddle.",
+        "Same scene and subject. Only a clear shallow puddle remains on the slate, with no solid ice."
+      ],
+      "transitions": [
+        "",
+        "The ice cube has rounded edges and a small pool of water around its base.",
+        "A smaller rounded piece of ice sits in a wider shallow puddle.",
+        "Only a clear shallow puddle remains on the slate, with no solid ice."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "not_selected",
+      "reason": "The cube visibly shrinks, but a raised remnant remains at the requested water-only endpoint; duplicate theme not selected.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "ice-melt-transition-s20261026/frame_01.png",
+          "sha256": "e1c82f381f87bf1122d4cc48c5a4c9ff172d84ec991ce98c468a5681e2b509a5",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "ice-melt-transition-s20261026/frame_02.png",
+          "sha256": "5a91ec82ab6d85715c221b77da0f043b7c483aca8e95a326e8ed2249991610c9",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "ice-melt-transition-s20261026/frame_03.png",
+          "sha256": "1f736a333ca574db85371aa6de78d33c7d599bfc26800619f5bbb25dbf8e6bac",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "ice-melt-transition-s20261026/frame_04.png",
+          "sha256": "55672bd8e0d414587c7eb0cada0df03a448044cc7fd143b8eae045c105687ca5",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "c815b5b3045e665cd427d0b72418185bc5fc5917c0513b23711b1507e1324c71"
+    },
+    {
+      "id": "ice-melt-transition-s20262026",
+      "scene": "ice-melt",
+      "title": "An ice cube becomes a puddle",
+      "captions": [
+        "Macro product photograph of one clear ice cube resting on a dark gray slate surface. Plain background, fixed camera, consistent soft side lighting, no other objects. A time-lapse at room temperature. A complete ice cube with sharp square edges rests on the slate.",
+        "Same scene and subject. The ice cube has rounded edges and a small pool of water around its base.",
+        "Same scene and subject. A smaller rounded piece of ice sits in a wider shallow puddle.",
+        "Same scene and subject. Only a clear shallow puddle remains on the slate, with no solid ice."
+      ],
+      "transitions": [
+        "",
+        "The ice cube has rounded edges and a small pool of water around its base.",
+        "A smaller rounded piece of ice sits in a wider shallow puddle.",
+        "Only a clear shallow puddle remains on the slate, with no solid ice."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The slate support disappears in the final frame; scene/support continuity fails.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "ice-melt-transition-s20262026/frame_01.png",
+          "sha256": "ce546609102dae1fd0735b9dee49226030bcb26a9f598e7687b19d5d70c382b3",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "ice-melt-transition-s20262026/frame_02.png",
+          "sha256": "f99bcc29ff941144fd85f6e5c973c27ce8d931246d99ec88eb5fd6124feea0a3",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "ice-melt-transition-s20262026/frame_03.png",
+          "sha256": "09e8670af96390a3ba4f8a58f7236bb7c2a32e87e9f3d338a7ab90fd469ad91b",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "ice-melt-transition-s20262026/frame_04.png",
+          "sha256": "44cdd5ea622039bfbc92b2ca74746c3684c0789cd0e25741eb1f125d6f28e017",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "1ff9db1e493164d3583491f83dee14f872275872ac96d702d9f9fe33ca655c32"
+    },
+    {
+      "id": "popcorn-transition-s20261026",
+      "scene": "popcorn",
+      "title": "A kernel pops",
+      "captions": [
+        "High-speed macro photograph of one golden popcorn kernel on a matte black surface against a black background. Fixed camera, close-up, crisp studio lighting, one kernel only, no hands, same viewpoint. An intact golden popcorn kernel rests on the black surface.",
+        "Same scene and subject. The golden shell splits slightly and a little white starch emerges.",
+        "Same scene and subject. White popcorn expands outward from the split golden shell.",
+        "Same scene and subject. One fully popped piece of white popcorn rests on the surface with a tiny golden hull at its base."
+      ],
+      "transitions": [
+        "",
+        "The golden shell splits slightly and a little white starch emerges.",
+        "White popcorn expands outward from the split golden shell.",
+        "One fully popped piece of white popcorn rests on the surface with a tiny golden hull at its base."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The white material appears and recedes, and the final shape is not a convincing popped kernel.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "popcorn-transition-s20261026/frame_01.png",
+          "sha256": "7f4da41025da8c9a8c780ca809db08ebc3e47e9cfa1caff7604876bf318c23d9",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "popcorn-transition-s20261026/frame_02.png",
+          "sha256": "e34260731ec4de0aeb3be0f3879f24b1732c872f3f271fc0545c5d8dec7a40d2",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "popcorn-transition-s20261026/frame_03.png",
+          "sha256": "cc32fda5edfc2bf35909d33f328a1ba7be1af81fc4fe1570528a8bf6dceea531",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "popcorn-transition-s20261026/frame_04.png",
+          "sha256": "790bfcb3f268549239c5270e3d47d1d7c9b063ff55370fe0b413553306b92b96",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "959dfc712d4ba1ae9da6fea15d30324149895ce39f08c71fddeac2915879ed41"
+    },
+    {
+      "id": "popcorn-transition-s20262026",
+      "scene": "popcorn",
+      "title": "A kernel pops",
+      "captions": [
+        "High-speed macro photograph of one golden popcorn kernel on a matte black surface against a black background. Fixed camera, close-up, crisp studio lighting, one kernel only, no hands, same viewpoint. An intact golden popcorn kernel rests on the black surface.",
+        "Same scene and subject. The golden shell splits slightly and a little white starch emerges.",
+        "Same scene and subject. White popcorn expands outward from the split golden shell.",
+        "Same scene and subject. One fully popped piece of white popcorn rests on the surface with a tiny golden hull at its base."
+      ],
+      "transitions": [
+        "",
+        "The golden shell splits slightly and a little white starch emerges.",
+        "White popcorn expands outward from the split golden shell.",
+        "One fully popped piece of white popcorn rests on the surface with a tiny golden hull at its base."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The starting object is an open cup-like hull rather than an intact kernel; poor physical transformation.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "popcorn-transition-s20262026/frame_01.png",
+          "sha256": "3bfa262976312dad680c8b0f38c42b88b2234d273b354a4e093a593b58af5afa",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "popcorn-transition-s20262026/frame_02.png",
+          "sha256": "67c8a9b738823e8ab7e48987feaaa2b9f76a217eb1295673b9d928b3d1ea35a7",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "popcorn-transition-s20262026/frame_03.png",
+          "sha256": "fc952953dbec3541ab8cfd2931849ff3135b21681372e38df4380874032cee14",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "popcorn-transition-s20262026/frame_04.png",
+          "sha256": "e39080d7115403c324cb06b4c1e363e4b3aa5d17f44039c3c4c4b1b74fc56ae1",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "3b3028db208852018bc3a8038f02c8a15c2ed36b51ad86b5fd5c8c21e3b2f126"
+    },
+    {
+      "id": "paper-boat-transition-s20261026",
+      "scene": "paper-boat",
+      "title": "A paper boat drifts downstream",
+      "captions": [
+        "Photograph of one small yellow folded paper boat floating in a shallow clear stream. A smooth gray stone stays at the center of the image near the far bank, same streambed and fixed camera. Gentle current flows left to right, realistic ripples. The yellow paper boat floats to the left of the gray stone.",
+        "Same scene and subject. The yellow paper boat drifts right and approaches the stone.",
+        "Same scene and subject. The boat floats directly in front of the stone without touching it.",
+        "Same scene and subject. The boat has drifted to the right of the stone."
+      ],
+      "transitions": [
+        "",
+        "The yellow paper boat drifts right and approaches the stone.",
+        "The boat floats directly in front of the stone without touching it.",
+        "The boat has drifted to the right of the stone."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "Boats duplicate and change folded form; object conservation fails.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "paper-boat-transition-s20261026/frame_01.png",
+          "sha256": "4138066da4dc34f5a5eb203d3361649d7d118a771136620ecd47fff4bc22c629",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "paper-boat-transition-s20261026/frame_02.png",
+          "sha256": "d6a69bbf6939f4e5dabab897fb7768c437fecddf7f296e6caaae552e87eae567",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "paper-boat-transition-s20261026/frame_03.png",
+          "sha256": "0c543de3287d321e4fa403dfb6eee64d3e98d4202931e7bc627a170e31fc0985",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "paper-boat-transition-s20261026/frame_04.png",
+          "sha256": "c701430fc9df0fe43db827463ac86550a14c8e027a98ff36da061a9e35b196f8",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "1527c447112a335bf9f28b5d1d5990b093bf8f3074bf77c046507b17e568efed"
+    },
+    {
+      "id": "paper-boat-transition-s20262026",
+      "scene": "paper-boat",
+      "title": "A paper boat drifts downstream",
+      "captions": [
+        "Photograph of one small yellow folded paper boat floating in a shallow clear stream. A smooth gray stone stays at the center of the image near the far bank, same streambed and fixed camera. Gentle current flows left to right, realistic ripples. The yellow paper boat floats to the left of the gray stone.",
+        "Same scene and subject. The yellow paper boat drifts right and approaches the stone.",
+        "Same scene and subject. The boat floats directly in front of the stone without touching it.",
+        "Same scene and subject. The boat has drifted to the right of the stone."
+      ],
+      "transitions": [
+        "",
+        "The yellow paper boat drifts right and approaches the stone.",
+        "The boat floats directly in front of the stone without touching it.",
+        "The boat has drifted to the right of the stone."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The boat remains on the same side of the stone, with small rotations rather than the requested pass.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "paper-boat-transition-s20262026/frame_01.png",
+          "sha256": "66d14cb5a5f31e7407ed3ccff88cf667e15ee8eee5f2ca3f35e6ad0723354ecd",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "paper-boat-transition-s20262026/frame_02.png",
+          "sha256": "136164149cdbbfacecb9438c19e5a0e3c8feffc15cf95bd2705661dd1b6e79b3",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "paper-boat-transition-s20262026/frame_03.png",
+          "sha256": "6bf3c09ece0e68936f2b58fa78a13d999bea19711b764c867391415117c3c790",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "paper-boat-transition-s20262026/frame_04.png",
+          "sha256": "b22e37b2a592856f418b390940f8878a9aa30464b30271c89de38470ad0f8df1",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "78c5c0b224e401dd845bb8395fc3c23fd6ae3c1e8e8e409c51de7bd04e1985e6"
+    },
+    {
+      "id": "lighthouse-transition-s20261026",
+      "scene": "lighthouse",
+      "title": "A sailboat passes the lighthouse",
+      "captions": [
+        "Coastal photograph of one small white sailboat with one triangular white sail moving left to right across calm blue water. A white lighthouse with a red roof stays on the rocky island in the background. Fixed wide camera, sunny afternoon, same boat, sail and lighthouse. The sailboat is well to the left of the lighthouse.",
+        "Same scene and subject. The sailboat approaches the left side of the lighthouse.",
+        "Same scene and subject. The sailboat passes in front of the lighthouse.",
+        "Same scene and subject. The sailboat is to the right of the lighthouse, leaving a small wake."
+      ],
+      "transitions": [
+        "",
+        "The sailboat approaches the left side of the lighthouse.",
+        "The sailboat passes in front of the lighthouse.",
+        "The sailboat is to the right of the lighthouse, leaving a small wake."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "An extra sailboat appears while the lighthouse is barely represented; object conservation fails.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "lighthouse-transition-s20261026/frame_01.png",
+          "sha256": "d1d1d4c800dd6d46f030e23d363a3255c8c02317bb9f2be21af4b7bbf8ceadf6",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "lighthouse-transition-s20261026/frame_02.png",
+          "sha256": "6807cbfb6effdbacc7a2d5f8bbf34fe6d51a2cfee6f4fae38406ebeb8f1be749",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "lighthouse-transition-s20261026/frame_03.png",
+          "sha256": "15294c67c7e76e27739e3537e7fbb6ec62b754b6c272b40b4738fccce7626a11",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "lighthouse-transition-s20261026/frame_04.png",
+          "sha256": "71f28269de5c2e5d95bdb8e7ac76feb223aa153394567fdf17fdbaa982bb8814",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "1b8983d48dfb3f333bc886303cbed41a1373ef0a8bb82d8ab5ba6cf81f5020bb"
+    },
+    {
+      "id": "lighthouse-transition-s20262026",
+      "scene": "lighthouse",
+      "title": "A sailboat passes the lighthouse",
+      "captions": [
+        "Coastal photograph of one small white sailboat with one triangular white sail moving left to right across calm blue water. A white lighthouse with a red roof stays on the rocky island in the background. Fixed wide camera, sunny afternoon, same boat, sail and lighthouse. The sailboat is well to the left of the lighthouse.",
+        "Same scene and subject. The sailboat approaches the left side of the lighthouse.",
+        "Same scene and subject. The sailboat passes in front of the lighthouse.",
+        "Same scene and subject. The sailboat is to the right of the lighthouse, leaving a small wake."
+      ],
+      "transitions": [
+        "",
+        "The sailboat approaches the left side of the lighthouse.",
+        "The sailboat passes in front of the lighthouse.",
+        "The sailboat is to the right of the lighthouse, leaving a small wake."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The camera/lighthouse shift and the boat never clearly completes the requested pass.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "lighthouse-transition-s20262026/frame_01.png",
+          "sha256": "04addfd26385876bd0af3bba4bf0f954eb539732e060558b709d0862c884b9e2",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "lighthouse-transition-s20262026/frame_02.png",
+          "sha256": "8e272c119b26be31f87dd6fc115c30a03492aaf2b552e9d380c465550948960d",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "lighthouse-transition-s20262026/frame_03.png",
+          "sha256": "09bee54a75cb4e49da37fc1430bbd203a838e337f469cae5409a98e4f7d7db26",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "lighthouse-transition-s20262026/frame_04.png",
+          "sha256": "a677d94a07754685f95ad7c1b4e306dbc4d27e6c23f25f9c210a6c0e6b09cee7",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "de4a51e7f83c3bdc4e3067d14cc310bc77033ddd9927679ebe499dfca43999e2"
+    },
+    {
+      "id": "lantern-dusk-transition-s20261026",
+      "scene": "lantern-dusk",
+      "title": "A lantern at blue hour",
+      "captions": [
+        "Photograph of a single warm paper lantern hanging from the wooden eave of a small Japanese garden pavilion. A stone path and still pond behind it. Fixed camera, unchanged architecture and lantern, a time-lapse from late afternoon into evening. The garden is bright in late afternoon and the lantern is unlit.",
+        "Same scene and subject. The garden grows dimmer near sunset, and the lantern begins to glow.",
+        "Same scene and subject. At dusk the lantern glows warm orange against the blue garden.",
+        "Same scene and subject. After sunset the warm lantern illuminates the nearby wooden eave while the pond and garden are dark blue."
+      ],
+      "transitions": [
+        "",
+        "The garden grows dimmer near sunset, and the lantern begins to glow.",
+        "At dusk the lantern glows warm orange against the blue garden.",
+        "After sunset the warm lantern illuminates the nearby wooden eave while the pond and garden are dark blue."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The lantern is absent initially and appears abruptly, with little day-to-night transition.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "lantern-dusk-transition-s20261026/frame_01.png",
+          "sha256": "c0398193b13afdaf59205d2920cd591786ccaf5ca0a141d5ff92c159b89c744a",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "lantern-dusk-transition-s20261026/frame_02.png",
+          "sha256": "377a1277bc3330907dec54f61a5b4a85760f17384899dbe217863469d8bb35a6",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "lantern-dusk-transition-s20261026/frame_03.png",
+          "sha256": "b9db35dcd4f1f92feb5a8584d687bd62ceb02ec51f9c62b5ce72a6fe43400961",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "lantern-dusk-transition-s20261026/frame_04.png",
+          "sha256": "3741237e585bbb83df4a0a8789bcf8d124da9250627d71452e58d361c6223b1a",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "ea28a46c4095a7e627aaee32b8593c26aeb273e080b0d1b8bde05f872c256b11"
+    },
+    {
+      "id": "lantern-dusk-transition-s20262026",
+      "scene": "lantern-dusk",
+      "title": "A lantern at blue hour",
+      "captions": [
+        "Photograph of a single warm paper lantern hanging from the wooden eave of a small Japanese garden pavilion. A stone path and still pond behind it. Fixed camera, unchanged architecture and lantern, a time-lapse from late afternoon into evening. The garden is bright in late afternoon and the lantern is unlit.",
+        "Same scene and subject. The garden grows dimmer near sunset, and the lantern begins to glow.",
+        "Same scene and subject. At dusk the lantern glows warm orange against the blue garden.",
+        "Same scene and subject. After sunset the warm lantern illuminates the nearby wooden eave while the pond and garden are dark blue."
+      ],
+      "transitions": [
+        "",
+        "The garden grows dimmer near sunset, and the lantern begins to glow.",
+        "At dusk the lantern glows warm orange against the blue garden.",
+        "After sunset the warm lantern illuminates the nearby wooden eave while the pond and garden are dark blue."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The lantern disappears in the third frame and reappears in the fourth; object continuity fails.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "lantern-dusk-transition-s20262026/frame_01.png",
+          "sha256": "000ab7111b2597dd7d2683cc64fcce26e3cf9742c324366a58805f6c4f778e3d",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "lantern-dusk-transition-s20262026/frame_02.png",
+          "sha256": "fd7e63df16a2a9d33f4792ebf744d72f5b73cb10e0bcdbf653bd60575693ac41",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "lantern-dusk-transition-s20262026/frame_03.png",
+          "sha256": "933b505727325d8aa677388d15af9bc3ada7e12c75719631d40d04ed9435c7ab",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "lantern-dusk-transition-s20262026/frame_04.png",
+          "sha256": "6573168b5dd089c1521928d354392ed53d0a8ef17c8d45c3d2f8b8437a056703",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "daa0ac1abbf025c6f963c362070b5eb9baf1414c7180b61423b63f2570ba7cc4"
+    },
+    {
+      "id": "rain-window-transition-s20261026",
+      "scene": "rain-window",
+      "title": "Rain begins at the window",
+      "captions": [
+        "Close-up photograph of the same rectangular window looking out onto a softly blurred leafy garden. The window has a dark wooden frame. Fixed indoor camera, natural overcast light, no people or lettering. The window glass is dry and the garden is visible through it.",
+        "Same scene and subject. A few separate raindrops appear on the glass.",
+        "Same scene and subject. Many raindrops bead on the window, softly blurring the garden.",
+        "Same scene and subject. Larger drops run downward in thin trails across the wet glass."
+      ],
+      "transitions": [
+        "",
+        "A few separate raindrops appear on the glass.",
+        "Many raindrops bead on the window, softly blurring the garden.",
+        "Larger drops run downward in thin trails across the wet glass."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "not_selected",
+      "reason": "Plausible accumulating droplets, but the theme is already represented by a clearer first-batch sequence.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "rain-window-transition-s20261026/frame_01.png",
+          "sha256": "ce411d9793f59eff6013fa1b47e248642cfd94ad68517362806341d656aad569",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "rain-window-transition-s20261026/frame_02.png",
+          "sha256": "27ff0b071f46d1c5d7929272f3da2d8a4515ac15a70fdbd274a7eb0994fc897a",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "rain-window-transition-s20261026/frame_03.png",
+          "sha256": "483cd0f8b25eb9a0f85ae4e856206b88a2e9628af34ec81c95daaaa93e64848e",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "rain-window-transition-s20261026/frame_04.png",
+          "sha256": "ea8bab4b9eaf897916674a8eb9b2307e5c2e086b3b32347eef79e8b5421ff95f",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "3ed76a7f6a83a13bd9b6d6ca44a360391dcc8bcfbae0f76f072c50aa3b696cd8"
+    },
+    {
+      "id": "rain-window-transition-s20262026",
+      "scene": "rain-window",
+      "title": "Rain begins at the window",
+      "captions": [
+        "Close-up photograph of the same rectangular window looking out onto a softly blurred leafy garden. The window has a dark wooden frame. Fixed indoor camera, natural overcast light, no people or lettering. The window glass is dry and the garden is visible through it.",
+        "Same scene and subject. A few separate raindrops appear on the glass.",
+        "Same scene and subject. Many raindrops bead on the window, softly blurring the garden.",
+        "Same scene and subject. Larger drops run downward in thin trails across the wet glass."
+      ],
+      "transitions": [
+        "",
+        "A few separate raindrops appear on the glass.",
+        "Many raindrops bead on the window, softly blurring the garden.",
+        "Larger drops run downward in thin trails across the wet glass."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "not_selected",
+      "reason": "Plausible rain trails, but the theme is already represented; not selected as a duplicate.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "rain-window-transition-s20262026/frame_01.png",
+          "sha256": "df960897f5ff47a1683441d8068decaf445d9b041732cf05bcaebdb6043b005d",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "rain-window-transition-s20262026/frame_02.png",
+          "sha256": "307c1363a612cea4d7bb3a513d62ca6146cee9936d4bd2d34672502365ed06e5",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "rain-window-transition-s20262026/frame_03.png",
+          "sha256": "99883e4885c1f2e64c8485f1d82595d7d4b9e20eadccb634c33a7bc336c4be3e",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "rain-window-transition-s20262026/frame_04.png",
+          "sha256": "5b072a6e261caa281b66807c36dfcb5c9127a19165401aa757e7ef941acb7951",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "c4a858287e9c3eef375abc7f8eaac732ba913904b719963b2065b4c25d027b59"
+    },
+    {
+      "id": "dog-tennis-transition-s20261026",
+      "scene": "dog-tennis",
+      "title": "A dog finds its tennis ball",
+      "captions": [
+        "Photograph of one golden retriever on a short green lawn with one yellow tennis ball in front of its nose. Full body in view, side camera, sunny garden, same dog with a blue collar, realistic anatomy, no people. The dog sits facing the tennis ball on the grass.",
+        "Same scene and subject. The dog bends its head down toward the ball.",
+        "Same scene and subject. The dog gently holds the yellow ball in its mouth.",
+        "Same scene and subject. The dog sits upright with the ball held in its mouth."
+      ],
+      "transitions": [
+        "",
+        "The dog bends its head down toward the ball.",
+        "The dog gently holds the yellow ball in its mouth.",
+        "The dog sits upright with the ball held in its mouth."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "Initial ball color and body/leg arrangement are ambiguous; the dog does not settle into the requested seated final pose.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "dog-tennis-transition-s20261026/frame_01.png",
+          "sha256": "aff6edc0977db6ba479e7fd0ee55bfb73b57db0f35a2d6b7117aef2c59539830",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "dog-tennis-transition-s20261026/frame_02.png",
+          "sha256": "b01f5317044493fa062cbb3637d6e88483aed5813b1eab1bd04c3b07757401fc",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "dog-tennis-transition-s20261026/frame_03.png",
+          "sha256": "01415162a44293704dc7581071dd25eb4abc27a3967520ef843786c48c25cc35",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "dog-tennis-transition-s20261026/frame_04.png",
+          "sha256": "eb45bb7e9ade55d1e89f53824a10b6ac2d4eb7e5d94f0ffb69e9f01963a8c3a8",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "28af97a375812372d1d3b34c8a807d2ac92b1d424bc8f16e2305ba6b8fcdde9c"
+    },
+    {
+      "id": "dog-tennis-transition-s20262026",
+      "scene": "dog-tennis",
+      "title": "A dog finds its tennis ball",
+      "captions": [
+        "Photograph of one golden retriever on a short green lawn with one yellow tennis ball in front of its nose. Full body in view, side camera, sunny garden, same dog with a blue collar, realistic anatomy, no people. The dog sits facing the tennis ball on the grass.",
+        "Same scene and subject. The dog bends its head down toward the ball.",
+        "Same scene and subject. The dog gently holds the yellow ball in its mouth.",
+        "Same scene and subject. The dog sits upright with the ball held in its mouth."
+      ],
+      "transitions": [
+        "",
+        "The dog bends its head down toward the ball.",
+        "The dog gently holds the yellow ball in its mouth.",
+        "The dog sits upright with the ball held in its mouth."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The ball disappears rather than being held in the mouth; requested object/contact continuity fails.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "dog-tennis-transition-s20262026/frame_01.png",
+          "sha256": "43df739f421ce9b067e4fd2279875e789b88838a589dadd6aeb3c506bd9e1022",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "dog-tennis-transition-s20262026/frame_02.png",
+          "sha256": "a5ecd163fb5582d2938b19e312131d018b772cd6ab846c51ac09b0965963cc48",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "dog-tennis-transition-s20262026/frame_03.png",
+          "sha256": "5faefa5c827c358d8a3fbd63bd1598b102cf1d1cd03475b0daf66c1494845535",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "dog-tennis-transition-s20262026/frame_04.png",
+          "sha256": "2281a77d16e503dec63d33f126b9e96dd8dae372576b3e687c1118905c796372",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "e4a9bd91d1b316659ece763d9d21f4e54dd91e820591c514e78a9b66917cb02a"
+    },
+    {
+      "id": "tea-pour-transition-s20261026",
+      "scene": "tea-pour",
+      "title": "Pouring tea",
+      "captions": [
+        "Close-up still-life photograph of a white porcelain teacup on a matching saucer, on a wooden table. The curved spout of a white teapot enters from the upper left, teapot handle and hands outside the frame. Fixed camera, soft window light, consistent cup and saucer. The teacup is empty and the teapot spout is above the rim.",
+        "Same scene and subject. A thin stream of amber tea falls from the spout into the cup.",
+        "Same scene and subject. Tea continues pouring and the cup is half full, with small ripples on the liquid.",
+        "Same scene and subject. The tea stream stops and the teacup is three-quarters full, with the spout lifted slightly away."
+      ],
+      "transitions": [
+        "",
+        "A thin stream of amber tea falls from the spout into the cup.",
+        "Tea continues pouring and the cup is half full, with small ripples on the liquid.",
+        "The tea stream stops and the teacup is three-quarters full, with the spout lifted slightly away."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "accepted",
+      "reason": "Full-resolution review: tea flows into the same supported cup, rises, then pouring ends with a filled cup. Cup/saucer and background remain coherent. The first frame already shows pouring, so display text describes the visible action rather than an empty-cup state.",
+      "reviewed_original_resolution": true,
+      "frames": [
+        {
+          "source": "tea-pour-transition-s20261026/frame_01.png",
+          "sha256": "ec688946e256a44cd2fb45255629204632e964d04b591120c6b315d42b336d41",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "tea-pour-transition-s20261026/frame_02.png",
+          "sha256": "2a36920e4cda9dfaa09e27c71bf8773fd89cf412eda565331c97e3f81b173689",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "tea-pour-transition-s20261026/frame_03.png",
+          "sha256": "3fa398caa42aaa83e442ff71990bd428ba4c953ea19e02c11e6d6aa435286f14",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "tea-pour-transition-s20261026/frame_04.png",
+          "sha256": "782827857e937298b63d179d6a733fb32120d7c917cbc4359af6258aa6255d60",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "0860843406a79d256171b39aa0f132a447db07501281b18d7b59fd83c1c6ee7c"
+    },
+    {
+      "id": "tea-pour-transition-s20262026",
+      "scene": "tea-pour",
+      "title": "Pouring tea",
+      "captions": [
+        "Close-up still-life photograph of a white porcelain teacup on a matching saucer, on a wooden table. The curved spout of a white teapot enters from the upper left, teapot handle and hands outside the frame. Fixed camera, soft window light, consistent cup and saucer. The teacup is empty and the teapot spout is above the rim.",
+        "Same scene and subject. A thin stream of amber tea falls from the spout into the cup.",
+        "Same scene and subject. Tea continues pouring and the cup is half full, with small ripples on the liquid.",
+        "Same scene and subject. The tea stream stops and the teacup is three-quarters full, with the spout lifted slightly away."
+      ],
+      "transitions": [
+        "",
+        "A thin stream of amber tea falls from the spout into the cup.",
+        "Tea continues pouring and the cup is half full, with small ripples on the liquid.",
+        "The tea stream stops and the teacup is three-quarters full, with the spout lifted slightly away."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The final frame continues pouring and the cup changes rim/handle proportions; incomplete action.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "tea-pour-transition-s20262026/frame_01.png",
+          "sha256": "c15727785fc4658307d4b24ce36db12165d4c79ba99bcb75f6ea39d1b742ccc1",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "tea-pour-transition-s20262026/frame_02.png",
+          "sha256": "1e54334c0dbe0e3b8248f996d6eb96877b411ca9fbc34877520d2e9264bc5b69",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "tea-pour-transition-s20262026/frame_03.png",
+          "sha256": "664bb1f1923a32ecff25d59b4eaf5592e1f8d3300c1cb121d142e1b63b1289ba",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "tea-pour-transition-s20262026/frame_04.png",
+          "sha256": "4cf17a8b8a391a02faea8fa3f1aa8d4399067bb9114c8ffd44a0d9ac222dfa54",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "9840c49908d8c12e52a9e97bc46f96cac58c4d420b61db65ab61a2e0b18cdc7b"
+    },
+    {
+      "id": "baker-bread-transition-s20261026",
+      "scene": "baker-bread",
+      "title": "A baker checks a loaf",
+      "captions": [
+        "Documentary photograph of an adult baker wearing a white apron over a blue shirt at a wooden bakery counter. One round crusty loaf on a cutting board. Waist-up view, fixed camera, warm natural light, consistent person and loaf, realistic hands. The baker looks down at the uncut round loaf, hands resting on the counter.",
+        "Same scene and subject. The baker places one hand gently on top of the loaf.",
+        "Same scene and subject. The baker leans forward to look closely at the crust, keeping the hand on the loaf.",
+        "Same scene and subject. The baker stands upright smiling, with both hands resting on the counter beside the loaf."
+      ],
+      "transitions": [
+        "",
+        "The baker places one hand gently on top of the loaf.",
+        "The baker leans forward to look closely at the crust, keeping the hand on the loaf.",
+        "The baker stands upright smiling, with both hands resting on the counter beside the loaf."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "hold",
+      "reason": "A cutting board appears partway through and finger contact is ambiguous; hold.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "baker-bread-transition-s20261026/frame_01.png",
+          "sha256": "d013fd0d2b73e9c4c692d5a048d3624f535f9df41f6d33c8a4d4a6baba1851e7",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "baker-bread-transition-s20261026/frame_02.png",
+          "sha256": "0f86f8082a9d701232f8a699283b42dde212cfe383941cd9020a3f1a567b8bcc",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "baker-bread-transition-s20261026/frame_03.png",
+          "sha256": "9d7a3a49ea0dd99f891a4d1106bcb52baad39a48b63f2486323ef6d38c28a421",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "baker-bread-transition-s20261026/frame_04.png",
+          "sha256": "b43d49bc2b779ec7ffab8b8974c8eb3da1eed6117ae56ffb0042360c9cd74c1e",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "3ee582521510adcb4726f43a4dc67d6587a5edc995613fc08e8706ebe21f8d4f"
+    },
+    {
+      "id": "baker-bread-transition-s20262026",
+      "scene": "baker-bread",
+      "title": "A baker checks a loaf",
+      "captions": [
+        "Documentary photograph of an adult baker wearing a white apron over a blue shirt at a wooden bakery counter. One round crusty loaf on a cutting board. Waist-up view, fixed camera, warm natural light, consistent person and loaf, realistic hands. The baker looks down at the uncut round loaf, hands resting on the counter.",
+        "Same scene and subject. The baker places one hand gently on top of the loaf.",
+        "Same scene and subject. The baker leans forward to look closely at the crust, keeping the hand on the loaf.",
+        "Same scene and subject. The baker stands upright smiling, with both hands resting on the counter beside the loaf."
+      ],
+      "transitions": [
+        "",
+        "The baker places one hand gently on top of the loaf.",
+        "The baker leans forward to look closely at the crust, keeping the hand on the loaf.",
+        "The baker stands upright smiling, with both hands resting on the counter beside the loaf."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "hold",
+      "reason": "Fine hand/finger anatomy and contact with the loaf are ambiguous; hold.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "baker-bread-transition-s20262026/frame_01.png",
+          "sha256": "1e3fba6b28b1c029da9362202ae18bd71441385367d89b962f0b88e942324487",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "baker-bread-transition-s20262026/frame_02.png",
+          "sha256": "17c2d77f4c833337d5a4cea2c1992b47bdbcfb63b76efeee207301fa94d7ef1c",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "baker-bread-transition-s20262026/frame_03.png",
+          "sha256": "6bf013f90c13ab5ee4759df1bb243662c90e4e52f34e9fac09734e84afca700c",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "baker-bread-transition-s20262026/frame_04.png",
+          "sha256": "3d30a9723a7f298b2bf53b40faae7e8b9390db27a841be1c915635a1a12ec2bb",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "d96dd2cd3ee9fd81a496faf127fb1fdd71e2918091479a2ad01ac1a270e713c9"
+    },
+    {
+      "id": "cat-box-transition-s20261026",
+      "scene": "cat-box",
+      "title": "A cat discovers a cardboard box",
+      "captions": [
+        "Photograph of one gray short-haired cat beside one plain open cardboard box on a wooden floor. The box is large enough for the cat, no labels. Fixed side camera, full cat and box in view, soft indoor daylight, same cat and room. The cat stands beside the open box looking into it.",
+        "Same scene and subject. The cat places its two front paws inside the box while its hind paws stay on the floor.",
+        "Same scene and subject. The cat climbs into the box, with its tail still outside.",
+        "Same scene and subject. The cat sits comfortably inside the box with its head and shoulders visible above the rim."
+      ],
+      "transitions": [
+        "",
+        "The cat places its two front paws inside the box while its hind paws stay on the floor.",
+        "The cat climbs into the box, with its tail still outside.",
+        "The cat sits comfortably inside the box with its head and shoulders visible above the rim."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The box changes orientation/opening and the cat ends outside it; target sequence is not completed.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "cat-box-transition-s20261026/frame_01.png",
+          "sha256": "da484cdc57e8cff7259f89bdc55a0090adbeed800fc6f9b8a421c9d4ad788adc",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "cat-box-transition-s20261026/frame_02.png",
+          "sha256": "8117a1a23189e0de510097f460d12ff8fe08b70c8ea46a16bc1ecb294d09a069",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "cat-box-transition-s20261026/frame_03.png",
+          "sha256": "2e4038322492a6cea4c6fe58f1e68926c92c1b7590baacbe84dd5f66cc3d538e",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "cat-box-transition-s20261026/frame_04.png",
+          "sha256": "2c69ed4f78d9a398f64caff7dfe95209c13e888fcef7fbe7baf3dd460020f1c6",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "5f55f34ad629dc2af2c54c305882a7c3c2aa3245e5d80e0189ad5b57234bc6a7"
+    },
+    {
+      "id": "cat-box-transition-s20262026",
+      "scene": "cat-box",
+      "title": "A cat discovers a cardboard box",
+      "captions": [
+        "Photograph of one gray short-haired cat beside one plain open cardboard box on a wooden floor. The box is large enough for the cat, no labels. Fixed side camera, full cat and box in view, soft indoor daylight, same cat and room. The cat stands beside the open box looking into it.",
+        "Same scene and subject. The cat places its two front paws inside the box while its hind paws stay on the floor.",
+        "Same scene and subject. The cat climbs into the box, with its tail still outside.",
+        "Same scene and subject. The cat sits comfortably inside the box with its head and shoulders visible above the rim."
+      ],
+      "transitions": [
+        "",
+        "The cat places its two front paws inside the box while its hind paws stay on the floor.",
+        "The cat climbs into the box, with its tail still outside.",
+        "The cat sits comfortably inside the box with its head and shoulders visible above the rim."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "Unwanted generated lettering; the cat is already inside at the first frame, so the requested entry is absent.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "cat-box-transition-s20262026/frame_01.png",
+          "sha256": "4e82f7a4c2771388f1edb72f8c5a6261506e466b8ab8e8798b475c6af3668e9b",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "cat-box-transition-s20262026/frame_02.png",
+          "sha256": "7475b3b43235c450913ce1320707eb417129a0dd60a8d0852499a1f7c72cd9e7",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "cat-box-transition-s20262026/frame_03.png",
+          "sha256": "2c819c24e6e432d8e68b1f8b423daaa418bc66935d3dc4edf2fb888dfa9eb5ac",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "cat-box-transition-s20262026/frame_04.png",
+          "sha256": "b05f397fdd2b4476d7fe224bfc1ce8a87cb0b52f32d2f58960305f338a4fafce",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "f4ad59d189dac7c029ffb95838d315153350ca48fc47199ab186f9afd82104fe"
+    },
+    {
+      "id": "train-transition-steam-transition-s20261026",
+      "scene": "train-steam",
+      "title": "A steam train leaves the station",
+      "captions": [
+        "Detailed miniature photograph of one red steam locomotive on straight metal railway tracks beside a small cream station building. Fixed side camera, clean miniature diorama, same locomotive, wheels, track and station, no lettering. The locomotive stands on the left side of the station with a little white steam above its chimney.",
+        "Same scene and subject. The locomotive moves slightly to the right as white steam rises from its chimney.",
+        "Same scene and subject. The locomotive passes in front of the station, wheels remaining on the rails.",
+        "Same scene and subject. The locomotive continues to the right of the station with a thin plume of steam trailing behind."
+      ],
+      "transitions": [
+        "",
+        "The locomotive moves slightly to the right as white steam rises from its chimney.",
+        "The locomotive passes in front of the station, wheels remaining on the rails.",
+        "The locomotive continues to the right of the station with a thin plume of steam trailing behind."
+      ],
+      "seed": 20261026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The station disappears while the locomotive shape changes; scene and object continuity fail.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "train-transition-steam-transition-s20261026/frame_01.png",
+          "sha256": "48ec2dbc8b739287674e5dcfb088ecd8ff27719e2e99ffcbf036e055fc031d4f",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "train-transition-steam-transition-s20261026/frame_02.png",
+          "sha256": "78ed5de1f915475ce117c47527c213568f46f55d5a7f93fd158e3e3096d46e99",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "train-transition-steam-transition-s20261026/frame_03.png",
+          "sha256": "aa34f1d36835310091303d4260e662df3f862b46bae39fb75ef427532fce0cea",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "train-transition-steam-transition-s20261026/frame_04.png",
+          "sha256": "5606ddadbbbb9561cd39734d04d80c0f7116b6615f0a2697229c6404151efd55",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "43c7a4dfc7da81fbe89bf0cd16f33c1e4bd73f8f602026138d34a152ed7d1546"
+    },
+    {
+      "id": "train-transition-steam-transition-s20262026",
+      "scene": "train-steam",
+      "title": "A steam train leaves the station",
+      "captions": [
+        "Detailed miniature photograph of one red steam locomotive on straight metal railway tracks beside a small cream station building. Fixed side camera, clean miniature diorama, same locomotive, wheels, track and station, no lettering. The locomotive stands on the left side of the station with a little white steam above its chimney.",
+        "Same scene and subject. The locomotive moves slightly to the right as white steam rises from its chimney.",
+        "Same scene and subject. The locomotive passes in front of the station, wheels remaining on the rails.",
+        "Same scene and subject. The locomotive continues to the right of the station with a thin plume of steam trailing behind."
+      ],
+      "transitions": [
+        "",
+        "The locomotive moves slightly to the right as white steam rises from its chimney.",
+        "The locomotive passes in front of the station, wheels remaining on the rails.",
+        "The locomotive continues to the right of the station with a thin plume of steam trailing behind."
+      ],
+      "seed": 20262026,
+      "status": "success",
+      "decision": "exclude",
+      "reason": "The locomotive stretches/changes body structure across frames; mechanical geometry fails.",
+      "reviewed_original_resolution": false,
+      "frames": [
+        {
+          "source": "train-transition-steam-transition-s20262026/frame_01.png",
+          "sha256": "67d5e24ca416e81e60400bfa919215b05b890e2910e93e57ded1d9f0b461ac19",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "train-transition-steam-transition-s20262026/frame_02.png",
+          "sha256": "b73ee14fb66280cc3c71b999e30242df85f0226c0941304efc739546f955fd51",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "train-transition-steam-transition-s20262026/frame_03.png",
+          "sha256": "9674a8feb087b88d6c2c7c4b3ef0db517baec46dbdb444e394b518ee41312110",
+          "size": [
+            576,
+            384
+          ]
+        },
+        {
+          "source": "train-transition-steam-transition-s20262026/frame_04.png",
+          "sha256": "51bebbbd4813dccfd18988acb2084a120b33fc3a025429ca11d334315f418355",
+          "size": [
+            576,
+            384
+          ]
+        }
+      ],
+      "run_sha256": "7336249067d0d00b27ef2fcecb8f4eec1b15938f54c6ad9f99efa5246a483286"
+    }
+  ]
+}

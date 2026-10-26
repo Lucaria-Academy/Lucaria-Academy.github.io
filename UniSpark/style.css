@@ -173,7 +173,7 @@ figcaption { font-size: 12px; color: var(--muted); margin-top: 15px; line-height
 .sequence-description { color: var(--muted); font-size: 13px; margin: 0 0 22px; }
 .sequence-frames { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .sequence-frame { padding: 0; background: transparent; text-align: left; }
-.sequence-frames img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; }
+.sequence-frames img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; border-radius: 8px; }
 .sequence-frames span { display: block; padding: 12px 0; font-size: 11px; color: var(--muted); }
 .table-scroll { overflow: auto; border: 1px solid var(--line); border-radius: 10px; background: #101318; }
 table { width: 100%; border-collapse: collapse; text-align: right; white-space: nowrap; font-size: 13px; font-variant-numeric: tabular-nums; }
