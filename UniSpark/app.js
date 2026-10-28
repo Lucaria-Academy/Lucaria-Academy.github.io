@@ -245,3 +245,122 @@ window.addEventListener('scroll', () => {
 }, {passive:true});
 window.addEventListener('resize', updateSectionNavigation);
 updateSectionNavigation();
+
+function initShowcaseVideo() {
+  const video = document.querySelector('.showcase-video');
+  if (!video) return;
+  const sound = document.querySelector('#showcase-sound');
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const connection = navigator.connection;
+  const observesVisibility = 'IntersectionObserver' in window;
+  let inView = false;
+  let userPaused = false;
+  let autoplayBlocked = false;
+  let playPending = false;
+  let automaticPlayback = false;
+  let policyPaused = false;
+  let policyPauseEvents = 0;
+
+  video.muted = false;
+  function updateSound() {
+    if (!sound) return;
+    const audible = !video.muted && video.volume > 0;
+    const label = video.paused ? 'Play with sound' : audible ? 'Mute sound' : 'Turn sound on';
+    sound.querySelector('span').textContent = label;
+    sound.setAttribute('aria-label', label);
+    sound.title = label;
+  }
+  if (sound) {
+    sound.hidden = false;
+    sound.addEventListener('click', () => {
+      if (video.paused || video.muted || video.volume === 0) {
+        if (video.volume === 0) video.volume = .7;
+        video.muted = false;
+        if (video.paused) {
+          inView = isVisibleNow();
+          userPaused = false;
+          autoplayBlocked = false;
+          automaticPlayback = false;
+          video.play().catch(() => {});
+        }
+      } else video.muted = true;
+      updateSound();
+    });
+    video.addEventListener('volumechange', updateSound);
+    updateSound();
+  }
+
+  const explicitViewing = () => document.pictureInPictureElement === video ||
+    document.fullscreenElement?.contains(video) || video.webkitDisplayingFullscreen;
+  function isVisibleNow() {
+    const rect = video.getBoundingClientRect();
+    return rect.bottom > 80 && rect.top < window.innerHeight;
+  }
+  const canWatch = () => explicitViewing() || (inView && !document.hidden);
+  const allowsAutoplay = () => observesVisibility && !motion.matches && !connection?.saveData;
+  function pauseForPolicy() {
+    if (video.paused) return;
+    policyPaused = true;
+    policyPauseEvents++;
+    video.pause();
+  }
+  async function syncPlayback() {
+    if (!canWatch() || (automaticPlayback && !allowsAutoplay())) {
+      pauseForPolicy();
+      return;
+    }
+    if (!allowsAutoplay() || userPaused || autoplayBlocked || playPending || !video.paused || video.ended) return;
+    playPending = true;
+    automaticPlayback = true;
+    policyPaused = false;
+    try {
+      await video.play();
+    } catch (error) {
+      if (error.name !== 'AbortError') autoplayBlocked = true;
+    } finally {
+      playPending = false;
+      if (!canWatch() || (automaticPlayback && !allowsAutoplay())) pauseForPolicy();
+      // A visibility pause can finish while play() is still pending.
+      else if (policyPaused && policyPauseEvents === 0) syncPlayback();
+    }
+  }
+  video.addEventListener('play', () => {
+    userPaused = false;
+    autoplayBlocked = false;
+    if (!playPending) {
+      automaticPlayback = false;
+      inView = isVisibleNow();
+    }
+    if (!canWatch()) pauseForPolicy();
+    updateSound();
+  });
+  video.addEventListener('pause', () => {
+    // Media events are asynchronous; consume only pauses requested by this script.
+    if (policyPauseEvents > 0) {
+      policyPauseEvents--;
+      if (policyPaused) syncPlayback();
+    } else {
+      userPaused = !video.ended;
+      automaticPlayback = false;
+    }
+    updateSound();
+  });
+  video.addEventListener('ended', () => { automaticPlayback = false; });
+  document.addEventListener('visibilitychange', syncPlayback);
+  document.addEventListener('fullscreenchange', syncPlayback);
+  video.addEventListener('enterpictureinpicture', syncPlayback);
+  video.addEventListener('leavepictureinpicture', syncPlayback);
+  video.addEventListener('webkitbeginfullscreen', syncPlayback);
+  video.addEventListener('webkitendfullscreen', syncPlayback);
+  motion.addEventListener('change', syncPlayback);
+  connection?.addEventListener?.('change', syncPlayback);
+  if (observesVisibility) {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.intersectionRatio >= .55) inView = true;
+      else if (entry.intersectionRatio <= .15) inView = false;
+      syncPlayback();
+    }, {threshold: [0, .15, .55], rootMargin: '-80px 0px 0px'});
+    observer.observe(video);
+  } else inView = true;
+}
+initShowcaseVideo();

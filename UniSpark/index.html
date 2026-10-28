@@ -7,12 +7,12 @@
 <meta name="theme-color" content="#08090b">
 <link rel="icon" href="assets/spark.svg" type="image/svg+xml">
 <link rel="preload" href="assets/manrope-regular.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261026-anime-v14">
-<script defer src="content.js?v=20261026-pokemon-edit-v18"></script><script defer src="results-data.js"></script><script defer src="app.js?v=20261026-anime-edit-v15"></script>
+<link rel="stylesheet" href="style.css?v=20261028-layout-v20">
+<script defer src="content.js?v=20261026-pokemon-edit-v18"></script><script defer src="results-data.js"></script><script defer src="app.js?v=20261028-video-v18"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="topbar"><div class="nav-wrap"><a class="brand" href="#" aria-label="UniSpark home"><img src="assets/spark.svg" width="28" height="28" alt="">UniSpark</a><nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#gallery">Gallery</a><a href="#results">Results</a><a href="#reference">Reference</a><a data-paper-link aria-disabled="true" title="Link coming soon" target="_blank" rel="noopener">Paper</a></nav><div class="header-links"><a class="institute-brand" href="https://www.antresearch.com/" target="_blank" rel="noopener" aria-label="蚂蚁技术研究院 Ant Research"><img src="assets/ant-research.png" width="264" height="78" alt="蚂蚁技术研究院 Ant Research"></a></div></div></header>
+<header class="topbar"><div class="nav-wrap"><a class="brand" href="#" aria-label="UniSpark home"><img src="assets/spark.svg" width="28" height="28" alt="">UniSpark</a><nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#gallery">Gallery</a><a href="#showcase-video">Video</a><a href="#results">Results</a><a href="#reference">Reference</a><a data-paper-link aria-disabled="true" title="Link coming soon" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a></nav><div class="header-links"><a class="institute-brand" href="https://www.antresearch.com/" target="_blank" rel="noopener" aria-label="蚂蚁技术研究院 Ant Research"><img src="assets/ant-research.png" width="264" height="78" alt="蚂蚁技术研究院 Ant Research"></a></div></div></header>
 <main id="main">
 <section class="hero wrap" aria-labelledby="title">
 <h1 id="title">UniSpark</h1>
@@ -46,6 +46,14 @@
 <section id="sequences" class="wrap section">
 <div class="section-heading"><h2>Beyond a single image</h2><p>Interleaved prediction carries visual context across successive outputs. These four-image sequences illustrate scene continuity as actions unfold.</p></div><div class="sequence-toolbar"><div id="sequence-options" class="filters" role="group" aria-label="Sequence examples"></div><div class="arrows"><button id="previous-sequence" aria-label="Previous sequence">‹</button><button id="next-sequence" aria-label="Next sequence">›</button></div></div><p id="sequence-description" class="sequence-description" aria-live="polite"></p><div id="sequence-frames" class="sequence-frames"></div>
 </section>
+<section id="showcase-video" class="wrap section" aria-labelledby="showcase-video-title">
+<div class="section-heading"><h2 id="showcase-video-title">UniSpark in action</h2><p>Generation, editing, and visual continuity in one showcase.</p></div>
+<video class="showcase-video" controls playsinline preload="none" poster="assets/unispark-overview-poster.jpg?v=brand-v3" width="1920" height="1080" aria-label="UniSpark showcase video">
+<source src="assets/unispark-overview.mp4?v=brand-v3" type="video/mp4">
+<a href="assets/unispark-overview.mp4?v=brand-v3">Download the UniSpark showcase video</a>.
+</video>
+<div class="showcase-controls"><p class="small-note">72-second showcase</p><button id="showcase-sound" class="button video-sound" type="button" aria-label="Play with sound" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4zM16 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg><span>Play with sound</span></button></div>
+</section>
 <section id="results" class="wrap section">
 <div class="section-heading"><h2>Understanding, generation, and efficiency</h2><p>Explore benchmark breakdowns, evaluation settings, and the trade-offs behind each result. Expand a table to see all model entries reported in the paper.</p></div>
 <div class="filters result-filters" role="group" aria-label="Select results table"><button aria-pressed="true" class="active" data-result="understanding">Understanding</button><button aria-pressed="false" data-result="geneval">GenEval</button><button aria-pressed="false" data-result="dpg">DPG-Bench</button><button aria-pressed="false" data-result="editing">Image editing</button><button aria-pressed="false" data-result="generation_efficiency">Generation speed</button><button aria-pressed="false" data-result="understanding_efficiency">Understanding speed</button></div>
@@ -56,7 +64,7 @@
 <section id="reference" class="wrap section reference">
 <div class="section-heading"><h2>Reference</h2></div><div class="citation-header"><span>Technical report citation</span><button id="copy-citation" class="button">Copy BibTeX</button></div><pre><code id="citation">@misc{pan2026unispark,
   title = {UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation},
-  author = {Pan, Jiancheng and Liu, Yuzheng and Cao, Hengyuan and Zhang, Qiyuan and Li, Yangyan and Gong, Biao and Shen, Yujun},
+  author = {Pan, Jiancheng and Liu, Yuzheng and Cao, Hengyuan and Zhang, Qiyuan and Li, Yangyan and Gong, Biao and Zhang, Zheng and Cheng, Ka Long and Wang, Xinyang and Shen, Yujun},
   year = {2026},
   note = {Technical report}
 }</code></pre><p id="copy-status" class="small-note" role="status"></p>
@@ -70,7 +78,14 @@
 <li><span>Qiyuan Zhang</span></li>
 <li><a href="https://yangyan.li/" target="_blank" rel="noopener">Yangyan Li</a></li>
 <li><a href="https://scholar.google.com.hk/citations?user=BwdpTiQAAAAJ&amp;hl=zh-CN&amp;oi=ao" target="_blank" rel="noopener">Biao Gong</a></li>
+<li class="author-disclosure"><details><summary>4 more authors<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+<ul class="author-list">
+<li><span>Zheng Zhang</span></li>
+<li><span>Ka Long Cheng</span></li>
+<li><span>Xinyang Wang</span></li>
 <li><a href="https://shenyujun.github.io/" target="_blank" rel="noopener">Yujun Shen</a></li>
+</ul>
+</details></li>
 </ul>
 </section>
 </main><footer class="wrap"><a class="brand" href="#"><img src="assets/spark.svg" width="24" height="24" alt="">UniSpark</a><p>Exploring hybrid multimodal modeling.</p><p class="small-note">Page design inspired by <a href="https://lucaria-academy.github.io/AGG/" target="_blank" rel="noopener">AGG</a>.</p><a href="#">Back to top ↑</a></footer>
