@@ -124,7 +124,6 @@ const results = {
     rows: resultRows.understanding.filter(r => ['Qwen3.5-9B','MetaQuery-XL†','SenseNova-U1','UniSpark'].includes(r[0]) || (r[0]==='BAGEL' && r[2]==='7B MoT')),
     fullRows: resultRows.understanding,
     analysis: 'UniSpark scores above BAGEL (7B MoT) across all six benchmark families, including +6.2 points on MM-Vet and +4.1 on MathVista. The remaining gaps are task dependent: MetaQuery-XL scores 58.6 on MMMU versus 56.7 for UniSpark, while Qwen3.5-9B is higher on MM-Vet and MathVista.',
-    note: 'MMBench answer extraction differs: UniSpark uses rules only; Qwen3.5 and SenseNova-U1 use a Qwen fallback. MoT counts are per branch, and MoE counts are active/total. † Frozen Qwen2.5-VL backbone. ** Scores taken from MetaMorph or MetaQuery in the source comparison. — Unreported.',
     settings: [
       ['Evaluation', 'MMBench v1.0-dev-en uses circular accuracy. MMMU reports validation accuracy without chain-of-thought prompting. MMVP reports paired accuracy.'],
       ['Benchmark coverage', `${benchmarkLink('MME','https://arxiv.org/abs/2306.13394v1')} evaluates perception and cognition; ${benchmarkLink('MMBench','https://arxiv.org/abs/2307.06281')} and ${benchmarkLink('MM-Vet','https://proceedings.mlr.press/v235/yu24o.html')} cover visual question answering and integrated capabilities. ${benchmarkLink('MMMU','https://openaccess.thecvf.com/content/CVPR2024/html/Yue_MMMU_A_Massive_Multi-discipline_Multimodal_Understanding_and_Reasoning_Benchmark_for_CVPR_2024_paper.html')} tests subject-level reasoning; ${benchmarkLink('MathVista','https://arxiv.org/abs/2310.02255')} covers visual mathematics; ${benchmarkLink('MMVP','https://arxiv.org/abs/2401.06209')} tests fine-grained visual discrimination.`],
@@ -202,7 +201,7 @@ function showResult(key) {
     <dl class="result-highlights">${data.stats.map(([value,label])=>`<div><dt>${label}</dt><dd>${value.replace(/ (s|GB)$/, ' <span>$1</span>')}</dd></div>`).join('')}</dl>
     ${resultTable(data.title,data.headers,data.rows)}
     <div class="result-reading"><h4>What the results show</h4><p>${data.analysis}</p></div>
-    <p class="result-note">${data.note}</p>
+    ${data.note ? `<p class="result-note">${data.note}</p>` : ''}
     <details class="experiment-details"><summary>Evaluation settings and sources <span aria-hidden="true">+</span></summary><dl class="experiment-settings">${data.settings.map(([label,body])=>`<div><dt>${label}</dt><dd>${body}</dd></div>`).join('')}</dl></details>
     ${data.fullRows?`<details class="experiment-details"><summary>${data.fullLabel || `View all ${data.fullRows.length} model entries from the paper`} <span aria-hidden="true">+</span></summary>${resultTable(data.fullTitle || data.title.replace('Selected ','All '),data.fullHeaders||data.headers,data.fullRows)}</details>`:''}`;
 }
